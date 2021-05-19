@@ -1,0 +1,18 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$interfaceKyoo_1_1Models_1_1Attributes_1_1IOnMerge.html" title="An interface with a method called when this object is merged." alt="" coords="6,23,205,65"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Models_1_1Episode.html" title=" " alt="" coords="265,56,425,83"/>
+<area shape="rect" id="node3" href="$classKyoo_1_1Models_1_1Show.html" title=" " alt="" coords="273,5,417,32"/>
+<area shape="rect" id="node4" href="$interfaceKyoo_1_1Models_1_1IResource.html" title="An interface to represent a resource that can be retrieved from the database." alt="" coords="19,309,192,336"/>
+<area shape="rect" id="node5" href="$classKyoo_1_1Models_1_1Collection.html" title=" " alt="" coords="258,563,433,589"/>
+<area shape="rect" id="node6" href="$classKyoo_1_1Models_1_1Genre.html" title=" " alt="" coords="271,107,419,133"/>
+<area shape="rect" id="node7" href="$classKyoo_1_1Models_1_1Library.html" title=" " alt="" coords="268,157,423,184"/>
+<area shape="rect" id="node8" href="$classKyoo_1_1Models_1_1LibraryItem.html" title=" " alt="" coords="253,208,437,235"/>
+<area shape="rect" id="node9" href="$classKyoo_1_1Models_1_1People.html" title=" " alt="" coords="269,259,422,285"/>
+<area shape="rect" id="node10" href="$classKyoo_1_1Models_1_1PeopleRole.html" title=" " alt="" coords="254,309,437,336"/>
+<area shape="rect" id="node11" href="$classKyoo_1_1Models_1_1Provider.html" title=" " alt="" coords="264,360,427,387"/>
+<area shape="rect" id="node12" href="$classKyoo_1_1Models_1_1Season.html" title=" " alt="" coords="267,411,423,437"/>
+<area shape="rect" id="node13" href="$classKyoo_1_1Models_1_1Studio.html" title=" " alt="" coords="270,461,421,488"/>
+<area shape="rect" id="node14" href="$classKyoo_1_1Models_1_1Track.html" title=" " alt="" coords="274,613,417,640"/>
+<area shape="rect" id="node15" href="$classKyoo_1_1Models_1_1User.html" title="A single user of the app." alt="" coords="276,512,415,539"/>
+<area shape="rect" id="node16" href="$classKyoo_1_1Models_1_1Watch_1_1Stream.html" title=" " alt="" coords="5,613,205,640"/>
+</map>

@@ -1,0 +1,351 @@
+\hypertarget{classKyoo_1_1Controllers_1_1TaskManager}{}\doxysection{Kyoo.\+Controllers.\+Task\+Manager Class Reference}
+\label{classKyoo_1_1Controllers_1_1TaskManager}\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+
+
+A service to handle long running tasks and a background runner.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+Task\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classKyoo_1_1Controllers_1_1TaskManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+Task\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKyoo_1_1Controllers_1_1TaskManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_ae4f3284f20c7c091b768f55da6eddaf1}{Task\+Manager}} (I\+Enumerable$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}} $>$ tasks, I\+Service\+Provider provider, I\+Options\+Monitor$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Options_1_1TaskOptions}{Task\+Options}} $>$ options, I\+Logger$<$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager}{Task\+Manager}} $>$ logger)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager}{Task\+Manager}}. \end{DoxyCompactList}\item 
+override Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_ab16c629e8514ff714f54879099001df2}{Start\+Async}} (Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em Triggered when the application host is ready to start the service. \end{DoxyCompactList}\item 
+override Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_acd585d31d832431c8140c7913d4f10b9}{Stop\+Async}} (Cancellation\+Token cancellation\+Token)
+\item 
+void \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_a7147fd4140124a442a27c590b4a12eb8}{Start\+Task}} (string task\+Slug, Dictionary$<$ string, object $>$ arguments=null)
+\begin{DoxyCompactList}\small\item\em Start a new task (or queue it). \end{DoxyCompactList}\item 
+I\+Collection$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_ae04658cb3d3780cff2b5d4b98452919b}{Get\+Running\+Tasks}} ()
+\begin{DoxyCompactList}\small\item\em Get all currently running tasks \end{DoxyCompactList}\item 
+I\+Collection$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_a3379a2d6e9e5e938bb67faa1f61bd291}{Get\+All\+Tasks}} ()
+\begin{DoxyCompactList}\small\item\em Get all available tasks \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_a8186aec36d11209176d6cc1880e74815}{Execute\+Async}} (Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em The runner that will host tasks and run queued tasks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_ac2d016076366fffc487c7ea82a599b3d}{Run\+Task}} (\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}} task, Dictionary$<$ string, object $>$ arguments)
+\begin{DoxyCompactList}\small\item\em Parse parameters, inject a task and run it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_a708f020fee0afe66cc90c646e755772d}{Queue\+Scheduled\+Tasks}} ()
+\begin{DoxyCompactList}\small\item\em Start tasks that are scheduled for start. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_a4fdc48a4d01cfbc3e6385672b43f87ce}{Enqueue\+Startup\+Tasks}} ()
+\begin{DoxyCompactList}\small\item\em Queue startup tasks with respect to the priority rules. \end{DoxyCompactList}\item 
+Date\+Time \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_acdd3628fca8ca0744fd044ca47534e03}{Get\+Next\+Task\+Date}} (string task\+Slug)
+\begin{DoxyCompactList}\small\item\em Get the next date of the execution of the given task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_a1718147e240c5fb2a7b710accc923d89}{Inject\+Services}} (\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}} obj, \mbox{[}Instant\+Handle\mbox{]} Func$<$ Type, object $>$ retrieve)
+\begin{DoxyCompactList}\small\item\em Inject services into the Injected\+Attribute marked properties of the given object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly I\+Service\+Provider \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_a28244230122df55040e9582eaf539b9e}{\+\_\+provider}}
+\begin{DoxyCompactList}\small\item\em The service provider used to activate \end{DoxyCompactList}\item 
+readonly I\+Options\+Monitor$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Options_1_1TaskOptions}{Task\+Options}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_a449ad78be0cfe15569961aa4f8473ef3}{\+\_\+options}}
+\begin{DoxyCompactList}\small\item\em The configuration instance used to get schedule information \end{DoxyCompactList}\item 
+readonly I\+Logger$<$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager}{Task\+Manager}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_a37dda13778b30bcb54d19042c48ef015}{\+\_\+logger}}
+\begin{DoxyCompactList}\small\item\em The logger instance. \end{DoxyCompactList}\item 
+readonly List$<$(\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}} task, Date\+Time scheduled\+Date)$>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_a9ac1a5cbb4451044a5a211b63c7276ef}{\+\_\+tasks}}
+\begin{DoxyCompactList}\small\item\em The list of tasks and their next scheduled run. \end{DoxyCompactList}\item 
+readonly Queue$<$(\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}}, Dictionary$<$ string, object $>$)$>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_aaaa2e24e7256394fb8a660d006827f54}{\+\_\+queued\+Tasks}} = new()
+\begin{DoxyCompactList}\small\item\em The queue of tasks that should be run as soon as possible. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_aa5655b9d02fef65edf4664825efefec3}{\+\_\+running\+Task}}
+\begin{DoxyCompactList}\small\item\em The currently running task. \end{DoxyCompactList}\item 
+readonly Cancellation\+Token\+Source \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_a4f23a5e46fb368c56b9138dccabb6085}{\+\_\+task\+Token}} = new()
+\begin{DoxyCompactList}\small\item\em The cancellation token used to cancel the running task when the runner should shutdown. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A service to handle long running tasks and a background runner. 
+
+Task will be queued, only one can run simultaneously.
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_ae4f3284f20c7c091b768f55da6eddaf1}\label{classKyoo_1_1Controllers_1_1TaskManager_ae4f3284f20c7c091b768f55da6eddaf1}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!TaskManager@{TaskManager}}
+\index{TaskManager@{TaskManager}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{TaskManager()}{TaskManager()}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+Task\+Manager.\+Task\+Manager (\begin{DoxyParamCaption}\item[{I\+Enumerable$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}} $>$}]{tasks,  }\item[{I\+Service\+Provider}]{provider,  }\item[{I\+Options\+Monitor$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Options_1_1TaskOptions}{Task\+Options}} $>$}]{options,  }\item[{I\+Logger$<$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager}{Task\+Manager}} $>$}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager}{Task\+Manager}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tasks} & The list of tasks to manage\\
+\hline
+{\em provider} & The service provider to request services for tasks\\
+\hline
+{\em options} & The configuration to load schedule information.\\
+\hline
+{\em logger} & The logger.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_a4fdc48a4d01cfbc3e6385672b43f87ce}\label{classKyoo_1_1Controllers_1_1TaskManager_a4fdc48a4d01cfbc3e6385672b43f87ce}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!EnqueueStartupTasks@{EnqueueStartupTasks}}
+\index{EnqueueStartupTasks@{EnqueueStartupTasks}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{EnqueueStartupTasks()}{EnqueueStartupTasks()}}
+{\footnotesize\ttfamily void Kyoo.\+Controllers.\+Task\+Manager.\+Enqueue\+Startup\+Tasks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Queue startup tasks with respect to the priority rules. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_a8186aec36d11209176d6cc1880e74815}\label{classKyoo_1_1Controllers_1_1TaskManager_a8186aec36d11209176d6cc1880e74815}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!ExecuteAsync@{ExecuteAsync}}
+\index{ExecuteAsync@{ExecuteAsync}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{ExecuteAsync()}{ExecuteAsync()}}
+{\footnotesize\ttfamily override async Task Kyoo.\+Controllers.\+Task\+Manager.\+Execute\+Async (\begin{DoxyParamCaption}\item[{Cancellation\+Token}]{cancellation\+Token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+The runner that will host tasks and run queued tasks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cancellation\+Token} & A token to stop the runner\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_a3379a2d6e9e5e938bb67faa1f61bd291}\label{classKyoo_1_1Controllers_1_1TaskManager_a3379a2d6e9e5e938bb67faa1f61bd291}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!GetAllTasks@{GetAllTasks}}
+\index{GetAllTasks@{GetAllTasks}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{GetAllTasks()}{GetAllTasks()}}
+{\footnotesize\ttfamily I\+Collection$<$\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}}$>$ Kyoo.\+Controllers.\+Task\+Manager.\+Get\+All\+Tasks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all available tasks 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITaskManager_aca99bf3276825309e98c563db85e571c}{Kyoo.\+Controllers.\+I\+Task\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_acdd3628fca8ca0744fd044ca47534e03}\label{classKyoo_1_1Controllers_1_1TaskManager_acdd3628fca8ca0744fd044ca47534e03}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!GetNextTaskDate@{GetNextTaskDate}}
+\index{GetNextTaskDate@{GetNextTaskDate}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{GetNextTaskDate()}{GetNextTaskDate()}}
+{\footnotesize\ttfamily Date\+Time Kyoo.\+Controllers.\+Task\+Manager.\+Get\+Next\+Task\+Date (\begin{DoxyParamCaption}\item[{string}]{task\+Slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Get the next date of the execution of the given task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em task\+Slug} & The slug of the task\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The next date.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_ae04658cb3d3780cff2b5d4b98452919b}\label{classKyoo_1_1Controllers_1_1TaskManager_ae04658cb3d3780cff2b5d4b98452919b}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!GetRunningTasks@{GetRunningTasks}}
+\index{GetRunningTasks@{GetRunningTasks}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{GetRunningTasks()}{GetRunningTasks()}}
+{\footnotesize\ttfamily I\+Collection$<$\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}}$>$ Kyoo.\+Controllers.\+Task\+Manager.\+Get\+Running\+Tasks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all currently running tasks 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITaskManager_accff8da87a7e791cccbcda3cbcf00249}{Kyoo.\+Controllers.\+I\+Task\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_a1718147e240c5fb2a7b710accc923d89}\label{classKyoo_1_1Controllers_1_1TaskManager_a1718147e240c5fb2a7b710accc923d89}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!InjectServices@{InjectServices}}
+\index{InjectServices@{InjectServices}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{InjectServices()}{InjectServices()}}
+{\footnotesize\ttfamily static void Kyoo.\+Controllers.\+Task\+Manager.\+Inject\+Services (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}}}]{obj,  }\item[{\mbox{[}\+Instant\+Handle\mbox{]} Func$<$ Type, object $>$}]{retrieve }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Inject services into the Injected\+Attribute marked properties of the given object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to inject\\
+\hline
+{\em retrieve} & The function used to retrieve services. (The function is called immediately)\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_a708f020fee0afe66cc90c646e755772d}\label{classKyoo_1_1Controllers_1_1TaskManager_a708f020fee0afe66cc90c646e755772d}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!QueueScheduledTasks@{QueueScheduledTasks}}
+\index{QueueScheduledTasks@{QueueScheduledTasks}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{QueueScheduledTasks()}{QueueScheduledTasks()}}
+{\footnotesize\ttfamily void Kyoo.\+Controllers.\+Task\+Manager.\+Queue\+Scheduled\+Tasks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Start tasks that are scheduled for start. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_ac2d016076366fffc487c7ea82a599b3d}\label{classKyoo_1_1Controllers_1_1TaskManager_ac2d016076366fffc487c7ea82a599b3d}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!RunTask@{RunTask}}
+\index{RunTask@{RunTask}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{RunTask()}{RunTask()}}
+{\footnotesize\ttfamily async Task Kyoo.\+Controllers.\+Task\+Manager.\+Run\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}}}]{task,  }\item[{Dictionary$<$ string, object $>$}]{arguments }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Parse parameters, inject a task and run it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em task} & The task to run\\
+\hline
+{\em arguments} & The arguments to pass to the function\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & There was an invalid argument or a required argument was not found.\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_ab16c629e8514ff714f54879099001df2}\label{classKyoo_1_1Controllers_1_1TaskManager_ab16c629e8514ff714f54879099001df2}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!StartAsync@{StartAsync}}
+\index{StartAsync@{StartAsync}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{StartAsync()}{StartAsync()}}
+{\footnotesize\ttfamily override Task Kyoo.\+Controllers.\+Task\+Manager.\+Start\+Async (\begin{DoxyParamCaption}\item[{Cancellation\+Token}]{cancellation\+Token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Triggered when the application host is ready to start the service. 
+
+Start the runner in another thread.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cancellation\+Token} & Indicates that the start process has been aborted.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_a7147fd4140124a442a27c590b4a12eb8}\label{classKyoo_1_1Controllers_1_1TaskManager_a7147fd4140124a442a27c590b4a12eb8}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!StartTask@{StartTask}}
+\index{StartTask@{StartTask}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{StartTask()}{StartTask()}}
+{\footnotesize\ttfamily void Kyoo.\+Controllers.\+Task\+Manager.\+Start\+Task (\begin{DoxyParamCaption}\item[{string}]{task\+Slug,  }\item[{Dictionary$<$ string, object $>$}]{arguments = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Start a new task (or queue it). 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITaskManager_af5c5066589c67a833fbfc8cad625ce8a}{Kyoo.\+Controllers.\+I\+Task\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_acd585d31d832431c8140c7913d4f10b9}\label{classKyoo_1_1Controllers_1_1TaskManager_acd585d31d832431c8140c7913d4f10b9}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!StopAsync@{StopAsync}}
+\index{StopAsync@{StopAsync}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{StopAsync()}{StopAsync()}}
+{\footnotesize\ttfamily override Task Kyoo.\+Controllers.\+Task\+Manager.\+Stop\+Async (\begin{DoxyParamCaption}\item[{Cancellation\+Token}]{cancellation\+Token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_a37dda13778b30bcb54d19042c48ef015}\label{classKyoo_1_1Controllers_1_1TaskManager_a37dda13778b30bcb54d19042c48ef015}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!\_logger@{\_logger}}
+\index{\_logger@{\_logger}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{\_logger}{\_logger}}
+{\footnotesize\ttfamily readonly I\+Logger$<$\mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager}{Task\+Manager}}$>$ Kyoo.\+Controllers.\+Task\+Manager.\+\_\+logger\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The logger instance. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_a449ad78be0cfe15569961aa4f8473ef3}\label{classKyoo_1_1Controllers_1_1TaskManager_a449ad78be0cfe15569961aa4f8473ef3}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!\_options@{\_options}}
+\index{\_options@{\_options}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{\_options}{\_options}}
+{\footnotesize\ttfamily readonly I\+Options\+Monitor$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Options_1_1TaskOptions}{Task\+Options}}$>$ Kyoo.\+Controllers.\+Task\+Manager.\+\_\+options\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The configuration instance used to get schedule information 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_a28244230122df55040e9582eaf539b9e}\label{classKyoo_1_1Controllers_1_1TaskManager_a28244230122df55040e9582eaf539b9e}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!\_provider@{\_provider}}
+\index{\_provider@{\_provider}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{\_provider}{\_provider}}
+{\footnotesize\ttfamily readonly I\+Service\+Provider Kyoo.\+Controllers.\+Task\+Manager.\+\_\+provider\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The service provider used to activate 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_aaaa2e24e7256394fb8a660d006827f54}\label{classKyoo_1_1Controllers_1_1TaskManager_aaaa2e24e7256394fb8a660d006827f54}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!\_queuedTasks@{\_queuedTasks}}
+\index{\_queuedTasks@{\_queuedTasks}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{\_queuedTasks}{\_queuedTasks}}
+{\footnotesize\ttfamily readonly Queue$<$(\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}}, Dictionary$<$string, object$>$)$>$ Kyoo.\+Controllers.\+Task\+Manager.\+\_\+queued\+Tasks = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The queue of tasks that should be run as soon as possible. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_aa5655b9d02fef65edf4664825efefec3}\label{classKyoo_1_1Controllers_1_1TaskManager_aa5655b9d02fef65edf4664825efefec3}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!\_runningTask@{\_runningTask}}
+\index{\_runningTask@{\_runningTask}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{\_runningTask}{\_runningTask}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}} Kyoo.\+Controllers.\+Task\+Manager.\+\_\+running\+Task\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The currently running task. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_a9ac1a5cbb4451044a5a211b63c7276ef}\label{classKyoo_1_1Controllers_1_1TaskManager_a9ac1a5cbb4451044a5a211b63c7276ef}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!\_tasks@{\_tasks}}
+\index{\_tasks@{\_tasks}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{\_tasks}{\_tasks}}
+{\footnotesize\ttfamily readonly List$<$(\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}} task, Date\+Time scheduled\+Date)$>$ Kyoo.\+Controllers.\+Task\+Manager.\+\_\+tasks\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The list of tasks and their next scheduled run. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TaskManager_a4f23a5e46fb368c56b9138dccabb6085}\label{classKyoo_1_1Controllers_1_1TaskManager_a4f23a5e46fb368c56b9138dccabb6085}} 
+\index{Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}!\_taskToken@{\_taskToken}}
+\index{\_taskToken@{\_taskToken}!Kyoo.Controllers.TaskManager@{Kyoo.Controllers.TaskManager}}
+\doxysubsubsection{\texorpdfstring{\_taskToken}{\_taskToken}}
+{\footnotesize\ttfamily readonly Cancellation\+Token\+Source Kyoo.\+Controllers.\+Task\+Manager.\+\_\+task\+Token = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The cancellation token used to cancel the running task when the runner should shutdown. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Controllers/\mbox{\hyperlink{TaskManager_8cs}{Task\+Manager.\+cs}}\end{DoxyCompactItemize}

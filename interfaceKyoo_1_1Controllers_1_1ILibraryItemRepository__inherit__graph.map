@@ -1,0 +1,5 @@
+<map id="Kyoo.Controllers.ILibraryItemRepository" name="Kyoo.Controllers.ILibraryItemRepository">
+<area shape="rect" id="node1" title="A repository to handle library items (A wrapper around shows and collections)." alt="" coords="15,277,197,413"/>
+<area shape="rect" id="node3" href="$classKyoo_1_1Controllers_1_1LibraryItemRepository.html" title="A local repository to handle library items." alt="" coords="10,461,202,832"/>
+<area shape="rect" id="node2" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title=" " alt="" coords="5,5,207,229"/>
+</map>

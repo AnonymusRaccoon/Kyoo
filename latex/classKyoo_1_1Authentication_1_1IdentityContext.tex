@@ -1,0 +1,95 @@
+\hypertarget{classKyoo_1_1Authentication_1_1IdentityContext}{}\doxysection{Kyoo.\+Authentication.\+Identity\+Context Class Reference}
+\label{classKyoo_1_1Authentication_1_1IdentityContext}\index{Kyoo.Authentication.IdentityContext@{Kyoo.Authentication.IdentityContext}}
+
+
+The hard coded context of the identity server.  
+
+
+
+
+Collaboration diagram for Kyoo.\+Authentication.\+Identity\+Context\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classKyoo_1_1Authentication_1_1IdentityContext__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static I\+Enumerable$<$ Identity\+Resource $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1IdentityContext_a8b668f21b17f2f2fda0ce591758c77af}{Get\+Identity\+Resources}} ()
+\begin{DoxyCompactList}\small\item\em The list of identity resources supported (email, profile and openid) \end{DoxyCompactList}\item 
+static I\+Enumerable$<$ Client $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1IdentityContext_a3c7ac6f8b2e7b129d85033b81e4213fc}{Get\+Clients}} ()
+\begin{DoxyCompactList}\small\item\em The list of officially supported clients. \end{DoxyCompactList}\item 
+static I\+Enumerable$<$ Api\+Scope $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1IdentityContext_a2789bdcc4562fd0de6739f4a83be1d02}{Get\+Scopes}} ()
+\begin{DoxyCompactList}\small\item\em The list of scopes supported by the A\+PI. \end{DoxyCompactList}\item 
+static I\+Enumerable$<$ Api\+Resource $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1IdentityContext_a91bca0cafa8f9de25eb7269eecd5ce6d}{Get\+Apis}} ()
+\begin{DoxyCompactList}\small\item\em The list of A\+P\+Is (this is used to create Audiences) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The hard coded context of the identity server. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1IdentityContext_a91bca0cafa8f9de25eb7269eecd5ce6d}\label{classKyoo_1_1Authentication_1_1IdentityContext_a91bca0cafa8f9de25eb7269eecd5ce6d}} 
+\index{Kyoo.Authentication.IdentityContext@{Kyoo.Authentication.IdentityContext}!GetApis@{GetApis}}
+\index{GetApis@{GetApis}!Kyoo.Authentication.IdentityContext@{Kyoo.Authentication.IdentityContext}}
+\doxysubsubsection{\texorpdfstring{GetApis()}{GetApis()}}
+{\footnotesize\ttfamily static I\+Enumerable$<$Api\+Resource$>$ Kyoo.\+Authentication.\+Identity\+Context.\+Get\+Apis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The list of A\+P\+Is (this is used to create Audiences) 
+
+\begin{DoxyReturn}{Returns}
+The list of apis
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1IdentityContext_a3c7ac6f8b2e7b129d85033b81e4213fc}\label{classKyoo_1_1Authentication_1_1IdentityContext_a3c7ac6f8b2e7b129d85033b81e4213fc}} 
+\index{Kyoo.Authentication.IdentityContext@{Kyoo.Authentication.IdentityContext}!GetClients@{GetClients}}
+\index{GetClients@{GetClients}!Kyoo.Authentication.IdentityContext@{Kyoo.Authentication.IdentityContext}}
+\doxysubsubsection{\texorpdfstring{GetClients()}{GetClients()}}
+{\footnotesize\ttfamily static I\+Enumerable$<$Client$>$ Kyoo.\+Authentication.\+Identity\+Context.\+Get\+Clients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The list of officially supported clients. 
+
+You can add custom clients in the settings.\+json file. 
+
+\begin{DoxyReturn}{Returns}
+The list of officially supported clients.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1IdentityContext_a8b668f21b17f2f2fda0ce591758c77af}\label{classKyoo_1_1Authentication_1_1IdentityContext_a8b668f21b17f2f2fda0ce591758c77af}} 
+\index{Kyoo.Authentication.IdentityContext@{Kyoo.Authentication.IdentityContext}!GetIdentityResources@{GetIdentityResources}}
+\index{GetIdentityResources@{GetIdentityResources}!Kyoo.Authentication.IdentityContext@{Kyoo.Authentication.IdentityContext}}
+\doxysubsubsection{\texorpdfstring{GetIdentityResources()}{GetIdentityResources()}}
+{\footnotesize\ttfamily static I\+Enumerable$<$Identity\+Resource$>$ Kyoo.\+Authentication.\+Identity\+Context.\+Get\+Identity\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The list of identity resources supported (email, profile and openid) 
+
+\begin{DoxyReturn}{Returns}
+The list of identity resources supported
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1IdentityContext_a2789bdcc4562fd0de6739f4a83be1d02}\label{classKyoo_1_1Authentication_1_1IdentityContext_a2789bdcc4562fd0de6739f4a83be1d02}} 
+\index{Kyoo.Authentication.IdentityContext@{Kyoo.Authentication.IdentityContext}!GetScopes@{GetScopes}}
+\index{GetScopes@{GetScopes}!Kyoo.Authentication.IdentityContext@{Kyoo.Authentication.IdentityContext}}
+\doxysubsubsection{\texorpdfstring{GetScopes()}{GetScopes()}}
+{\footnotesize\ttfamily static I\+Enumerable$<$Api\+Scope$>$ Kyoo.\+Authentication.\+Identity\+Context.\+Get\+Scopes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The list of scopes supported by the A\+PI. 
+
+\begin{DoxyReturn}{Returns}
+The list of scopes
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Authentication/\+Models/\mbox{\hyperlink{IdentityContext_8cs}{Identity\+Context.\+cs}}\end{DoxyCompactItemize}

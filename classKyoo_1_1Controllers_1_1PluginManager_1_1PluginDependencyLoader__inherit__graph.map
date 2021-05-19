@@ -1,0 +1,4 @@
+<map id="Kyoo.Controllers.PluginManager.PluginDependencyLoader" name="Kyoo.Controllers.PluginManager.PluginDependencyLoader">
+<area shape="rect" id="node1" title="A custom AssemblyLoadContext to load plugin&#39;s dependency if they are on the same folder." alt="" coords="5,131,239,252"/>
+<area shape="rect" id="node2" title=" " alt="" coords="38,5,206,83"/>
+</map>

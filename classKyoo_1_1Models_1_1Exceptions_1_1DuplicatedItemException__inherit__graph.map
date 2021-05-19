@@ -1,0 +1,4 @@
+<map id="Kyoo.Models.Exceptions.DuplicatedItemException" name="Kyoo.Models.Exceptions.DuplicatedItemException">
+<area shape="rect" id="node1" title="An exception raised when an item already exists in the database." alt="" coords="5,131,260,252"/>
+<area shape="rect" id="node2" title=" " alt="" coords="89,5,176,83"/>
+</map>

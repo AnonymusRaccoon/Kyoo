@@ -1,0 +1,6 @@
+<map id="Kyoo.Controllers.EpisodeRepository" name="Kyoo.Controllers.EpisodeRepository">
+<area shape="rect" id="node1" title="A local repository to handle episodes." alt="" coords="117,667,301,1052"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Controllers_1_1LocalRepository.html" title=" " alt="" coords="5,277,212,619"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1IEpisodeRepository.html" title="The repository to handle episodes" alt="" coords="237,373,383,523"/>
+<area shape="rect" id="node4" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title=" " alt="" coords="221,5,399,229"/>
+</map>

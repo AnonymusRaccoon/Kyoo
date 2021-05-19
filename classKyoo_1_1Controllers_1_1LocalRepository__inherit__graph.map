@@ -1,0 +1,5 @@
+<map id="Kyoo.Controllers.LocalRepository&lt; T &gt;" name="Kyoo.Controllers.LocalRepository&lt; T &gt;">
+<area shape="rect" id="node1" title="A base class to create repositories using Entity Framework." alt="" coords="5,403,280,744"/>
+<area shape="rect" id="node2" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title="A common repository for every resources." alt="" coords="75,131,210,355"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1IBaseRepository.html" title="A base class for repositories. Every service implementing this will be handled by the LibraryManager." alt="" coords="74,5,211,83"/>
+</map>

@@ -1,0 +1,585 @@
+\hypertarget{classKyoo_1_1Controllers_1_1LocalRepository}{}\doxysection{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$ Class Template Reference}
+\label{classKyoo_1_1Controllers_1_1LocalRepository}\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+
+
+A base class to create repositories using Entity Framework.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1Controllers_1_1LocalRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1Controllers_1_1LocalRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual async Task$<$ T $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_af09b42b1ad5164d603a591971558e2fa}{Get}} (int id)
+\begin{DoxyCompactList}\small\item\em Get a resource from it\textquotesingle{}s ID. \end{DoxyCompactList}\item 
+virtual async Task$<$ T $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a3b68de5e73f15d9c7c73d5b4d01b2b6d}{Get}} (string slug)
+\begin{DoxyCompactList}\small\item\em Get a resource from it\textquotesingle{}s slug. \end{DoxyCompactList}\item 
+virtual async Task$<$ T $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_aadfb91fde5031dc788c6f9cec5ec481a}{Get}} (Expression$<$ Func$<$ T, bool $>$$>$ where)
+\begin{DoxyCompactList}\small\item\em Get the first resource that match the predicate. \end{DoxyCompactList}\item 
+virtual Task$<$ T $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a79bb32bb6616a9c57be4c9825b44c3f8}{Get\+Or\+Default}} (int id)
+\begin{DoxyCompactList}\small\item\em Get a resource from it\textquotesingle{}s ID or null if it is not found. \end{DoxyCompactList}\item 
+virtual Task$<$ T $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a0fc72df07e0cae1cbd24be315282cb90}{Get\+Or\+Default}} (string slug)
+\begin{DoxyCompactList}\small\item\em Get a resource from it\textquotesingle{}s slug or null if it is not found. \end{DoxyCompactList}\item 
+virtual Task$<$ T $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a1c7672be816d2526290d5851966de9d3}{Get\+Or\+Default}} (Expression$<$ Func$<$ T, bool $>$$>$ where)
+\begin{DoxyCompactList}\small\item\em Get the first resource that match the predicate or null if it is not found. \end{DoxyCompactList}\item 
+abstract Task$<$ I\+Collection$<$ T $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a1ec5ba57aa01810e262bbfc02bd1fc3e}{Search}} (string query)
+\begin{DoxyCompactList}\small\item\em Search for resources. \end{DoxyCompactList}\item 
+virtual Task$<$ I\+Collection$<$ T $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_aed74f2c569f76f277789de79daf4cb75}{Get\+All}} (Expression$<$ Func$<$ T, bool $>$$>$ where=null, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ T $>$ sort=default, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Get every resources that match all filters \end{DoxyCompactList}\item 
+virtual Task$<$ int $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a5fd7ade45d4410f9fcf0b05066f743d2}{Get\+Count}} (Expression$<$ Func$<$ T, bool $>$$>$ where=null)
+\begin{DoxyCompactList}\small\item\em Get the number of resources that match the filter\textquotesingle{}s predicate. \end{DoxyCompactList}\item 
+virtual async Task$<$ T $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ac3b7fb3e91e3dcd77dfc0123cdfe829a}{Create}} (T obj)
+\begin{DoxyCompactList}\small\item\em Create a new resource. \end{DoxyCompactList}\item 
+virtual async Task$<$ T $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a19e001f7275479b6b6644b88182d2a55}{Create\+If\+Not\+Exists}} (T obj)
+\begin{DoxyCompactList}\small\item\em Create a new resource if it does not exist already. If it does, the existing value is returned instead. \end{DoxyCompactList}\item 
+virtual async Task$<$ T $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a616c041783c77e5df0f6392affef6e26}{Edit}} (T edited, bool reset\+Old)
+\begin{DoxyCompactList}\small\item\em Edit a resource \end{DoxyCompactList}\item 
+virtual async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ab6eaf27f244827c71c8bb66516aa7f37}{Delete}} (int id)
+\begin{DoxyCompactList}\small\item\em Delete a resource by it\textquotesingle{}s ID \end{DoxyCompactList}\item 
+virtual async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ae5ce2d88de3a0f48e5e9837ae7aef69f}{Delete}} (string slug)
+\begin{DoxyCompactList}\small\item\em Delete a resource by it\textquotesingle{}s slug \end{DoxyCompactList}\item 
+abstract Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_aa69989ae719375d39a7f08c9c2b3e5ee}{Delete}} (T obj)
+\begin{DoxyCompactList}\small\item\em Delete a resource \end{DoxyCompactList}\item 
+virtual async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a2d85c555003c02545cd81289194f502f}{Delete\+Range}} (I\+Enumerable$<$ T $>$ objs)
+\begin{DoxyCompactList}\small\item\em Delete a list of resources. \end{DoxyCompactList}\item 
+virtual async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a9fac0692a513d55b17108cf292ae19e6}{Delete\+Range}} (I\+Enumerable$<$ int $>$ ids)
+\begin{DoxyCompactList}\small\item\em Delete a list of resources. \end{DoxyCompactList}\item 
+virtual async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_aeea1f6ce9af5e2ba9514daa586d453f7}{Delete\+Range}} (I\+Enumerable$<$ string $>$ slugs)
+\begin{DoxyCompactList}\small\item\em Delete a list of resources. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ace983f6e8b438ee493a8e98890a021a7}{Delete\+Range}} (Expression$<$ Func$<$ T, bool $>$$>$ where)
+\begin{DoxyCompactList}\small\item\em Delete a list of resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Type \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ab675e49e5c92f1b4e204b64dd5b71035}{Repository\+Type}} =$>$ typeof(T)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ab323de41ba81523439304e1a75bc3607}{Local\+Repository}} (Db\+Context database)
+\begin{DoxyCompactList}\small\item\em Create a new base \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ab323de41ba81523439304e1a75bc3607}{Local\+Repository$<$\+T$>$}} with the given database handle. \end{DoxyCompactList}\item 
+virtual async Task$<$ T $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a01949fc5c7aa2ddcf23412e2cdcb1d4f}{Get\+With\+Tracking}} (int id)
+\begin{DoxyCompactList}\small\item\em Get a resource from it\textquotesingle{}s ID and make the \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_af3a353c7e99d5f7b7c419a78ccb75ab6}{Database}} instance track it. \end{DoxyCompactList}\item 
+Task$<$ I\+Collection$<$ T $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ab07d79c2fbe70587112c9faf676cf769}{Apply\+Filters}} (I\+Queryable$<$ T $>$ query, Expression$<$ Func$<$ T, bool $>$$>$ where=null, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ T $>$ sort=default, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Apply filters to a query to ease sort, pagination \& where queries for resources of this repository \end{DoxyCompactList}\item 
+async Task$<$ I\+Collection$<$ T\+Value $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_adfa885dec3000e0208b29be3950e2dd9}{Apply\+Filters$<$ T\+Value $>$}} (I\+Queryable$<$ T\+Value $>$ query, Func$<$ int, Task$<$ T\+Value $>$$>$ get, Expression$<$ Func$<$ T\+Value, object $>$$>$ default\+Sort, Expression$<$ Func$<$ T\+Value, bool $>$$>$ where=null, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ T\+Value $>$ sort=default, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Apply filters to a query to ease sort, pagination \& where queries for any resources types. For resources of type T, see \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ab07d79c2fbe70587112c9faf676cf769}{Apply\+Filters}} \end{DoxyCompactList}\item 
+virtual Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a908c24eee6cf21eac7b926f99127dc2d}{Edit\+Relations}} (T resource, T changed, bool reset\+Old)
+\begin{DoxyCompactList}\small\item\em An overridable method to edit relation of a resource. \end{DoxyCompactList}\item 
+virtual Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a1c4db0ee38dd4becb56e74b8d7043e6d}{Validate}} (T resource)
+\begin{DoxyCompactList}\small\item\em A method called just before saving a new resource to the database. It is also called on the default implementation of \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a908c24eee6cf21eac7b926f99127dc2d}{Edit\+Relations}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly Db\+Context \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_af3a353c7e99d5f7b7c419a78ccb75ab6}{Database}}
+\begin{DoxyCompactList}\small\item\em The Entity Framework\textquotesingle{}s Database handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+abstract Expression$<$ Func$<$ T, object $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ae00a4f8d9400df4c67d308fd4e20f8e0}{Default\+Sort}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The default sort order that will be used for this resource\textquotesingle{}s type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A base class to create repositories using Entity Framework. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of this repository\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em class}]\item[{\em T} : {\em I\+Resource}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_ab323de41ba81523439304e1a75bc3607}\label{classKyoo_1_1Controllers_1_1LocalRepository_ab323de41ba81523439304e1a75bc3607}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!LocalRepository@{LocalRepository}}
+\index{LocalRepository@{LocalRepository}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LocalRepository()}{LocalRepository()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.\mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Local\+Repository}} (\begin{DoxyParamCaption}\item[{Db\+Context}]{database }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Create a new base \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ab323de41ba81523439304e1a75bc3607}{Local\+Repository$<$\+T$>$}} with the given database handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & A database connection to load resources of type T\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_ab07d79c2fbe70587112c9faf676cf769}\label{classKyoo_1_1Controllers_1_1LocalRepository_ab07d79c2fbe70587112c9faf676cf769}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!ApplyFilters@{ApplyFilters}}
+\index{ApplyFilters@{ApplyFilters}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ApplyFilters()}{ApplyFilters()}}
+{\footnotesize\ttfamily Task$<$I\+Collection$<$T$>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Apply\+Filters (\begin{DoxyParamCaption}\item[{I\+Queryable$<$ T $>$}]{query,  }\item[{Expression$<$ Func$<$ T, bool $>$$>$}]{where = {\ttfamily null},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ T $>$}]{sort = {\ttfamily default},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Apply filters to a query to ease sort, pagination \& where queries for resources of this repository 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & The base query to filter.\\
+\hline
+{\em where} & An expression to filter based on arbitrary conditions\\
+\hline
+{\em sort} & The sort settings (sort order \& sort by)\\
+\hline
+{\em limit} & \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} information (where to start and how many to get)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The filtered query
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_adfa885dec3000e0208b29be3950e2dd9}\label{classKyoo_1_1Controllers_1_1LocalRepository_adfa885dec3000e0208b29be3950e2dd9}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!ApplyFilters$<$ TValue $>$@{ApplyFilters$<$ TValue $>$}}
+\index{ApplyFilters$<$ TValue $>$@{ApplyFilters$<$ TValue $>$}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ApplyFilters$<$ TValue $>$()}{ApplyFilters< TValue >()}}
+{\footnotesize\ttfamily async Task$<$I\+Collection$<$T\+Value$>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.\mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ab07d79c2fbe70587112c9faf676cf769}{Apply\+Filters}}$<$ T\+Value $>$ (\begin{DoxyParamCaption}\item[{I\+Queryable$<$ T\+Value $>$}]{query,  }\item[{Func$<$ int, Task$<$ T\+Value $>$$>$}]{get,  }\item[{Expression$<$ Func$<$ T\+Value, object $>$$>$}]{default\+Sort,  }\item[{Expression$<$ Func$<$ T\+Value, bool $>$$>$}]{where = {\ttfamily null},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ T\+Value $>$}]{sort = {\ttfamily default},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Apply filters to a query to ease sort, pagination \& where queries for any resources types. For resources of type T, see \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ab07d79c2fbe70587112c9faf676cf769}{Apply\+Filters}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em get} & A function to asynchronously get a resource from the database using it\textquotesingle{}s ID.\\
+\hline
+{\em default\+Sort} & The default sort order of this resource\textquotesingle{}s type.\\
+\hline
+{\em query} & The base query to filter.\\
+\hline
+{\em where} & An expression to filter based on arbitrary conditions\\
+\hline
+{\em sort} & The sort settings (sort order \& sort by)\\
+\hline
+{\em limit} & \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} information (where to start and how many to get)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The filtered query
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_ac3b7fb3e91e3dcd77dfc0123cdfe829a}\label{classKyoo_1_1Controllers_1_1LocalRepository_ac3b7fb3e91e3dcd77dfc0123cdfe829a}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!Create@{Create}}
+\index{Create@{Create}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily virtual async Task$<$T$>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Create (\begin{DoxyParamCaption}\item[{T}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Create a new resource. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_af5929cff2a3ee36d41c0d44d6962a597}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_a19e001f7275479b6b6644b88182d2a55}\label{classKyoo_1_1Controllers_1_1LocalRepository_a19e001f7275479b6b6644b88182d2a55}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!CreateIfNotExists@{CreateIfNotExists}}
+\index{CreateIfNotExists@{CreateIfNotExists}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateIfNotExists()}{CreateIfNotExists()}}
+{\footnotesize\ttfamily virtual async Task$<$T$>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Create\+If\+Not\+Exists (\begin{DoxyParamCaption}\item[{T}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Create a new resource if it does not exist already. If it does, the existing value is returned instead. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a9259ac7c5dbc471876970f382e4b3122}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_ab6eaf27f244827c71c8bb66516aa7f37}\label{classKyoo_1_1Controllers_1_1LocalRepository_ab6eaf27f244827c71c8bb66516aa7f37}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!Delete@{Delete}}
+\index{Delete@{Delete}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Delete (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Delete a resource by it\textquotesingle{}s ID 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a8818f07e10eebaa63b495bf31a8e45da}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_abb27b47a9ec2661e10c33289b70e25f4}{Kyoo.\+Controllers.\+Library\+Item\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_ae5ce2d88de3a0f48e5e9837ae7aef69f}\label{classKyoo_1_1Controllers_1_1LocalRepository_ae5ce2d88de3a0f48e5e9837ae7aef69f}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!Delete@{Delete}}
+\index{Delete@{Delete}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Delete (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Delete a resource by it\textquotesingle{}s slug 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a1f1806de7992247f9623a437d142534a}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_aa39760c9898717546f7f4b96d18680c1}{Kyoo.\+Controllers.\+Library\+Item\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_aa69989ae719375d39a7f08c9c2b3e5ee}\label{classKyoo_1_1Controllers_1_1LocalRepository_aa69989ae719375d39a7f08c9c2b3e5ee}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!Delete@{Delete}}
+\index{Delete@{Delete}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily abstract Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Delete (\begin{DoxyParamCaption}\item[{T}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Delete a resource 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a93f62cd9c8e87e58fe8b98619f93a537}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_ace983f6e8b438ee493a8e98890a021a7}\label{classKyoo_1_1Controllers_1_1LocalRepository_ace983f6e8b438ee493a8e98890a021a7}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!DeleteRange@{DeleteRange}}
+\index{DeleteRange@{DeleteRange}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeleteRange()}{DeleteRange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Delete\+Range (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, bool $>$$>$}]{where }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Delete a list of resources. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_af56a800c06294ca3ede23fa1a2ddc703}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_a9fac0692a513d55b17108cf292ae19e6}\label{classKyoo_1_1Controllers_1_1LocalRepository_a9fac0692a513d55b17108cf292ae19e6}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!DeleteRange@{DeleteRange}}
+\index{DeleteRange@{DeleteRange}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeleteRange()}{DeleteRange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily virtual async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Delete\+Range (\begin{DoxyParamCaption}\item[{I\+Enumerable$<$ int $>$}]{ids }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Delete a list of resources. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a409fe5d14d4c72ba12f5e8d0467d79d3}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_aeea1f6ce9af5e2ba9514daa586d453f7}\label{classKyoo_1_1Controllers_1_1LocalRepository_aeea1f6ce9af5e2ba9514daa586d453f7}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!DeleteRange@{DeleteRange}}
+\index{DeleteRange@{DeleteRange}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeleteRange()}{DeleteRange()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily virtual async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Delete\+Range (\begin{DoxyParamCaption}\item[{I\+Enumerable$<$ string $>$}]{slugs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Delete a list of resources. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a2284c7ee4b9933b448a5ffe37cd05249}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_a2d85c555003c02545cd81289194f502f}\label{classKyoo_1_1Controllers_1_1LocalRepository_a2d85c555003c02545cd81289194f502f}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!DeleteRange@{DeleteRange}}
+\index{DeleteRange@{DeleteRange}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeleteRange()}{DeleteRange()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily virtual async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Delete\+Range (\begin{DoxyParamCaption}\item[{I\+Enumerable$<$ T $>$}]{objs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Delete a list of resources. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a18110a0a5edf51564701be67a0416cf7}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_a616c041783c77e5df0f6392affef6e26}\label{classKyoo_1_1Controllers_1_1LocalRepository_a616c041783c77e5df0f6392affef6e26}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!Edit@{Edit}}
+\index{Edit@{Edit}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}}
+{\footnotesize\ttfamily virtual async Task$<$T$>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Edit (\begin{DoxyParamCaption}\item[{T}]{edited,  }\item[{bool}]{reset\+Old }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Edit a resource 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a90a12a368a6f95271903204b32c6b107}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_a908c24eee6cf21eac7b926f99127dc2d}\label{classKyoo_1_1Controllers_1_1LocalRepository_a908c24eee6cf21eac7b926f99127dc2d}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!EditRelations@{EditRelations}}
+\index{EditRelations@{EditRelations}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{EditRelations()}{EditRelations()}}
+{\footnotesize\ttfamily virtual Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Edit\+Relations (\begin{DoxyParamCaption}\item[{T}]{resource,  }\item[{T}]{changed,  }\item[{bool}]{reset\+Old }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+An overridable method to edit relation of a resource. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & The non edited resource\\
+\hline
+{\em changed} & The new version of resource. This item will be saved on the databse and replace resource\\
+\hline
+{\em reset\+Old} & A boolean to indicate if all values of resource should be discarded or not.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_aadfb91fde5031dc788c6f9cec5ec481a}\label{classKyoo_1_1Controllers_1_1LocalRepository_aadfb91fde5031dc788c6f9cec5ec481a}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual async Task$<$T$>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Get (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, bool $>$$>$}]{where }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the first resource that match the predicate. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_ad0a2a7bd3f0f756ef14aa553a13ad528}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_af09b42b1ad5164d603a591971558e2fa}\label{classKyoo_1_1Controllers_1_1LocalRepository_af09b42b1ad5164d603a591971558e2fa}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual async Task$<$T$>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Get (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get a resource from it\textquotesingle{}s ID. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_af74eba3a7e105d6810cdc174ab9fbace}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_ae04bf3170aae6d963c36d2525643d84d}{Kyoo.\+Controllers.\+Season\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_a3b68de5e73f15d9c7c73d5b4d01b2b6d}\label{classKyoo_1_1Controllers_1_1LocalRepository_a3b68de5e73f15d9c7c73d5b4d01b2b6d}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual async Task$<$T$>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Get (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get a resource from it\textquotesingle{}s slug. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_aa7ec59ab2abd1de1210781fec0b6e4f3}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_aa260d54b3bdaaae1fcb7619359b2427b}{Kyoo.\+Controllers.\+Season\+Repository}}, and \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TrackRepository_a65cc468fc522aa351bd04ea23f146708}{Kyoo.\+Controllers.\+Track\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_aed74f2c569f76f277789de79daf4cb75}\label{classKyoo_1_1Controllers_1_1LocalRepository_aed74f2c569f76f277789de79daf4cb75}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetAll()}{GetAll()}}
+{\footnotesize\ttfamily virtual Task$<$I\+Collection$<$T$>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Get\+All (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, bool $>$$>$}]{where = {\ttfamily null},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ T $>$}]{sort = {\ttfamily default},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get every resources that match all filters 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_ac2d5de5e9a6d374c4765189c4169243f}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_a5fd7ade45d4410f9fcf0b05066f743d2}\label{classKyoo_1_1Controllers_1_1LocalRepository_a5fd7ade45d4410f9fcf0b05066f743d2}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!GetCount@{GetCount}}
+\index{GetCount@{GetCount}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetCount()}{GetCount()}}
+{\footnotesize\ttfamily virtual Task$<$int$>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Get\+Count (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, bool $>$$>$}]{where = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the number of resources that match the filter\textquotesingle{}s predicate. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a5d7747ee10f84a5272831180009b8d23}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_a1c7672be816d2526290d5851966de9d3}\label{classKyoo_1_1Controllers_1_1LocalRepository_a1c7672be816d2526290d5851966de9d3}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual Task$<$T$>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Get\+Or\+Default (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, bool $>$$>$}]{where }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the first resource that match the predicate or null if it is not found. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a425081354745d76fcaf4a9d1a7cd3c0e}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_a79bb32bb6616a9c57be4c9825b44c3f8}\label{classKyoo_1_1Controllers_1_1LocalRepository_a79bb32bb6616a9c57be4c9825b44c3f8}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual Task$<$T$>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Get\+Or\+Default (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get a resource from it\textquotesingle{}s ID or null if it is not found. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_ad9334bf404ffb4c240efbbe06900b008}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a1675f22f10d2f9cc2dec2573787c3e17}{Kyoo.\+Controllers.\+Episode\+Repository}}, and \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_a461016756dc42ad06aa208a5356e43c3}{Kyoo.\+Controllers.\+Library\+Item\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_a0fc72df07e0cae1cbd24be315282cb90}\label{classKyoo_1_1Controllers_1_1LocalRepository_a0fc72df07e0cae1cbd24be315282cb90}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual Task$<$T$>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Get\+Or\+Default (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get a resource from it\textquotesingle{}s slug or null if it is not found. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a66bb3303f2e5734ca78de7c4feb7e40f}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_ac90eac622541e414c194180900fa8dc6}{Kyoo.\+Controllers.\+Episode\+Repository}}, and \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_abad3f7a174984b8cab37c4d6dedfc5cd}{Kyoo.\+Controllers.\+Library\+Item\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_a01949fc5c7aa2ddcf23412e2cdcb1d4f}\label{classKyoo_1_1Controllers_1_1LocalRepository_a01949fc5c7aa2ddcf23412e2cdcb1d4f}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!GetWithTracking@{GetWithTracking}}
+\index{GetWithTracking@{GetWithTracking}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetWithTracking()}{GetWithTracking()}}
+{\footnotesize\ttfamily virtual async Task$<$T$>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Get\+With\+Tracking (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Get a resource from it\textquotesingle{}s ID and make the \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_af3a353c7e99d5f7b7c419a78ccb75ab6}{Database}} instance track it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the resource\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The tracked resource with the given ID
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_a1ec5ba57aa01810e262bbfc02bd1fc3e}\label{classKyoo_1_1Controllers_1_1LocalRepository_a1ec5ba57aa01810e262bbfc02bd1fc3e}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!Search@{Search}}
+\index{Search@{Search}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily abstract Task$<$I\+Collection$<$T$>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Search (\begin{DoxyParamCaption}\item[{string}]{query }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Search for resources. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a6f4965c6b983a5d1ba6320170752b8e9}{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$}}.
+
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a13973a6645609489e3362575f162ef8e}{Kyoo.\+Controllers.\+Episode\+Repository}}, \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_a481ba36e7c35011a4b1b463d00e047db}{Kyoo.\+Controllers.\+Season\+Repository}}, \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_a808274b9a6de8f343dfed9054d135720}{Kyoo.\+Controllers.\+Library\+Item\+Repository}}, \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TrackRepository_a56477e40c359c54aa1858da3e35bf308}{Kyoo.\+Controllers.\+Track\+Repository}}, \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_a6ca83779aaf96039c09fe0d6ecfe2469}{Kyoo.\+Controllers.\+Show\+Repository}}, \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository_aaf5aae1bc4be750650221b16ec8fe5d2}{Kyoo.\+Controllers.\+People\+Repository}}, \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryRepository_a56a037d36880e41e0e5eb7ef42c962e1}{Kyoo.\+Controllers.\+Library\+Repository}}, \mbox{\hyperlink{classKyoo_1_1Controllers_1_1GenreRepository_aff353ccca942c507fcd454b9c8d14034}{Kyoo.\+Controllers.\+Genre\+Repository}}, \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderRepository_a5544b7facccc54edebd8db1288b3932f}{Kyoo.\+Controllers.\+Provider\+Repository}}, \mbox{\hyperlink{classKyoo_1_1Controllers_1_1StudioRepository_a5845fc677299898527b381126953ff3d}{Kyoo.\+Controllers.\+Studio\+Repository}}, \mbox{\hyperlink{classKyoo_1_1Controllers_1_1UserRepository_a61e2a660465a4d013a7299f47bff060a}{Kyoo.\+Controllers.\+User\+Repository}}, and \mbox{\hyperlink{classKyoo_1_1Controllers_1_1CollectionRepository_ad3e2b0d3249ed544a4219758774fcf5b}{Kyoo.\+Controllers.\+Collection\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_a1c4db0ee38dd4becb56e74b8d7043e6d}\label{classKyoo_1_1Controllers_1_1LocalRepository_a1c4db0ee38dd4becb56e74b8d7043e6d}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!Validate@{Validate}}
+\index{Validate@{Validate}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily virtual Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Validate (\begin{DoxyParamCaption}\item[{T}]{resource }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+A method called just before saving a new resource to the database. It is also called on the default implementation of \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a908c24eee6cf21eac7b926f99127dc2d}{Edit\+Relations}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & The resource that will be saved\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & You can throw this if the resource is illegal and should not be saved.\\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_af3a353c7e99d5f7b7c419a78ccb75ab6}\label{classKyoo_1_1Controllers_1_1LocalRepository_af3a353c7e99d5f7b7c419a78ccb75ab6}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!Database@{Database}}
+\index{Database@{Database}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Database}{Database}}
+{\footnotesize\ttfamily readonly Db\+Context \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Database\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The Entity Framework\textquotesingle{}s Database handle. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_ab675e49e5c92f1b4e204b64dd5b71035}\label{classKyoo_1_1Controllers_1_1LocalRepository_ab675e49e5c92f1b4e204b64dd5b71035}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!RepositoryType@{RepositoryType}}
+\index{RepositoryType@{RepositoryType}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{RepositoryType}{RepositoryType}}
+{\footnotesize\ttfamily Type \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Repository\+Type =$>$ typeof(T)}
+
+
+
+
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LocalRepository_ae00a4f8d9400df4c67d308fd4e20f8e0}\label{classKyoo_1_1Controllers_1_1LocalRepository_ae00a4f8d9400df4c67d308fd4e20f8e0}} 
+\index{Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}!DefaultSort@{DefaultSort}}
+\index{DefaultSort@{DefaultSort}!Kyoo.Controllers.LocalRepository$<$ T $>$@{Kyoo.Controllers.LocalRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DefaultSort}{DefaultSort}}
+{\footnotesize\ttfamily abstract Expression$<$Func$<$T, object$>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Kyoo.\+Controllers.\+Local\+Repository}}$<$ T $>$.Default\+Sort\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+The default sort order that will be used for this resource\textquotesingle{}s type. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common\+A\+P\+I/\mbox{\hyperlink{LocalRepository_8cs}{Local\+Repository.\+cs}}\end{DoxyCompactItemize}

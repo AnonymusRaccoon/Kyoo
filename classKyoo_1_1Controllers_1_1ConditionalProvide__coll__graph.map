@@ -1,0 +1,5 @@
+<map id="Kyoo.Controllers.ConditionalProvide" name="Kyoo.Controllers.ConditionalProvide">
+<area shape="rect" id="node1" title="A type that will only be provided if a special condition is met. To check that your condition is met,..." alt="" coords="139,292,368,413"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,79,245,156"/>
+<area shape="rect" id="node3" href="$classKyoo_1_1Controllers_1_1ProviderCondition.html" title="A condition for a conditional type." alt="" coords="270,5,493,229"/>
+</map>

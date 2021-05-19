@@ -1,0 +1,111 @@
+\hypertarget{interfaceKyoo_1_1Controllers_1_1ITaskManager}{}\doxysection{Kyoo.\+Controllers.\+I\+Task\+Manager Interface Reference}
+\label{interfaceKyoo_1_1Controllers_1_1ITaskManager}\index{Kyoo.Controllers.ITaskManager@{Kyoo.Controllers.ITaskManager}}
+
+
+A service to handle long running tasks.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+I\+Task\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{interfaceKyoo_1_1Controllers_1_1ITaskManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+I\+Task\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{interfaceKyoo_1_1Controllers_1_1ITaskManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITaskManager_af5c5066589c67a833fbfc8cad625ce8a}{Start\+Task}} (string task\+Slug, Dictionary$<$ string, object $>$ arguments=null)
+\begin{DoxyCompactList}\small\item\em Start a new task (or queue it). \end{DoxyCompactList}\item 
+I\+Collection$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITaskManager_accff8da87a7e791cccbcda3cbcf00249}{Get\+Running\+Tasks}} ()
+\begin{DoxyCompactList}\small\item\em Get all currently running tasks \end{DoxyCompactList}\item 
+I\+Collection$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITaskManager_aca99bf3276825309e98c563db85e571c}{Get\+All\+Tasks}} ()
+\begin{DoxyCompactList}\small\item\em Get all available tasks \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A service to handle long running tasks. 
+
+The concurrent number of running tasks is implementation dependent.
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ITaskManager_aca99bf3276825309e98c563db85e571c}\label{interfaceKyoo_1_1Controllers_1_1ITaskManager_aca99bf3276825309e98c563db85e571c}} 
+\index{Kyoo.Controllers.ITaskManager@{Kyoo.Controllers.ITaskManager}!GetAllTasks@{GetAllTasks}}
+\index{GetAllTasks@{GetAllTasks}!Kyoo.Controllers.ITaskManager@{Kyoo.Controllers.ITaskManager}}
+\doxysubsubsection{\texorpdfstring{GetAllTasks()}{GetAllTasks()}}
+{\footnotesize\ttfamily I\+Collection$<$\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}}$>$ Kyoo.\+Controllers.\+I\+Task\+Manager.\+Get\+All\+Tasks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get all available tasks 
+
+\begin{DoxyReturn}{Returns}
+A list of every tasks that this instance know.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_a3379a2d6e9e5e938bb67faa1f61bd291}{Kyoo.\+Controllers.\+Task\+Manager}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ITaskManager_accff8da87a7e791cccbcda3cbcf00249}\label{interfaceKyoo_1_1Controllers_1_1ITaskManager_accff8da87a7e791cccbcda3cbcf00249}} 
+\index{Kyoo.Controllers.ITaskManager@{Kyoo.Controllers.ITaskManager}!GetRunningTasks@{GetRunningTasks}}
+\index{GetRunningTasks@{GetRunningTasks}!Kyoo.Controllers.ITaskManager@{Kyoo.Controllers.ITaskManager}}
+\doxysubsubsection{\texorpdfstring{GetRunningTasks()}{GetRunningTasks()}}
+{\footnotesize\ttfamily I\+Collection$<$\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}}$>$ Kyoo.\+Controllers.\+I\+Task\+Manager.\+Get\+Running\+Tasks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get all currently running tasks 
+
+\begin{DoxyReturn}{Returns}
+A list of currently running tasks.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_ae04658cb3d3780cff2b5d4b98452919b}{Kyoo.\+Controllers.\+Task\+Manager}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ITaskManager_af5c5066589c67a833fbfc8cad625ce8a}\label{interfaceKyoo_1_1Controllers_1_1ITaskManager_af5c5066589c67a833fbfc8cad625ce8a}} 
+\index{Kyoo.Controllers.ITaskManager@{Kyoo.Controllers.ITaskManager}!StartTask@{StartTask}}
+\index{StartTask@{StartTask}!Kyoo.Controllers.ITaskManager@{Kyoo.Controllers.ITaskManager}}
+\doxysubsubsection{\texorpdfstring{StartTask()}{StartTask()}}
+{\footnotesize\ttfamily void Kyoo.\+Controllers.\+I\+Task\+Manager.\+Start\+Task (\begin{DoxyParamCaption}\item[{string}]{task\+Slug,  }\item[{Dictionary$<$ string, object $>$}]{arguments = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Start a new task (or queue it). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em task\+Slug} & The slug of the task to run\\
+\hline
+{\em arguments} & A list of arguments to pass to the task. An automatic conversion will be made if arguments to not fit.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & If the number of arguments is invalid or if an argument can\textquotesingle{}t be converted.\\
+\hline
+{\em Item\+Not\+Found\+Exception} & The task could not be found.\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager_a7147fd4140124a442a27c590b4a12eb8}{Kyoo.\+Controllers.\+Task\+Manager}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Controllers/\mbox{\hyperlink{ITaskManager_8cs}{I\+Task\+Manager.\+cs}}\end{DoxyCompactItemize}

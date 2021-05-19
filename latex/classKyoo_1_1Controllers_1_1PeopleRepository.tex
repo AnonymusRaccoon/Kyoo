@@ -1,0 +1,256 @@
+\hypertarget{classKyoo_1_1Controllers_1_1PeopleRepository}{}\doxysection{Kyoo.\+Controllers.\+People\+Repository Class Reference}
+\label{classKyoo_1_1Controllers_1_1PeopleRepository}\index{Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}}
+
+
+A local repository to handle people.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+People\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1Controllers_1_1PeopleRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+People\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKyoo_1_1Controllers_1_1PeopleRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository_a1e0313363b49d2f883559965cdd5c9cf}{People\+Repository}} (\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} database, \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{I\+Provider\+Repository}} providers, Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository}{I\+Show\+Repository}} $>$ shows)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository}{People\+Repository}} \end{DoxyCompactList}\item 
+override async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository_aaf5aae1bc4be750650221b16ec8fe5d2}{Search}} (string query)
+\item 
+override async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository_a4369bd8531af8e0082b38e2f34d716aa}{Create}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}} obj)
+\item 
+override async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository_abb4f4cb524e2b6ad9bfb1203a7ab34cb}{Delete}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}} obj)
+\item 
+async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository_ab29cfc6d9a39e87f7714672633224114}{Get\+From\+Show}} (int show\+ID, Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}, bool $>$$>$ where=null, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$ sort=default, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Get people\textquotesingle{}s roles from a show. \end{DoxyCompactList}\item 
+async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository_ac964070e823ae9dccf30bf7d5ef25b1e}{Get\+From\+Show}} (string show\+Slug, Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}, bool $>$$>$ where=null, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$ sort=default, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Get people\textquotesingle{}s roles from a show. \end{DoxyCompactList}\item 
+async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository_adc89ced0ef50b21e62d4a9f22705b96c}{Get\+From\+People}} (int id, Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}, bool $>$$>$ where=null, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$ sort=default, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Get people\textquotesingle{}s roles from a person. \end{DoxyCompactList}\item 
+async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository_a492942f330aefd11f747c7650f7fa8ee}{Get\+From\+People}} (string slug, Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}, bool $>$$>$ where=null, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$ sort=default, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Get people\textquotesingle{}s roles from a person. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository_ac8fa7139224a707b583e418febc0cd00}{Validate}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}} resource)
+\item 
+override async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository_a66c7fb576f1e7c0f8424f2c36d96c462}{Edit\+Relations}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}} resource, \mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}} changed, bool reset\+Old)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+override Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}}, object $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository_a971e7d5fad6113a467eef0129e099b3b}{Default\+Sort}} =$>$ x =$>$ x.\+Name
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository_af260297973ece67220284fd30590ea9f}{\+\_\+database}}
+\begin{DoxyCompactList}\small\item\em The database handle \end{DoxyCompactList}\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{I\+Provider\+Repository}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository_a07a4f64fb6fa2e987045eeb6531f25b1}{\+\_\+providers}}
+\begin{DoxyCompactList}\small\item\em A provider repository to handle external\+ID creation and deletion \end{DoxyCompactList}\item 
+readonly Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository}{I\+Show\+Repository}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository_a99b0d3bb6a3826dea3ea650708faff91}{\+\_\+shows}}
+\begin{DoxyCompactList}\small\item\em A lazy loaded show repository to validate requests from shows. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A local repository to handle people. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PeopleRepository_a1e0313363b49d2f883559965cdd5c9cf}\label{classKyoo_1_1Controllers_1_1PeopleRepository_a1e0313363b49d2f883559965cdd5c9cf}} 
+\index{Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}!PeopleRepository@{PeopleRepository}}
+\index{PeopleRepository@{PeopleRepository}!Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}}
+\doxysubsubsection{\texorpdfstring{PeopleRepository()}{PeopleRepository()}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+People\+Repository.\+People\+Repository (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}}}]{database,  }\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{I\+Provider\+Repository}}}]{providers,  }\item[{Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository}{I\+Show\+Repository}} $>$}]{shows }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository}{People\+Repository}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & The database handle\\
+\hline
+{\em providers} & A provider repository\\
+\hline
+{\em shows} & A lazy loaded show repository\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PeopleRepository_a4369bd8531af8e0082b38e2f34d716aa}\label{classKyoo_1_1Controllers_1_1PeopleRepository_a4369bd8531af8e0082b38e2f34d716aa}} 
+\index{Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}!Create@{Create}}
+\index{Create@{Create}!Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily override async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}}$>$ Kyoo.\+Controllers.\+People\+Repository.\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PeopleRepository_abb4f4cb524e2b6ad9bfb1203a7ab34cb}\label{classKyoo_1_1Controllers_1_1PeopleRepository_abb4f4cb524e2b6ad9bfb1203a7ab34cb}} 
+\index{Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}!Delete@{Delete}}
+\index{Delete@{Delete}!Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily override async Task Kyoo.\+Controllers.\+People\+Repository.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PeopleRepository_a66c7fb576f1e7c0f8424f2c36d96c462}\label{classKyoo_1_1Controllers_1_1PeopleRepository_a66c7fb576f1e7c0f8424f2c36d96c462}} 
+\index{Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}!EditRelations@{EditRelations}}
+\index{EditRelations@{EditRelations}!Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}}
+\doxysubsubsection{\texorpdfstring{EditRelations()}{EditRelations()}}
+{\footnotesize\ttfamily override async Task Kyoo.\+Controllers.\+People\+Repository.\+Edit\+Relations (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}}}]{resource,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}}}]{changed,  }\item[{bool}]{reset\+Old }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PeopleRepository_adc89ced0ef50b21e62d4a9f22705b96c}\label{classKyoo_1_1Controllers_1_1PeopleRepository_adc89ced0ef50b21e62d4a9f22705b96c}} 
+\index{Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}!GetFromPeople@{GetFromPeople}}
+\index{GetFromPeople@{GetFromPeople}!Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}}
+\doxysubsubsection{\texorpdfstring{GetFromPeople()}{GetFromPeople()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}$>$ $>$ Kyoo.\+Controllers.\+People\+Repository.\+Get\+From\+People (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}, bool $>$$>$}]{where = {\ttfamily null},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$}]{sort = {\ttfamily default},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get people\textquotesingle{}s roles from a person. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPeopleRepository_ae6dd614d839222c6bcfc94070e6ecea7}{Kyoo.\+Controllers.\+I\+People\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PeopleRepository_a492942f330aefd11f747c7650f7fa8ee}\label{classKyoo_1_1Controllers_1_1PeopleRepository_a492942f330aefd11f747c7650f7fa8ee}} 
+\index{Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}!GetFromPeople@{GetFromPeople}}
+\index{GetFromPeople@{GetFromPeople}!Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}}
+\doxysubsubsection{\texorpdfstring{GetFromPeople()}{GetFromPeople()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}$>$ $>$ Kyoo.\+Controllers.\+People\+Repository.\+Get\+From\+People (\begin{DoxyParamCaption}\item[{string}]{slug,  }\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}, bool $>$$>$}]{where = {\ttfamily null},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$}]{sort = {\ttfamily default},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get people\textquotesingle{}s roles from a person. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPeopleRepository_af016e3a598a89c86e45d0fe44def687b}{Kyoo.\+Controllers.\+I\+People\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PeopleRepository_ab29cfc6d9a39e87f7714672633224114}\label{classKyoo_1_1Controllers_1_1PeopleRepository_ab29cfc6d9a39e87f7714672633224114}} 
+\index{Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}!GetFromShow@{GetFromShow}}
+\index{GetFromShow@{GetFromShow}!Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}}
+\doxysubsubsection{\texorpdfstring{GetFromShow()}{GetFromShow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}$>$ $>$ Kyoo.\+Controllers.\+People\+Repository.\+Get\+From\+Show (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}, bool $>$$>$}]{where = {\ttfamily null},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$}]{sort = {\ttfamily default},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get people\textquotesingle{}s roles from a show. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPeopleRepository_aaba5dbd4e76b8ad0fe50a956640ce3c3}{Kyoo.\+Controllers.\+I\+People\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PeopleRepository_ac964070e823ae9dccf30bf7d5ef25b1e}\label{classKyoo_1_1Controllers_1_1PeopleRepository_ac964070e823ae9dccf30bf7d5ef25b1e}} 
+\index{Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}!GetFromShow@{GetFromShow}}
+\index{GetFromShow@{GetFromShow}!Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}}
+\doxysubsubsection{\texorpdfstring{GetFromShow()}{GetFromShow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}$>$ $>$ Kyoo.\+Controllers.\+People\+Repository.\+Get\+From\+Show (\begin{DoxyParamCaption}\item[{string}]{show\+Slug,  }\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}, bool $>$$>$}]{where = {\ttfamily null},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$}]{sort = {\ttfamily default},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get people\textquotesingle{}s roles from a show. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPeopleRepository_a5fe97bf837c66faab1686c7e598b8f99}{Kyoo.\+Controllers.\+I\+People\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PeopleRepository_aaf5aae1bc4be750650221b16ec8fe5d2}\label{classKyoo_1_1Controllers_1_1PeopleRepository_aaf5aae1bc4be750650221b16ec8fe5d2}} 
+\index{Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}!Search@{Search}}
+\index{Search@{Search}!Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily override async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}}$>$ $>$ Kyoo.\+Controllers.\+People\+Repository.\+Search (\begin{DoxyParamCaption}\item[{string}]{query }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Implements \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a1ec5ba57aa01810e262bbfc02bd1fc3e}{Kyoo.\+Controllers.\+Local\+Repository$<$ People $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PeopleRepository_ac8fa7139224a707b583e418febc0cd00}\label{classKyoo_1_1Controllers_1_1PeopleRepository_ac8fa7139224a707b583e418febc0cd00}} 
+\index{Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}!Validate@{Validate}}
+\index{Validate@{Validate}!Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily override async Task Kyoo.\+Controllers.\+People\+Repository.\+Validate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}}}]{resource }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PeopleRepository_af260297973ece67220284fd30590ea9f}\label{classKyoo_1_1Controllers_1_1PeopleRepository_af260297973ece67220284fd30590ea9f}} 
+\index{Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}!\_database@{\_database}}
+\index{\_database@{\_database}!Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}}
+\doxysubsubsection{\texorpdfstring{\_database}{\_database}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} Kyoo.\+Controllers.\+People\+Repository.\+\_\+database\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The database handle 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PeopleRepository_a07a4f64fb6fa2e987045eeb6531f25b1}\label{classKyoo_1_1Controllers_1_1PeopleRepository_a07a4f64fb6fa2e987045eeb6531f25b1}} 
+\index{Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}!\_providers@{\_providers}}
+\index{\_providers@{\_providers}!Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}}
+\doxysubsubsection{\texorpdfstring{\_providers}{\_providers}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{I\+Provider\+Repository}} Kyoo.\+Controllers.\+People\+Repository.\+\_\+providers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A provider repository to handle external\+ID creation and deletion 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PeopleRepository_a99b0d3bb6a3826dea3ea650708faff91}\label{classKyoo_1_1Controllers_1_1PeopleRepository_a99b0d3bb6a3826dea3ea650708faff91}} 
+\index{Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}!\_shows@{\_shows}}
+\index{\_shows@{\_shows}!Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}}
+\doxysubsubsection{\texorpdfstring{\_shows}{\_shows}}
+{\footnotesize\ttfamily readonly Lazy$<$\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository}{I\+Show\+Repository}}$>$ Kyoo.\+Controllers.\+People\+Repository.\+\_\+shows\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A lazy loaded show repository to validate requests from shows. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PeopleRepository_a971e7d5fad6113a467eef0129e099b3b}\label{classKyoo_1_1Controllers_1_1PeopleRepository_a971e7d5fad6113a467eef0129e099b3b}} 
+\index{Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}!DefaultSort@{DefaultSort}}
+\index{DefaultSort@{DefaultSort}!Kyoo.Controllers.PeopleRepository@{Kyoo.Controllers.PeopleRepository}}
+\doxysubsubsection{\texorpdfstring{DefaultSort}{DefaultSort}}
+{\footnotesize\ttfamily override Expression$<$Func$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}}, object$>$ $>$ Kyoo.\+Controllers.\+People\+Repository.\+Default\+Sort =$>$ x =$>$ x.\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Controllers/\+Repositories/\mbox{\hyperlink{PeopleRepository_8cs}{People\+Repository.\+cs}}\end{DoxyCompactItemize}

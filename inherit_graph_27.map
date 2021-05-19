@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,78,92,105"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Controllers_1_1BadTranscoderException.html" title=" " alt="" coords="153,5,381,47"/>
+<area shape="rect" id="node3" href="$classKyoo_1_1Models_1_1Exceptions_1_1DuplicatedItemException.html" title="An exception raised when an item already exists in the database." alt="" coords="140,71,395,112"/>
+<area shape="rect" id="node4" href="$classKyoo_1_1Models_1_1Exceptions_1_1ItemNotFoundException.html" title="An exception raised when an item could not be found." alt="" coords="160,136,375,177"/>
+</map>

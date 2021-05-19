@@ -1,0 +1,137 @@
+\hypertarget{classKyoo_1_1Controllers_1_1UserRepository}{}\doxysection{Kyoo.\+Controllers.\+User\+Repository Class Reference}
+\label{classKyoo_1_1Controllers_1_1UserRepository}\index{Kyoo.Controllers.UserRepository@{Kyoo.Controllers.UserRepository}}
+
+
+A repository for users.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+User\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1Controllers_1_1UserRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+User\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKyoo_1_1Controllers_1_1UserRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1UserRepository_a1ac7085fbab7c2952a6b7def3eddae9d}{User\+Repository}} (\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} database)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1UserRepository}{User\+Repository}} \end{DoxyCompactList}\item 
+override async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1UserRepository_a61e2a660465a4d013a7299f47bff060a}{Search}} (string query)
+\item 
+override async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1UserRepository_a0b2d10f0ef748ad8643b49bf06c59869}{Create}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}} obj)
+\item 
+override async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1UserRepository_a1214777f559990e8a6cc0c90e375f1b0}{Delete}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}} obj)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+override Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}}, object $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1UserRepository_ad8e6923691fe78d86bd276a5b8d92148}{Default\+Sort}} =$>$ x =$>$ x.\+Username
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1UserRepository_a196c4ba073d9cbfb04b614755446f371}{\+\_\+database}}
+\begin{DoxyCompactList}\small\item\em The database handle \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A repository for users. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1UserRepository_a1ac7085fbab7c2952a6b7def3eddae9d}\label{classKyoo_1_1Controllers_1_1UserRepository_a1ac7085fbab7c2952a6b7def3eddae9d}} 
+\index{Kyoo.Controllers.UserRepository@{Kyoo.Controllers.UserRepository}!UserRepository@{UserRepository}}
+\index{UserRepository@{UserRepository}!Kyoo.Controllers.UserRepository@{Kyoo.Controllers.UserRepository}}
+\doxysubsubsection{\texorpdfstring{UserRepository()}{UserRepository()}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+User\+Repository.\+User\+Repository (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}}}]{database }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1UserRepository}{User\+Repository}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & The database handle to use\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1UserRepository_a0b2d10f0ef748ad8643b49bf06c59869}\label{classKyoo_1_1Controllers_1_1UserRepository_a0b2d10f0ef748ad8643b49bf06c59869}} 
+\index{Kyoo.Controllers.UserRepository@{Kyoo.Controllers.UserRepository}!Create@{Create}}
+\index{Create@{Create}!Kyoo.Controllers.UserRepository@{Kyoo.Controllers.UserRepository}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily override async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}}$>$ Kyoo.\+Controllers.\+User\+Repository.\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1UserRepository_a1214777f559990e8a6cc0c90e375f1b0}\label{classKyoo_1_1Controllers_1_1UserRepository_a1214777f559990e8a6cc0c90e375f1b0}} 
+\index{Kyoo.Controllers.UserRepository@{Kyoo.Controllers.UserRepository}!Delete@{Delete}}
+\index{Delete@{Delete}!Kyoo.Controllers.UserRepository@{Kyoo.Controllers.UserRepository}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily override async Task Kyoo.\+Controllers.\+User\+Repository.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1UserRepository_a61e2a660465a4d013a7299f47bff060a}\label{classKyoo_1_1Controllers_1_1UserRepository_a61e2a660465a4d013a7299f47bff060a}} 
+\index{Kyoo.Controllers.UserRepository@{Kyoo.Controllers.UserRepository}!Search@{Search}}
+\index{Search@{Search}!Kyoo.Controllers.UserRepository@{Kyoo.Controllers.UserRepository}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily override async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}}$>$ $>$ Kyoo.\+Controllers.\+User\+Repository.\+Search (\begin{DoxyParamCaption}\item[{string}]{query }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Implements \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a1ec5ba57aa01810e262bbfc02bd1fc3e}{Kyoo.\+Controllers.\+Local\+Repository$<$ User $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1UserRepository_a196c4ba073d9cbfb04b614755446f371}\label{classKyoo_1_1Controllers_1_1UserRepository_a196c4ba073d9cbfb04b614755446f371}} 
+\index{Kyoo.Controllers.UserRepository@{Kyoo.Controllers.UserRepository}!\_database@{\_database}}
+\index{\_database@{\_database}!Kyoo.Controllers.UserRepository@{Kyoo.Controllers.UserRepository}}
+\doxysubsubsection{\texorpdfstring{\_database}{\_database}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} Kyoo.\+Controllers.\+User\+Repository.\+\_\+database\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The database handle 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1UserRepository_ad8e6923691fe78d86bd276a5b8d92148}\label{classKyoo_1_1Controllers_1_1UserRepository_ad8e6923691fe78d86bd276a5b8d92148}} 
+\index{Kyoo.Controllers.UserRepository@{Kyoo.Controllers.UserRepository}!DefaultSort@{DefaultSort}}
+\index{DefaultSort@{DefaultSort}!Kyoo.Controllers.UserRepository@{Kyoo.Controllers.UserRepository}}
+\doxysubsubsection{\texorpdfstring{DefaultSort}{DefaultSort}}
+{\footnotesize\ttfamily override Expression$<$Func$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}}, object$>$ $>$ Kyoo.\+Controllers.\+User\+Repository.\+Default\+Sort =$>$ x =$>$ x.\+Username\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Controllers/\+Repositories/\mbox{\hyperlink{UserRepository_8cs}{User\+Repository.\+cs}}\end{DoxyCompactItemize}

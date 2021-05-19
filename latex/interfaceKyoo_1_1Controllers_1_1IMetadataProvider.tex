@@ -1,0 +1,85 @@
+\hypertarget{interfaceKyoo_1_1Controllers_1_1IMetadataProvider}{}\doxysection{Kyoo.\+Controllers.\+I\+Metadata\+Provider Interface Reference}
+\label{interfaceKyoo_1_1Controllers_1_1IMetadataProvider}\index{Kyoo.Controllers.IMetadataProvider@{Kyoo.Controllers.IMetadataProvider}}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+I\+Metadata\+Provider\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{interfaceKyoo_1_1Controllers_1_1IMetadataProvider__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Collection}{Collection}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_ae899bd2a729b38a3ed455dc8ba1b01ba}{Get\+Collection\+From\+Name}} (string name)
+\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_a8865fbf52f4907e56a0dbcfc1e87b7f9}{Get\+Show\+By\+ID}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} show)
+\item 
+Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} $>$ $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_a7e4ecd47e7087e4d64bc12a9df02c093}{Search\+Shows}} (string show\+Name, bool is\+Movie)
+\item 
+Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$ $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_a0b34520588f6d9d89d93ba9b40750dfe}{Get\+People}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} show)
+\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_ac2e7bcd85fd4b0cec7872a21f8ddb178}{Get\+Season}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} show, int season\+Number)
+\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_ac878ac4a9caa9b93ca1becb5628bf558}{Get\+Episode}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} show, int season\+Number, int episode\+Number, int absolute\+Number)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Models_1_1Provider}{Provider}} \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_af5fea868961c8207f37c9ed293119abf}{Provider}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_ae899bd2a729b38a3ed455dc8ba1b01ba}\label{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_ae899bd2a729b38a3ed455dc8ba1b01ba}} 
+\index{Kyoo.Controllers.IMetadataProvider@{Kyoo.Controllers.IMetadataProvider}!GetCollectionFromName@{GetCollectionFromName}}
+\index{GetCollectionFromName@{GetCollectionFromName}!Kyoo.Controllers.IMetadataProvider@{Kyoo.Controllers.IMetadataProvider}}
+\doxysubsubsection{\texorpdfstring{GetCollectionFromName()}{GetCollectionFromName()}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Collection}{Collection}}$>$ Kyoo.\+Controllers.\+I\+Metadata\+Provider.\+Get\+Collection\+From\+Name (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_ac878ac4a9caa9b93ca1becb5628bf558}\label{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_ac878ac4a9caa9b93ca1becb5628bf558}} 
+\index{Kyoo.Controllers.IMetadataProvider@{Kyoo.Controllers.IMetadataProvider}!GetEpisode@{GetEpisode}}
+\index{GetEpisode@{GetEpisode}!Kyoo.Controllers.IMetadataProvider@{Kyoo.Controllers.IMetadataProvider}}
+\doxysubsubsection{\texorpdfstring{GetEpisode()}{GetEpisode()}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+I\+Metadata\+Provider.\+Get\+Episode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{show,  }\item[{int}]{season\+Number,  }\item[{int}]{episode\+Number,  }\item[{int}]{absolute\+Number }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_a0b34520588f6d9d89d93ba9b40750dfe}\label{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_a0b34520588f6d9d89d93ba9b40750dfe}} 
+\index{Kyoo.Controllers.IMetadataProvider@{Kyoo.Controllers.IMetadataProvider}!GetPeople@{GetPeople}}
+\index{GetPeople@{GetPeople}!Kyoo.Controllers.IMetadataProvider@{Kyoo.Controllers.IMetadataProvider}}
+\doxysubsubsection{\texorpdfstring{GetPeople()}{GetPeople()}}
+{\footnotesize\ttfamily Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}$>$ $>$ Kyoo.\+Controllers.\+I\+Metadata\+Provider.\+Get\+People (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{show }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_ac2e7bcd85fd4b0cec7872a21f8ddb178}\label{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_ac2e7bcd85fd4b0cec7872a21f8ddb178}} 
+\index{Kyoo.Controllers.IMetadataProvider@{Kyoo.Controllers.IMetadataProvider}!GetSeason@{GetSeason}}
+\index{GetSeason@{GetSeason}!Kyoo.Controllers.IMetadataProvider@{Kyoo.Controllers.IMetadataProvider}}
+\doxysubsubsection{\texorpdfstring{GetSeason()}{GetSeason()}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ Kyoo.\+Controllers.\+I\+Metadata\+Provider.\+Get\+Season (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{show,  }\item[{int}]{season\+Number }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_a8865fbf52f4907e56a0dbcfc1e87b7f9}\label{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_a8865fbf52f4907e56a0dbcfc1e87b7f9}} 
+\index{Kyoo.Controllers.IMetadataProvider@{Kyoo.Controllers.IMetadataProvider}!GetShowByID@{GetShowByID}}
+\index{GetShowByID@{GetShowByID}!Kyoo.Controllers.IMetadataProvider@{Kyoo.Controllers.IMetadataProvider}}
+\doxysubsubsection{\texorpdfstring{GetShowByID()}{GetShowByID()}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}$>$ Kyoo.\+Controllers.\+I\+Metadata\+Provider.\+Get\+Show\+By\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{show }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_a7e4ecd47e7087e4d64bc12a9df02c093}\label{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_a7e4ecd47e7087e4d64bc12a9df02c093}} 
+\index{Kyoo.Controllers.IMetadataProvider@{Kyoo.Controllers.IMetadataProvider}!SearchShows@{SearchShows}}
+\index{SearchShows@{SearchShows}!Kyoo.Controllers.IMetadataProvider@{Kyoo.Controllers.IMetadataProvider}}
+\doxysubsubsection{\texorpdfstring{SearchShows()}{SearchShows()}}
+{\footnotesize\ttfamily Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}$>$ $>$ Kyoo.\+Controllers.\+I\+Metadata\+Provider.\+Search\+Shows (\begin{DoxyParamCaption}\item[{string}]{show\+Name,  }\item[{bool}]{is\+Movie }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_af5fea868961c8207f37c9ed293119abf}\label{interfaceKyoo_1_1Controllers_1_1IMetadataProvider_af5fea868961c8207f37c9ed293119abf}} 
+\index{Kyoo.Controllers.IMetadataProvider@{Kyoo.Controllers.IMetadataProvider}!Provider@{Provider}}
+\index{Provider@{Provider}!Kyoo.Controllers.IMetadataProvider@{Kyoo.Controllers.IMetadataProvider}}
+\doxysubsubsection{\texorpdfstring{Provider}{Provider}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKyoo_1_1Models_1_1Provider}{Provider}} Kyoo.\+Controllers.\+I\+Metadata\+Provider.\+Provider\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Controllers/\mbox{\hyperlink{IMetadataProvider_8cs}{I\+Metadata\+Provider.\+cs}}\end{DoxyCompactItemize}

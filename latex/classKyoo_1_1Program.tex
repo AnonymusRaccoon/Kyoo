@@ -1,0 +1,113 @@
+\hypertarget{classKyoo_1_1Program}{}\doxysection{Kyoo.\+Program Class Reference}
+\label{classKyoo_1_1Program}\index{Kyoo.Program@{Kyoo.Program}}
+
+
+\mbox{\hyperlink{classKyoo_1_1Program}{Program}} entrypoint.  
+
+
+
+
+Collaboration diagram for Kyoo.\+Program\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classKyoo_1_1Program__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static async Task \mbox{\hyperlink{classKyoo_1_1Program_a1e66bffb629229e92970a56e521d56a0}{Main}} (string\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Main function of the program \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const string \mbox{\hyperlink{classKyoo_1_1Program_adf25b00aa615064d7b22e3c579c52f16}{Json\+Config\+Path}} = \char`\"{}./settings.\+json\char`\"{}
+\begin{DoxyCompactList}\small\item\em The path of the json configuration of the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static I\+Configuration\+Builder \mbox{\hyperlink{classKyoo_1_1Program_a9b923d003b48f57fe7f1d66e22b46339}{Setup\+Config}} (I\+Configuration\+Builder builder, string\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Register settings.\+json, environment variables and command lines arguments as configuration. \end{DoxyCompactList}\item 
+static I\+Web\+Host\+Builder \mbox{\hyperlink{classKyoo_1_1Program_a6f8b4bbc85a3c3fb09a03654aa41d81a}{Create\+Web\+Host\+Builder}} (string\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Create a a web host \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classKyoo_1_1Program}{Program}} entrypoint. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Program_a6f8b4bbc85a3c3fb09a03654aa41d81a}\label{classKyoo_1_1Program_a6f8b4bbc85a3c3fb09a03654aa41d81a}} 
+\index{Kyoo.Program@{Kyoo.Program}!CreateWebHostBuilder@{CreateWebHostBuilder}}
+\index{CreateWebHostBuilder@{CreateWebHostBuilder}!Kyoo.Program@{Kyoo.Program}}
+\doxysubsubsection{\texorpdfstring{CreateWebHostBuilder()}{CreateWebHostBuilder()}}
+{\footnotesize\ttfamily static I\+Web\+Host\+Builder Kyoo.\+Program.\+Create\+Web\+Host\+Builder (\begin{DoxyParamCaption}\item[{string\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Create a a web host 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Command line parameters that can be handled by kestrel\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new web host instance
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Program_a1e66bffb629229e92970a56e521d56a0}\label{classKyoo_1_1Program_a1e66bffb629229e92970a56e521d56a0}} 
+\index{Kyoo.Program@{Kyoo.Program}!Main@{Main}}
+\index{Main@{Main}!Kyoo.Program@{Kyoo.Program}}
+\doxysubsubsection{\texorpdfstring{Main()}{Main()}}
+{\footnotesize\ttfamily static async Task Kyoo.\+Program.\+Main (\begin{DoxyParamCaption}\item[{string\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Main function of the program 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Command line arguments\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKyoo_1_1Program_a9b923d003b48f57fe7f1d66e22b46339}\label{classKyoo_1_1Program_a9b923d003b48f57fe7f1d66e22b46339}} 
+\index{Kyoo.Program@{Kyoo.Program}!SetupConfig@{SetupConfig}}
+\index{SetupConfig@{SetupConfig}!Kyoo.Program@{Kyoo.Program}}
+\doxysubsubsection{\texorpdfstring{SetupConfig()}{SetupConfig()}}
+{\footnotesize\ttfamily static I\+Configuration\+Builder Kyoo.\+Program.\+Setup\+Config (\begin{DoxyParamCaption}\item[{I\+Configuration\+Builder}]{builder,  }\item[{string\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Register settings.\+json, environment variables and command lines arguments as configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em builder} & The configuration builder to use\\
+\hline
+{\em args} & The command line arguments\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modified configuration builder
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Program_adf25b00aa615064d7b22e3c579c52f16}\label{classKyoo_1_1Program_adf25b00aa615064d7b22e3c579c52f16}} 
+\index{Kyoo.Program@{Kyoo.Program}!JsonConfigPath@{JsonConfigPath}}
+\index{JsonConfigPath@{JsonConfigPath}!Kyoo.Program@{Kyoo.Program}}
+\doxysubsubsection{\texorpdfstring{JsonConfigPath}{JsonConfigPath}}
+{\footnotesize\ttfamily const string Kyoo.\+Program.\+Json\+Config\+Path = \char`\"{}./settings.\+json\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The path of the json configuration of the application. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\mbox{\hyperlink{Program_8cs}{Program.\+cs}}\end{DoxyCompactItemize}

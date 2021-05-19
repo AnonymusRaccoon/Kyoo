@@ -1,0 +1,117 @@
+\hypertarget{interfaceKyoo_1_1Controllers_1_1IProviderManager}{}\doxysection{Kyoo.\+Controllers.\+I\+Provider\+Manager Interface Reference}
+\label{interfaceKyoo_1_1Controllers_1_1IProviderManager}\index{Kyoo.Controllers.IProviderManager@{Kyoo.Controllers.IProviderManager}}
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+I\+Provider\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{interfaceKyoo_1_1Controllers_1_1IProviderManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+I\+Provider\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{interfaceKyoo_1_1Controllers_1_1IProviderManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Collection}{Collection}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderManager_a90280aeb8913244936baa9d5c0cd424b}{Get\+Collection\+From\+Name}} (string name, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderManager_a0534c147a6d31e45e426cf1466cff88a}{Complete\+Show}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} show, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderManager_ac4a6170fc70b223d5cd1c1046465af8d}{Search\+Show}} (string show\+Name, bool is\+Movie, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\item 
+Task$<$ I\+Enumerable$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} $>$ $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderManager_a365e2534eb53f3fa24356de95ecf582a}{Search\+Shows}} (string show\+Name, bool is\+Movie, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderManager_a86a8cc44b22813a980f64a2c63190488}{Get\+Season}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} show, int season\+Number, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderManager_a206799fb0967509040e3ef5a4a28f250}{Get\+Episode}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} show, string episode\+Path, int season\+Number, int episode\+Number, int absolute\+Number, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\item 
+Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$ $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderManager_a15882a720a320f6457ab640f4d46bd7e}{Get\+People}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} show, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IProviderManager_a0534c147a6d31e45e426cf1466cff88a}\label{interfaceKyoo_1_1Controllers_1_1IProviderManager_a0534c147a6d31e45e426cf1466cff88a}} 
+\index{Kyoo.Controllers.IProviderManager@{Kyoo.Controllers.IProviderManager}!CompleteShow@{CompleteShow}}
+\index{CompleteShow@{CompleteShow}!Kyoo.Controllers.IProviderManager@{Kyoo.Controllers.IProviderManager}}
+\doxysubsubsection{\texorpdfstring{CompleteShow()}{CompleteShow()}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}$>$ Kyoo.\+Controllers.\+I\+Provider\+Manager.\+Complete\+Show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{show,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_adefcdfe7a21caef55f3c1644a2bdbe5b}{Kyoo.\+Controllers.\+Provider\+Manager}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IProviderManager_a90280aeb8913244936baa9d5c0cd424b}\label{interfaceKyoo_1_1Controllers_1_1IProviderManager_a90280aeb8913244936baa9d5c0cd424b}} 
+\index{Kyoo.Controllers.IProviderManager@{Kyoo.Controllers.IProviderManager}!GetCollectionFromName@{GetCollectionFromName}}
+\index{GetCollectionFromName@{GetCollectionFromName}!Kyoo.Controllers.IProviderManager@{Kyoo.Controllers.IProviderManager}}
+\doxysubsubsection{\texorpdfstring{GetCollectionFromName()}{GetCollectionFromName()}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Collection}{Collection}}$>$ Kyoo.\+Controllers.\+I\+Provider\+Manager.\+Get\+Collection\+From\+Name (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_af4e9614809e8ba7f8187afa2fc9da5ed}{Kyoo.\+Controllers.\+Provider\+Manager}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IProviderManager_a206799fb0967509040e3ef5a4a28f250}\label{interfaceKyoo_1_1Controllers_1_1IProviderManager_a206799fb0967509040e3ef5a4a28f250}} 
+\index{Kyoo.Controllers.IProviderManager@{Kyoo.Controllers.IProviderManager}!GetEpisode@{GetEpisode}}
+\index{GetEpisode@{GetEpisode}!Kyoo.Controllers.IProviderManager@{Kyoo.Controllers.IProviderManager}}
+\doxysubsubsection{\texorpdfstring{GetEpisode()}{GetEpisode()}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+I\+Provider\+Manager.\+Get\+Episode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{show,  }\item[{string}]{episode\+Path,  }\item[{int}]{season\+Number,  }\item[{int}]{episode\+Number,  }\item[{int}]{absolute\+Number,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_a085f5a71746139129c1f802dc2e02d1e}{Kyoo.\+Controllers.\+Provider\+Manager}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IProviderManager_a15882a720a320f6457ab640f4d46bd7e}\label{interfaceKyoo_1_1Controllers_1_1IProviderManager_a15882a720a320f6457ab640f4d46bd7e}} 
+\index{Kyoo.Controllers.IProviderManager@{Kyoo.Controllers.IProviderManager}!GetPeople@{GetPeople}}
+\index{GetPeople@{GetPeople}!Kyoo.Controllers.IProviderManager@{Kyoo.Controllers.IProviderManager}}
+\doxysubsubsection{\texorpdfstring{GetPeople()}{GetPeople()}}
+{\footnotesize\ttfamily Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}$>$ $>$ Kyoo.\+Controllers.\+I\+Provider\+Manager.\+Get\+People (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{show,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_a27a2d97531926ef31e9122c037a9fef9}{Kyoo.\+Controllers.\+Provider\+Manager}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IProviderManager_a86a8cc44b22813a980f64a2c63190488}\label{interfaceKyoo_1_1Controllers_1_1IProviderManager_a86a8cc44b22813a980f64a2c63190488}} 
+\index{Kyoo.Controllers.IProviderManager@{Kyoo.Controllers.IProviderManager}!GetSeason@{GetSeason}}
+\index{GetSeason@{GetSeason}!Kyoo.Controllers.IProviderManager@{Kyoo.Controllers.IProviderManager}}
+\doxysubsubsection{\texorpdfstring{GetSeason()}{GetSeason()}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ Kyoo.\+Controllers.\+I\+Provider\+Manager.\+Get\+Season (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{show,  }\item[{int}]{season\+Number,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_aefa7c9e578d11e89e11da0eec77b3add}{Kyoo.\+Controllers.\+Provider\+Manager}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IProviderManager_ac4a6170fc70b223d5cd1c1046465af8d}\label{interfaceKyoo_1_1Controllers_1_1IProviderManager_ac4a6170fc70b223d5cd1c1046465af8d}} 
+\index{Kyoo.Controllers.IProviderManager@{Kyoo.Controllers.IProviderManager}!SearchShow@{SearchShow}}
+\index{SearchShow@{SearchShow}!Kyoo.Controllers.IProviderManager@{Kyoo.Controllers.IProviderManager}}
+\doxysubsubsection{\texorpdfstring{SearchShow()}{SearchShow()}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}$>$ Kyoo.\+Controllers.\+I\+Provider\+Manager.\+Search\+Show (\begin{DoxyParamCaption}\item[{string}]{show\+Name,  }\item[{bool}]{is\+Movie,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_a27e6cd137ec9aabc1d84484a8ea745b6}{Kyoo.\+Controllers.\+Provider\+Manager}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IProviderManager_a365e2534eb53f3fa24356de95ecf582a}\label{interfaceKyoo_1_1Controllers_1_1IProviderManager_a365e2534eb53f3fa24356de95ecf582a}} 
+\index{Kyoo.Controllers.IProviderManager@{Kyoo.Controllers.IProviderManager}!SearchShows@{SearchShows}}
+\index{SearchShows@{SearchShows}!Kyoo.Controllers.IProviderManager@{Kyoo.Controllers.IProviderManager}}
+\doxysubsubsection{\texorpdfstring{SearchShows()}{SearchShows()}}
+{\footnotesize\ttfamily Task$<$I\+Enumerable$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}$>$ $>$ Kyoo.\+Controllers.\+I\+Provider\+Manager.\+Search\+Shows (\begin{DoxyParamCaption}\item[{string}]{show\+Name,  }\item[{bool}]{is\+Movie,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_a1a6783fa2b621b37400b12b81be07353}{Kyoo.\+Controllers.\+Provider\+Manager}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Controllers/\mbox{\hyperlink{IProviderManager_8cs}{I\+Provider\+Manager.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="Kyoo.Startup" name="Kyoo.Startup">
+<area shape="rect" id="node1" title="The Startup class is used to configure the AspNet&#39;s webhost." alt="" coords="12,233,176,340"/>
+<area shape="rect" id="node2" href="$interfaceKyoo_1_1Controllers_1_1IPluginManager.html" title="A manager to load plugins and retrieve information from them." alt="" coords="5,5,183,171"/>
+</map>

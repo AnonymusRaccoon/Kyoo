@@ -1,0 +1,5 @@
+<map id="Kyoo.Controllers.Transcoder" name="Kyoo.Controllers.Transcoder">
+<area shape="rect" id="node1" title=" " alt="" coords="64,248,267,369"/>
+<area shape="rect" id="node2" href="$interfaceKyoo_1_1Controllers_1_1ITranscoder.html" title=" " alt="" coords="5,42,131,149"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1IFileManager.html" title="A service to abstract the file system to allow custom file systems (like distant file systems or exte..." alt="" coords="155,5,373,185"/>
+</map>

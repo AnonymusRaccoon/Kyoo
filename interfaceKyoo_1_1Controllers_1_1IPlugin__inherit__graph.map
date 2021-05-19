@@ -1,0 +1,6 @@
+<map id="Kyoo.Controllers.IPlugin" name="Kyoo.Controllers.IPlugin">
+<area shape="rect" id="node1" title="A common interface used to discord plugins" alt="" coords="276,5,453,185"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Authentication_1_1AuthenticationModule.html" title="A module that enable OpenID authentication for Kyoo." alt="" coords="5,233,257,472"/>
+<area shape="rect" id="node3" href="$classKyoo_1_1CoreModule.html" title="The core module containing default implementations" alt="" coords="281,255,448,450"/>
+<area shape="rect" id="node4" href="$classKyoo_1_1Postgresql_1_1PostgresModule.html" title="A module to add postgresql capacity to the app." alt="" coords="473,241,659,465"/>
+</map>

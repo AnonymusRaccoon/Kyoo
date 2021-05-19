@@ -1,0 +1,114 @@
+\hypertarget{structKyoo_1_1Controllers_1_1Sort}{}\doxysection{Kyoo.\+Controllers.\+Sort$<$ T $>$ Struct Template Reference}
+\label{structKyoo_1_1Controllers_1_1Sort}\index{Kyoo.Controllers.Sort$<$ T $>$@{Kyoo.Controllers.Sort$<$ T $>$}}
+
+
+Information about how a query should be sorted. What factor should decide the sort and in which order.  
+
+
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+Sort$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{structKyoo_1_1Controllers_1_1Sort__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort_a485c2dc03f00a0e19e703abf31bc0d68}{Sort}} (Expression$<$ Func$<$ T, object $>$$>$ key, bool descendant=false)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort_a485c2dc03f00a0e19e703abf31bc0d68}{Sort$<$\+T$>$}} instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort_a22c2711becda797e327141bac6b7bd28}{Sort}} (string sort\+By)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort_a485c2dc03f00a0e19e703abf31bc0d68}{Sort$<$\+T$>$}} instance from a key\textquotesingle{}s name (case insensitive). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Expression$<$ Func$<$ T, object $>$ $>$ \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort_a57ddbfc54fa858a6f2d6549abc007e69}{Key}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The sort key. This member will be used to sort the results. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort_a6187093374108596111f9dbc8c7057dd}{Descendant}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If this is set to true, items will be sorted in descend order else, they will be sorted in ascendant order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Information about how a query should be sorted. What factor should decide the sort and in which order. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & For witch type this sort applies\\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structKyoo_1_1Controllers_1_1Sort_a485c2dc03f00a0e19e703abf31bc0d68}\label{structKyoo_1_1Controllers_1_1Sort_a485c2dc03f00a0e19e703abf31bc0d68}} 
+\index{Kyoo.Controllers.Sort$<$ T $>$@{Kyoo.Controllers.Sort$<$ T $>$}!Sort@{Sort}}
+\index{Sort@{Sort}!Kyoo.Controllers.Sort$<$ T $>$@{Kyoo.Controllers.Sort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Sort()}{Sort()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Kyoo.\+Controllers.\+Sort}}$<$ T $>$.\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}} (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, object $>$$>$}]{key,  }\item[{bool}]{descendant = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort_a485c2dc03f00a0e19e703abf31bc0d68}{Sort$<$\+T$>$}} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The sort key given. It is assigned to \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort_a57ddbfc54fa858a6f2d6549abc007e69}{Key}}.\\
+\hline
+{\em descendant} & Should this be in descendant order? The default is false.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & If the given key is not a member.\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{structKyoo_1_1Controllers_1_1Sort_a22c2711becda797e327141bac6b7bd28}\label{structKyoo_1_1Controllers_1_1Sort_a22c2711becda797e327141bac6b7bd28}} 
+\index{Kyoo.Controllers.Sort$<$ T $>$@{Kyoo.Controllers.Sort$<$ T $>$}!Sort@{Sort}}
+\index{Sort@{Sort}!Kyoo.Controllers.Sort$<$ T $>$@{Kyoo.Controllers.Sort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Sort()}{Sort()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Kyoo.\+Controllers.\+Sort}}$<$ T $>$.\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}} (\begin{DoxyParamCaption}\item[{string}]{sort\+By }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort_a485c2dc03f00a0e19e703abf31bc0d68}{Sort$<$\+T$>$}} instance from a key\textquotesingle{}s name (case insensitive). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sort\+By} & A key name with an optional order specifier. Format\+: \char`\"{}key\+:asc\char`\"{}, \char`\"{}key\+:desc\char`\"{} or \char`\"{}key\char`\"{}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & An invalid key or sort specifier as been given.\\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{structKyoo_1_1Controllers_1_1Sort_a6187093374108596111f9dbc8c7057dd}\label{structKyoo_1_1Controllers_1_1Sort_a6187093374108596111f9dbc8c7057dd}} 
+\index{Kyoo.Controllers.Sort$<$ T $>$@{Kyoo.Controllers.Sort$<$ T $>$}!Descendant@{Descendant}}
+\index{Descendant@{Descendant}!Kyoo.Controllers.Sort$<$ T $>$@{Kyoo.Controllers.Sort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Descendant}{Descendant}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Kyoo.\+Controllers.\+Sort}}$<$ T $>$.Descendant\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+If this is set to true, items will be sorted in descend order else, they will be sorted in ascendant order. 
+
+\mbox{\Hypertarget{structKyoo_1_1Controllers_1_1Sort_a57ddbfc54fa858a6f2d6549abc007e69}\label{structKyoo_1_1Controllers_1_1Sort_a57ddbfc54fa858a6f2d6549abc007e69}} 
+\index{Kyoo.Controllers.Sort$<$ T $>$@{Kyoo.Controllers.Sort$<$ T $>$}!Key@{Key}}
+\index{Key@{Key}!Kyoo.Controllers.Sort$<$ T $>$@{Kyoo.Controllers.Sort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Key}{Key}}
+{\footnotesize\ttfamily Expression$<$Func$<$T, object$>$ $>$ \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Kyoo.\+Controllers.\+Sort}}$<$ T $>$.Key\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The sort key. This member will be used to sort the results. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Controllers/\mbox{\hyperlink{IRepository_8cs}{I\+Repository.\+cs}}\end{DoxyCompactItemize}

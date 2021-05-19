@@ -1,0 +1,93 @@
+\hypertarget{classKyoo_1_1Authentication_1_1Extensions}{}\doxysection{Kyoo.\+Authentication.\+Extensions Class Reference}
+\label{classKyoo_1_1Authentication_1_1Extensions}\index{Kyoo.Authentication.Extensions@{Kyoo.Authentication.Extensions}}
+
+
+Extension methods.  
+
+
+
+
+Collaboration diagram for Kyoo.\+Authentication.\+Extensions\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classKyoo_1_1Authentication_1_1Extensions__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static I\+Collection$<$ Claim $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Extensions_a45bb208b2fd3cb3348f6ad256a2d97ee}{Get\+Claims}} (this \mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}} user)
+\begin{DoxyCompactList}\small\item\em Get claims of an user. \end{DoxyCompactList}\item 
+static Identity\+Server\+User \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Extensions_ab535b449f35b466e582b298bfd467cb0}{To\+Identity\+User}} (this \mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}} user)
+\begin{DoxyCompactList}\small\item\em Convert a user to an Identity\+Server\+User. \end{DoxyCompactList}\item 
+static I\+Collection$<$ string $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Extensions_a9c38f40514d2edb53c02c83b6a4e5801}{Get\+Permissions}} (this Claims\+Principal user)
+\begin{DoxyCompactList}\small\item\em Get the permissions of an user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Extension methods. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Extensions_a45bb208b2fd3cb3348f6ad256a2d97ee}\label{classKyoo_1_1Authentication_1_1Extensions_a45bb208b2fd3cb3348f6ad256a2d97ee}} 
+\index{Kyoo.Authentication.Extensions@{Kyoo.Authentication.Extensions}!GetClaims@{GetClaims}}
+\index{GetClaims@{GetClaims}!Kyoo.Authentication.Extensions@{Kyoo.Authentication.Extensions}}
+\doxysubsubsection{\texorpdfstring{GetClaims()}{GetClaims()}}
+{\footnotesize\ttfamily static I\+Collection$<$Claim$>$ Kyoo.\+Authentication.\+Extensions.\+Get\+Claims (\begin{DoxyParamCaption}\item[{this \mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}}}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get claims of an user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The user concerned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list of claims the user has
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Extensions_a9c38f40514d2edb53c02c83b6a4e5801}\label{classKyoo_1_1Authentication_1_1Extensions_a9c38f40514d2edb53c02c83b6a4e5801}} 
+\index{Kyoo.Authentication.Extensions@{Kyoo.Authentication.Extensions}!GetPermissions@{GetPermissions}}
+\index{GetPermissions@{GetPermissions}!Kyoo.Authentication.Extensions@{Kyoo.Authentication.Extensions}}
+\doxysubsubsection{\texorpdfstring{GetPermissions()}{GetPermissions()}}
+{\footnotesize\ttfamily static I\+Collection$<$string$>$ Kyoo.\+Authentication.\+Extensions.\+Get\+Permissions (\begin{DoxyParamCaption}\item[{this Claims\+Principal}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the permissions of an user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list of permissions
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Extensions_ab535b449f35b466e582b298bfd467cb0}\label{classKyoo_1_1Authentication_1_1Extensions_ab535b449f35b466e582b298bfd467cb0}} 
+\index{Kyoo.Authentication.Extensions@{Kyoo.Authentication.Extensions}!ToIdentityUser@{ToIdentityUser}}
+\index{ToIdentityUser@{ToIdentityUser}!Kyoo.Authentication.Extensions@{Kyoo.Authentication.Extensions}}
+\doxysubsubsection{\texorpdfstring{ToIdentityUser()}{ToIdentityUser()}}
+{\footnotesize\ttfamily static Identity\+Server\+User Kyoo.\+Authentication.\+Extensions.\+To\+Identity\+User (\begin{DoxyParamCaption}\item[{this \mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}}}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert a user to an Identity\+Server\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The user to convert\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding identity server user.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Authentication/\mbox{\hyperlink{Kyoo_8Authentication_2Extensions_8cs}{Extensions.\+cs}}\end{DoxyCompactItemize}

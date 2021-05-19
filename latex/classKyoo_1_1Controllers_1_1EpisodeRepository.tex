@@ -1,0 +1,381 @@
+\hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository}{}\doxysection{Kyoo.\+Controllers.\+Episode\+Repository Class Reference}
+\label{classKyoo_1_1Controllers_1_1EpisodeRepository}\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+
+
+A local repository to handle episodes.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+Episode\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1Controllers_1_1EpisodeRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+Episode\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKyoo_1_1Controllers_1_1EpisodeRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_ac0a39b02977518d309429d60a19023b0}{Episode\+Repository}} (\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} database, \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{I\+Provider\+Repository}} providers, \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository}{I\+Show\+Repository}} shows, \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITrackRepository}{I\+Track\+Repository}} tracks)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository}{Episode\+Repository}}. \end{DoxyCompactList}\item 
+override async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a1675f22f10d2f9cc2dec2573787c3e17}{Get\+Or\+Default}} (int id)
+\item 
+override async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_ac90eac622541e414c194180900fa8dc6}{Get\+Or\+Default}} (string slug)
+\item 
+override async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a980067262939d6a8f8d9b7c35f28355b}{Get\+Or\+Default}} (Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}, bool $>$$>$ where)
+\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a800cebb6710e34bbc799c75f23062201}{Get\+Or\+Default}} (string show\+Slug, int season\+Number, int episode\+Number)
+\begin{DoxyCompactList}\small\item\em Get a episode from it\textquotesingle{}s show slug, it\textquotesingle{}s season\+Number and it\textquotesingle{}s episode number or null if it is not found. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a3801dc7ddad4329bbcd0917567292a7a}{Get}} (int show\+ID, int season\+Number, int episode\+Number)
+\begin{DoxyCompactList}\small\item\em Get a episode from it\textquotesingle{}s show\+ID, it\textquotesingle{}s season\+Number and it\textquotesingle{}s episode number. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a19002e9a63c84582e764413a64f9e95e}{Get}} (string show\+Slug, int season\+Number, int episode\+Number)
+\begin{DoxyCompactList}\small\item\em Get a episode from it\textquotesingle{}s show slug, it\textquotesingle{}s season\+Number and it\textquotesingle{}s episode number. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_ad46e45c550006ec9f578eabb6c1fe759}{Get\+Or\+Default}} (int show\+ID, int season\+Number, int episode\+Number)
+\begin{DoxyCompactList}\small\item\em Get a episode from it\textquotesingle{}s show\+ID, it\textquotesingle{}s season\+Number and it\textquotesingle{}s episode number or null if it is not found. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a5021f10d7bd5a47ff2c6cc85574be960}{Get\+Absolute}} (int show\+ID, int absolute\+Number)
+\begin{DoxyCompactList}\small\item\em Get a episode from it\textquotesingle{}s show\+ID and it\textquotesingle{}s absolute number. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_aa7e2894733430e2c8b0c245f746fdc08}{Get\+Absolute}} (string show\+Slug, int absolute\+Number)
+\begin{DoxyCompactList}\small\item\em Get a episode from it\textquotesingle{}s show\+ID and it\textquotesingle{}s absolute number. \end{DoxyCompactList}\item 
+override async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a13973a6645609489e3362575f162ef8e}{Search}} (string query)
+\item 
+override async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_ad93d9599f0844c04f6dd9289192a39bd}{Get\+All}} (Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}, bool $>$$>$ where=null, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ sort=default, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\item 
+override async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a322a272647c0c7e282ef0724785c3ad7}{Create}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} obj)
+\item 
+override async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a49cfa3e520749612d762439406c0c032}{Delete}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} obj)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a06a3cfb7e915f4ed570ada50554364b2}{Edit\+Relations}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} resource, \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} changed, bool reset\+Old)
+\item 
+override async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a1395d25358681a5218157c666f0d7946}{Validate}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} resource)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+override Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}, object $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_aac6eff04cf5436fb6eed2bf692130079}{Default\+Sort}} =$>$ x =$>$ x.\+Episode\+Number
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a3d4c54967f9707a38541be2370cd2a50}{Validate\+Tracks}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} resource)
+\begin{DoxyCompactList}\small\item\em Set track\textquotesingle{}s index and ensure that every tracks is well-\/formed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a0c94d8474a58717b3f291f6f029a345b}{\+\_\+database}}
+\begin{DoxyCompactList}\small\item\em The databse handle \end{DoxyCompactList}\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{I\+Provider\+Repository}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_aae79ae7adff6a6a86fa426e587429837}{\+\_\+providers}}
+\begin{DoxyCompactList}\small\item\em A provider repository to handle external\+ID creation and deletion \end{DoxyCompactList}\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository}{I\+Show\+Repository}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a302a1b10bbccbda5d0e3a5e81a8d7ecd}{\+\_\+shows}}
+\begin{DoxyCompactList}\small\item\em A show repository to get show\textquotesingle{}s slug from their ID and keep the slug in each episode. \end{DoxyCompactList}\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITrackRepository}{I\+Track\+Repository}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_ac603387c1f42f62fb7bba4d410bb7d22}{\+\_\+tracks}}
+\begin{DoxyCompactList}\small\item\em A track repository to handle creation and deletion of tracks related to the current episode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A local repository to handle episodes. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_ac0a39b02977518d309429d60a19023b0}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_ac0a39b02977518d309429d60a19023b0}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!EpisodeRepository@{EpisodeRepository}}
+\index{EpisodeRepository@{EpisodeRepository}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{EpisodeRepository()}{EpisodeRepository()}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+Episode\+Repository.\+Episode\+Repository (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}}}]{database,  }\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{I\+Provider\+Repository}}}]{providers,  }\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository}{I\+Show\+Repository}}}]{shows,  }\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITrackRepository}{I\+Track\+Repository}}}]{tracks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository}{Episode\+Repository}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & The database handle to use.\\
+\hline
+{\em providers} & A provider repository\\
+\hline
+{\em shows} & A show repository\\
+\hline
+{\em tracks} & A track repository\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_a322a272647c0c7e282ef0724785c3ad7}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_a322a272647c0c7e282ef0724785c3ad7}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!Create@{Create}}
+\index{Create@{Create}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily override async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+Episode\+Repository.\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_a49cfa3e520749612d762439406c0c032}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_a49cfa3e520749612d762439406c0c032}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!Delete@{Delete}}
+\index{Delete@{Delete}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily override async Task Kyoo.\+Controllers.\+Episode\+Repository.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_a06a3cfb7e915f4ed570ada50554364b2}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_a06a3cfb7e915f4ed570ada50554364b2}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!EditRelations@{EditRelations}}
+\index{EditRelations@{EditRelations}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{EditRelations()}{EditRelations()}}
+{\footnotesize\ttfamily override async Task Kyoo.\+Controllers.\+Episode\+Repository.\+Edit\+Relations (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}}]{resource,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}}]{changed,  }\item[{bool}]{reset\+Old }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_a3801dc7ddad4329bbcd0917567292a7a}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_a3801dc7ddad4329bbcd0917567292a7a}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+Episode\+Repository.\+Get (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{int}]{season\+Number,  }\item[{int}]{episode\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a episode from it\textquotesingle{}s show\+ID, it\textquotesingle{}s season\+Number and it\textquotesingle{}s episode number. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_acd0cd07b2348a5bd9cde169b70265539}{Kyoo.\+Controllers.\+I\+Episode\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_a19002e9a63c84582e764413a64f9e95e}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_a19002e9a63c84582e764413a64f9e95e}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+Episode\+Repository.\+Get (\begin{DoxyParamCaption}\item[{string}]{show\+Slug,  }\item[{int}]{season\+Number,  }\item[{int}]{episode\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a episode from it\textquotesingle{}s show slug, it\textquotesingle{}s season\+Number and it\textquotesingle{}s episode number. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_adb1cf3d34354f71de53ddd19610a237c}{Kyoo.\+Controllers.\+I\+Episode\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_a5021f10d7bd5a47ff2c6cc85574be960}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_a5021f10d7bd5a47ff2c6cc85574be960}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!GetAbsolute@{GetAbsolute}}
+\index{GetAbsolute@{GetAbsolute}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{GetAbsolute()}{GetAbsolute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+Episode\+Repository.\+Get\+Absolute (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{int}]{absolute\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a episode from it\textquotesingle{}s show\+ID and it\textquotesingle{}s absolute number. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_a02a3741c14a2c916d64d96475f563f55}{Kyoo.\+Controllers.\+I\+Episode\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_aa7e2894733430e2c8b0c245f746fdc08}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_aa7e2894733430e2c8b0c245f746fdc08}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!GetAbsolute@{GetAbsolute}}
+\index{GetAbsolute@{GetAbsolute}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{GetAbsolute()}{GetAbsolute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+Episode\+Repository.\+Get\+Absolute (\begin{DoxyParamCaption}\item[{string}]{show\+Slug,  }\item[{int}]{absolute\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a episode from it\textquotesingle{}s show\+ID and it\textquotesingle{}s absolute number. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_ae8cd75a8763d7c0333670b990b483bb8}{Kyoo.\+Controllers.\+I\+Episode\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_ad93d9599f0844c04f6dd9289192a39bd}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_ad93d9599f0844c04f6dd9289192a39bd}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{GetAll()}{GetAll()}}
+{\footnotesize\ttfamily override async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ $>$ Kyoo.\+Controllers.\+Episode\+Repository.\+Get\+All (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}, bool $>$$>$}]{where = {\ttfamily null},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$}]{sort = {\ttfamily default},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_a980067262939d6a8f8d9b7c35f28355b}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_a980067262939d6a8f8d9b7c35f28355b}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily override async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+Episode\+Repository.\+Get\+Or\+Default (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}, bool $>$$>$}]{where }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_a1675f22f10d2f9cc2dec2573787c3e17}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_a1675f22f10d2f9cc2dec2573787c3e17}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily override async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+Episode\+Repository.\+Get\+Or\+Default (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Reimplemented from \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a79bb32bb6616a9c57be4c9825b44c3f8}{Kyoo.\+Controllers.\+Local\+Repository$<$ Episode $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_ad46e45c550006ec9f578eabb6c1fe759}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_ad46e45c550006ec9f578eabb6c1fe759}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+Episode\+Repository.\+Get\+Or\+Default (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{int}]{season\+Number,  }\item[{int}]{episode\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a episode from it\textquotesingle{}s show\+ID, it\textquotesingle{}s season\+Number and it\textquotesingle{}s episode number or null if it is not found. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_a2f61209d221500930db7dcb5196aacc3}{Kyoo.\+Controllers.\+I\+Episode\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_a800cebb6710e34bbc799c75f23062201}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_a800cebb6710e34bbc799c75f23062201}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+Episode\+Repository.\+Get\+Or\+Default (\begin{DoxyParamCaption}\item[{string}]{show\+Slug,  }\item[{int}]{season\+Number,  }\item[{int}]{episode\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a episode from it\textquotesingle{}s show slug, it\textquotesingle{}s season\+Number and it\textquotesingle{}s episode number or null if it is not found. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_aacaf492d483320a784df41f275d7d9ac}{Kyoo.\+Controllers.\+I\+Episode\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_ac90eac622541e414c194180900fa8dc6}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_ac90eac622541e414c194180900fa8dc6}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily override async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+Episode\+Repository.\+Get\+Or\+Default (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Reimplemented from \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a0fc72df07e0cae1cbd24be315282cb90}{Kyoo.\+Controllers.\+Local\+Repository$<$ Episode $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_a13973a6645609489e3362575f162ef8e}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_a13973a6645609489e3362575f162ef8e}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!Search@{Search}}
+\index{Search@{Search}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily override async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ $>$ Kyoo.\+Controllers.\+Episode\+Repository.\+Search (\begin{DoxyParamCaption}\item[{string}]{query }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Implements \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a1ec5ba57aa01810e262bbfc02bd1fc3e}{Kyoo.\+Controllers.\+Local\+Repository$<$ Episode $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_a1395d25358681a5218157c666f0d7946}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_a1395d25358681a5218157c666f0d7946}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!Validate@{Validate}}
+\index{Validate@{Validate}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily override async Task Kyoo.\+Controllers.\+Episode\+Repository.\+Validate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}}]{resource }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_a3d4c54967f9707a38541be2370cd2a50}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_a3d4c54967f9707a38541be2370cd2a50}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!ValidateTracks@{ValidateTracks}}
+\index{ValidateTracks@{ValidateTracks}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{ValidateTracks()}{ValidateTracks()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+Episode\+Repository.\+Validate\+Tracks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}}]{resource }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Set track\textquotesingle{}s index and ensure that every tracks is well-\/formed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & The resource to fix.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The resource parameter is returnned.
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_a0c94d8474a58717b3f291f6f029a345b}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_a0c94d8474a58717b3f291f6f029a345b}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!\_database@{\_database}}
+\index{\_database@{\_database}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{\_database}{\_database}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} Kyoo.\+Controllers.\+Episode\+Repository.\+\_\+database\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The databse handle 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_aae79ae7adff6a6a86fa426e587429837}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_aae79ae7adff6a6a86fa426e587429837}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!\_providers@{\_providers}}
+\index{\_providers@{\_providers}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{\_providers}{\_providers}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{I\+Provider\+Repository}} Kyoo.\+Controllers.\+Episode\+Repository.\+\_\+providers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A provider repository to handle external\+ID creation and deletion 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_a302a1b10bbccbda5d0e3a5e81a8d7ecd}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_a302a1b10bbccbda5d0e3a5e81a8d7ecd}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!\_shows@{\_shows}}
+\index{\_shows@{\_shows}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{\_shows}{\_shows}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository}{I\+Show\+Repository}} Kyoo.\+Controllers.\+Episode\+Repository.\+\_\+shows\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A show repository to get show\textquotesingle{}s slug from their ID and keep the slug in each episode. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_ac603387c1f42f62fb7bba4d410bb7d22}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_ac603387c1f42f62fb7bba4d410bb7d22}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!\_tracks@{\_tracks}}
+\index{\_tracks@{\_tracks}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{\_tracks}{\_tracks}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITrackRepository}{I\+Track\+Repository}} Kyoo.\+Controllers.\+Episode\+Repository.\+\_\+tracks\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A track repository to handle creation and deletion of tracks related to the current episode. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1EpisodeRepository_aac6eff04cf5436fb6eed2bf692130079}\label{classKyoo_1_1Controllers_1_1EpisodeRepository_aac6eff04cf5436fb6eed2bf692130079}} 
+\index{Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}!DefaultSort@{DefaultSort}}
+\index{DefaultSort@{DefaultSort}!Kyoo.Controllers.EpisodeRepository@{Kyoo.Controllers.EpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{DefaultSort}{DefaultSort}}
+{\footnotesize\ttfamily override Expression$<$Func$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}, object$>$ $>$ Kyoo.\+Controllers.\+Episode\+Repository.\+Default\+Sort =$>$ x =$>$ x.\+Episode\+Number\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Controllers/\+Repositories/\mbox{\hyperlink{EpisodeRepository_8cs}{Episode\+Repository.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,157 @@
+\hypertarget{interfaceKyoo_1_1Controllers_1_1ISeasonRepository}{}\doxysection{Kyoo.\+Controllers.\+I\+Season\+Repository Interface Reference}
+\label{interfaceKyoo_1_1Controllers_1_1ISeasonRepository}\index{Kyoo.Controllers.ISeasonRepository@{Kyoo.Controllers.ISeasonRepository}}
+
+
+A repository to handle seasons.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+I\+Season\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{interfaceKyoo_1_1Controllers_1_1ISeasonRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+I\+Season\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{interfaceKyoo_1_1Controllers_1_1ISeasonRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ISeasonRepository_a7af18e0fdfda779421e5d176c10cdf9a}{Get}} (int show\+ID, int season\+Number)
+\begin{DoxyCompactList}\small\item\em Get a season from it\textquotesingle{}s show\+ID and it\textquotesingle{}s season\+Number \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ISeasonRepository_ab06f6f123d8c1743a9fc27aec2218478}{Get}} (string show\+Slug, int season\+Number)
+\begin{DoxyCompactList}\small\item\em Get a season from it\textquotesingle{}s show slug and it\textquotesingle{}s season\+Number \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ISeasonRepository_a7b8111ebfa5d8692a286bb6464486263}{Get\+Or\+Default}} (int show\+ID, int season\+Number)
+\begin{DoxyCompactList}\small\item\em Get a season from it\textquotesingle{}s show\+ID and it\textquotesingle{}s season\+Number or null if it is not found. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ISeasonRepository_aa6ec6bf40bb6af8a9b8b034ae9beb3bb}{Get\+Or\+Default}} (string show\+Slug, int season\+Number)
+\begin{DoxyCompactList}\small\item\em Get a season from it\textquotesingle{}s show slug and it\textquotesingle{}s season\+Number or null if it is not found. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A repository to handle seasons. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ISeasonRepository_a7af18e0fdfda779421e5d176c10cdf9a}\label{interfaceKyoo_1_1Controllers_1_1ISeasonRepository_a7af18e0fdfda779421e5d176c10cdf9a}} 
+\index{Kyoo.Controllers.ISeasonRepository@{Kyoo.Controllers.ISeasonRepository}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.ISeasonRepository@{Kyoo.Controllers.ISeasonRepository}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ Kyoo.\+Controllers.\+I\+Season\+Repository.\+Get (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{int}]{season\+Number }\end{DoxyParamCaption})}
+
+
+
+Get a season from it\textquotesingle{}s show\+ID and it\textquotesingle{}s season\+Number 
+
+
+\begin{DoxyParams}{Parameters}
+{\em show\+ID} & The id of the show\\
+\hline
+{\em season\+Number} & The season\textquotesingle{}s number\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The season found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_ab3e0c57c2eeb812ade9a61fb6fe86d7d}{Kyoo.\+Controllers.\+Season\+Repository}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ISeasonRepository_ab06f6f123d8c1743a9fc27aec2218478}\label{interfaceKyoo_1_1Controllers_1_1ISeasonRepository_ab06f6f123d8c1743a9fc27aec2218478}} 
+\index{Kyoo.Controllers.ISeasonRepository@{Kyoo.Controllers.ISeasonRepository}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.ISeasonRepository@{Kyoo.Controllers.ISeasonRepository}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ Kyoo.\+Controllers.\+I\+Season\+Repository.\+Get (\begin{DoxyParamCaption}\item[{string}]{show\+Slug,  }\item[{int}]{season\+Number }\end{DoxyParamCaption})}
+
+
+
+Get a season from it\textquotesingle{}s show slug and it\textquotesingle{}s season\+Number 
+
+
+\begin{DoxyParams}{Parameters}
+{\em show\+Slug} & The slug of the show\\
+\hline
+{\em season\+Number} & The season\textquotesingle{}s number\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The season found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_a91d851271401c75b93ae5080092a2f0f}{Kyoo.\+Controllers.\+Season\+Repository}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ISeasonRepository_a7b8111ebfa5d8692a286bb6464486263}\label{interfaceKyoo_1_1Controllers_1_1ISeasonRepository_a7b8111ebfa5d8692a286bb6464486263}} 
+\index{Kyoo.Controllers.ISeasonRepository@{Kyoo.Controllers.ISeasonRepository}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.ISeasonRepository@{Kyoo.Controllers.ISeasonRepository}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ Kyoo.\+Controllers.\+I\+Season\+Repository.\+Get\+Or\+Default (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{int}]{season\+Number }\end{DoxyParamCaption})}
+
+
+
+Get a season from it\textquotesingle{}s show\+ID and it\textquotesingle{}s season\+Number or null if it is not found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em show\+ID} & The id of the show\\
+\hline
+{\em season\+Number} & The season\textquotesingle{}s number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The season found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_a6a09a16bc1e31e220fe756a289b8ce87}{Kyoo.\+Controllers.\+Season\+Repository}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ISeasonRepository_aa6ec6bf40bb6af8a9b8b034ae9beb3bb}\label{interfaceKyoo_1_1Controllers_1_1ISeasonRepository_aa6ec6bf40bb6af8a9b8b034ae9beb3bb}} 
+\index{Kyoo.Controllers.ISeasonRepository@{Kyoo.Controllers.ISeasonRepository}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.ISeasonRepository@{Kyoo.Controllers.ISeasonRepository}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ Kyoo.\+Controllers.\+I\+Season\+Repository.\+Get\+Or\+Default (\begin{DoxyParamCaption}\item[{string}]{show\+Slug,  }\item[{int}]{season\+Number }\end{DoxyParamCaption})}
+
+
+
+Get a season from it\textquotesingle{}s show slug and it\textquotesingle{}s season\+Number or null if it is not found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em show\+Slug} & The slug of the show\\
+\hline
+{\em season\+Number} & The season\textquotesingle{}s number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The season found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_ae0dfac32484553a1a24c6ba19a91b162}{Kyoo.\+Controllers.\+Season\+Repository}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Controllers/\mbox{\hyperlink{IRepository_8cs}{I\+Repository.\+cs}}\end{DoxyCompactItemize}

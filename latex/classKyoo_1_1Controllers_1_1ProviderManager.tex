@@ -1,0 +1,165 @@
+\hypertarget{classKyoo_1_1Controllers_1_1ProviderManager}{}\doxysection{Kyoo.\+Controllers.\+Provider\+Manager Class Reference}
+\label{classKyoo_1_1Controllers_1_1ProviderManager}\index{Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}}
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+Provider\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classKyoo_1_1Controllers_1_1ProviderManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+Provider\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classKyoo_1_1Controllers_1_1ProviderManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_a98eb3f2f08c59f666d47849f8381c52c}{Provider\+Manager}} (\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager}{I\+Plugin\+Manager}} plugin\+Manager)
+\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Collection}{Collection}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_af4e9614809e8ba7f8187afa2fc9da5ed}{Get\+Collection\+From\+Name}} (string name, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_adefcdfe7a21caef55f3c1644a2bdbe5b}{Complete\+Show}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} show, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_a27e6cd137ec9aabc1d84484a8ea745b6}{Search\+Show}} (string show\+Name, bool is\+Movie, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\item 
+async Task$<$ I\+Enumerable$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_a1a6783fa2b621b37400b12b81be07353}{Search\+Shows}} (string show\+Name, bool is\+Movie, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_aefa7c9e578d11e89e11da0eec77b3add}{Get\+Season}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} show, int season\+Number, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_a085f5a71746139129c1f802dc2e02d1e}{Get\+Episode}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} show, string episode\+Path, int season\+Number, int episode\+Number, int absolute\+Number, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\item 
+async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_a27a2d97531926ef31e9122c037a9fef9}{Get\+People}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} show, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task$<$ T $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_a1994359110b44a3486a4b88abcf9686a}{Get\+Metadata$<$ T $>$}} (Func$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IMetadataProvider}{I\+Metadata\+Provider}}, Task$<$ T $>$$>$ provider\+Call, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library, string what)
+\item 
+async Task$<$ List$<$ T $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_a503d74ace1de2b9b1d7e8f9a0d61e538}{Get\+Metadata$<$ T $>$}} (Func$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IMetadataProvider}{I\+Metadata\+Provider}}, Task$<$ I\+Collection$<$ T $>$$>$$>$ provider\+Call, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library, string what)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly I\+Enumerable$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IMetadataProvider}{I\+Metadata\+Provider}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager_a198dce8fc155ec61116be19fbf7cfb99}{\+\_\+providers}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderManager_a98eb3f2f08c59f666d47849f8381c52c}\label{classKyoo_1_1Controllers_1_1ProviderManager_a98eb3f2f08c59f666d47849f8381c52c}} 
+\index{Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}!ProviderManager@{ProviderManager}}
+\index{ProviderManager@{ProviderManager}!Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}}
+\doxysubsubsection{\texorpdfstring{ProviderManager()}{ProviderManager()}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+Provider\+Manager.\+Provider\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager}{I\+Plugin\+Manager}}}]{plugin\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderManager_adefcdfe7a21caef55f3c1644a2bdbe5b}\label{classKyoo_1_1Controllers_1_1ProviderManager_adefcdfe7a21caef55f3c1644a2bdbe5b}} 
+\index{Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}!CompleteShow@{CompleteShow}}
+\index{CompleteShow@{CompleteShow}!Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}}
+\doxysubsubsection{\texorpdfstring{CompleteShow()}{CompleteShow()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}$>$ Kyoo.\+Controllers.\+Provider\+Manager.\+Complete\+Show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{show,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderManager_a0534c147a6d31e45e426cf1466cff88a}{Kyoo.\+Controllers.\+I\+Provider\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderManager_af4e9614809e8ba7f8187afa2fc9da5ed}\label{classKyoo_1_1Controllers_1_1ProviderManager_af4e9614809e8ba7f8187afa2fc9da5ed}} 
+\index{Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}!GetCollectionFromName@{GetCollectionFromName}}
+\index{GetCollectionFromName@{GetCollectionFromName}!Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}}
+\doxysubsubsection{\texorpdfstring{GetCollectionFromName()}{GetCollectionFromName()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Collection}{Collection}}$>$ Kyoo.\+Controllers.\+Provider\+Manager.\+Get\+Collection\+From\+Name (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderManager_a90280aeb8913244936baa9d5c0cd424b}{Kyoo.\+Controllers.\+I\+Provider\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderManager_a085f5a71746139129c1f802dc2e02d1e}\label{classKyoo_1_1Controllers_1_1ProviderManager_a085f5a71746139129c1f802dc2e02d1e}} 
+\index{Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}!GetEpisode@{GetEpisode}}
+\index{GetEpisode@{GetEpisode}!Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}}
+\doxysubsubsection{\texorpdfstring{GetEpisode()}{GetEpisode()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+Provider\+Manager.\+Get\+Episode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{show,  }\item[{string}]{episode\+Path,  }\item[{int}]{season\+Number,  }\item[{int}]{episode\+Number,  }\item[{int}]{absolute\+Number,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderManager_a206799fb0967509040e3ef5a4a28f250}{Kyoo.\+Controllers.\+I\+Provider\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderManager_a503d74ace1de2b9b1d7e8f9a0d61e538}\label{classKyoo_1_1Controllers_1_1ProviderManager_a503d74ace1de2b9b1d7e8f9a0d61e538}} 
+\index{Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}!GetMetadata$<$ T $>$@{GetMetadata$<$ T $>$}}
+\index{GetMetadata$<$ T $>$@{GetMetadata$<$ T $>$}!Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}}
+\doxysubsubsection{\texorpdfstring{GetMetadata$<$ T $>$()}{GetMetadata< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$List$<$T$>$ $>$ Kyoo.\+Controllers.\+Provider\+Manager.\+Get\+Metadata$<$ T $>$ (\begin{DoxyParamCaption}\item[{Func$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IMetadataProvider}{I\+Metadata\+Provider}}, Task$<$ I\+Collection$<$ T $>$$>$$>$}]{provider\+Call,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library,  }\item[{string}]{what }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderManager_a1994359110b44a3486a4b88abcf9686a}\label{classKyoo_1_1Controllers_1_1ProviderManager_a1994359110b44a3486a4b88abcf9686a}} 
+\index{Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}!GetMetadata$<$ T $>$@{GetMetadata$<$ T $>$}}
+\index{GetMetadata$<$ T $>$@{GetMetadata$<$ T $>$}!Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}}
+\doxysubsubsection{\texorpdfstring{GetMetadata$<$ T $>$()}{GetMetadata< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$T$>$ Kyoo.\+Controllers.\+Provider\+Manager.\+Get\+Metadata$<$ T $>$ (\begin{DoxyParamCaption}\item[{Func$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IMetadataProvider}{I\+Metadata\+Provider}}, Task$<$ T $>$$>$}]{provider\+Call,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library,  }\item[{string}]{what }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderManager_a27a2d97531926ef31e9122c037a9fef9}\label{classKyoo_1_1Controllers_1_1ProviderManager_a27a2d97531926ef31e9122c037a9fef9}} 
+\index{Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}!GetPeople@{GetPeople}}
+\index{GetPeople@{GetPeople}!Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}}
+\doxysubsubsection{\texorpdfstring{GetPeople()}{GetPeople()}}
+{\footnotesize\ttfamily async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}$>$ $>$ Kyoo.\+Controllers.\+Provider\+Manager.\+Get\+People (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{show,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderManager_a15882a720a320f6457ab640f4d46bd7e}{Kyoo.\+Controllers.\+I\+Provider\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderManager_aefa7c9e578d11e89e11da0eec77b3add}\label{classKyoo_1_1Controllers_1_1ProviderManager_aefa7c9e578d11e89e11da0eec77b3add}} 
+\index{Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}!GetSeason@{GetSeason}}
+\index{GetSeason@{GetSeason}!Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}}
+\doxysubsubsection{\texorpdfstring{GetSeason()}{GetSeason()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ Kyoo.\+Controllers.\+Provider\+Manager.\+Get\+Season (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{show,  }\item[{int}]{season\+Number,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderManager_a86a8cc44b22813a980f64a2c63190488}{Kyoo.\+Controllers.\+I\+Provider\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderManager_a27e6cd137ec9aabc1d84484a8ea745b6}\label{classKyoo_1_1Controllers_1_1ProviderManager_a27e6cd137ec9aabc1d84484a8ea745b6}} 
+\index{Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}!SearchShow@{SearchShow}}
+\index{SearchShow@{SearchShow}!Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}}
+\doxysubsubsection{\texorpdfstring{SearchShow()}{SearchShow()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}$>$ Kyoo.\+Controllers.\+Provider\+Manager.\+Search\+Show (\begin{DoxyParamCaption}\item[{string}]{show\+Name,  }\item[{bool}]{is\+Movie,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderManager_ac4a6170fc70b223d5cd1c1046465af8d}{Kyoo.\+Controllers.\+I\+Provider\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderManager_a1a6783fa2b621b37400b12b81be07353}\label{classKyoo_1_1Controllers_1_1ProviderManager_a1a6783fa2b621b37400b12b81be07353}} 
+\index{Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}!SearchShows@{SearchShows}}
+\index{SearchShows@{SearchShows}!Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}}
+\doxysubsubsection{\texorpdfstring{SearchShows()}{SearchShows()}}
+{\footnotesize\ttfamily async Task$<$I\+Enumerable$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}$>$ $>$ Kyoo.\+Controllers.\+Provider\+Manager.\+Search\+Shows (\begin{DoxyParamCaption}\item[{string}]{show\+Name,  }\item[{bool}]{is\+Movie,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderManager_a365e2534eb53f3fa24356de95ecf582a}{Kyoo.\+Controllers.\+I\+Provider\+Manager}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderManager_a198dce8fc155ec61116be19fbf7cfb99}\label{classKyoo_1_1Controllers_1_1ProviderManager_a198dce8fc155ec61116be19fbf7cfb99}} 
+\index{Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}!\_providers@{\_providers}}
+\index{\_providers@{\_providers}!Kyoo.Controllers.ProviderManager@{Kyoo.Controllers.ProviderManager}}
+\doxysubsubsection{\texorpdfstring{\_providers}{\_providers}}
+{\footnotesize\ttfamily readonly I\+Enumerable$<$\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IMetadataProvider}{I\+Metadata\+Provider}}$>$ Kyoo.\+Controllers.\+Provider\+Manager.\+\_\+providers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Controllers/\mbox{\hyperlink{ProviderManager_8cs}{Provider\+Manager.\+cs}}\end{DoxyCompactItemize}

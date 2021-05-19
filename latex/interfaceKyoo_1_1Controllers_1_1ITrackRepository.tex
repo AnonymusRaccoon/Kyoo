@@ -1,0 +1,100 @@
+\hypertarget{interfaceKyoo_1_1Controllers_1_1ITrackRepository}{}\doxysection{Kyoo.\+Controllers.\+I\+Track\+Repository Interface Reference}
+\label{interfaceKyoo_1_1Controllers_1_1ITrackRepository}\index{Kyoo.Controllers.ITrackRepository@{Kyoo.Controllers.ITrackRepository}}
+
+
+A repository to handle tracks  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+I\+Track\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{interfaceKyoo_1_1Controllers_1_1ITrackRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+I\+Track\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{interfaceKyoo_1_1Controllers_1_1ITrackRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITrackRepository_adc7c0a0de8177c21abb0c459912e3155}{Get}} (string slug, \mbox{\hyperlink{namespaceKyoo_1_1Models_ae50c4d5a9549b79e0cd3e91c5c42ef35}{Stream\+Type}} type=Stream\+Type.\+Unknown)
+\begin{DoxyCompactList}\small\item\em Get a track from it\textquotesingle{}s slug and it\textquotesingle{}s type. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITrackRepository_af678e57bc0c3a3f0cc3cf5296723b902}{Get\+Or\+Default}} (string slug, \mbox{\hyperlink{namespaceKyoo_1_1Models_ae50c4d5a9549b79e0cd3e91c5c42ef35}{Stream\+Type}} type=Stream\+Type.\+Unknown)
+\begin{DoxyCompactList}\small\item\em Get a track from it\textquotesingle{}s slug and it\textquotesingle{}s type or null if it is not found. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A repository to handle tracks 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ITrackRepository_adc7c0a0de8177c21abb0c459912e3155}\label{interfaceKyoo_1_1Controllers_1_1ITrackRepository_adc7c0a0de8177c21abb0c459912e3155}} 
+\index{Kyoo.Controllers.ITrackRepository@{Kyoo.Controllers.ITrackRepository}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.ITrackRepository@{Kyoo.Controllers.ITrackRepository}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}}$>$ Kyoo.\+Controllers.\+I\+Track\+Repository.\+Get (\begin{DoxyParamCaption}\item[{string}]{slug,  }\item[{\mbox{\hyperlink{namespaceKyoo_1_1Models_ae50c4d5a9549b79e0cd3e91c5c42ef35}{Stream\+Type}}}]{type = {\ttfamily StreamType.Unknown} }\end{DoxyParamCaption})}
+
+
+
+Get a track from it\textquotesingle{}s slug and it\textquotesingle{}s type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slug} & The slug of the track\\
+\hline
+{\em type} & The type (Video, Audio or Subtitle)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The track found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TrackRepository_a205b2e8c60821149d54350c9f9a31021}{Kyoo.\+Controllers.\+Track\+Repository}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ITrackRepository_af678e57bc0c3a3f0cc3cf5296723b902}\label{interfaceKyoo_1_1Controllers_1_1ITrackRepository_af678e57bc0c3a3f0cc3cf5296723b902}} 
+\index{Kyoo.Controllers.ITrackRepository@{Kyoo.Controllers.ITrackRepository}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.ITrackRepository@{Kyoo.Controllers.ITrackRepository}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}}$>$ Kyoo.\+Controllers.\+I\+Track\+Repository.\+Get\+Or\+Default (\begin{DoxyParamCaption}\item[{string}]{slug,  }\item[{\mbox{\hyperlink{namespaceKyoo_1_1Models_ae50c4d5a9549b79e0cd3e91c5c42ef35}{Stream\+Type}}}]{type = {\ttfamily StreamType.Unknown} }\end{DoxyParamCaption})}
+
+
+
+Get a track from it\textquotesingle{}s slug and it\textquotesingle{}s type or null if it is not found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slug} & The slug of the track\\
+\hline
+{\em type} & The type (Video, Audio or Subtitle)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The track found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TrackRepository_abeb0e5eb887b09222fe52d125e37d226}{Kyoo.\+Controllers.\+Track\+Repository}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Controllers/\mbox{\hyperlink{IRepository_8cs}{I\+Repository.\+cs}}\end{DoxyCompactItemize}

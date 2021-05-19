@@ -1,0 +1,5 @@
+<map id="Kyoo.Api.SearchApi" name="Kyoo.Api.SearchApi">
+<area shape="rect" id="node1" title=" " alt="" coords="70,453,233,633"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,159,124,237"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1ILibraryManager.html" title="An interface to interract with the database. Every repository is mapped through here." alt="" coords="148,5,331,391"/>
+</map>

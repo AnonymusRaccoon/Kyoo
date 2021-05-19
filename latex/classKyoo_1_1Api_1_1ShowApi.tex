@@ -1,0 +1,227 @@
+\hypertarget{classKyoo_1_1Api_1_1ShowApi}{}\doxysection{Kyoo.\+Api.\+Show\+Api Class Reference}
+\label{classKyoo_1_1Api_1_1ShowApi}\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+
+
+Inheritance diagram for Kyoo.\+Api.\+Show\+Api\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classKyoo_1_1Api_1_1ShowApi__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Api.\+Show\+Api\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKyoo_1_1Api_1_1ShowApi__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_aa568ad3d4edd8cb3847e5275e9941c68}{Show\+Api}} (\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}} library\+Manager, \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}} files, \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IThumbnailsManager}{I\+Thumbnails\+Manager}} thumbs, I\+Options$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Options_1_1BasicOptions}{Basic\+Options}} $>$ options)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_a685292b7d0277ce66ef4d597cbd5fea1}{Get\+Seasons}} (int show\+ID, \mbox{[}From\+Query\mbox{]} string sort\+By, \mbox{[}From\+Query\mbox{]} int after\+ID, \mbox{[}From\+Query\mbox{]} Dictionary$<$ string, string $>$ where, \mbox{[}From\+Query\mbox{]} int limit=20)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_a7a620c8b194688c0a1fd3b01ba47efc0}{Get\+Seasons}} (string slug, \mbox{[}From\+Query\mbox{]} string sort\+By, \mbox{[}From\+Query\mbox{]} int after\+ID, \mbox{[}From\+Query\mbox{]} Dictionary$<$ string, string $>$ where, \mbox{[}From\+Query\mbox{]} int limit=20)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_ab59095843993cd08f34396e23a6bac81}{Get\+Episodes}} (int show\+ID, \mbox{[}From\+Query\mbox{]} string sort\+By, \mbox{[}From\+Query\mbox{]} int after\+ID, \mbox{[}From\+Query\mbox{]} Dictionary$<$ string, string $>$ where, \mbox{[}From\+Query\mbox{]} int limit=50)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_a5495a026bc7101a08db2cfe544fe94ab}{Get\+Episodes}} (string slug, \mbox{[}From\+Query\mbox{]} string sort\+By, \mbox{[}From\+Query\mbox{]} int after\+ID, \mbox{[}From\+Query\mbox{]} Dictionary$<$ string, string $>$ where, \mbox{[}From\+Query\mbox{]} int limit=50)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$ $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_a876106ed7de657a928eff2e8ec714874}{Get\+People}} (int show\+ID, \mbox{[}From\+Query\mbox{]} string sort\+By, \mbox{[}From\+Query\mbox{]} int after\+ID, \mbox{[}From\+Query\mbox{]} Dictionary$<$ string, string $>$ where, \mbox{[}From\+Query\mbox{]} int limit=30)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$ $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_a6bab30f9e97f9e488dda05a3df573137}{Get\+People}} (string slug, \mbox{[}From\+Query\mbox{]} string sort\+By, \mbox{[}From\+Query\mbox{]} int after\+ID, \mbox{[}From\+Query\mbox{]} Dictionary$<$ string, string $>$ where, \mbox{[}From\+Query\mbox{]} int limit=30)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Genre}{Genre}} $>$ $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_a6d4659c1fd05f2eca4ea14a5fb5a5c04}{Get\+Genres}} (int show\+ID, \mbox{[}From\+Query\mbox{]} string sort\+By, \mbox{[}From\+Query\mbox{]} int after\+ID, \mbox{[}From\+Query\mbox{]} Dictionary$<$ string, string $>$ where, \mbox{[}From\+Query\mbox{]} int limit=30)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Genre}{Genre}} $>$ $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_a902d5bfce64ec63daa9b3963db2a34f0}{Get\+Genre}} (string slug, \mbox{[}From\+Query\mbox{]} string sort\+By, \mbox{[}From\+Query\mbox{]} int after\+ID, \mbox{[}From\+Query\mbox{]} Dictionary$<$ string, string $>$ where, \mbox{[}From\+Query\mbox{]} int limit=30)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Studio}{Studio}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_a27a2801ae77283ce254c4544907ebee3}{Get\+Studio}} (int show\+ID)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Studio}{Studio}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_ab87814f9bc54576a9ef22a3768c51255}{Get\+Studio}} (string slug)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} $>$ $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_a5f0392998bac78b1a6a24b1fce89e38b}{Get\+Libraries}} (int show\+ID, \mbox{[}From\+Query\mbox{]} string sort\+By, \mbox{[}From\+Query\mbox{]} int after\+ID, \mbox{[}From\+Query\mbox{]} Dictionary$<$ string, string $>$ where, \mbox{[}From\+Query\mbox{]} int limit=30)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} $>$ $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_acc5ff268bc84431aafa2af64e7c6413c}{Get\+Libraries}} (string slug, \mbox{[}From\+Query\mbox{]} string sort\+By, \mbox{[}From\+Query\mbox{]} int after\+ID, \mbox{[}From\+Query\mbox{]} Dictionary$<$ string, string $>$ where, \mbox{[}From\+Query\mbox{]} int limit=30)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Collection}{Collection}} $>$ $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_a450f68ecd43b2550725d2ca51d6668c1}{Get\+Collections}} (int show\+ID, \mbox{[}From\+Query\mbox{]} string sort\+By, \mbox{[}From\+Query\mbox{]} int after\+ID, \mbox{[}From\+Query\mbox{]} Dictionary$<$ string, string $>$ where, \mbox{[}From\+Query\mbox{]} int limit=30)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Collection}{Collection}} $>$ $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_aa2a621a0ade477f26dcc02b91c9e46e9}{Get\+Collections}} (string slug, \mbox{[}From\+Query\mbox{]} string sort\+By, \mbox{[}From\+Query\mbox{]} int after\+ID, \mbox{[}From\+Query\mbox{]} Dictionary$<$ string, string $>$ where, \mbox{[}From\+Query\mbox{]} int limit=30)
+\item 
+async Task$<$ Action\+Result$<$ Dictionary$<$ string, string $>$ $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_aba6f985903317339a527e26155401134}{Get\+Fonts}} (string slug)
+\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_acdff7af0123290e3bf9ccf2fa165d7fa}{Get\+Font}} (string show\+Slug, string slug)
+\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_a8f5ee6a78092e6a9cf8a19d2dd6cec61}{Get\+Poster}} (string slug)
+\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_a4950527812aa9ec7f45dd8151197ccbb}{Get\+Logo}} (string slug)
+\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_a65644e217f03b51850b767a85a680ff3}{Get\+Backdrop}} (string slug)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}} \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_ab9b08a59776c9bb418ad1455703f2800}{\+\_\+library\+Manager}}
+\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}} \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_a52b4f1cd8f4af4ff79a777c7d5506ed3}{\+\_\+files}}
+\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IThumbnailsManager}{I\+Thumbnails\+Manager}} \mbox{\hyperlink{classKyoo_1_1Api_1_1ShowApi_a6c5d74e9f3f3bcb8bae385f6e6152f70}{\+\_\+thumbs}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_aa568ad3d4edd8cb3847e5275e9941c68}\label{classKyoo_1_1Api_1_1ShowApi_aa568ad3d4edd8cb3847e5275e9941c68}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!ShowApi@{ShowApi}}
+\index{ShowApi@{ShowApi}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{ShowApi()}{ShowApi()}}
+{\footnotesize\ttfamily Kyoo.\+Api.\+Show\+Api.\+Show\+Api (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}}}]{library\+Manager,  }\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}}}]{files,  }\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IThumbnailsManager}{I\+Thumbnails\+Manager}}}]{thumbs,  }\item[{I\+Options$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Options_1_1BasicOptions}{Basic\+Options}} $>$}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_a65644e217f03b51850b767a85a680ff3}\label{classKyoo_1_1Api_1_1ShowApi_a65644e217f03b51850b767a85a680ff3}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetBackdrop@{GetBackdrop}}
+\index{GetBackdrop@{GetBackdrop}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetBackdrop()}{GetBackdrop()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Kyoo.\+Api.\+Show\+Api.\+Get\+Backdrop (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_a450f68ecd43b2550725d2ca51d6668c1}\label{classKyoo_1_1Api_1_1ShowApi_a450f68ecd43b2550725d2ca51d6668c1}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetCollections@{GetCollections}}
+\index{GetCollections@{GetCollections}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetCollections()}{GetCollections()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Collection}{Collection}}$>$ $>$ $>$ Kyoo.\+Api.\+Show\+Api.\+Get\+Collections (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} string}]{sort\+By,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{after\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} Dictionary$<$ string, string $>$}]{where,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{limit = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_aa2a621a0ade477f26dcc02b91c9e46e9}\label{classKyoo_1_1Api_1_1ShowApi_aa2a621a0ade477f26dcc02b91c9e46e9}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetCollections@{GetCollections}}
+\index{GetCollections@{GetCollections}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetCollections()}{GetCollections()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Collection}{Collection}}$>$ $>$ $>$ Kyoo.\+Api.\+Show\+Api.\+Get\+Collections (\begin{DoxyParamCaption}\item[{string}]{slug,  }\item[{\mbox{[}\+From\+Query\mbox{]} string}]{sort\+By,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{after\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} Dictionary$<$ string, string $>$}]{where,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{limit = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_ab59095843993cd08f34396e23a6bac81}\label{classKyoo_1_1Api_1_1ShowApi_ab59095843993cd08f34396e23a6bac81}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetEpisodes@{GetEpisodes}}
+\index{GetEpisodes@{GetEpisodes}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetEpisodes()}{GetEpisodes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ $>$ $>$ Kyoo.\+Api.\+Show\+Api.\+Get\+Episodes (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} string}]{sort\+By,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{after\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} Dictionary$<$ string, string $>$}]{where,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{limit = {\ttfamily 50} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_a5495a026bc7101a08db2cfe544fe94ab}\label{classKyoo_1_1Api_1_1ShowApi_a5495a026bc7101a08db2cfe544fe94ab}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetEpisodes@{GetEpisodes}}
+\index{GetEpisodes@{GetEpisodes}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetEpisodes()}{GetEpisodes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ $>$ $>$ Kyoo.\+Api.\+Show\+Api.\+Get\+Episodes (\begin{DoxyParamCaption}\item[{string}]{slug,  }\item[{\mbox{[}\+From\+Query\mbox{]} string}]{sort\+By,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{after\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} Dictionary$<$ string, string $>$}]{where,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{limit = {\ttfamily 50} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_acdff7af0123290e3bf9ccf2fa165d7fa}\label{classKyoo_1_1Api_1_1ShowApi_acdff7af0123290e3bf9ccf2fa165d7fa}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetFont@{GetFont}}
+\index{GetFont@{GetFont}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetFont()}{GetFont()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Kyoo.\+Api.\+Show\+Api.\+Get\+Font (\begin{DoxyParamCaption}\item[{string}]{show\+Slug,  }\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_aba6f985903317339a527e26155401134}\label{classKyoo_1_1Api_1_1ShowApi_aba6f985903317339a527e26155401134}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetFonts@{GetFonts}}
+\index{GetFonts@{GetFonts}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetFonts()}{GetFonts()}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$Dictionary$<$string, string$>$ $>$ $>$ Kyoo.\+Api.\+Show\+Api.\+Get\+Fonts (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_a902d5bfce64ec63daa9b3963db2a34f0}\label{classKyoo_1_1Api_1_1ShowApi_a902d5bfce64ec63daa9b3963db2a34f0}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetGenre@{GetGenre}}
+\index{GetGenre@{GetGenre}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetGenre()}{GetGenre()}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Genre}{Genre}}$>$ $>$ $>$ Kyoo.\+Api.\+Show\+Api.\+Get\+Genre (\begin{DoxyParamCaption}\item[{string}]{slug,  }\item[{\mbox{[}\+From\+Query\mbox{]} string}]{sort\+By,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{after\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} Dictionary$<$ string, string $>$}]{where,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{limit = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_a6d4659c1fd05f2eca4ea14a5fb5a5c04}\label{classKyoo_1_1Api_1_1ShowApi_a6d4659c1fd05f2eca4ea14a5fb5a5c04}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetGenres@{GetGenres}}
+\index{GetGenres@{GetGenres}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetGenres()}{GetGenres()}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Genre}{Genre}}$>$ $>$ $>$ Kyoo.\+Api.\+Show\+Api.\+Get\+Genres (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} string}]{sort\+By,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{after\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} Dictionary$<$ string, string $>$}]{where,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{limit = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_a5f0392998bac78b1a6a24b1fce89e38b}\label{classKyoo_1_1Api_1_1ShowApi_a5f0392998bac78b1a6a24b1fce89e38b}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetLibraries@{GetLibraries}}
+\index{GetLibraries@{GetLibraries}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetLibraries()}{GetLibraries()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}$>$ $>$ $>$ Kyoo.\+Api.\+Show\+Api.\+Get\+Libraries (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} string}]{sort\+By,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{after\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} Dictionary$<$ string, string $>$}]{where,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{limit = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_acc5ff268bc84431aafa2af64e7c6413c}\label{classKyoo_1_1Api_1_1ShowApi_acc5ff268bc84431aafa2af64e7c6413c}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetLibraries@{GetLibraries}}
+\index{GetLibraries@{GetLibraries}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetLibraries()}{GetLibraries()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}$>$ $>$ $>$ Kyoo.\+Api.\+Show\+Api.\+Get\+Libraries (\begin{DoxyParamCaption}\item[{string}]{slug,  }\item[{\mbox{[}\+From\+Query\mbox{]} string}]{sort\+By,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{after\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} Dictionary$<$ string, string $>$}]{where,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{limit = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_a4950527812aa9ec7f45dd8151197ccbb}\label{classKyoo_1_1Api_1_1ShowApi_a4950527812aa9ec7f45dd8151197ccbb}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetLogo@{GetLogo}}
+\index{GetLogo@{GetLogo}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetLogo()}{GetLogo()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Kyoo.\+Api.\+Show\+Api.\+Get\+Logo (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_a876106ed7de657a928eff2e8ec714874}\label{classKyoo_1_1Api_1_1ShowApi_a876106ed7de657a928eff2e8ec714874}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetPeople@{GetPeople}}
+\index{GetPeople@{GetPeople}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetPeople()}{GetPeople()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}$>$ $>$ $>$ Kyoo.\+Api.\+Show\+Api.\+Get\+People (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} string}]{sort\+By,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{after\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} Dictionary$<$ string, string $>$}]{where,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{limit = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_a6bab30f9e97f9e488dda05a3df573137}\label{classKyoo_1_1Api_1_1ShowApi_a6bab30f9e97f9e488dda05a3df573137}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetPeople@{GetPeople}}
+\index{GetPeople@{GetPeople}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetPeople()}{GetPeople()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}$>$ $>$ $>$ Kyoo.\+Api.\+Show\+Api.\+Get\+People (\begin{DoxyParamCaption}\item[{string}]{slug,  }\item[{\mbox{[}\+From\+Query\mbox{]} string}]{sort\+By,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{after\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} Dictionary$<$ string, string $>$}]{where,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{limit = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_a8f5ee6a78092e6a9cf8a19d2dd6cec61}\label{classKyoo_1_1Api_1_1ShowApi_a8f5ee6a78092e6a9cf8a19d2dd6cec61}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetPoster@{GetPoster}}
+\index{GetPoster@{GetPoster}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetPoster()}{GetPoster()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Kyoo.\+Api.\+Show\+Api.\+Get\+Poster (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_a685292b7d0277ce66ef4d597cbd5fea1}\label{classKyoo_1_1Api_1_1ShowApi_a685292b7d0277ce66ef4d597cbd5fea1}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetSeasons@{GetSeasons}}
+\index{GetSeasons@{GetSeasons}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetSeasons()}{GetSeasons()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ $>$ $>$ Kyoo.\+Api.\+Show\+Api.\+Get\+Seasons (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} string}]{sort\+By,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{after\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} Dictionary$<$ string, string $>$}]{where,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{limit = {\ttfamily 20} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_a7a620c8b194688c0a1fd3b01ba47efc0}\label{classKyoo_1_1Api_1_1ShowApi_a7a620c8b194688c0a1fd3b01ba47efc0}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetSeasons@{GetSeasons}}
+\index{GetSeasons@{GetSeasons}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetSeasons()}{GetSeasons()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ $>$ $>$ Kyoo.\+Api.\+Show\+Api.\+Get\+Seasons (\begin{DoxyParamCaption}\item[{string}]{slug,  }\item[{\mbox{[}\+From\+Query\mbox{]} string}]{sort\+By,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{after\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} Dictionary$<$ string, string $>$}]{where,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{limit = {\ttfamily 20} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_a27a2801ae77283ce254c4544907ebee3}\label{classKyoo_1_1Api_1_1ShowApi_a27a2801ae77283ce254c4544907ebee3}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetStudio@{GetStudio}}
+\index{GetStudio@{GetStudio}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetStudio()}{GetStudio()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Studio}{Studio}}$>$ $>$ Kyoo.\+Api.\+Show\+Api.\+Get\+Studio (\begin{DoxyParamCaption}\item[{int}]{show\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_ab87814f9bc54576a9ef22a3768c51255}\label{classKyoo_1_1Api_1_1ShowApi_ab87814f9bc54576a9ef22a3768c51255}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!GetStudio@{GetStudio}}
+\index{GetStudio@{GetStudio}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{GetStudio()}{GetStudio()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Studio}{Studio}}$>$ $>$ Kyoo.\+Api.\+Show\+Api.\+Get\+Studio (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_a52b4f1cd8f4af4ff79a777c7d5506ed3}\label{classKyoo_1_1Api_1_1ShowApi_a52b4f1cd8f4af4ff79a777c7d5506ed3}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!\_files@{\_files}}
+\index{\_files@{\_files}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{\_files}{\_files}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}} Kyoo.\+Api.\+Show\+Api.\+\_\+files\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_ab9b08a59776c9bb418ad1455703f2800}\label{classKyoo_1_1Api_1_1ShowApi_ab9b08a59776c9bb418ad1455703f2800}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!\_libraryManager@{\_libraryManager}}
+\index{\_libraryManager@{\_libraryManager}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{\_libraryManager}{\_libraryManager}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}} Kyoo.\+Api.\+Show\+Api.\+\_\+library\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ShowApi_a6c5d74e9f3f3bcb8bae385f6e6152f70}\label{classKyoo_1_1Api_1_1ShowApi_a6c5d74e9f3f3bcb8bae385f6e6152f70}} 
+\index{Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}!\_thumbs@{\_thumbs}}
+\index{\_thumbs@{\_thumbs}!Kyoo.Api.ShowApi@{Kyoo.Api.ShowApi}}
+\doxysubsubsection{\texorpdfstring{\_thumbs}{\_thumbs}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IThumbnailsManager}{I\+Thumbnails\+Manager}} Kyoo.\+Api.\+Show\+Api.\+\_\+thumbs\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Views/\mbox{\hyperlink{ShowApi_8cs}{Show\+Api.\+cs}}\end{DoxyCompactItemize}

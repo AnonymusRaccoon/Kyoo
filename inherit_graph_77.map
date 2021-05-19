@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="19,274,98,301"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Models_1_1Attributes_1_1DeserializeIgnoreAttribute.html" title=" " alt="" coords="160,397,411,439"/>
+<area shape="rect" id="node3" href="$classKyoo_1_1Models_1_1Attributes_1_1EditableRelationAttribute.html" title=" " alt="" coords="170,5,401,47"/>
+<area shape="rect" id="node4" href="$classKyoo_1_1Models_1_1Attributes_1_1InjectedAttribute.html" title="An attribute to inform that the service will be injected automatically by a service provider." alt="" coords="171,71,400,112"/>
+<area shape="rect" id="node5" href="$classKyoo_1_1Models_1_1Attributes_1_1LoadableRelationAttribute.html" title=" " alt="" coords="167,136,403,177"/>
+<area shape="rect" id="node6" href="$classKyoo_1_1Models_1_1Attributes_1_1NotMergeableAttribute.html" title="Specify that a property can&#39;t be merged." alt="" coords="185,201,385,243"/>
+<area shape="rect" id="node7" href="$classKyoo_1_1Models_1_1Attributes_1_1SerializeAsAttribute.html" title=" " alt="" coords="169,267,402,308"/>
+<area shape="rect" id="node8" href="$classKyoo_1_1Models_1_1Attributes_1_1SerializeIgnoreAttribute.html" title=" " alt="" coords="169,332,402,373"/>
+<area shape="rect" id="node9" href="$classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute.html" title="Specify one part of a permissions needed for the API (the kind or the type)." alt="" coords="189,528,381,569"/>
+<area shape="rect" id="node10" href="$classKyoo_1_1Models_1_1Permissions_1_1PermissionAttribute.html" title="Specify permissions needed for the API." alt="" coords="189,463,381,504"/>
+<area shape="rect" id="node11" title=" " alt="" coords="5,502,112,529"/>
+</map>

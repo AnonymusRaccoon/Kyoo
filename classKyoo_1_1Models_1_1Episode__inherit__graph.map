@@ -1,0 +1,5 @@
+<map id="Kyoo.Models.Episode" name="Kyoo.Models.Episode">
+<area shape="rect" id="node1" title=" " alt="" coords="29,145,189,399"/>
+<area shape="rect" id="node2" href="$interfaceKyoo_1_1Models_1_1IResource.html" title="An interface to represent a resource that can be retrieved from the database." alt="" coords="5,5,92,97"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Models_1_1Attributes_1_1IOnMerge.html" title="An interface with a method called when this object is merged." alt="" coords="117,13,223,90"/>
+</map>

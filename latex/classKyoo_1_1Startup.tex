@@ -1,0 +1,111 @@
+\hypertarget{classKyoo_1_1Startup}{}\doxysection{Kyoo.\+Startup Class Reference}
+\label{classKyoo_1_1Startup}\index{Kyoo.Startup@{Kyoo.Startup}}
+
+
+The \mbox{\hyperlink{classKyoo_1_1Startup}{Startup}} class is used to configure the Asp\+Net\textquotesingle{}s webhost.  
+
+
+
+
+Collaboration diagram for Kyoo.\+Startup\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classKyoo_1_1Startup__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Startup_aeef86880a6921d69cd0c764dc71336a4}{Startup}} (I\+Service\+Provider host\+Provider, I\+Configuration configuration, I\+Logger\+Factory logger\+Factory, I\+Web\+Host\+Environment host)
+\begin{DoxyCompactList}\small\item\em Created from the DI container, those services are needed to load information and instantiate plugins.\+s \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKyoo_1_1Startup_ae2b6c0e868466cc6df616da95206cd54}{Configure\+Services}} (I\+Service\+Collection services)
+\begin{DoxyCompactList}\small\item\em Configure the Web\+App services context. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKyoo_1_1Startup_a3a585049b3d4c373ac9a446b63ba2ed6}{Configure}} (I\+Application\+Builder app, I\+Web\+Host\+Environment env)
+\begin{DoxyCompactList}\small\item\em Configure the asp net host. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager}{I\+Plugin\+Manager}} \mbox{\hyperlink{classKyoo_1_1Startup_ab8c6b31856022a795620a72f24f9d364}{\+\_\+plugins}}
+\begin{DoxyCompactList}\small\item\em A plugin manager used to load plugins and allow them to configure services / asp net. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classKyoo_1_1Startup}{Startup}} class is used to configure the Asp\+Net\textquotesingle{}s webhost. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Startup_aeef86880a6921d69cd0c764dc71336a4}\label{classKyoo_1_1Startup_aeef86880a6921d69cd0c764dc71336a4}} 
+\index{Kyoo.Startup@{Kyoo.Startup}!Startup@{Startup}}
+\index{Startup@{Startup}!Kyoo.Startup@{Kyoo.Startup}}
+\doxysubsubsection{\texorpdfstring{Startup()}{Startup()}}
+{\footnotesize\ttfamily Kyoo.\+Startup.\+Startup (\begin{DoxyParamCaption}\item[{I\+Service\+Provider}]{host\+Provider,  }\item[{I\+Configuration}]{configuration,  }\item[{I\+Logger\+Factory}]{logger\+Factory,  }\item[{I\+Web\+Host\+Environment}]{host }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Created from the DI container, those services are needed to load information and instantiate plugins.\+s 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host\+Provider} & The Service\+Provider used to create this \mbox{\hyperlink{classKyoo_1_1Startup}{Startup}} instance. The host provider that contains only well-\/known services that are \mbox{\hyperlink{namespaceKyoo}{Kyoo}} independent. This is used to instantiate plugins that might need a logger, a configuration or an host environment. \\
+\hline
+{\em configuration} & The configuration context\\
+\hline
+{\em logger\+Factory} & A logger factory used to create a logger for the plugin manager.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Startup_a3a585049b3d4c373ac9a446b63ba2ed6}\label{classKyoo_1_1Startup_a3a585049b3d4c373ac9a446b63ba2ed6}} 
+\index{Kyoo.Startup@{Kyoo.Startup}!Configure@{Configure}}
+\index{Configure@{Configure}!Kyoo.Startup@{Kyoo.Startup}}
+\doxysubsubsection{\texorpdfstring{Configure()}{Configure()}}
+{\footnotesize\ttfamily void Kyoo.\+Startup.\+Configure (\begin{DoxyParamCaption}\item[{I\+Application\+Builder}]{app,  }\item[{I\+Web\+Host\+Environment}]{env }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configure the asp net host. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & The asp net host to configure\\
+\hline
+{\em env} & The host environment (is the app in development mode?)\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKyoo_1_1Startup_ae2b6c0e868466cc6df616da95206cd54}\label{classKyoo_1_1Startup_ae2b6c0e868466cc6df616da95206cd54}} 
+\index{Kyoo.Startup@{Kyoo.Startup}!ConfigureServices@{ConfigureServices}}
+\index{ConfigureServices@{ConfigureServices}!Kyoo.Startup@{Kyoo.Startup}}
+\doxysubsubsection{\texorpdfstring{ConfigureServices()}{ConfigureServices()}}
+{\footnotesize\ttfamily void Kyoo.\+Startup.\+Configure\+Services (\begin{DoxyParamCaption}\item[{I\+Service\+Collection}]{services }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configure the Web\+App services context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em services} & The service collection to fill.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Startup_ab8c6b31856022a795620a72f24f9d364}\label{classKyoo_1_1Startup_ab8c6b31856022a795620a72f24f9d364}} 
+\index{Kyoo.Startup@{Kyoo.Startup}!\_plugins@{\_plugins}}
+\index{\_plugins@{\_plugins}!Kyoo.Startup@{Kyoo.Startup}}
+\doxysubsubsection{\texorpdfstring{\_plugins}{\_plugins}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager}{I\+Plugin\+Manager}} Kyoo.\+Startup.\+\_\+plugins\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A plugin manager used to load plugins and allow them to configure services / asp net. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\mbox{\hyperlink{Startup_8cs}{Startup.\+cs}}\end{DoxyCompactItemize}

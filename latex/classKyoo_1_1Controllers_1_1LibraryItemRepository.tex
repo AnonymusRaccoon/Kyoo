@@ -1,0 +1,367 @@
+\hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository}{}\doxysection{Kyoo.\+Controllers.\+Library\+Item\+Repository Class Reference}
+\label{classKyoo_1_1Controllers_1_1LibraryItemRepository}\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+
+
+A local repository to handle library items.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+Library\+Item\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1Controllers_1_1LibraryItemRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+Library\+Item\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1Controllers_1_1LibraryItemRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_a94e745a8bec2104416b305209bdc1df4}{Library\+Item\+Repository}} (\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} database, Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryRepository}{I\+Library\+Repository}} $>$ libraries, Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository}{I\+Show\+Repository}} $>$ shows, Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ICollectionRepository}{I\+Collection\+Repository}} $>$ collections)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository}{Library\+Item\+Repository}}. \end{DoxyCompactList}\item 
+override async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_a461016756dc42ad06aa208a5356e43c3}{Get\+Or\+Default}} (int id)
+\item 
+override Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_abad3f7a174984b8cab37c4d6dedfc5cd}{Get\+Or\+Default}} (string slug)
+\item 
+override Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_ab0569ceb43053ad74723825e1dec14e4}{Get\+All}} (Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, bool $>$$>$ where=null, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ sort=default, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\item 
+override Task$<$ int $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_a291447b418d933231abeb29a90b3634f}{Get\+Count}} (Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, bool $>$$>$ where=null)
+\item 
+override async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_a808274b9a6de8f343dfed9054d135720}{Search}} (string query)
+\item 
+override Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_a09d956210e191c27284a260052db226e}{Create}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} obj)
+\item 
+override Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_ac1b230f2304e9e574b39e7acb2428b9c}{Create\+If\+Not\+Exists}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} obj)
+\item 
+override Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_a909cd077f7d644c485f97c4e43a8928e}{Edit}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} obj, bool reset)
+\item 
+override Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_abb27b47a9ec2661e10c33289b70e25f4}{Delete}} (int id)
+\item 
+override Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_aa39760c9898717546f7f4b96d18680c1}{Delete}} (string slug)
+\item 
+override Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_aa92ffc5e7f24f2535274216c8c9bf900}{Delete}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} obj)
+\item 
+async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_aa1b6254d70a458d3bc8c021c5add43b2}{Get\+From\+Library}} (int id, Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, bool $>$$>$ where=null, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ sort=default, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Get items (A wrapper around shows or collections) from a library. \end{DoxyCompactList}\item 
+async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_a95ae880ff1e3bfd4e80c8f3967ccc8f8}{Get\+From\+Library}} (string slug, Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, bool $>$$>$ where=null, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ sort=default, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Get items (A wrapper around shows or collections) from a library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+override Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, object $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_a8546556f9052e16da54f9e38c729cf7e}{Default\+Sort}} =$>$ x =$>$ x.\+Title
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+I\+Queryable$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_af7050c7b2ef4b05b7580e06c9eff61f9}{Library\+Related\+Query}} (Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}, bool $>$$>$ selector)
+\begin{DoxyCompactList}\small\item\em Get a basic queryable for a library with the right mapping from shows \& collections. Shows contained in a collection are excluded. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_a177700402583da52cddcc9016e87e363}{\+\_\+database}}
+\begin{DoxyCompactList}\small\item\em The database handle \end{DoxyCompactList}\item 
+readonly Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryRepository}{I\+Library\+Repository}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_ae3609f29b83b5bb75bf8981f95f925ff}{\+\_\+libraries}}
+\begin{DoxyCompactList}\small\item\em A lazy loaded library repository to validate queries (check if a library does exist) \end{DoxyCompactList}\item 
+readonly Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository}{I\+Show\+Repository}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_ae246592406676c498cb84cb904b88fc4}{\+\_\+shows}}
+\begin{DoxyCompactList}\small\item\em A lazy loaded show repository to get a show from it\textquotesingle{}s id. \end{DoxyCompactList}\item 
+readonly Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ICollectionRepository}{I\+Collection\+Repository}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_ae798b97ca923b67e909fd5db0858c78e}{\+\_\+collections}}
+\begin{DoxyCompactList}\small\item\em A lazy loaded collection repository to get a collection from it\textquotesingle{}s id. \end{DoxyCompactList}\item 
+I\+Queryable$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_a77d9fe7e5e410609e9010e058dbb526a}{Items\+Query}}
+\begin{DoxyCompactList}\small\item\em Get a basic queryable with the right mapping from shows \& collections. Shows contained in a collection are excluded. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A local repository to handle library items. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_a94e745a8bec2104416b305209bdc1df4}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_a94e745a8bec2104416b305209bdc1df4}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!LibraryItemRepository@{LibraryItemRepository}}
+\index{LibraryItemRepository@{LibraryItemRepository}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{LibraryItemRepository()}{LibraryItemRepository()}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+Library\+Item\+Repository.\+Library\+Item\+Repository (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}}}]{database,  }\item[{Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryRepository}{I\+Library\+Repository}} $>$}]{libraries,  }\item[{Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository}{I\+Show\+Repository}} $>$}]{shows,  }\item[{Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ICollectionRepository}{I\+Collection\+Repository}} $>$}]{collections }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository}{Library\+Item\+Repository}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & The databse instance\\
+\hline
+{\em libraries} & A lazy loaded library repository\\
+\hline
+{\em shows} & A lazy loaded show repository\\
+\hline
+{\em collections} & A lazy loaded collection repository\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_a09d956210e191c27284a260052db226e}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_a09d956210e191c27284a260052db226e}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!Create@{Create}}
+\index{Create@{Create}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily override Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}$>$ Kyoo.\+Controllers.\+Library\+Item\+Repository.\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}}]{obj }\end{DoxyParamCaption})}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_ac1b230f2304e9e574b39e7acb2428b9c}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_ac1b230f2304e9e574b39e7acb2428b9c}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!CreateIfNotExists@{CreateIfNotExists}}
+\index{CreateIfNotExists@{CreateIfNotExists}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{CreateIfNotExists()}{CreateIfNotExists()}}
+{\footnotesize\ttfamily override Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}$>$ Kyoo.\+Controllers.\+Library\+Item\+Repository.\+Create\+If\+Not\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}}]{obj }\end{DoxyParamCaption})}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_abb27b47a9ec2661e10c33289b70e25f4}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_abb27b47a9ec2661e10c33289b70e25f4}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!Delete@{Delete}}
+\index{Delete@{Delete}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily override Task Kyoo.\+Controllers.\+Library\+Item\+Repository.\+Delete (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Reimplemented from \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ab6eaf27f244827c71c8bb66516aa7f37}{Kyoo.\+Controllers.\+Local\+Repository$<$ Library\+Item $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_aa92ffc5e7f24f2535274216c8c9bf900}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_aa92ffc5e7f24f2535274216c8c9bf900}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!Delete@{Delete}}
+\index{Delete@{Delete}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily override Task Kyoo.\+Controllers.\+Library\+Item\+Repository.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}}]{obj }\end{DoxyParamCaption})}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_aa39760c9898717546f7f4b96d18680c1}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_aa39760c9898717546f7f4b96d18680c1}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!Delete@{Delete}}
+\index{Delete@{Delete}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily override Task Kyoo.\+Controllers.\+Library\+Item\+Repository.\+Delete (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Reimplemented from \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ae5ce2d88de3a0f48e5e9837ae7aef69f}{Kyoo.\+Controllers.\+Local\+Repository$<$ Library\+Item $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_a909cd077f7d644c485f97c4e43a8928e}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_a909cd077f7d644c485f97c4e43a8928e}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!Edit@{Edit}}
+\index{Edit@{Edit}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}}
+{\footnotesize\ttfamily override Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}$>$ Kyoo.\+Controllers.\+Library\+Item\+Repository.\+Edit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}}]{obj,  }\item[{bool}]{reset }\end{DoxyParamCaption})}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_ab0569ceb43053ad74723825e1dec14e4}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_ab0569ceb43053ad74723825e1dec14e4}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{GetAll()}{GetAll()}}
+{\footnotesize\ttfamily override Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}$>$ $>$ Kyoo.\+Controllers.\+Library\+Item\+Repository.\+Get\+All (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, bool $>$$>$}]{where = {\ttfamily null},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$}]{sort = {\ttfamily default},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_a291447b418d933231abeb29a90b3634f}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_a291447b418d933231abeb29a90b3634f}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!GetCount@{GetCount}}
+\index{GetCount@{GetCount}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{GetCount()}{GetCount()}}
+{\footnotesize\ttfamily override Task$<$int$>$ Kyoo.\+Controllers.\+Library\+Item\+Repository.\+Get\+Count (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, bool $>$$>$}]{where = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_aa1b6254d70a458d3bc8c021c5add43b2}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_aa1b6254d70a458d3bc8c021c5add43b2}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!GetFromLibrary@{GetFromLibrary}}
+\index{GetFromLibrary@{GetFromLibrary}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{GetFromLibrary()}{GetFromLibrary()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}$>$ $>$ Kyoo.\+Controllers.\+Library\+Item\+Repository.\+Get\+From\+Library (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, bool $>$$>$}]{where = {\ttfamily null},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$}]{sort = {\ttfamily default},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get items (A wrapper around shows or collections) from a library. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository_a35b0a65a4e2a39941353dd2e7d7f8a52}{Kyoo.\+Controllers.\+I\+Library\+Item\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_a95ae880ff1e3bfd4e80c8f3967ccc8f8}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_a95ae880ff1e3bfd4e80c8f3967ccc8f8}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!GetFromLibrary@{GetFromLibrary}}
+\index{GetFromLibrary@{GetFromLibrary}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{GetFromLibrary()}{GetFromLibrary()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}$>$ $>$ Kyoo.\+Controllers.\+Library\+Item\+Repository.\+Get\+From\+Library (\begin{DoxyParamCaption}\item[{string}]{slug,  }\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, bool $>$$>$}]{where = {\ttfamily null},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$}]{sort = {\ttfamily default},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get items (A wrapper around shows or collections) from a library. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository_a18244dc7fc814f37289c3c623f6522d4}{Kyoo.\+Controllers.\+I\+Library\+Item\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_a461016756dc42ad06aa208a5356e43c3}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_a461016756dc42ad06aa208a5356e43c3}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily override async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}$>$ Kyoo.\+Controllers.\+Library\+Item\+Repository.\+Get\+Or\+Default (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Reimplemented from \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a79bb32bb6616a9c57be4c9825b44c3f8}{Kyoo.\+Controllers.\+Local\+Repository$<$ Library\+Item $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_abad3f7a174984b8cab37c4d6dedfc5cd}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_abad3f7a174984b8cab37c4d6dedfc5cd}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily override Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}$>$ Kyoo.\+Controllers.\+Library\+Item\+Repository.\+Get\+Or\+Default (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Reimplemented from \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a0fc72df07e0cae1cbd24be315282cb90}{Kyoo.\+Controllers.\+Local\+Repository$<$ Library\+Item $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_af7050c7b2ef4b05b7580e06c9eff61f9}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_af7050c7b2ef4b05b7580e06c9eff61f9}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!LibraryRelatedQuery@{LibraryRelatedQuery}}
+\index{LibraryRelatedQuery@{LibraryRelatedQuery}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{LibraryRelatedQuery()}{LibraryRelatedQuery()}}
+{\footnotesize\ttfamily I\+Queryable$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}$>$ Kyoo.\+Controllers.\+Library\+Item\+Repository.\+Library\+Related\+Query (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}, bool $>$$>$}]{selector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get a basic queryable for a library with the right mapping from shows \& collections. Shows contained in a collection are excluded. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em selector} & Only items that are part of a library that match this predicate will be returned.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A queryable containing items that are part of a library matching the selector.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_a808274b9a6de8f343dfed9054d135720}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_a808274b9a6de8f343dfed9054d135720}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!Search@{Search}}
+\index{Search@{Search}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily override async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}$>$ $>$ Kyoo.\+Controllers.\+Library\+Item\+Repository.\+Search (\begin{DoxyParamCaption}\item[{string}]{query }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Implements \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a1ec5ba57aa01810e262bbfc02bd1fc3e}{Kyoo.\+Controllers.\+Local\+Repository$<$ Library\+Item $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_ae798b97ca923b67e909fd5db0858c78e}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_ae798b97ca923b67e909fd5db0858c78e}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!\_collections@{\_collections}}
+\index{\_collections@{\_collections}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{\_collections}{\_collections}}
+{\footnotesize\ttfamily readonly Lazy$<$\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ICollectionRepository}{I\+Collection\+Repository}}$>$ Kyoo.\+Controllers.\+Library\+Item\+Repository.\+\_\+collections\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A lazy loaded collection repository to get a collection from it\textquotesingle{}s id. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_a177700402583da52cddcc9016e87e363}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_a177700402583da52cddcc9016e87e363}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!\_database@{\_database}}
+\index{\_database@{\_database}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{\_database}{\_database}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} Kyoo.\+Controllers.\+Library\+Item\+Repository.\+\_\+database\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The database handle 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_ae3609f29b83b5bb75bf8981f95f925ff}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_ae3609f29b83b5bb75bf8981f95f925ff}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!\_libraries@{\_libraries}}
+\index{\_libraries@{\_libraries}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{\_libraries}{\_libraries}}
+{\footnotesize\ttfamily readonly Lazy$<$\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryRepository}{I\+Library\+Repository}}$>$ Kyoo.\+Controllers.\+Library\+Item\+Repository.\+\_\+libraries\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A lazy loaded library repository to validate queries (check if a library does exist) 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_ae246592406676c498cb84cb904b88fc4}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_ae246592406676c498cb84cb904b88fc4}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!\_shows@{\_shows}}
+\index{\_shows@{\_shows}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{\_shows}{\_shows}}
+{\footnotesize\ttfamily readonly Lazy$<$\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository}{I\+Show\+Repository}}$>$ Kyoo.\+Controllers.\+Library\+Item\+Repository.\+\_\+shows\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A lazy loaded show repository to get a show from it\textquotesingle{}s id. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_a8546556f9052e16da54f9e38c729cf7e}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_a8546556f9052e16da54f9e38c729cf7e}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!DefaultSort@{DefaultSort}}
+\index{DefaultSort@{DefaultSort}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{DefaultSort}{DefaultSort}}
+{\footnotesize\ttfamily override Expression$<$Func$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, object$>$ $>$ Kyoo.\+Controllers.\+Library\+Item\+Repository.\+Default\+Sort =$>$ x =$>$ x.\+Title\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1LibraryItemRepository_a77d9fe7e5e410609e9010e058dbb526a}\label{classKyoo_1_1Controllers_1_1LibraryItemRepository_a77d9fe7e5e410609e9010e058dbb526a}} 
+\index{Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}!ItemsQuery@{ItemsQuery}}
+\index{ItemsQuery@{ItemsQuery}!Kyoo.Controllers.LibraryItemRepository@{Kyoo.Controllers.LibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{ItemsQuery}{ItemsQuery}}
+{\footnotesize\ttfamily I\+Queryable$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}$>$ Kyoo.\+Controllers.\+Library\+Item\+Repository.\+Items\+Query\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=> \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_a177700402583da52cddcc9016e87e363}{\_database}}.\mbox{\hyperlink{classKyoo_1_1DatabaseContext_ae2753b3e7f26f7ac1717b46ae2531210}{Shows}}}
+\DoxyCodeLine{                .Where(x => !x.Collections.Any())}
+\DoxyCodeLine{                .Select(LibraryItem.FromShow)}
+\DoxyCodeLine{                .Concat(\mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_a177700402583da52cddcc9016e87e363}{\_database}}.\mbox{\hyperlink{classKyoo_1_1DatabaseContext_abe08d1d096b15040efc04eeb41c2969f}{Collections}}}
+\DoxyCodeLine{                    .Select(LibraryItem.FromCollection))}
+
+\end{DoxyCode}
+
+
+Get a basic queryable with the right mapping from shows \& collections. Shows contained in a collection are excluded. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Controllers/\+Repositories/\mbox{\hyperlink{LibraryItemRepository_8cs}{Library\+Item\+Repository.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="Kyoo.Controllers.TaskManager" name="Kyoo.Controllers.TaskManager">
+<area shape="rect" id="node1" title="A service to handle long running tasks and a background runner." alt="" coords="57,160,276,487"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,20,152,97"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1ITaskManager.html" title="A service to handle long running tasks." alt="" coords="177,5,335,112"/>
+</map>

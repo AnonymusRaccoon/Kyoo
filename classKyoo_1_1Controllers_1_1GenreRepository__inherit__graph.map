@@ -1,0 +1,6 @@
+<map id="Kyoo.Controllers.GenreRepository" name="Kyoo.Controllers.GenreRepository">
+<area shape="rect" id="node1" title="A local repository for genres." alt="" coords="78,667,321,803"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Controllers_1_1LocalRepository.html" title=" " alt="" coords="5,277,204,619"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1IGenreRepository.html" title="A repository for genres." alt="" coords="228,409,363,487"/>
+<area shape="rect" id="node4" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title=" " alt="" coords="213,5,378,229"/>
+</map>

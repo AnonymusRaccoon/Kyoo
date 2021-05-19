@@ -1,0 +1,4 @@
+<map id="Kyoo.Controllers.FileManager" name="Kyoo.Controllers.FileManager">
+<area shape="rect" id="node1" title="A IFileManager for the local filesystem (using System.IO)." alt="" coords="5,233,219,428"/>
+<area shape="rect" id="node2" href="$interfaceKyoo_1_1Controllers_1_1IFileManager.html" title="A service to abstract the file system to allow custom file systems (like distant file systems or exte..." alt="" coords="30,5,194,185"/>
+</map>

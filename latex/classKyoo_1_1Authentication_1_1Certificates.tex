@@ -1,0 +1,122 @@
+\hypertarget{classKyoo_1_1Authentication_1_1Certificates}{}\doxysection{Kyoo.\+Authentication.\+Certificates Class Reference}
+\label{classKyoo_1_1Authentication_1_1Certificates}\index{Kyoo.Authentication.Certificates@{Kyoo.Authentication.Certificates}}
+
+
+A class containing multiple extensions methods to manage certificates.  
+
+
+
+
+Collaboration diagram for Kyoo.\+Authentication.\+Certificates\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classKyoo_1_1Authentication_1_1Certificates__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static I\+Identity\+Server\+Builder \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Certificates_a8cc7338347802b238795d78ce7b51c59}{Add\+Signin\+Keys}} (this I\+Identity\+Server\+Builder builder, \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1CertificateOption}{Certificate\+Option}} options)
+\begin{DoxyCompactList}\small\item\em Add the certificate file to the identity server. If the certificate will expire soon, automatically renew it. If no certificate exists, one is generated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static X509\+Certificate2 \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Certificates_af180444210e432be379726aca94ca64b}{Get\+Certificate}} (\mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1CertificateOption}{Certificate\+Option}} options)
+\begin{DoxyCompactList}\small\item\em Get or generate the sign-\/in certificate. \end{DoxyCompactList}\item 
+static X509\+Certificate2 \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Certificates_a1bea1edb08223f4f6482702cb95fb4f1}{Get\+Existing\+Credential}} (string file, string password)
+\begin{DoxyCompactList}\small\item\em Load a certificate from a file \end{DoxyCompactList}\item 
+static X509\+Certificate2 \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Certificates_a2aadf0e40ae59f706050170512418a21}{Generate\+Certificate}} (string file, string password)
+\begin{DoxyCompactList}\small\item\em Generate a new certificate key and put it in the file at file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class containing multiple extensions methods to manage certificates. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Certificates_a8cc7338347802b238795d78ce7b51c59}\label{classKyoo_1_1Authentication_1_1Certificates_a8cc7338347802b238795d78ce7b51c59}} 
+\index{Kyoo.Authentication.Certificates@{Kyoo.Authentication.Certificates}!AddSigninKeys@{AddSigninKeys}}
+\index{AddSigninKeys@{AddSigninKeys}!Kyoo.Authentication.Certificates@{Kyoo.Authentication.Certificates}}
+\doxysubsubsection{\texorpdfstring{AddSigninKeys()}{AddSigninKeys()}}
+{\footnotesize\ttfamily static I\+Identity\+Server\+Builder Kyoo.\+Authentication.\+Certificates.\+Add\+Signin\+Keys (\begin{DoxyParamCaption}\item[{this I\+Identity\+Server\+Builder}]{builder,  }\item[{\mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1CertificateOption}{Certificate\+Option}}}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Add the certificate file to the identity server. If the certificate will expire soon, automatically renew it. If no certificate exists, one is generated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em builder} & The identity server that will be modified.\\
+\hline
+{\em options} & The certificate options\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Certificates_a2aadf0e40ae59f706050170512418a21}\label{classKyoo_1_1Authentication_1_1Certificates_a2aadf0e40ae59f706050170512418a21}} 
+\index{Kyoo.Authentication.Certificates@{Kyoo.Authentication.Certificates}!GenerateCertificate@{GenerateCertificate}}
+\index{GenerateCertificate@{GenerateCertificate}!Kyoo.Authentication.Certificates@{Kyoo.Authentication.Certificates}}
+\doxysubsubsection{\texorpdfstring{GenerateCertificate()}{GenerateCertificate()}}
+{\footnotesize\ttfamily static X509\+Certificate2 Kyoo.\+Authentication.\+Certificates.\+Generate\+Certificate (\begin{DoxyParamCaption}\item[{string}]{file,  }\item[{string}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Generate a new certificate key and put it in the file at file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The path of the output file\\
+\hline
+{\em password} & The password of the new certificate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The generated certificate
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Certificates_af180444210e432be379726aca94ca64b}\label{classKyoo_1_1Authentication_1_1Certificates_af180444210e432be379726aca94ca64b}} 
+\index{Kyoo.Authentication.Certificates@{Kyoo.Authentication.Certificates}!GetCertificate@{GetCertificate}}
+\index{GetCertificate@{GetCertificate}!Kyoo.Authentication.Certificates@{Kyoo.Authentication.Certificates}}
+\doxysubsubsection{\texorpdfstring{GetCertificate()}{GetCertificate()}}
+{\footnotesize\ttfamily static X509\+Certificate2 Kyoo.\+Authentication.\+Certificates.\+Get\+Certificate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1CertificateOption}{Certificate\+Option}}}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Get or generate the sign-\/in certificate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em options} & The certificate options\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A valid certificate
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Certificates_a1bea1edb08223f4f6482702cb95fb4f1}\label{classKyoo_1_1Authentication_1_1Certificates_a1bea1edb08223f4f6482702cb95fb4f1}} 
+\index{Kyoo.Authentication.Certificates@{Kyoo.Authentication.Certificates}!GetExistingCredential@{GetExistingCredential}}
+\index{GetExistingCredential@{GetExistingCredential}!Kyoo.Authentication.Certificates@{Kyoo.Authentication.Certificates}}
+\doxysubsubsection{\texorpdfstring{GetExistingCredential()}{GetExistingCredential()}}
+{\footnotesize\ttfamily static X509\+Certificate2 Kyoo.\+Authentication.\+Certificates.\+Get\+Existing\+Credential (\begin{DoxyParamCaption}\item[{string}]{file,  }\item[{string}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Load a certificate from a file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The path of the certificate\\
+\hline
+{\em password} & The password of the certificate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded certificate
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Authentication/\+Controllers/\mbox{\hyperlink{Certificates_8cs}{Certificates.\+cs}}\end{DoxyCompactItemize}

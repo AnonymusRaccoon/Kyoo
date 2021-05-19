@@ -1,0 +1,4 @@
+<map id="Kyoo.Models.User" name="Kyoo.Models.User">
+<area shape="rect" id="node1" title="A single user of the app." alt="" coords="5,145,163,340"/>
+<area shape="rect" id="node2" href="$interfaceKyoo_1_1Models_1_1IResource.html" title="An interface to represent a resource that can be retrieved from the database." alt="" coords="41,5,127,97"/>
+</map>

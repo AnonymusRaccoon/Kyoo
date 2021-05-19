@@ -1,0 +1,217 @@
+\hypertarget{classKyoo_1_1Controllers_1_1FileManager}{}\doxysection{Kyoo.\+Controllers.\+File\+Manager Class Reference}
+\label{classKyoo_1_1Controllers_1_1FileManager}\index{Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}}
+
+
+A \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}} for the local filesystem (using System.\+IO).  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+File\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classKyoo_1_1Controllers_1_1FileManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+File\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classKyoo_1_1Controllers_1_1FileManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+I\+Action\+Result \mbox{\hyperlink{classKyoo_1_1Controllers_1_1FileManager_ab8950b3af4cf3a8ed427facb780bed83}{File\+Result}} (string path, bool range=false, string type=null)
+\begin{DoxyCompactList}\small\item\em Used for http queries returning a file. This should be used to return local files or proxy them from a distant server \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Transcoder_8cs_ac74280701eb7654d386e373c0fdc48fb}{Stream}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1FileManager_a7bd027b61121cb2e4dca0ee0c2a31bcd}{Get\+Reader}} (string path)
+\begin{DoxyCompactList}\small\item\em Read a file present at {\itshape path} . The reader can be used in an arbitrary context. To return files from an http endpoint, use \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager_a5d950ba073f30546efb181edae97710d}{File\+Result}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Transcoder_8cs_ac74280701eb7654d386e373c0fdc48fb}{Stream}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1FileManager_a05be386795b96c4596b07a81c8beed0d}{New\+File}} (string path)
+\begin{DoxyCompactList}\small\item\em Create a new file at {\itshape path} . \end{DoxyCompactList}\item 
+Task$<$ I\+Collection$<$ string $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1FileManager_ab7bf8df5c2ec3860bafd7067484d79b4}{List\+Files}} (string path)
+\begin{DoxyCompactList}\small\item\em List files in a directory. \end{DoxyCompactList}\item 
+Task$<$ bool $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1FileManager_a0e7adee1a0cc6a3f13ec4cd96f3e1e26}{Exists}} (string path)
+\begin{DoxyCompactList}\small\item\em Check if a file exists at the given path. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classKyoo_1_1Controllers_1_1FileManager_ac56216a9b513f5fb6a289254294ea819}{Get\+Extra\+Directory}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} show)
+\begin{DoxyCompactList}\small\item\em Get the extra directory of a show. This method is in this system to allow a filesystem to use a different metadata policy for one. It can be useful if the filesystem is readonly. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classKyoo_1_1Controllers_1_1FileManager_a664a390b7decd681963af865da5db107}{Get\+Extra\+Directory}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} season)
+\begin{DoxyCompactList}\small\item\em Get the extra directory of a season. This method is in this system to allow a filesystem to use a different metadata policy for one. It can be useful if the filesystem is readonly. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classKyoo_1_1Controllers_1_1FileManager_ad40419473e4c4c04a2c6d06a3fabff6c}{Get\+Extra\+Directory}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} episode)
+\begin{DoxyCompactList}\small\item\em Get the extra directory of an episode. This method is in this system to allow a filesystem to use a different metadata policy for one. It can be useful if the filesystem is readonly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Controllers_1_1FileManager_a0d9c7ade57eaa5e7b375e3dfbd34c466}{\+\_\+\+Get\+Content\+Type}} (string path)
+\begin{DoxyCompactList}\small\item\em Get the content type of a file using it\textquotesingle{}s extension. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+File\+Extension\+Content\+Type\+Provider \mbox{\hyperlink{classKyoo_1_1Controllers_1_1FileManager_a02f472a1ece90091fcc8bc3941e5dc6e}{\+\_\+provider}}
+\begin{DoxyCompactList}\small\item\em An extension provider to get content types from files extensions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}} for the local filesystem (using System.\+IO). 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1FileManager_a0d9c7ade57eaa5e7b375e3dfbd34c466}\label{classKyoo_1_1Controllers_1_1FileManager_a0d9c7ade57eaa5e7b375e3dfbd34c466}} 
+\index{Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}!\_GetContentType@{\_GetContentType}}
+\index{\_GetContentType@{\_GetContentType}!Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}}
+\doxysubsubsection{\texorpdfstring{\_GetContentType()}{\_GetContentType()}}
+{\footnotesize\ttfamily string Kyoo.\+Controllers.\+File\+Manager.\+\_\+\+Get\+Content\+Type (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Get the content type of a file using it\textquotesingle{}s extension. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path of the file\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Not\+Implemented\+Exception} & The extension of the file is not known.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The content type of the file
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1FileManager_a0e7adee1a0cc6a3f13ec4cd96f3e1e26}\label{classKyoo_1_1Controllers_1_1FileManager_a0e7adee1a0cc6a3f13ec4cd96f3e1e26}} 
+\index{Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}!Exists@{Exists}}
+\index{Exists@{Exists}!Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}}
+\doxysubsubsection{\texorpdfstring{Exists()}{Exists()}}
+{\footnotesize\ttfamily Task$<$bool$>$ Kyoo.\+Controllers.\+File\+Manager.\+Exists (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if a file exists at the given path. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager_ae22fa662caa3413ac6c3469d7e2940d4}{Kyoo.\+Controllers.\+I\+File\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1FileManager_ab8950b3af4cf3a8ed427facb780bed83}\label{classKyoo_1_1Controllers_1_1FileManager_ab8950b3af4cf3a8ed427facb780bed83}} 
+\index{Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}!FileResult@{FileResult}}
+\index{FileResult@{FileResult}!Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}}
+\doxysubsubsection{\texorpdfstring{FileResult()}{FileResult()}}
+{\footnotesize\ttfamily I\+Action\+Result Kyoo.\+Controllers.\+File\+Manager.\+File\+Result (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{bool}]{range = {\ttfamily false},  }\item[{string}]{type = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Used for http queries returning a file. This should be used to return local files or proxy them from a distant server 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager_a5d950ba073f30546efb181edae97710d}{Kyoo.\+Controllers.\+I\+File\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1FileManager_ad40419473e4c4c04a2c6d06a3fabff6c}\label{classKyoo_1_1Controllers_1_1FileManager_ad40419473e4c4c04a2c6d06a3fabff6c}} 
+\index{Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}!GetExtraDirectory@{GetExtraDirectory}}
+\index{GetExtraDirectory@{GetExtraDirectory}!Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}}
+\doxysubsubsection{\texorpdfstring{GetExtraDirectory()}{GetExtraDirectory()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily string Kyoo.\+Controllers.\+File\+Manager.\+Get\+Extra\+Directory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}}]{episode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the extra directory of an episode. This method is in this system to allow a filesystem to use a different metadata policy for one. It can be useful if the filesystem is readonly. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager_a40fdc9281a549fecf3fc267d3829d34d}{Kyoo.\+Controllers.\+I\+File\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1FileManager_a664a390b7decd681963af865da5db107}\label{classKyoo_1_1Controllers_1_1FileManager_a664a390b7decd681963af865da5db107}} 
+\index{Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}!GetExtraDirectory@{GetExtraDirectory}}
+\index{GetExtraDirectory@{GetExtraDirectory}!Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}}
+\doxysubsubsection{\texorpdfstring{GetExtraDirectory()}{GetExtraDirectory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily string Kyoo.\+Controllers.\+File\+Manager.\+Get\+Extra\+Directory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}}]{season }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the extra directory of a season. This method is in this system to allow a filesystem to use a different metadata policy for one. It can be useful if the filesystem is readonly. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager_a1297c5f7c2686bf61f7e2735f27b4e4f}{Kyoo.\+Controllers.\+I\+File\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1FileManager_ac56216a9b513f5fb6a289254294ea819}\label{classKyoo_1_1Controllers_1_1FileManager_ac56216a9b513f5fb6a289254294ea819}} 
+\index{Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}!GetExtraDirectory@{GetExtraDirectory}}
+\index{GetExtraDirectory@{GetExtraDirectory}!Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}}
+\doxysubsubsection{\texorpdfstring{GetExtraDirectory()}{GetExtraDirectory()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily string Kyoo.\+Controllers.\+File\+Manager.\+Get\+Extra\+Directory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{show }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the extra directory of a show. This method is in this system to allow a filesystem to use a different metadata policy for one. It can be useful if the filesystem is readonly. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager_a4fd07f70b086d1e7521eafa59031bf73}{Kyoo.\+Controllers.\+I\+File\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1FileManager_a7bd027b61121cb2e4dca0ee0c2a31bcd}\label{classKyoo_1_1Controllers_1_1FileManager_a7bd027b61121cb2e4dca0ee0c2a31bcd}} 
+\index{Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}!GetReader@{GetReader}}
+\index{GetReader@{GetReader}!Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}}
+\doxysubsubsection{\texorpdfstring{GetReader()}{GetReader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Transcoder_8cs_ac74280701eb7654d386e373c0fdc48fb}{Stream}} Kyoo.\+Controllers.\+File\+Manager.\+Get\+Reader (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Read a file present at {\itshape path} . The reader can be used in an arbitrary context. To return files from an http endpoint, use \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager_a5d950ba073f30546efb181edae97710d}{File\+Result}}. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager_ae35e9a4441a02c2ae5c38104895ba9c4}{Kyoo.\+Controllers.\+I\+File\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1FileManager_ab7bf8df5c2ec3860bafd7067484d79b4}\label{classKyoo_1_1Controllers_1_1FileManager_ab7bf8df5c2ec3860bafd7067484d79b4}} 
+\index{Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}!ListFiles@{ListFiles}}
+\index{ListFiles@{ListFiles}!Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}}
+\doxysubsubsection{\texorpdfstring{ListFiles()}{ListFiles()}}
+{\footnotesize\ttfamily Task$<$I\+Collection$<$string$>$ $>$ Kyoo.\+Controllers.\+File\+Manager.\+List\+Files (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+List files in a directory. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager_a8245c7495ab024421f4a2ab572debf3d}{Kyoo.\+Controllers.\+I\+File\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1FileManager_a05be386795b96c4596b07a81c8beed0d}\label{classKyoo_1_1Controllers_1_1FileManager_a05be386795b96c4596b07a81c8beed0d}} 
+\index{Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}!NewFile@{NewFile}}
+\index{NewFile@{NewFile}!Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}}
+\doxysubsubsection{\texorpdfstring{NewFile()}{NewFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Transcoder_8cs_ac74280701eb7654d386e373c0fdc48fb}{Stream}} Kyoo.\+Controllers.\+File\+Manager.\+New\+File (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new file at {\itshape path} . 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager_af5ff5aa79aaae8877143b9ac57d98deb}{Kyoo.\+Controllers.\+I\+File\+Manager}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1FileManager_a02f472a1ece90091fcc8bc3941e5dc6e}\label{classKyoo_1_1Controllers_1_1FileManager_a02f472a1ece90091fcc8bc3941e5dc6e}} 
+\index{Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}!\_provider@{\_provider}}
+\index{\_provider@{\_provider}!Kyoo.Controllers.FileManager@{Kyoo.Controllers.FileManager}}
+\doxysubsubsection{\texorpdfstring{\_provider}{\_provider}}
+{\footnotesize\ttfamily File\+Extension\+Content\+Type\+Provider Kyoo.\+Controllers.\+File\+Manager.\+\_\+provider\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+An extension provider to get content types from files extensions. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Controllers/\mbox{\hyperlink{FileManager_8cs}{File\+Manager.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="Kyoo.Models.Permissions.IPermissionValidator" name="Kyoo.Models.Permissions.IPermissionValidator">
+<area shape="rect" id="node1" title="A service to validate permissions" alt="" coords="157,5,349,112"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Authentication_1_1PermissionValidatorFactory.html" title="A permission validator to validate permission with user Permission array or the default array from th..." alt="" coords="5,160,235,281"/>
+<area shape="rect" id="node3" href="$classKyoo_1_1Controllers_1_1PassthroughPermissionValidator.html" title="A permission validator that always validate permissions. This effectively disable the permission syst..." alt="" coords="259,160,515,281"/>
+</map>

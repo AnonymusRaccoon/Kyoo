@@ -1,0 +1,326 @@
+\hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository}{}\doxysection{Kyoo.\+Controllers.\+Season\+Repository Class Reference}
+\label{classKyoo_1_1Controllers_1_1SeasonRepository}\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+
+
+A local repository to handle seasons.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+Season\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1Controllers_1_1SeasonRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+Season\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKyoo_1_1Controllers_1_1SeasonRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_ae1612e9fad619498606688346428a2a0}{Season\+Repository}} (\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} database, \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{I\+Provider\+Repository}} providers, \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository}{I\+Show\+Repository}} shows, Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository}{I\+Episode\+Repository}} $>$ episodes)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository}{Season\+Repository}} using the provided handle, a provider \& a show repository and a service provider to lazilly request an episode repository. \end{DoxyCompactList}\item 
+override async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_ae04bf3170aae6d963c36d2525643d84d}{Get}} (int id)
+\item 
+override async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_ae04626f4d98167cd7b40223f828659f5}{Get}} (Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}, bool $>$$>$ where)
+\item 
+override Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_aa260d54b3bdaaae1fcb7619359b2427b}{Get}} (string slug)
+\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_ab3e0c57c2eeb812ade9a61fb6fe86d7d}{Get}} (int show\+ID, int season\+Number)
+\begin{DoxyCompactList}\small\item\em Get a season from it\textquotesingle{}s show\+ID and it\textquotesingle{}s season\+Number \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_a91d851271401c75b93ae5080092a2f0f}{Get}} (string show\+Slug, int season\+Number)
+\begin{DoxyCompactList}\small\item\em Get a season from it\textquotesingle{}s show slug and it\textquotesingle{}s season\+Number \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_a6a09a16bc1e31e220fe756a289b8ce87}{Get\+Or\+Default}} (int show\+ID, int season\+Number)
+\begin{DoxyCompactList}\small\item\em Get a season from it\textquotesingle{}s show\+ID and it\textquotesingle{}s season\+Number or null if it is not found. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_ae0dfac32484553a1a24c6ba19a91b162}{Get\+Or\+Default}} (string show\+Slug, int season\+Number)
+\begin{DoxyCompactList}\small\item\em Get a season from it\textquotesingle{}s show slug and it\textquotesingle{}s season\+Number or null if it is not found. \end{DoxyCompactList}\item 
+override async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_a481ba36e7c35011a4b1b463d00e047db}{Search}} (string query)
+\item 
+override async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_a8ab1fc9086fe0ab53a48631de421385a}{Get\+All}} (Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}, bool $>$$>$ where=null, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ sort=default, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\item 
+override async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_a3bcaf78e7298f5860f6eea435c31ce70}{Create}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} obj)
+\item 
+override async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_ad44c81bf2c870386a4a5562cb8039861}{Delete}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} obj)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_ac6f4d7cb627265690b636bc1247a6fca}{Validate}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} resource)
+\item 
+override async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_ac40878ec79d9a62033720cf0fa086308}{Edit\+Relations}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} resource, \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} changed, bool reset\+Old)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+override Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}, object $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_ae11e18a83910857b5ec811a2614be433}{Default\+Sort}} =$>$ x =$>$ x.\+Season\+Number
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_ad5aeb71c1ccdbfbb50a84e09e183c3ff}{\+\_\+database}}
+\begin{DoxyCompactList}\small\item\em The database handle \end{DoxyCompactList}\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{I\+Provider\+Repository}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_ad7d66bccf45768024b1ee4bbd58ad56f}{\+\_\+providers}}
+\begin{DoxyCompactList}\small\item\em A provider repository to handle external\+ID creation and deletion \end{DoxyCompactList}\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository}{I\+Show\+Repository}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_ad1c6f28270b5fce0425937c1063a2d9d}{\+\_\+shows}}
+\begin{DoxyCompactList}\small\item\em A show repository to get show\textquotesingle{}s slug from their ID and keep the slug in each episode. \end{DoxyCompactList}\item 
+readonly Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository}{I\+Episode\+Repository}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository_ac113ef2277430a1d65f78e6cd8756721}{\+\_\+episodes}}
+\begin{DoxyCompactList}\small\item\em A lazilly loaded episode repository to handle deletion of episodes with the season. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A local repository to handle seasons. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_ae1612e9fad619498606688346428a2a0}\label{classKyoo_1_1Controllers_1_1SeasonRepository_ae1612e9fad619498606688346428a2a0}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!SeasonRepository@{SeasonRepository}}
+\index{SeasonRepository@{SeasonRepository}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{SeasonRepository()}{SeasonRepository()}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+Season\+Repository.\+Season\+Repository (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}}}]{database,  }\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{I\+Provider\+Repository}}}]{providers,  }\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository}{I\+Show\+Repository}}}]{shows,  }\item[{Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository}{I\+Episode\+Repository}} $>$}]{episodes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository}{Season\+Repository}} using the provided handle, a provider \& a show repository and a service provider to lazilly request an episode repository. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & The database handle that will be used\\
+\hline
+{\em providers} & A provider repository\\
+\hline
+{\em shows} & A show repository\\
+\hline
+{\em episodes} & A lazy loaded episode repository.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_a3bcaf78e7298f5860f6eea435c31ce70}\label{classKyoo_1_1Controllers_1_1SeasonRepository_a3bcaf78e7298f5860f6eea435c31ce70}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!Create@{Create}}
+\index{Create@{Create}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily override async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ Kyoo.\+Controllers.\+Season\+Repository.\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_ad44c81bf2c870386a4a5562cb8039861}\label{classKyoo_1_1Controllers_1_1SeasonRepository_ad44c81bf2c870386a4a5562cb8039861}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!Delete@{Delete}}
+\index{Delete@{Delete}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily override async Task Kyoo.\+Controllers.\+Season\+Repository.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_ac40878ec79d9a62033720cf0fa086308}\label{classKyoo_1_1Controllers_1_1SeasonRepository_ac40878ec79d9a62033720cf0fa086308}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!EditRelations@{EditRelations}}
+\index{EditRelations@{EditRelations}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{EditRelations()}{EditRelations()}}
+{\footnotesize\ttfamily override async Task Kyoo.\+Controllers.\+Season\+Repository.\+Edit\+Relations (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}}]{resource,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}}]{changed,  }\item[{bool}]{reset\+Old }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_ae04626f4d98167cd7b40223f828659f5}\label{classKyoo_1_1Controllers_1_1SeasonRepository_ae04626f4d98167cd7b40223f828659f5}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily override async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ Kyoo.\+Controllers.\+Season\+Repository.\+Get (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}, bool $>$$>$}]{where }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_ae04bf3170aae6d963c36d2525643d84d}\label{classKyoo_1_1Controllers_1_1SeasonRepository_ae04bf3170aae6d963c36d2525643d84d}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily override async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ Kyoo.\+Controllers.\+Season\+Repository.\+Get (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Reimplemented from \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_af09b42b1ad5164d603a591971558e2fa}{Kyoo.\+Controllers.\+Local\+Repository$<$ Season $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_ab3e0c57c2eeb812ade9a61fb6fe86d7d}\label{classKyoo_1_1Controllers_1_1SeasonRepository_ab3e0c57c2eeb812ade9a61fb6fe86d7d}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ Kyoo.\+Controllers.\+Season\+Repository.\+Get (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{int}]{season\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a season from it\textquotesingle{}s show\+ID and it\textquotesingle{}s season\+Number 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ISeasonRepository_a7af18e0fdfda779421e5d176c10cdf9a}{Kyoo.\+Controllers.\+I\+Season\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_a91d851271401c75b93ae5080092a2f0f}\label{classKyoo_1_1Controllers_1_1SeasonRepository_a91d851271401c75b93ae5080092a2f0f}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ Kyoo.\+Controllers.\+Season\+Repository.\+Get (\begin{DoxyParamCaption}\item[{string}]{show\+Slug,  }\item[{int}]{season\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a season from it\textquotesingle{}s show slug and it\textquotesingle{}s season\+Number 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ISeasonRepository_ab06f6f123d8c1743a9fc27aec2218478}{Kyoo.\+Controllers.\+I\+Season\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_aa260d54b3bdaaae1fcb7619359b2427b}\label{classKyoo_1_1Controllers_1_1SeasonRepository_aa260d54b3bdaaae1fcb7619359b2427b}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily override Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ Kyoo.\+Controllers.\+Season\+Repository.\+Get (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Reimplemented from \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a3b68de5e73f15d9c7c73d5b4d01b2b6d}{Kyoo.\+Controllers.\+Local\+Repository$<$ Season $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_a8ab1fc9086fe0ab53a48631de421385a}\label{classKyoo_1_1Controllers_1_1SeasonRepository_a8ab1fc9086fe0ab53a48631de421385a}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{GetAll()}{GetAll()}}
+{\footnotesize\ttfamily override async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ $>$ Kyoo.\+Controllers.\+Season\+Repository.\+Get\+All (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}, bool $>$$>$}]{where = {\ttfamily null},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$}]{sort = {\ttfamily default},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_a6a09a16bc1e31e220fe756a289b8ce87}\label{classKyoo_1_1Controllers_1_1SeasonRepository_a6a09a16bc1e31e220fe756a289b8ce87}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ Kyoo.\+Controllers.\+Season\+Repository.\+Get\+Or\+Default (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{int}]{season\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a season from it\textquotesingle{}s show\+ID and it\textquotesingle{}s season\+Number or null if it is not found. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ISeasonRepository_a7b8111ebfa5d8692a286bb6464486263}{Kyoo.\+Controllers.\+I\+Season\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_ae0dfac32484553a1a24c6ba19a91b162}\label{classKyoo_1_1Controllers_1_1SeasonRepository_ae0dfac32484553a1a24c6ba19a91b162}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ Kyoo.\+Controllers.\+Season\+Repository.\+Get\+Or\+Default (\begin{DoxyParamCaption}\item[{string}]{show\+Slug,  }\item[{int}]{season\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a season from it\textquotesingle{}s show slug and it\textquotesingle{}s season\+Number or null if it is not found. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ISeasonRepository_aa6ec6bf40bb6af8a9b8b034ae9beb3bb}{Kyoo.\+Controllers.\+I\+Season\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_a481ba36e7c35011a4b1b463d00e047db}\label{classKyoo_1_1Controllers_1_1SeasonRepository_a481ba36e7c35011a4b1b463d00e047db}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!Search@{Search}}
+\index{Search@{Search}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily override async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ $>$ Kyoo.\+Controllers.\+Season\+Repository.\+Search (\begin{DoxyParamCaption}\item[{string}]{query }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Implements \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a1ec5ba57aa01810e262bbfc02bd1fc3e}{Kyoo.\+Controllers.\+Local\+Repository$<$ Season $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_ac6f4d7cb627265690b636bc1247a6fca}\label{classKyoo_1_1Controllers_1_1SeasonRepository_ac6f4d7cb627265690b636bc1247a6fca}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!Validate@{Validate}}
+\index{Validate@{Validate}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily override async Task Kyoo.\+Controllers.\+Season\+Repository.\+Validate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}}]{resource }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_ad5aeb71c1ccdbfbb50a84e09e183c3ff}\label{classKyoo_1_1Controllers_1_1SeasonRepository_ad5aeb71c1ccdbfbb50a84e09e183c3ff}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!\_database@{\_database}}
+\index{\_database@{\_database}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{\_database}{\_database}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} Kyoo.\+Controllers.\+Season\+Repository.\+\_\+database\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The database handle 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_ac113ef2277430a1d65f78e6cd8756721}\label{classKyoo_1_1Controllers_1_1SeasonRepository_ac113ef2277430a1d65f78e6cd8756721}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!\_episodes@{\_episodes}}
+\index{\_episodes@{\_episodes}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{\_episodes}{\_episodes}}
+{\footnotesize\ttfamily readonly Lazy$<$\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository}{I\+Episode\+Repository}}$>$ Kyoo.\+Controllers.\+Season\+Repository.\+\_\+episodes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A lazilly loaded episode repository to handle deletion of episodes with the season. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_ad7d66bccf45768024b1ee4bbd58ad56f}\label{classKyoo_1_1Controllers_1_1SeasonRepository_ad7d66bccf45768024b1ee4bbd58ad56f}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!\_providers@{\_providers}}
+\index{\_providers@{\_providers}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{\_providers}{\_providers}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{I\+Provider\+Repository}} Kyoo.\+Controllers.\+Season\+Repository.\+\_\+providers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A provider repository to handle external\+ID creation and deletion 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_ad1c6f28270b5fce0425937c1063a2d9d}\label{classKyoo_1_1Controllers_1_1SeasonRepository_ad1c6f28270b5fce0425937c1063a2d9d}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!\_shows@{\_shows}}
+\index{\_shows@{\_shows}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{\_shows}{\_shows}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository}{I\+Show\+Repository}} Kyoo.\+Controllers.\+Season\+Repository.\+\_\+shows\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A show repository to get show\textquotesingle{}s slug from their ID and keep the slug in each episode. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1SeasonRepository_ae11e18a83910857b5ec811a2614be433}\label{classKyoo_1_1Controllers_1_1SeasonRepository_ae11e18a83910857b5ec811a2614be433}} 
+\index{Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}!DefaultSort@{DefaultSort}}
+\index{DefaultSort@{DefaultSort}!Kyoo.Controllers.SeasonRepository@{Kyoo.Controllers.SeasonRepository}}
+\doxysubsubsection{\texorpdfstring{DefaultSort}{DefaultSort}}
+{\footnotesize\ttfamily override Expression$<$Func$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}, object$>$ $>$ Kyoo.\+Controllers.\+Season\+Repository.\+Default\+Sort =$>$ x =$>$ x.\+Season\+Number\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Controllers/\+Repositories/\mbox{\hyperlink{SeasonRepository_8cs}{Season\+Repository.\+cs}}\end{DoxyCompactItemize}

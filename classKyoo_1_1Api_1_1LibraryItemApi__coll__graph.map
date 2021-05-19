@@ -1,0 +1,6 @@
+<map id="Kyoo.Api.LibraryItemApi" name="Kyoo.Api.LibraryItemApi">
+<area shape="rect" id="node1" title=" " alt="" coords="30,477,209,569"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,308,124,385"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository.html" title="A repository to handle library items (A wrapper around shows and collections)." alt="" coords="148,279,331,415"/>
+<area shape="rect" id="node4" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title=" " alt="" coords="139,5,340,229"/>
+</map>

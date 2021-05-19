@@ -1,0 +1,144 @@
+\hypertarget{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute}{}\doxysection{Kyoo.\+Models.\+Permissions.\+Partial\+Permission\+Attribute Class Reference}
+\label{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute}\index{Kyoo.Models.Permissions.PartialPermissionAttribute@{Kyoo.Models.Permissions.PartialPermissionAttribute}}
+
+
+Specify one part of a permissions needed for the A\+PI (the kind or the type).  
+
+
+
+
+Inheritance diagram for Kyoo.\+Models.\+Permissions.\+Partial\+Permission\+Attribute\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Models.\+Permissions.\+Partial\+Permission\+Attribute\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a1bc7ce3e0d092171dfb92cec1d61e572}{Partial\+Permission\+Attribute}} (string type)
+\begin{DoxyCompactList}\small\item\em Ask a permission to run an action. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a945477fd560ab25bc8d919d9752eca1e}{Partial\+Permission\+Attribute}} (\mbox{\hyperlink{namespaceKyoo_1_1Models_1_1Permissions_ad067cd704d5d3eb520d0a4a4d99fe602}{Kind}} permission)
+\begin{DoxyCompactList}\small\item\em Ask a permission to run an action. \end{DoxyCompactList}\item 
+I\+Filter\+Metadata \mbox{\hyperlink{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a10a45e4489dd3b02066181228f707e22}{Create\+Instance}} (I\+Service\+Provider service\+Provider)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a399aed24885d5f6cdf77c5119c27f774}{Is\+Reusable}} =$>$ true
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a8b2932808e2ff3c8e70452932e6463ee}{Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The needed permission type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceKyoo_1_1Models_1_1Permissions_ad067cd704d5d3eb520d0a4a4d99fe602}{Kind}} \mbox{\hyperlink{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a1bd8c85cefe65fa913a5bb57f041cf56}{Kind}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The needed permission kind. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Specify one part of a permissions needed for the A\+PI (the kind or the type). 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a1bc7ce3e0d092171dfb92cec1d61e572}\label{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a1bc7ce3e0d092171dfb92cec1d61e572}} 
+\index{Kyoo.Models.Permissions.PartialPermissionAttribute@{Kyoo.Models.Permissions.PartialPermissionAttribute}!PartialPermissionAttribute@{PartialPermissionAttribute}}
+\index{PartialPermissionAttribute@{PartialPermissionAttribute}!Kyoo.Models.Permissions.PartialPermissionAttribute@{Kyoo.Models.Permissions.PartialPermissionAttribute}}
+\doxysubsubsection{\texorpdfstring{PartialPermissionAttribute()}{PartialPermissionAttribute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Kyoo.\+Models.\+Permissions.\+Partial\+Permission\+Attribute.\+Partial\+Permission\+Attribute (\begin{DoxyParamCaption}\item[{string}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ask a permission to run an action. 
+
+With this attribute, you can only specify a type or a kind. To have a valid permission attribute, you must specify the kind and the permission using two attributes. Those attributes can be dispatched at different places (one on the class, one on the method for example). If you don\textquotesingle{}t put exactly two of those attributes, the permission attribute will be ill-\/formed and will lead to unspecified behaviors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of the action (if the type ends with api, it will be removed. This allow you to use nameof(\+Your\+Api)). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a945477fd560ab25bc8d919d9752eca1e}\label{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a945477fd560ab25bc8d919d9752eca1e}} 
+\index{Kyoo.Models.Permissions.PartialPermissionAttribute@{Kyoo.Models.Permissions.PartialPermissionAttribute}!PartialPermissionAttribute@{PartialPermissionAttribute}}
+\index{PartialPermissionAttribute@{PartialPermissionAttribute}!Kyoo.Models.Permissions.PartialPermissionAttribute@{Kyoo.Models.Permissions.PartialPermissionAttribute}}
+\doxysubsubsection{\texorpdfstring{PartialPermissionAttribute()}{PartialPermissionAttribute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Kyoo.\+Models.\+Permissions.\+Partial\+Permission\+Attribute.\+Partial\+Permission\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceKyoo_1_1Models_1_1Permissions_ad067cd704d5d3eb520d0a4a4d99fe602}{Kind}}}]{permission }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ask a permission to run an action. 
+
+With this attribute, you can only specify a type or a kind. To have a valid permission attribute, you must specify the kind and the permission using two attributes. Those attributes can be dispatched at different places (one on the class, one on the method for example). If you don\textquotesingle{}t put exactly two of those attributes, the permission attribute will be ill-\/formed and will lead to unspecified behaviors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em permission} & The kind of permission needed\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a10a45e4489dd3b02066181228f707e22}\label{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a10a45e4489dd3b02066181228f707e22}} 
+\index{Kyoo.Models.Permissions.PartialPermissionAttribute@{Kyoo.Models.Permissions.PartialPermissionAttribute}!CreateInstance@{CreateInstance}}
+\index{CreateInstance@{CreateInstance}!Kyoo.Models.Permissions.PartialPermissionAttribute@{Kyoo.Models.Permissions.PartialPermissionAttribute}}
+\doxysubsubsection{\texorpdfstring{CreateInstance()}{CreateInstance()}}
+{\footnotesize\ttfamily I\+Filter\+Metadata Kyoo.\+Models.\+Permissions.\+Partial\+Permission\+Attribute.\+Create\+Instance (\begin{DoxyParamCaption}\item[{I\+Service\+Provider}]{service\+Provider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a399aed24885d5f6cdf77c5119c27f774}\label{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a399aed24885d5f6cdf77c5119c27f774}} 
+\index{Kyoo.Models.Permissions.PartialPermissionAttribute@{Kyoo.Models.Permissions.PartialPermissionAttribute}!IsReusable@{IsReusable}}
+\index{IsReusable@{IsReusable}!Kyoo.Models.Permissions.PartialPermissionAttribute@{Kyoo.Models.Permissions.PartialPermissionAttribute}}
+\doxysubsubsection{\texorpdfstring{IsReusable}{IsReusable}}
+{\footnotesize\ttfamily bool Kyoo.\+Models.\+Permissions.\+Partial\+Permission\+Attribute.\+Is\+Reusable =$>$ true}
+
+
+
+
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a1bd8c85cefe65fa913a5bb57f041cf56}\label{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a1bd8c85cefe65fa913a5bb57f041cf56}} 
+\index{Kyoo.Models.Permissions.PartialPermissionAttribute@{Kyoo.Models.Permissions.PartialPermissionAttribute}!Kind@{Kind}}
+\index{Kind@{Kind}!Kyoo.Models.Permissions.PartialPermissionAttribute@{Kyoo.Models.Permissions.PartialPermissionAttribute}}
+\doxysubsubsection{\texorpdfstring{Kind}{Kind}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceKyoo_1_1Models_1_1Permissions_ad067cd704d5d3eb520d0a4a4d99fe602}{Kind}} Kyoo.\+Models.\+Permissions.\+Partial\+Permission\+Attribute.\+Kind\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The needed permission kind. 
+
+\mbox{\Hypertarget{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a8b2932808e2ff3c8e70452932e6463ee}\label{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute_a8b2932808e2ff3c8e70452932e6463ee}} 
+\index{Kyoo.Models.Permissions.PartialPermissionAttribute@{Kyoo.Models.Permissions.PartialPermissionAttribute}!Type@{Type}}
+\index{Type@{Type}!Kyoo.Models.Permissions.PartialPermissionAttribute@{Kyoo.Models.Permissions.PartialPermissionAttribute}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily string Kyoo.\+Models.\+Permissions.\+Partial\+Permission\+Attribute.\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The needed permission type. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Models/\+Attributes/\mbox{\hyperlink{PermissionAttribute_8cs}{Permission\+Attribute.\+cs}}\end{DoxyCompactItemize}

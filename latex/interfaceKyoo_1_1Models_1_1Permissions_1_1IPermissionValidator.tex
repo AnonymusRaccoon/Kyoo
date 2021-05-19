@@ -1,0 +1,91 @@
+\hypertarget{interfaceKyoo_1_1Models_1_1Permissions_1_1IPermissionValidator}{}\doxysection{Kyoo.\+Models.\+Permissions.\+I\+Permission\+Validator Interface Reference}
+\label{interfaceKyoo_1_1Models_1_1Permissions_1_1IPermissionValidator}\index{Kyoo.Models.Permissions.IPermissionValidator@{Kyoo.Models.Permissions.IPermissionValidator}}
+
+
+A service to validate permissions  
+
+
+
+
+Inheritance diagram for Kyoo.\+Models.\+Permissions.\+I\+Permission\+Validator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceKyoo_1_1Models_1_1Permissions_1_1IPermissionValidator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Models.\+Permissions.\+I\+Permission\+Validator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{interfaceKyoo_1_1Models_1_1Permissions_1_1IPermissionValidator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+I\+Filter\+Metadata \mbox{\hyperlink{interfaceKyoo_1_1Models_1_1Permissions_1_1IPermissionValidator_a0f01d3253ba5be4af1296dbd30d03d0d}{Create}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Permissions_1_1PermissionAttribute}{Permission\+Attribute}} attribute)
+\begin{DoxyCompactList}\small\item\em Create an I\+Authorization\+Filter that will be used to validate permissions. This can registered with any lifetime. \end{DoxyCompactList}\item 
+I\+Filter\+Metadata \mbox{\hyperlink{interfaceKyoo_1_1Models_1_1Permissions_1_1IPermissionValidator_aa5dbd8b1a69d92eb7bf7a715be17172d}{Create}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute}{Partial\+Permission\+Attribute}} attribute)
+\begin{DoxyCompactList}\small\item\em Create an I\+Authorization\+Filter that will be used to validate permissions. This can registered with any lifetime. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A service to validate permissions 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Models_1_1Permissions_1_1IPermissionValidator_aa5dbd8b1a69d92eb7bf7a715be17172d}\label{interfaceKyoo_1_1Models_1_1Permissions_1_1IPermissionValidator_aa5dbd8b1a69d92eb7bf7a715be17172d}} 
+\index{Kyoo.Models.Permissions.IPermissionValidator@{Kyoo.Models.Permissions.IPermissionValidator}!Create@{Create}}
+\index{Create@{Create}!Kyoo.Models.Permissions.IPermissionValidator@{Kyoo.Models.Permissions.IPermissionValidator}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily I\+Filter\+Metadata Kyoo.\+Models.\+Permissions.\+I\+Permission\+Validator.\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute}{Partial\+Permission\+Attribute}}}]{attribute }\end{DoxyParamCaption})}
+
+
+
+Create an I\+Authorization\+Filter that will be used to validate permissions. This can registered with any lifetime. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attribute} & A partial attribute to validate. See \mbox{\hyperlink{classKyoo_1_1Models_1_1Permissions_1_1PartialPermissionAttribute}{Partial\+Permission\+Attribute}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An authorization filter used to validate the permission
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_a73ef538dc438515d189fdf7e1d1a52d0}{Kyoo.\+Authentication.\+Permission\+Validator\+Factory}}, and \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PassthroughPermissionValidator_aac1d853fc6c2387f1be9da03b43d7cb7}{Kyoo.\+Controllers.\+Passthrough\+Permission\+Validator}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Models_1_1Permissions_1_1IPermissionValidator_a0f01d3253ba5be4af1296dbd30d03d0d}\label{interfaceKyoo_1_1Models_1_1Permissions_1_1IPermissionValidator_a0f01d3253ba5be4af1296dbd30d03d0d}} 
+\index{Kyoo.Models.Permissions.IPermissionValidator@{Kyoo.Models.Permissions.IPermissionValidator}!Create@{Create}}
+\index{Create@{Create}!Kyoo.Models.Permissions.IPermissionValidator@{Kyoo.Models.Permissions.IPermissionValidator}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily I\+Filter\+Metadata Kyoo.\+Models.\+Permissions.\+I\+Permission\+Validator.\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Permissions_1_1PermissionAttribute}{Permission\+Attribute}}}]{attribute }\end{DoxyParamCaption})}
+
+
+
+Create an I\+Authorization\+Filter that will be used to validate permissions. This can registered with any lifetime. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attribute} & The permission attribute to validate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An authorization filter used to validate the permission
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_a2da597228713f22c28b43274ded86655}{Kyoo.\+Authentication.\+Permission\+Validator\+Factory}}, and \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PassthroughPermissionValidator_a249139b401d5e6ffe013dfd89c7faf7d}{Kyoo.\+Controllers.\+Passthrough\+Permission\+Validator}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Models/\+Attributes/\mbox{\hyperlink{PermissionAttribute_8cs}{Permission\+Attribute.\+cs}}\end{DoxyCompactItemize}

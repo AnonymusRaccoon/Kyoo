@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$interfaceKyoo_1_1Controllers_1_1IPluginManager.html" title="A manager to load plugins and retrieve information from them." alt="" coords="5,5,183,47"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Controllers_1_1PluginManager.html" title="An implementation of IPluginManager. This is used to load plugins and retrieve information from them." alt="" coords="231,13,461,39"/>
+</map>

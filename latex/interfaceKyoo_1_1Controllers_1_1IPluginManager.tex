@@ -1,0 +1,183 @@
+\hypertarget{interfaceKyoo_1_1Controllers_1_1IPluginManager}{}\doxysection{Kyoo.\+Controllers.\+I\+Plugin\+Manager Interface Reference}
+\label{interfaceKyoo_1_1Controllers_1_1IPluginManager}\index{Kyoo.Controllers.IPluginManager@{Kyoo.Controllers.IPluginManager}}
+
+
+A manager to load plugins and retrieve information from them.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+I\+Plugin\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{interfaceKyoo_1_1Controllers_1_1IPluginManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+I\+Plugin\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{interfaceKyoo_1_1Controllers_1_1IPluginManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager_a8b26080cc642ce5dcd3197a4cc88c8f6}{Get\+Plugin$<$ T $>$}} (string name)
+\begin{DoxyCompactList}\small\item\em Get a single plugin that match the type and name given. \end{DoxyCompactList}\item 
+I\+Collection$<$ T $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager_aa99240d71ca8bd9719d848956faed014}{Get\+Plugins$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Get all plugins of the given type. \end{DoxyCompactList}\item 
+I\+Collection$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager_a4c80c9e0c41a5cf059b941dda917fc14}{Get\+All\+Plugins}} ()
+\begin{DoxyCompactList}\small\item\em Get all plugins currently running on \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. This also includes deleted plugins if the app as not been restarted. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager_a22e1d734d49b6b48c9a41f9e5a48e125}{Load\+Plugins}} (I\+Collection$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}} $>$ plugins)
+\begin{DoxyCompactList}\small\item\em Load plugins and their dependencies from the plugin directory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager_ae05b3ff84127bfc4af1d4ac74249cd30}{Configure\+Services}} (I\+Service\+Collection services)
+\begin{DoxyCompactList}\small\item\em Configure services adding or removing services as the plugins wants. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager_a00621b7e0eef649d8a23e52a2f8ac98f}{Configure\+Aspnet}} (I\+Application\+Builder app)
+\begin{DoxyCompactList}\small\item\em Configure an asp net application applying plugins policies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A manager to load plugins and retrieve information from them. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IPluginManager_a00621b7e0eef649d8a23e52a2f8ac98f}\label{interfaceKyoo_1_1Controllers_1_1IPluginManager_a00621b7e0eef649d8a23e52a2f8ac98f}} 
+\index{Kyoo.Controllers.IPluginManager@{Kyoo.Controllers.IPluginManager}!ConfigureAspnet@{ConfigureAspnet}}
+\index{ConfigureAspnet@{ConfigureAspnet}!Kyoo.Controllers.IPluginManager@{Kyoo.Controllers.IPluginManager}}
+\doxysubsubsection{\texorpdfstring{ConfigureAspnet()}{ConfigureAspnet()}}
+{\footnotesize\ttfamily void Kyoo.\+Controllers.\+I\+Plugin\+Manager.\+Configure\+Aspnet (\begin{DoxyParamCaption}\item[{I\+Application\+Builder}]{app }\end{DoxyParamCaption})}
+
+
+
+Configure an asp net application applying plugins policies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & The asp net application to configure\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_a3d36674c1b53b36c7474b4e09b70170b}{Kyoo.\+Controllers.\+Plugin\+Manager}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IPluginManager_ae05b3ff84127bfc4af1d4ac74249cd30}\label{interfaceKyoo_1_1Controllers_1_1IPluginManager_ae05b3ff84127bfc4af1d4ac74249cd30}} 
+\index{Kyoo.Controllers.IPluginManager@{Kyoo.Controllers.IPluginManager}!ConfigureServices@{ConfigureServices}}
+\index{ConfigureServices@{ConfigureServices}!Kyoo.Controllers.IPluginManager@{Kyoo.Controllers.IPluginManager}}
+\doxysubsubsection{\texorpdfstring{ConfigureServices()}{ConfigureServices()}}
+{\footnotesize\ttfamily void Kyoo.\+Controllers.\+I\+Plugin\+Manager.\+Configure\+Services (\begin{DoxyParamCaption}\item[{I\+Service\+Collection}]{services }\end{DoxyParamCaption})}
+
+
+
+Configure services adding or removing services as the plugins wants. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em services} & The service collection to populate\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_a1669531fdd4f8ad190ef419426a6d6aa}{Kyoo.\+Controllers.\+Plugin\+Manager}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IPluginManager_a4c80c9e0c41a5cf059b941dda917fc14}\label{interfaceKyoo_1_1Controllers_1_1IPluginManager_a4c80c9e0c41a5cf059b941dda917fc14}} 
+\index{Kyoo.Controllers.IPluginManager@{Kyoo.Controllers.IPluginManager}!GetAllPlugins@{GetAllPlugins}}
+\index{GetAllPlugins@{GetAllPlugins}!Kyoo.Controllers.IPluginManager@{Kyoo.Controllers.IPluginManager}}
+\doxysubsubsection{\texorpdfstring{GetAllPlugins()}{GetAllPlugins()}}
+{\footnotesize\ttfamily I\+Collection$<$\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}}$>$ Kyoo.\+Controllers.\+I\+Plugin\+Manager.\+Get\+All\+Plugins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get all plugins currently running on \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. This also includes deleted plugins if the app as not been restarted. 
+
+\begin{DoxyReturn}{Returns}
+All plugins currently loaded.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_a5df9c9e85fd8905107498cdfdc99f73b}{Kyoo.\+Controllers.\+Plugin\+Manager}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IPluginManager_a8b26080cc642ce5dcd3197a4cc88c8f6}\label{interfaceKyoo_1_1Controllers_1_1IPluginManager_a8b26080cc642ce5dcd3197a4cc88c8f6}} 
+\index{Kyoo.Controllers.IPluginManager@{Kyoo.Controllers.IPluginManager}!GetPlugin$<$ T $>$@{GetPlugin$<$ T $>$}}
+\index{GetPlugin$<$ T $>$@{GetPlugin$<$ T $>$}!Kyoo.Controllers.IPluginManager@{Kyoo.Controllers.IPluginManager}}
+\doxysubsubsection{\texorpdfstring{GetPlugin$<$ T $>$()}{GetPlugin< T >()}}
+{\footnotesize\ttfamily T Kyoo.\+Controllers.\+I\+Plugin\+Manager.\+Get\+Plugin$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Get a single plugin that match the type and name given. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the plugin\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the plugin\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If no plugins match the query\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+A plugin that match the queries
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_a331c613b56a2bfef0455a838d5eaf5ed}{Kyoo.\+Controllers.\+Plugin\+Manager}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IPluginManager_aa99240d71ca8bd9719d848956faed014}\label{interfaceKyoo_1_1Controllers_1_1IPluginManager_aa99240d71ca8bd9719d848956faed014}} 
+\index{Kyoo.Controllers.IPluginManager@{Kyoo.Controllers.IPluginManager}!GetPlugins$<$ T $>$@{GetPlugins$<$ T $>$}}
+\index{GetPlugins$<$ T $>$@{GetPlugins$<$ T $>$}!Kyoo.Controllers.IPluginManager@{Kyoo.Controllers.IPluginManager}}
+\doxysubsubsection{\texorpdfstring{GetPlugins$<$ T $>$()}{GetPlugins< T >()}}
+{\footnotesize\ttfamily I\+Collection$<$T$>$ Kyoo.\+Controllers.\+I\+Plugin\+Manager.\+Get\+Plugins$<$ T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get all plugins of the given type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of plugins to get\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+A list of plugins matching the given type or an empty list of none match.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_afb3a3d91c29f8e8a1656ae30a79ef285}{Kyoo.\+Controllers.\+Plugin\+Manager}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IPluginManager_a22e1d734d49b6b48c9a41f9e5a48e125}\label{interfaceKyoo_1_1Controllers_1_1IPluginManager_a22e1d734d49b6b48c9a41f9e5a48e125}} 
+\index{Kyoo.Controllers.IPluginManager@{Kyoo.Controllers.IPluginManager}!LoadPlugins@{LoadPlugins}}
+\index{LoadPlugins@{LoadPlugins}!Kyoo.Controllers.IPluginManager@{Kyoo.Controllers.IPluginManager}}
+\doxysubsubsection{\texorpdfstring{LoadPlugins()}{LoadPlugins()}}
+{\footnotesize\ttfamily void Kyoo.\+Controllers.\+I\+Plugin\+Manager.\+Load\+Plugins (\begin{DoxyParamCaption}\item[{I\+Collection$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}} $>$}]{plugins }\end{DoxyParamCaption})}
+
+
+
+Load plugins and their dependencies from the plugin directory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugins} & An initial plugin list to use. You should not try to put plugins from the plugins directory here as they will get automatically loaded. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_acc9d949d7b04acec4d2f6eb4734cb419}{Kyoo.\+Controllers.\+Plugin\+Manager}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Controllers/\mbox{\hyperlink{IPluginManager_8cs}{I\+Plugin\+Manager.\+cs}}\end{DoxyCompactItemize}

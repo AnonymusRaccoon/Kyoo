@@ -1,0 +1,277 @@
+\hypertarget{classKyoo_1_1Authentication_1_1Views_1_1AccountApi}{}\doxysection{Kyoo.\+Authentication.\+Views.\+Account\+Api Class Reference}
+\label{classKyoo_1_1Authentication_1_1Views_1_1AccountApi}\index{Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}}
+
+
+The class responsible for login, logout, permissions and claims of a user.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Authentication.\+Views.\+Account\+Api\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classKyoo_1_1Authentication_1_1Views_1_1AccountApi__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Authentication.\+Views.\+Account\+Api\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKyoo_1_1Authentication_1_1Views_1_1AccountApi__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a47ca86982f00dd6af76cfbe1a7f8b863}{Account\+Api}} (\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IUserRepository}{I\+User\+Repository}} users, \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}} files, I\+Options$<$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1AuthenticationOption}{Authentication\+Option}} $>$ options)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Views_1_1AccountApi}{Account\+Api}} handle to handle login/users requests. \end{DoxyCompactList}\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a3455095a0375666b5c3ee0af4b08a056}{Register}} (\mbox{[}From\+Body\mbox{]} \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1DTO_1_1RegisterRequest}{Register\+Request}} request)
+\begin{DoxyCompactList}\small\item\em Register a new user and return a O\+T\+AC to connect to it. \end{DoxyCompactList}\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_aae312868ab3e2b95da3987114884a0b3}{Login}} (\mbox{[}From\+Body\mbox{]} \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1DTO_1_1LoginRequest}{Login\+Request}} login)
+\begin{DoxyCompactList}\small\item\em Login the user. \end{DoxyCompactList}\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a78b8758991e3e7a87caf68db0d40e1de}{Otac\+Login}} (\mbox{[}From\+Body\mbox{]} \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1DTO_1_1OtacRequest}{Otac\+Request}} otac)
+\begin{DoxyCompactList}\small\item\em Use a O\+T\+AC to login a user. \end{DoxyCompactList}\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_aaa8c512c654c7741b8fce78a340112bb}{Logout}} ()
+\begin{DoxyCompactList}\small\item\em Sign out an user \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a11206b26bdeab3c6af8ba3aa6ddefa0d}{Get\+Profile\+Data\+Async}} (Profile\+Data\+Request\+Context context)
+\item 
+async Task \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a3c87ad34ebd00bb079309653cdb2ca5e}{Is\+Active\+Async}} (Is\+Active\+Context context)
+\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_ab35a0f7ee7c055aaff23db05b1103d00}{Get\+Picture}} (string slug)
+\begin{DoxyCompactList}\small\item\em Get the user\textquotesingle{}s profile picture. \end{DoxyCompactList}\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a3c3f01bd0eebf1c4c7dae7dab06b5e16}{Update}} (\mbox{[}From\+Form\mbox{]} \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1DTO_1_1AccountUpdateRequest}{Account\+Update\+Request}} data)
+\begin{DoxyCompactList}\small\item\em Update profile information (email, username, profile picture...) \end{DoxyCompactList}\item 
+Action\+Result$<$ I\+Enumerable$<$ string $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a5d3ab14529080bbc2f48479c2e2cb94a}{Get\+Default\+Permissions}} ()
+\begin{DoxyCompactList}\small\item\em Get permissions for a non connected user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Authentication\+Properties \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a418e5754c77dd66b3310185dd659f12e}{Stay\+Logged}} (bool stay\+Logged)
+\begin{DoxyCompactList}\small\item\em Return an authentication properties based on a stay login property \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IUserRepository}{I\+User\+Repository}} \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a5da7f1d593754e249c7655b23cbe38cf}{\+\_\+users}}
+\begin{DoxyCompactList}\small\item\em The repository to handle users. \end{DoxyCompactList}\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}} \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_ad96fe6a7bd1c44b72881c7832b9f1b56}{\+\_\+files}}
+\begin{DoxyCompactList}\small\item\em A file manager to send profile pictures \end{DoxyCompactList}\item 
+readonly I\+Options$<$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1AuthenticationOption}{Authentication\+Option}} $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a03f965c670f71ab168395ce216ac906c}{\+\_\+options}}
+\begin{DoxyCompactList}\small\item\em Options about authentication. Those options are monitored and reloads are supported. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class responsible for login, logout, permissions and claims of a user. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a47ca86982f00dd6af76cfbe1a7f8b863}\label{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a47ca86982f00dd6af76cfbe1a7f8b863}} 
+\index{Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}!AccountApi@{AccountApi}}
+\index{AccountApi@{AccountApi}!Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}}
+\doxysubsubsection{\texorpdfstring{AccountApi()}{AccountApi()}}
+{\footnotesize\ttfamily Kyoo.\+Authentication.\+Views.\+Account\+Api.\+Account\+Api (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IUserRepository}{I\+User\+Repository}}}]{users,  }\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}}}]{files,  }\item[{I\+Options$<$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1AuthenticationOption}{Authentication\+Option}} $>$}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Views_1_1AccountApi}{Account\+Api}} handle to handle login/users requests. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em users} & The user repository to create and manage users\\
+\hline
+{\em files} & A file manager to send profile pictures\\
+\hline
+{\em options} & \mbox{\hyperlink{namespaceKyoo_1_1Authentication}{Authentication}} options (this may be hot reloaded)\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a5d3ab14529080bbc2f48479c2e2cb94a}\label{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a5d3ab14529080bbc2f48479c2e2cb94a}} 
+\index{Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}!GetDefaultPermissions@{GetDefaultPermissions}}
+\index{GetDefaultPermissions@{GetDefaultPermissions}!Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}}
+\doxysubsubsection{\texorpdfstring{GetDefaultPermissions()}{GetDefaultPermissions()}}
+{\footnotesize\ttfamily Action\+Result$<$I\+Enumerable$<$string$>$ $>$ Kyoo.\+Authentication.\+Views.\+Account\+Api.\+Get\+Default\+Permissions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get permissions for a non connected user. 
+
+\begin{DoxyReturn}{Returns}
+The list of permissions of a default user.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_ab35a0f7ee7c055aaff23db05b1103d00}\label{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_ab35a0f7ee7c055aaff23db05b1103d00}} 
+\index{Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}!GetPicture@{GetPicture}}
+\index{GetPicture@{GetPicture}!Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}}
+\doxysubsubsection{\texorpdfstring{GetPicture()}{GetPicture()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Kyoo.\+Authentication.\+Views.\+Account\+Api.\+Get\+Picture (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the user\textquotesingle{}s profile picture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slug} & The user slug\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The profile picture of the user or 404 if not found
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a11206b26bdeab3c6af8ba3aa6ddefa0d}\label{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a11206b26bdeab3c6af8ba3aa6ddefa0d}} 
+\index{Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}!GetProfileDataAsync@{GetProfileDataAsync}}
+\index{GetProfileDataAsync@{GetProfileDataAsync}!Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}}
+\doxysubsubsection{\texorpdfstring{GetProfileDataAsync()}{GetProfileDataAsync()}}
+{\footnotesize\ttfamily async Task Kyoo.\+Authentication.\+Views.\+Account\+Api.\+Get\+Profile\+Data\+Async (\begin{DoxyParamCaption}\item[{Profile\+Data\+Request\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a3c87ad34ebd00bb079309653cdb2ca5e}\label{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a3c87ad34ebd00bb079309653cdb2ca5e}} 
+\index{Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}!IsActiveAsync@{IsActiveAsync}}
+\index{IsActiveAsync@{IsActiveAsync}!Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}}
+\doxysubsubsection{\texorpdfstring{IsActiveAsync()}{IsActiveAsync()}}
+{\footnotesize\ttfamily async Task Kyoo.\+Authentication.\+Views.\+Account\+Api.\+Is\+Active\+Async (\begin{DoxyParamCaption}\item[{Is\+Active\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_aae312868ab3e2b95da3987114884a0b3}\label{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_aae312868ab3e2b95da3987114884a0b3}} 
+\index{Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}!Login@{Login}}
+\index{Login@{Login}!Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Kyoo.\+Authentication.\+Views.\+Account\+Api.\+Login (\begin{DoxyParamCaption}\item[{\mbox{[}\+From\+Body\mbox{]} \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1DTO_1_1LoginRequest}{Login\+Request}}}]{login }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Login the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & The D\+TO login request\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_aaa8c512c654c7741b8fce78a340112bb}\label{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_aaa8c512c654c7741b8fce78a340112bb}} 
+\index{Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}!Logout@{Logout}}
+\index{Logout@{Logout}!Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}}
+\doxysubsubsection{\texorpdfstring{Logout()}{Logout()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Kyoo.\+Authentication.\+Views.\+Account\+Api.\+Logout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sign out an user 
+
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a78b8758991e3e7a87caf68db0d40e1de}\label{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a78b8758991e3e7a87caf68db0d40e1de}} 
+\index{Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}!OtacLogin@{OtacLogin}}
+\index{OtacLogin@{OtacLogin}!Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}}
+\doxysubsubsection{\texorpdfstring{OtacLogin()}{OtacLogin()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Kyoo.\+Authentication.\+Views.\+Account\+Api.\+Otac\+Login (\begin{DoxyParamCaption}\item[{\mbox{[}\+From\+Body\mbox{]} \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1DTO_1_1OtacRequest}{Otac\+Request}}}]{otac }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Use a O\+T\+AC to login a user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em otac} & The O\+T\+AC request\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a3455095a0375666b5c3ee0af4b08a056}\label{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a3455095a0375666b5c3ee0af4b08a056}} 
+\index{Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}!Register@{Register}}
+\index{Register@{Register}!Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Kyoo.\+Authentication.\+Views.\+Account\+Api.\+Register (\begin{DoxyParamCaption}\item[{\mbox{[}\+From\+Body\mbox{]} \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1DTO_1_1RegisterRequest}{Register\+Request}}}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Register a new user and return a O\+T\+AC to connect to it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The D\+TO register request\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A O\+T\+AC to connect to this new account
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a418e5754c77dd66b3310185dd659f12e}\label{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a418e5754c77dd66b3310185dd659f12e}} 
+\index{Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}!StayLogged@{StayLogged}}
+\index{StayLogged@{StayLogged}!Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}}
+\doxysubsubsection{\texorpdfstring{StayLogged()}{StayLogged()}}
+{\footnotesize\ttfamily static Authentication\+Properties Kyoo.\+Authentication.\+Views.\+Account\+Api.\+Stay\+Logged (\begin{DoxyParamCaption}\item[{bool}]{stay\+Logged }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Return an authentication properties based on a stay login property 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stay\+Logged} & Should the user stay logged\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{namespaceKyoo_1_1Authentication}{Authentication}} properties based on a stay login
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a3c3f01bd0eebf1c4c7dae7dab06b5e16}\label{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a3c3f01bd0eebf1c4c7dae7dab06b5e16}} 
+\index{Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}!Update@{Update}}
+\index{Update@{Update}!Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}}$>$ $>$ Kyoo.\+Authentication.\+Views.\+Account\+Api.\+Update (\begin{DoxyParamCaption}\item[{\mbox{[}\+From\+Form\mbox{]} \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1DTO_1_1AccountUpdateRequest}{Account\+Update\+Request}}}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update profile information (email, username, profile picture...) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The new information\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The edited user
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_ad96fe6a7bd1c44b72881c7832b9f1b56}\label{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_ad96fe6a7bd1c44b72881c7832b9f1b56}} 
+\index{Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}!\_files@{\_files}}
+\index{\_files@{\_files}!Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}}
+\doxysubsubsection{\texorpdfstring{\_files}{\_files}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}} Kyoo.\+Authentication.\+Views.\+Account\+Api.\+\_\+files\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A file manager to send profile pictures 
+
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a03f965c670f71ab168395ce216ac906c}\label{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a03f965c670f71ab168395ce216ac906c}} 
+\index{Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}!\_options@{\_options}}
+\index{\_options@{\_options}!Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}}
+\doxysubsubsection{\texorpdfstring{\_options}{\_options}}
+{\footnotesize\ttfamily readonly I\+Options$<$\mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1AuthenticationOption}{Authentication\+Option}}$>$ Kyoo.\+Authentication.\+Views.\+Account\+Api.\+\_\+options\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Options about authentication. Those options are monitored and reloads are supported. 
+
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a5da7f1d593754e249c7655b23cbe38cf}\label{classKyoo_1_1Authentication_1_1Views_1_1AccountApi_a5da7f1d593754e249c7655b23cbe38cf}} 
+\index{Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}!\_users@{\_users}}
+\index{\_users@{\_users}!Kyoo.Authentication.Views.AccountApi@{Kyoo.Authentication.Views.AccountApi}}
+\doxysubsubsection{\texorpdfstring{\_users}{\_users}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IUserRepository}{I\+User\+Repository}} Kyoo.\+Authentication.\+Views.\+Account\+Api.\+\_\+users\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The repository to handle users. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Authentication/\+Views/\mbox{\hyperlink{AccountApi_8cs}{Account\+Api.\+cs}}\end{DoxyCompactItemize}

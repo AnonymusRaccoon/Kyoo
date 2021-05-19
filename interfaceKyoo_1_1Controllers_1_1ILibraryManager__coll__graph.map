@@ -1,0 +1,3 @@
+<map id="Kyoo.Controllers.ILibraryManager" name="Kyoo.Controllers.ILibraryManager">
+<area shape="rect" id="node1" title="An interface to interract with the database. Every repository is mapped through here." alt="" coords="5,5,188,391"/>
+</map>

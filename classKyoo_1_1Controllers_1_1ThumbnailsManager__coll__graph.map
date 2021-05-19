@@ -1,0 +1,5 @@
+<map id="Kyoo.Controllers.ThumbnailsManager" name="Kyoo.Controllers.ThumbnailsManager">
+<area shape="rect" id="node1" title=" " alt="" coords="92,307,301,589"/>
+<area shape="rect" id="node2" href="$interfaceKyoo_1_1Controllers_1_1IThumbnailsManager.html" title=" " alt="" coords="5,5,172,244"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1IFileManager.html" title="A service to abstract the file system to allow custom file systems (like distant file systems or exte..." alt="" coords="196,35,413,215"/>
+</map>

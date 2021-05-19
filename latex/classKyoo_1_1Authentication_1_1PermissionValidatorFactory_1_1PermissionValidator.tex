@@ -1,0 +1,154 @@
+\hypertarget{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator}{}\doxysection{Kyoo.\+Authentication.\+Permission\+Validator\+Factory.\+Permission\+Validator Class Reference}
+\label{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator}\index{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator@{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator}}
+
+
+The authorization filter used by \mbox{\hyperlink{classKyoo_1_1Authentication_1_1PermissionValidatorFactory}{Permission\+Validator\+Factory}}  
+
+
+
+
+Inheritance diagram for Kyoo.\+Authentication.\+Permission\+Validator\+Factory.\+Permission\+Validator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Authentication.\+Permission\+Validator\+Factory.\+Permission\+Validator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_a27b28b25b9e6f14fd6a092c94a2bf0c9}{Permission\+Validator}} (string permission, \mbox{\hyperlink{namespaceKyoo_1_1Models_1_1Permissions_ad067cd704d5d3eb520d0a4a4d99fe602}{Kind}} kind, \mbox{\hyperlink{namespaceKyoo_1_1Models_1_1Permissions_a32ddb6ca7ab4409c1fbf223339c45983}{Group}} group, I\+Options\+Monitor$<$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1PermissionOption}{Permission\+Option}} $>$ options)
+\begin{DoxyCompactList}\small\item\em Create a new permission validator with the given options \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_aeb3d534eb1ddee3cb1bb6443a9cbf004}{Permission\+Validator}} (object partial\+Info, I\+Options\+Monitor$<$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1PermissionOption}{Permission\+Option}} $>$ options)
+\begin{DoxyCompactList}\small\item\em Create a new permission validator with the given options \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_a2c843fc90f660088bc22a717b60e263b}{On\+Authorization\+Async}} (Authorization\+Filter\+Context context)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly string \mbox{\hyperlink{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_aaa97ec338079596db994759bb66407aa}{\+\_\+permission}}
+\begin{DoxyCompactList}\small\item\em The permission to validate \end{DoxyCompactList}\item 
+readonly? \mbox{\hyperlink{namespaceKyoo_1_1Models_1_1Permissions_ad067cd704d5d3eb520d0a4a4d99fe602}{Kind}} \mbox{\hyperlink{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_ac012b5e79b9a4fc0fc69176fa85b7787}{\+\_\+kind}}
+\begin{DoxyCompactList}\small\item\em The kind of permission needed \end{DoxyCompactList}\item 
+readonly \mbox{\hyperlink{namespaceKyoo_1_1Models_1_1Permissions_a32ddb6ca7ab4409c1fbf223339c45983}{Group}} \mbox{\hyperlink{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_a3a5c8649a668538917a4f2b4e606ab63}{\+\_\+group}} = Group.\+Overall
+\begin{DoxyCompactList}\small\item\em The group of he permission \end{DoxyCompactList}\item 
+readonly I\+Options\+Monitor$<$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1PermissionOption}{Permission\+Option}} $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_aa5f66c55836ddecc9f56767132c71f9d}{\+\_\+options}}
+\begin{DoxyCompactList}\small\item\em The permissions options to retrieve default permissions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The authorization filter used by \mbox{\hyperlink{classKyoo_1_1Authentication_1_1PermissionValidatorFactory}{Permission\+Validator\+Factory}} 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_a27b28b25b9e6f14fd6a092c94a2bf0c9}\label{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_a27b28b25b9e6f14fd6a092c94a2bf0c9}} 
+\index{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator@{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator}!PermissionValidator@{PermissionValidator}}
+\index{PermissionValidator@{PermissionValidator}!Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator@{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator}}
+\doxysubsubsection{\texorpdfstring{PermissionValidator()}{PermissionValidator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Kyoo.\+Authentication.\+Permission\+Validator\+Factory.\+Permission\+Validator.\+Permission\+Validator (\begin{DoxyParamCaption}\item[{string}]{permission,  }\item[{\mbox{\hyperlink{namespaceKyoo_1_1Models_1_1Permissions_ad067cd704d5d3eb520d0a4a4d99fe602}{Kind}}}]{kind,  }\item[{\mbox{\hyperlink{namespaceKyoo_1_1Models_1_1Permissions_a32ddb6ca7ab4409c1fbf223339c45983}{Group}}}]{group,  }\item[{I\+Options\+Monitor$<$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1PermissionOption}{Permission\+Option}} $>$}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new permission validator with the given options 
+
+
+\begin{DoxyParams}{Parameters}
+{\em permission} & The permission to validate\\
+\hline
+{\em kind} & The kind of permission needed\\
+\hline
+{\em group} & The group of the permission\\
+\hline
+{\em options} & The option containing default values.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_aeb3d534eb1ddee3cb1bb6443a9cbf004}\label{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_aeb3d534eb1ddee3cb1bb6443a9cbf004}} 
+\index{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator@{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator}!PermissionValidator@{PermissionValidator}}
+\index{PermissionValidator@{PermissionValidator}!Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator@{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator}}
+\doxysubsubsection{\texorpdfstring{PermissionValidator()}{PermissionValidator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Kyoo.\+Authentication.\+Permission\+Validator\+Factory.\+Permission\+Validator.\+Permission\+Validator (\begin{DoxyParamCaption}\item[{object}]{partial\+Info,  }\item[{I\+Options\+Monitor$<$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1PermissionOption}{Permission\+Option}} $>$}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new permission validator with the given options 
+
+
+\begin{DoxyParams}{Parameters}
+{\em partial\+Info} & The partial permission to validate\\
+\hline
+{\em options} & The option containing default values.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_a2c843fc90f660088bc22a717b60e263b}\label{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_a2c843fc90f660088bc22a717b60e263b}} 
+\index{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator@{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator}!OnAuthorizationAsync@{OnAuthorizationAsync}}
+\index{OnAuthorizationAsync@{OnAuthorizationAsync}!Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator@{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator}}
+\doxysubsubsection{\texorpdfstring{OnAuthorizationAsync()}{OnAuthorizationAsync()}}
+{\footnotesize\ttfamily async Task Kyoo.\+Authentication.\+Permission\+Validator\+Factory.\+Permission\+Validator.\+On\+Authorization\+Async (\begin{DoxyParamCaption}\item[{Authorization\+Filter\+Context}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_a3a5c8649a668538917a4f2b4e606ab63}\label{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_a3a5c8649a668538917a4f2b4e606ab63}} 
+\index{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator@{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator}!\_group@{\_group}}
+\index{\_group@{\_group}!Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator@{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator}}
+\doxysubsubsection{\texorpdfstring{\_group}{\_group}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{namespaceKyoo_1_1Models_1_1Permissions_a32ddb6ca7ab4409c1fbf223339c45983}{Group}} Kyoo.\+Authentication.\+Permission\+Validator\+Factory.\+Permission\+Validator.\+\_\+group = Group.\+Overall\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The group of he permission 
+
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_ac012b5e79b9a4fc0fc69176fa85b7787}\label{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_ac012b5e79b9a4fc0fc69176fa85b7787}} 
+\index{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator@{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator}!\_kind@{\_kind}}
+\index{\_kind@{\_kind}!Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator@{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator}}
+\doxysubsubsection{\texorpdfstring{\_kind}{\_kind}}
+{\footnotesize\ttfamily readonly? \mbox{\hyperlink{namespaceKyoo_1_1Models_1_1Permissions_ad067cd704d5d3eb520d0a4a4d99fe602}{Kind}} Kyoo.\+Authentication.\+Permission\+Validator\+Factory.\+Permission\+Validator.\+\_\+kind\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The kind of permission needed 
+
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_aa5f66c55836ddecc9f56767132c71f9d}\label{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_aa5f66c55836ddecc9f56767132c71f9d}} 
+\index{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator@{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator}!\_options@{\_options}}
+\index{\_options@{\_options}!Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator@{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator}}
+\doxysubsubsection{\texorpdfstring{\_options}{\_options}}
+{\footnotesize\ttfamily readonly I\+Options\+Monitor$<$\mbox{\hyperlink{classKyoo_1_1Authentication_1_1Models_1_1PermissionOption}{Permission\+Option}}$>$ Kyoo.\+Authentication.\+Permission\+Validator\+Factory.\+Permission\+Validator.\+\_\+options\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The permissions options to retrieve default permissions. 
+
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_aaa97ec338079596db994759bb66407aa}\label{classKyoo_1_1Authentication_1_1PermissionValidatorFactory_1_1PermissionValidator_aaa97ec338079596db994759bb66407aa}} 
+\index{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator@{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator}!\_permission@{\_permission}}
+\index{\_permission@{\_permission}!Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator@{Kyoo.Authentication.PermissionValidatorFactory.PermissionValidator}}
+\doxysubsubsection{\texorpdfstring{\_permission}{\_permission}}
+{\footnotesize\ttfamily readonly string Kyoo.\+Authentication.\+Permission\+Validator\+Factory.\+Permission\+Validator.\+\_\+permission\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The permission to validate 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Authentication/\+Controllers/\mbox{\hyperlink{PremissionValidator_8cs}{Premission\+Validator.\+cs}}\end{DoxyCompactItemize}

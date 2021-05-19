@@ -1,0 +1,130 @@
+\hypertarget{classKyoo_1_1Api_1_1VideoApi}{}\doxysection{Kyoo.\+Api.\+Video\+Api Class Reference}
+\label{classKyoo_1_1Api_1_1VideoApi}\index{Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}}
+
+
+Inheritance diagram for Kyoo.\+Api.\+Video\+Api\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classKyoo_1_1Api_1_1VideoApi__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Api.\+Video\+Api\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKyoo_1_1Api_1_1VideoApi__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Api_1_1VideoApi_a9db46461dc347a8ee2e415c0787bc2e3}{Video\+Api}} (\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}} library\+Manager, \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITranscoder}{I\+Transcoder}} transcoder, I\+Options$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Options_1_1BasicOptions}{Basic\+Options}} $>$ options, \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}} files)
+\item 
+override void \mbox{\hyperlink{classKyoo_1_1Api_1_1VideoApi_a31d0a3b5117f5a0a1112ca186504d1b2}{On\+Action\+Executed}} (Action\+Executed\+Context ctx)
+\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1VideoApi_ac0c3984cb4898f8670d0de61f55475d5}{Direct}} (string slug)
+\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1VideoApi_a5995eda863a2d1d1b8952b91faef6490}{Transmux}} (string slug)
+\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1VideoApi_a46c411607497cc42596f8fba6f77ddfc}{Transcode}} (string slug)
+\item 
+I\+Action\+Result \mbox{\hyperlink{classKyoo_1_1Api_1_1VideoApi_a8ba6f8a2155bc303113fc49a0333b8a7}{Get\+Transmuxed\+Chunk}} (string episode\+Link, string chunk)
+\item 
+I\+Action\+Result \mbox{\hyperlink{classKyoo_1_1Api_1_1VideoApi_aac8734e80276db60fe065b7ee8853894}{Get\+Transcoded\+Chunk}} (string episode\+Link, string chunk)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}} \mbox{\hyperlink{classKyoo_1_1Api_1_1VideoApi_a4904849f325efe0e3286c309a93b327d}{\+\_\+library\+Manager}}
+\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITranscoder}{I\+Transcoder}} \mbox{\hyperlink{classKyoo_1_1Api_1_1VideoApi_a18e17fa35ccaeac6d83045bad42d0ddb}{\+\_\+transcoder}}
+\item 
+readonly I\+Options$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Options_1_1BasicOptions}{Basic\+Options}} $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1VideoApi_a4fbf42f4ee6fcc1d7d198f2631bad064}{\+\_\+options}}
+\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}} \mbox{\hyperlink{classKyoo_1_1Api_1_1VideoApi_a16fb87f9e497ac95df02e41509ad8f85}{\+\_\+files}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1VideoApi_a9db46461dc347a8ee2e415c0787bc2e3}\label{classKyoo_1_1Api_1_1VideoApi_a9db46461dc347a8ee2e415c0787bc2e3}} 
+\index{Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}!VideoApi@{VideoApi}}
+\index{VideoApi@{VideoApi}!Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}}
+\doxysubsubsection{\texorpdfstring{VideoApi()}{VideoApi()}}
+{\footnotesize\ttfamily Kyoo.\+Api.\+Video\+Api.\+Video\+Api (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}}}]{library\+Manager,  }\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITranscoder}{I\+Transcoder}}}]{transcoder,  }\item[{I\+Options$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Options_1_1BasicOptions}{Basic\+Options}} $>$}]{options,  }\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}}}]{files }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1VideoApi_ac0c3984cb4898f8670d0de61f55475d5}\label{classKyoo_1_1Api_1_1VideoApi_ac0c3984cb4898f8670d0de61f55475d5}} 
+\index{Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}!Direct@{Direct}}
+\index{Direct@{Direct}!Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}}
+\doxysubsubsection{\texorpdfstring{Direct()}{Direct()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Kyoo.\+Api.\+Video\+Api.\+Direct (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1VideoApi_aac8734e80276db60fe065b7ee8853894}\label{classKyoo_1_1Api_1_1VideoApi_aac8734e80276db60fe065b7ee8853894}} 
+\index{Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}!GetTranscodedChunk@{GetTranscodedChunk}}
+\index{GetTranscodedChunk@{GetTranscodedChunk}!Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}}
+\doxysubsubsection{\texorpdfstring{GetTranscodedChunk()}{GetTranscodedChunk()}}
+{\footnotesize\ttfamily I\+Action\+Result Kyoo.\+Api.\+Video\+Api.\+Get\+Transcoded\+Chunk (\begin{DoxyParamCaption}\item[{string}]{episode\+Link,  }\item[{string}]{chunk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1VideoApi_a8ba6f8a2155bc303113fc49a0333b8a7}\label{classKyoo_1_1Api_1_1VideoApi_a8ba6f8a2155bc303113fc49a0333b8a7}} 
+\index{Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}!GetTransmuxedChunk@{GetTransmuxedChunk}}
+\index{GetTransmuxedChunk@{GetTransmuxedChunk}!Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}}
+\doxysubsubsection{\texorpdfstring{GetTransmuxedChunk()}{GetTransmuxedChunk()}}
+{\footnotesize\ttfamily I\+Action\+Result Kyoo.\+Api.\+Video\+Api.\+Get\+Transmuxed\+Chunk (\begin{DoxyParamCaption}\item[{string}]{episode\+Link,  }\item[{string}]{chunk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1VideoApi_a31d0a3b5117f5a0a1112ca186504d1b2}\label{classKyoo_1_1Api_1_1VideoApi_a31d0a3b5117f5a0a1112ca186504d1b2}} 
+\index{Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}!OnActionExecuted@{OnActionExecuted}}
+\index{OnActionExecuted@{OnActionExecuted}!Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}}
+\doxysubsubsection{\texorpdfstring{OnActionExecuted()}{OnActionExecuted()}}
+{\footnotesize\ttfamily override void Kyoo.\+Api.\+Video\+Api.\+On\+Action\+Executed (\begin{DoxyParamCaption}\item[{Action\+Executed\+Context}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1VideoApi_a46c411607497cc42596f8fba6f77ddfc}\label{classKyoo_1_1Api_1_1VideoApi_a46c411607497cc42596f8fba6f77ddfc}} 
+\index{Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}!Transcode@{Transcode}}
+\index{Transcode@{Transcode}!Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}}
+\doxysubsubsection{\texorpdfstring{Transcode()}{Transcode()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Kyoo.\+Api.\+Video\+Api.\+Transcode (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1VideoApi_a5995eda863a2d1d1b8952b91faef6490}\label{classKyoo_1_1Api_1_1VideoApi_a5995eda863a2d1d1b8952b91faef6490}} 
+\index{Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}!Transmux@{Transmux}}
+\index{Transmux@{Transmux}!Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}}
+\doxysubsubsection{\texorpdfstring{Transmux()}{Transmux()}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Kyoo.\+Api.\+Video\+Api.\+Transmux (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1VideoApi_a16fb87f9e497ac95df02e41509ad8f85}\label{classKyoo_1_1Api_1_1VideoApi_a16fb87f9e497ac95df02e41509ad8f85}} 
+\index{Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}!\_files@{\_files}}
+\index{\_files@{\_files}!Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}}
+\doxysubsubsection{\texorpdfstring{\_files}{\_files}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}} Kyoo.\+Api.\+Video\+Api.\+\_\+files\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1VideoApi_a4904849f325efe0e3286c309a93b327d}\label{classKyoo_1_1Api_1_1VideoApi_a4904849f325efe0e3286c309a93b327d}} 
+\index{Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}!\_libraryManager@{\_libraryManager}}
+\index{\_libraryManager@{\_libraryManager}!Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}}
+\doxysubsubsection{\texorpdfstring{\_libraryManager}{\_libraryManager}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}} Kyoo.\+Api.\+Video\+Api.\+\_\+library\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1VideoApi_a4fbf42f4ee6fcc1d7d198f2631bad064}\label{classKyoo_1_1Api_1_1VideoApi_a4fbf42f4ee6fcc1d7d198f2631bad064}} 
+\index{Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}!\_options@{\_options}}
+\index{\_options@{\_options}!Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}}
+\doxysubsubsection{\texorpdfstring{\_options}{\_options}}
+{\footnotesize\ttfamily readonly I\+Options$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Options_1_1BasicOptions}{Basic\+Options}}$>$ Kyoo.\+Api.\+Video\+Api.\+\_\+options\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1VideoApi_a18e17fa35ccaeac6d83045bad42d0ddb}\label{classKyoo_1_1Api_1_1VideoApi_a18e17fa35ccaeac6d83045bad42d0ddb}} 
+\index{Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}!\_transcoder@{\_transcoder}}
+\index{\_transcoder@{\_transcoder}!Kyoo.Api.VideoApi@{Kyoo.Api.VideoApi}}
+\doxysubsubsection{\texorpdfstring{\_transcoder}{\_transcoder}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITranscoder}{I\+Transcoder}} Kyoo.\+Api.\+Video\+Api.\+\_\+transcoder\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Views/\mbox{\hyperlink{VideoApi_8cs}{Video\+Api.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,207 @@
+\hypertarget{classKyoo_1_1Module}{}\doxysection{Kyoo.\+Module Class Reference}
+\label{classKyoo_1_1Module}\index{Kyoo.Module@{Kyoo.Module}}
+
+
+A static class with helper functions to setup external modules  
+
+
+
+
+Collaboration diagram for Kyoo.\+Module\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classKyoo_1_1Module__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static I\+Service\+Collection \mbox{\hyperlink{classKyoo_1_1Module_abce16ab31bf3bd1fb4209c6cb74e0076}{Add\+Task$<$ T $>$}} (this I\+Service\+Collection services)
+\begin{DoxyCompactList}\small\item\em Register a new task to the container. \end{DoxyCompactList}\item 
+static I\+Service\+Collection \mbox{\hyperlink{classKyoo_1_1Module_a6e4c12614a6dcfdc5b59ab92db0379db}{Add\+Repository$<$ T $>$}} (this I\+Service\+Collection services, Service\+Lifetime lifetime=Service\+Lifetime.\+Scoped)
+\begin{DoxyCompactList}\small\item\em Register a new repository to the container. \end{DoxyCompactList}\item 
+static I\+Service\+Collection \mbox{\hyperlink{classKyoo_1_1Module_a695a97e681431adc7ef2e4785ea8f8ed}{Add\+Repository$<$ T, T2 $>$}} (this I\+Service\+Collection services, Service\+Lifetime lifetime=Service\+Lifetime.\+Scoped)
+\begin{DoxyCompactList}\small\item\em Register a new repository with a custom mapping to the container. \end{DoxyCompactList}\item 
+static I\+Service\+Collection \mbox{\hyperlink{classKyoo_1_1Module_a52fd328534beb133a3c6f6c6291dcae1}{Add\+Configuration$<$ T $>$}} (this I\+Service\+Collection services, string path)
+\begin{DoxyCompactList}\small\item\em Add an editable configuration to the editable configuration list \end{DoxyCompactList}\item 
+static I\+Service\+Collection \mbox{\hyperlink{classKyoo_1_1Module_af1845fcfe9f29d18f211f620fa34687c}{Add\+Untyped\+Configuration}} (this I\+Service\+Collection services, string path)
+\begin{DoxyCompactList}\small\item\em Add an editable configuration to the editable configuration list. W\+A\+R\+N\+I\+NG\+: this method allow you to add an unmanaged type. This type won\textquotesingle{}t be editable. This can be used for external libraries or variable arguments. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{classKyoo_1_1Module_ac2cf69768c6422f59f22a92115806d73}{Get\+Public\+Url}} (this I\+Configuration configuration)
+\begin{DoxyCompactList}\small\item\em Get the public U\+RL of kyoo using the given configuration instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A static class with helper functions to setup external modules 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Module_a52fd328534beb133a3c6f6c6291dcae1}\label{classKyoo_1_1Module_a52fd328534beb133a3c6f6c6291dcae1}} 
+\index{Kyoo.Module@{Kyoo.Module}!AddConfiguration$<$ T $>$@{AddConfiguration$<$ T $>$}}
+\index{AddConfiguration$<$ T $>$@{AddConfiguration$<$ T $>$}!Kyoo.Module@{Kyoo.Module}}
+\doxysubsubsection{\texorpdfstring{AddConfiguration$<$ T $>$()}{AddConfiguration< T >()}}
+{\footnotesize\ttfamily static I\+Service\+Collection Kyoo.\+Module.\+Add\+Configuration$<$ T $>$ (\begin{DoxyParamCaption}\item[{this I\+Service\+Collection}]{services,  }\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Add an editable configuration to the editable configuration list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em services} & The service collection to edit\\
+\hline
+{\em path} & The root path of the editable configuration. It should not be a nested type.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the configuration\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The given service collection is returned.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{classKyoo_1_1Module_a6e4c12614a6dcfdc5b59ab92db0379db}\label{classKyoo_1_1Module_a6e4c12614a6dcfdc5b59ab92db0379db}} 
+\index{Kyoo.Module@{Kyoo.Module}!AddRepository$<$ T $>$@{AddRepository$<$ T $>$}}
+\index{AddRepository$<$ T $>$@{AddRepository$<$ T $>$}!Kyoo.Module@{Kyoo.Module}}
+\doxysubsubsection{\texorpdfstring{AddRepository$<$ T $>$()}{AddRepository< T >()}}
+{\footnotesize\ttfamily static I\+Service\+Collection Kyoo.\+Module.\+Add\+Repository$<$ T $>$ (\begin{DoxyParamCaption}\item[{this I\+Service\+Collection}]{services,  }\item[{Service\+Lifetime}]{lifetime = {\ttfamily ServiceLifetime.Scoped} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Register a new repository to the container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em services} & The container\\
+\hline
+{\em lifetime} & The lifetime of the repository. The default is scoped.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the repository.\\
+\hline
+\end{DoxyTemplParams}
+
+
+If your repository implements a special interface, please use \mbox{\hyperlink{classKyoo_1_1Module_a695a97e681431adc7ef2e4785ea8f8ed}{Add\+Repository$<$\+T,\+T2$>$}} 
+
+\begin{DoxyReturn}{Returns}
+The initial container.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em I\+Base\+Repository}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{classKyoo_1_1Module_a695a97e681431adc7ef2e4785ea8f8ed}\label{classKyoo_1_1Module_a695a97e681431adc7ef2e4785ea8f8ed}} 
+\index{Kyoo.Module@{Kyoo.Module}!AddRepository$<$ T, T2 $>$@{AddRepository$<$ T, T2 $>$}}
+\index{AddRepository$<$ T, T2 $>$@{AddRepository$<$ T, T2 $>$}!Kyoo.Module@{Kyoo.Module}}
+\doxysubsubsection{\texorpdfstring{AddRepository$<$ T, T2 $>$()}{AddRepository< T, T2 >()}}
+{\footnotesize\ttfamily static I\+Service\+Collection Kyoo.\+Module.\+Add\+Repository$<$ T, T2 $>$ (\begin{DoxyParamCaption}\item[{this I\+Service\+Collection}]{services,  }\item[{Service\+Lifetime}]{lifetime = {\ttfamily ServiceLifetime.Scoped} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Register a new repository with a custom mapping to the container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em services} & \\
+\hline
+{\em lifetime} & The lifetime of the repository. The default is scoped.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The custom mapping you have for your repository.\\
+\hline
+{\em T2} & The type of the repository.\\
+\hline
+\end{DoxyTemplParams}
+
+
+If your repository does not implements a special interface, please use \mbox{\hyperlink{classKyoo_1_1Module_a6e4c12614a6dcfdc5b59ab92db0379db}{Add\+Repository$<$\+T$>$}} 
+
+\begin{DoxyReturn}{Returns}
+The initial container.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T2} : {\em I\+Base\+Repository}]\item[{\em T2} : {\em T}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{classKyoo_1_1Module_abce16ab31bf3bd1fb4209c6cb74e0076}\label{classKyoo_1_1Module_abce16ab31bf3bd1fb4209c6cb74e0076}} 
+\index{Kyoo.Module@{Kyoo.Module}!AddTask$<$ T $>$@{AddTask$<$ T $>$}}
+\index{AddTask$<$ T $>$@{AddTask$<$ T $>$}!Kyoo.Module@{Kyoo.Module}}
+\doxysubsubsection{\texorpdfstring{AddTask$<$ T $>$()}{AddTask< T >()}}
+{\footnotesize\ttfamily static I\+Service\+Collection Kyoo.\+Module.\+Add\+Task$<$ T $>$ (\begin{DoxyParamCaption}\item[{this I\+Service\+Collection}]{services }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Register a new task to the container. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em services} & The container\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the task\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The initial container.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em class}]\item[{\em T} : {\em I\+Task}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{classKyoo_1_1Module_af1845fcfe9f29d18f211f620fa34687c}\label{classKyoo_1_1Module_af1845fcfe9f29d18f211f620fa34687c}} 
+\index{Kyoo.Module@{Kyoo.Module}!AddUntypedConfiguration@{AddUntypedConfiguration}}
+\index{AddUntypedConfiguration@{AddUntypedConfiguration}!Kyoo.Module@{Kyoo.Module}}
+\doxysubsubsection{\texorpdfstring{AddUntypedConfiguration()}{AddUntypedConfiguration()}}
+{\footnotesize\ttfamily static I\+Service\+Collection Kyoo.\+Module.\+Add\+Untyped\+Configuration (\begin{DoxyParamCaption}\item[{this I\+Service\+Collection}]{services,  }\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Add an editable configuration to the editable configuration list. W\+A\+R\+N\+I\+NG\+: this method allow you to add an unmanaged type. This type won\textquotesingle{}t be editable. This can be used for external libraries or variable arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em services} & The service collection to edit\\
+\hline
+{\em path} & The root path of the editable configuration. It should not be a nested type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The given service collection is returned.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Module_ac2cf69768c6422f59f22a92115806d73}\label{classKyoo_1_1Module_ac2cf69768c6422f59f22a92115806d73}} 
+\index{Kyoo.Module@{Kyoo.Module}!GetPublicUrl@{GetPublicUrl}}
+\index{GetPublicUrl@{GetPublicUrl}!Kyoo.Module@{Kyoo.Module}}
+\doxysubsubsection{\texorpdfstring{GetPublicUrl()}{GetPublicUrl()}}
+{\footnotesize\ttfamily static string Kyoo.\+Module.\+Get\+Public\+Url (\begin{DoxyParamCaption}\item[{this I\+Configuration}]{configuration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the public U\+RL of kyoo using the given configuration instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em configuration} & The configuration instance\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The public U\+Rl of kyoo (without a slash at the end)
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\mbox{\hyperlink{Module_8cs}{Module.\+cs}}\end{DoxyCompactItemize}

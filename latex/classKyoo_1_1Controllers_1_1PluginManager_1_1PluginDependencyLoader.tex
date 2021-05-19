@@ -1,0 +1,108 @@
+\hypertarget{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader}{}\doxysection{Kyoo.\+Controllers.\+Plugin\+Manager.\+Plugin\+Dependency\+Loader Class Reference}
+\label{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader}\index{Kyoo.Controllers.PluginManager.PluginDependencyLoader@{Kyoo.Controllers.PluginManager.PluginDependencyLoader}}
+
+
+A custom Assembly\+Load\+Context to load plugin\textquotesingle{}s dependency if they are on the same folder.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+Plugin\+Manager.\+Plugin\+Dependency\+Loader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+Plugin\+Manager.\+Plugin\+Dependency\+Loader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader_a63d7c118d62267294cd952f88206dc3c}{Plugin\+Dependency\+Loader}} (string plugin\+Path)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader}{Plugin\+Dependency\+Loader}} for the given path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override Assembly \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader_aecad02951b5a04283e3ea3195394d4d8}{Load}} (Assembly\+Name assembly\+Name)
+\item 
+override Int\+Ptr \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader_a2a2768353042b7b24790918f60b56cd4}{Load\+Unmanaged\+Dll}} (string unmanaged\+Dll\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly Assembly\+Dependency\+Resolver \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader_a49d7f6887807e6b74c42cff0af123fc6}{\+\_\+resolver}}
+\begin{DoxyCompactList}\small\item\em The basic resolver that will be used to load dlls. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A custom Assembly\+Load\+Context to load plugin\textquotesingle{}s dependency if they are on the same folder. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader_a63d7c118d62267294cd952f88206dc3c}\label{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader_a63d7c118d62267294cd952f88206dc3c}} 
+\index{Kyoo.Controllers.PluginManager.PluginDependencyLoader@{Kyoo.Controllers.PluginManager.PluginDependencyLoader}!PluginDependencyLoader@{PluginDependencyLoader}}
+\index{PluginDependencyLoader@{PluginDependencyLoader}!Kyoo.Controllers.PluginManager.PluginDependencyLoader@{Kyoo.Controllers.PluginManager.PluginDependencyLoader}}
+\doxysubsubsection{\texorpdfstring{PluginDependencyLoader()}{PluginDependencyLoader()}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+Plugin\+Manager.\+Plugin\+Dependency\+Loader.\+Plugin\+Dependency\+Loader (\begin{DoxyParamCaption}\item[{string}]{plugin\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader}{Plugin\+Dependency\+Loader}} for the given path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin\+Path} & The path of the plugin and it\textquotesingle{}s dependencies\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader_aecad02951b5a04283e3ea3195394d4d8}\label{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader_aecad02951b5a04283e3ea3195394d4d8}} 
+\index{Kyoo.Controllers.PluginManager.PluginDependencyLoader@{Kyoo.Controllers.PluginManager.PluginDependencyLoader}!Load@{Load}}
+\index{Load@{Load}!Kyoo.Controllers.PluginManager.PluginDependencyLoader@{Kyoo.Controllers.PluginManager.PluginDependencyLoader}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily override Assembly Kyoo.\+Controllers.\+Plugin\+Manager.\+Plugin\+Dependency\+Loader.\+Load (\begin{DoxyParamCaption}\item[{Assembly\+Name}]{assembly\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader_a2a2768353042b7b24790918f60b56cd4}\label{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader_a2a2768353042b7b24790918f60b56cd4}} 
+\index{Kyoo.Controllers.PluginManager.PluginDependencyLoader@{Kyoo.Controllers.PluginManager.PluginDependencyLoader}!LoadUnmanagedDll@{LoadUnmanagedDll}}
+\index{LoadUnmanagedDll@{LoadUnmanagedDll}!Kyoo.Controllers.PluginManager.PluginDependencyLoader@{Kyoo.Controllers.PluginManager.PluginDependencyLoader}}
+\doxysubsubsection{\texorpdfstring{LoadUnmanagedDll()}{LoadUnmanagedDll()}}
+{\footnotesize\ttfamily override Int\+Ptr Kyoo.\+Controllers.\+Plugin\+Manager.\+Plugin\+Dependency\+Loader.\+Load\+Unmanaged\+Dll (\begin{DoxyParamCaption}\item[{string}]{unmanaged\+Dll\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader_a49d7f6887807e6b74c42cff0af123fc6}\label{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader_a49d7f6887807e6b74c42cff0af123fc6}} 
+\index{Kyoo.Controllers.PluginManager.PluginDependencyLoader@{Kyoo.Controllers.PluginManager.PluginDependencyLoader}!\_resolver@{\_resolver}}
+\index{\_resolver@{\_resolver}!Kyoo.Controllers.PluginManager.PluginDependencyLoader@{Kyoo.Controllers.PluginManager.PluginDependencyLoader}}
+\doxysubsubsection{\texorpdfstring{\_resolver}{\_resolver}}
+{\footnotesize\ttfamily readonly Assembly\+Dependency\+Resolver Kyoo.\+Controllers.\+Plugin\+Manager.\+Plugin\+Dependency\+Loader.\+\_\+resolver\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The basic resolver that will be used to load dlls. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Controllers/\mbox{\hyperlink{PluginManager_8cs}{Plugin\+Manager.\+cs}}\end{DoxyCompactItemize}

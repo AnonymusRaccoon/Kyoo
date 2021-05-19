@@ -1,0 +1,5 @@
+<map id="Kyoo.Postgresql.PostgresContext" name="Kyoo.Postgresql.PostgresContext">
+<area shape="rect" id="node1" title="A postgresql implementation of DatabaseContext." alt="" coords="21,696,208,905"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1DatabaseContext.html" title="The database handle used for all local repositories. This is an abstract class. It is meant to be imp..." alt="" coords="5,131,224,648"/>
+<area shape="rect" id="node3" title=" " alt="" coords="69,5,160,83"/>
+</map>

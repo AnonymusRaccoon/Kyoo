@@ -1,0 +1,211 @@
+\hypertarget{classKyoo_1_1Postgresql_1_1PostgresModule}{}\doxysection{Kyoo.\+Postgresql.\+Postgres\+Module Class Reference}
+\label{classKyoo_1_1Postgresql_1_1PostgresModule}\index{Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}}
+
+
+A module to add postgresql capacity to the app.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Postgresql.\+Postgres\+Module\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classKyoo_1_1Postgresql_1_1PostgresModule__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Postgresql.\+Postgres\+Module\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classKyoo_1_1Postgresql_1_1PostgresModule__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresModule_a94d68d4b1d1e8eaed4a20169c3c6c545}{Postgres\+Module}} (I\+Configuration configuration, I\+Web\+Host\+Environment env)
+\begin{DoxyCompactList}\small\item\em Create a new postgres module instance and use the given configuration and environment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresModule_a4c8960377f3821c60662b84b319b3360}{Configure}} (I\+Service\+Collection services, I\+Collection$<$ Type $>$ available\+Types)
+\begin{DoxyCompactList}\small\item\em A configure method that will be run on plugin\textquotesingle{}s startup. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresModule_a72098c86b173af30e7ebbd2ccfc565a7}{Initialize}} (I\+Service\+Provider provider)
+\begin{DoxyCompactList}\small\item\em An optional function to execute and initialize your plugin. It can be used to initialize a database connection, fill initial data or anything. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresModule_ab7c84ba33718ff99f872549f6267c72a}{Slug}} =$>$ \char`\"{}postgresql\char`\"{}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresModule_a54b51664cf17c926b5e06ef388c67a44}{Name}} =$>$ \char`\"{}Postgresql\char`\"{}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresModule_ac6c9bb1c5d0d40cb29cf3bb7738a9acb}{Description}} =$>$ \char`\"{}A database context for postgresql.\char`\"{}
+\item 
+I\+Collection$<$ Type $>$ \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresModule_aa9b7ced627013fc5759b6284797d02dc}{Provides}}
+\item 
+I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConditionalProvide}{Conditional\+Provide}} $>$ \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresModule_ad7f637471aa1ce8e02ef21d34a19dd22}{Conditional\+Provides}} =$>$ Array\+Segment$<$\mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConditionalProvide}{Conditional\+Provide}}$>$.Empty
+\item 
+I\+Collection$<$ Type $>$ \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresModule_af2ab94ba7df0555569660676d5aeecdf}{Requires}} =$>$ Array\+Segment$<$Type$>$.Empty
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly I\+Configuration \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresModule_a61557813796691999cc963fb2e57fbcd}{\+\_\+configuration}}
+\begin{DoxyCompactList}\small\item\em The configuration to use. The database connection string is pulled from it. \end{DoxyCompactList}\item 
+readonly I\+Web\+Host\+Environment \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresModule_ab4c8da87b060db3abc26d1061562a2c4}{\+\_\+environment}}
+\begin{DoxyCompactList}\small\item\em The host environment to check if the app is in debug mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A module to add postgresql capacity to the app. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresModule_a94d68d4b1d1e8eaed4a20169c3c6c545}\label{classKyoo_1_1Postgresql_1_1PostgresModule_a94d68d4b1d1e8eaed4a20169c3c6c545}} 
+\index{Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}!PostgresModule@{PostgresModule}}
+\index{PostgresModule@{PostgresModule}!Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}}
+\doxysubsubsection{\texorpdfstring{PostgresModule()}{PostgresModule()}}
+{\footnotesize\ttfamily Kyoo.\+Postgresql.\+Postgres\+Module.\+Postgres\+Module (\begin{DoxyParamCaption}\item[{I\+Configuration}]{configuration,  }\item[{I\+Web\+Host\+Environment}]{env }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new postgres module instance and use the given configuration and environment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em configuration} & The configuration to use\\
+\hline
+{\em env} & The environment that will be used (if the env is in development mode, more information will be displayed on errors.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresModule_a4c8960377f3821c60662b84b319b3360}\label{classKyoo_1_1Postgresql_1_1PostgresModule_a4c8960377f3821c60662b84b319b3360}} 
+\index{Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}!Configure@{Configure}}
+\index{Configure@{Configure}!Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}}
+\doxysubsubsection{\texorpdfstring{Configure()}{Configure()}}
+{\footnotesize\ttfamily void Kyoo.\+Postgresql.\+Postgres\+Module.\+Configure (\begin{DoxyParamCaption}\item[{I\+Service\+Collection}]{services,  }\item[{I\+Collection$<$ Type $>$}]{available\+Types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A configure method that will be run on plugin\textquotesingle{}s startup. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin_a8dc70a134829625351ba6cbfb0b3d471}{Kyoo.\+Controllers.\+I\+Plugin}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresModule_a72098c86b173af30e7ebbd2ccfc565a7}\label{classKyoo_1_1Postgresql_1_1PostgresModule_a72098c86b173af30e7ebbd2ccfc565a7}} 
+\index{Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Kyoo.\+Postgresql.\+Postgres\+Module.\+Initialize (\begin{DoxyParamCaption}\item[{I\+Service\+Provider}]{provider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+An optional function to execute and initialize your plugin. It can be used to initialize a database connection, fill initial data or anything. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin_a5b7cb8e8779111df6a1258dc155aac24}{Kyoo.\+Controllers.\+I\+Plugin}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresModule_a61557813796691999cc963fb2e57fbcd}\label{classKyoo_1_1Postgresql_1_1PostgresModule_a61557813796691999cc963fb2e57fbcd}} 
+\index{Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}!\_configuration@{\_configuration}}
+\index{\_configuration@{\_configuration}!Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}}
+\doxysubsubsection{\texorpdfstring{\_configuration}{\_configuration}}
+{\footnotesize\ttfamily readonly I\+Configuration Kyoo.\+Postgresql.\+Postgres\+Module.\+\_\+configuration\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The configuration to use. The database connection string is pulled from it. 
+
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresModule_ab4c8da87b060db3abc26d1061562a2c4}\label{classKyoo_1_1Postgresql_1_1PostgresModule_ab4c8da87b060db3abc26d1061562a2c4}} 
+\index{Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}!\_environment@{\_environment}}
+\index{\_environment@{\_environment}!Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}}
+\doxysubsubsection{\texorpdfstring{\_environment}{\_environment}}
+{\footnotesize\ttfamily readonly I\+Web\+Host\+Environment Kyoo.\+Postgresql.\+Postgres\+Module.\+\_\+environment\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The host environment to check if the app is in debug mode. 
+
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresModule_ad7f637471aa1ce8e02ef21d34a19dd22}\label{classKyoo_1_1Postgresql_1_1PostgresModule_ad7f637471aa1ce8e02ef21d34a19dd22}} 
+\index{Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}!ConditionalProvides@{ConditionalProvides}}
+\index{ConditionalProvides@{ConditionalProvides}!Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}}
+\doxysubsubsection{\texorpdfstring{ConditionalProvides}{ConditionalProvides}}
+{\footnotesize\ttfamily I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConditionalProvide}{Conditional\+Provide}}$>$ Kyoo.\+Postgresql.\+Postgres\+Module.\+Conditional\+Provides =$>$ Array\+Segment$<$\mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConditionalProvide}{Conditional\+Provide}}$>$.Empty}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresModule_ac6c9bb1c5d0d40cb29cf3bb7738a9acb}\label{classKyoo_1_1Postgresql_1_1PostgresModule_ac6c9bb1c5d0d40cb29cf3bb7738a9acb}} 
+\index{Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}!Description@{Description}}
+\index{Description@{Description}!Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}}
+\doxysubsubsection{\texorpdfstring{Description}{Description}}
+{\footnotesize\ttfamily string Kyoo.\+Postgresql.\+Postgres\+Module.\+Description =$>$ \char`\"{}A database context for postgresql.\char`\"{}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresModule_a54b51664cf17c926b5e06ef388c67a44}\label{classKyoo_1_1Postgresql_1_1PostgresModule_a54b51664cf17c926b5e06ef388c67a44}} 
+\index{Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}!Name@{Name}}
+\index{Name@{Name}!Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string Kyoo.\+Postgresql.\+Postgres\+Module.\+Name =$>$ \char`\"{}Postgresql\char`\"{}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresModule_aa9b7ced627013fc5759b6284797d02dc}\label{classKyoo_1_1Postgresql_1_1PostgresModule_aa9b7ced627013fc5759b6284797d02dc}} 
+\index{Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}!Provides@{Provides}}
+\index{Provides@{Provides}!Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}}
+\doxysubsubsection{\texorpdfstring{Provides}{Provides}}
+{\footnotesize\ttfamily I\+Collection$<$Type$>$ Kyoo.\+Postgresql.\+Postgres\+Module.\+Provides}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=> \textcolor{keyword}{new}[]}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            typeof(DatabaseContext)}
+\DoxyCodeLine{        \}}
+
+\end{DoxyCode}
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresModule_af2ab94ba7df0555569660676d5aeecdf}\label{classKyoo_1_1Postgresql_1_1PostgresModule_af2ab94ba7df0555569660676d5aeecdf}} 
+\index{Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}!Requires@{Requires}}
+\index{Requires@{Requires}!Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}}
+\doxysubsubsection{\texorpdfstring{Requires}{Requires}}
+{\footnotesize\ttfamily I\+Collection$<$Type$>$ Kyoo.\+Postgresql.\+Postgres\+Module.\+Requires =$>$ Array\+Segment$<$Type$>$.Empty}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresModule_ab7c84ba33718ff99f872549f6267c72a}\label{classKyoo_1_1Postgresql_1_1PostgresModule_ab7c84ba33718ff99f872549f6267c72a}} 
+\index{Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}!Slug@{Slug}}
+\index{Slug@{Slug}!Kyoo.Postgresql.PostgresModule@{Kyoo.Postgresql.PostgresModule}}
+\doxysubsubsection{\texorpdfstring{Slug}{Slug}}
+{\footnotesize\ttfamily string Kyoo.\+Postgresql.\+Postgres\+Module.\+Slug =$>$ \char`\"{}postgresql\char`\"{}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Postgresql/\mbox{\hyperlink{PostgresModule_8cs}{Postgres\+Module.\+cs}}\end{DoxyCompactItemize}

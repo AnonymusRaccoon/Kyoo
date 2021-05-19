@@ -1,0 +1,239 @@
+\hypertarget{classKyoo_1_1CoreModule}{}\doxysection{Kyoo.\+Core\+Module Class Reference}
+\label{classKyoo_1_1CoreModule}\index{Kyoo.CoreModule@{Kyoo.CoreModule}}
+
+
+The core module containing default implementations  
+
+
+
+
+Inheritance diagram for Kyoo.\+Core\+Module\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classKyoo_1_1CoreModule__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Core\+Module\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classKyoo_1_1CoreModule__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1CoreModule_a8312bd4c7240fd5516e19d6a131265f2}{Core\+Module}} (I\+Configuration configuration)
+\begin{DoxyCompactList}\small\item\em Create a new core module instance and use the given configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKyoo_1_1CoreModule_a801fac5cb99774640007c0ee07bab466}{Configure}} (I\+Service\+Collection services, I\+Collection$<$ Type $>$ available\+Types)
+\begin{DoxyCompactList}\small\item\em A configure method that will be run on plugin\textquotesingle{}s startup. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKyoo_1_1CoreModule_a9875b376b791168cb905fbd129117e87}{Configure\+Asp\+Net}} (I\+Application\+Builder app)
+\begin{DoxyCompactList}\small\item\em An optional configuration step to allow a plugin to change asp net configurations. W\+A\+R\+N\+I\+NG\+: This is only called on \mbox{\hyperlink{namespaceKyoo}{Kyoo}}\textquotesingle{}s startup so you must restart the app to apply this changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1CoreModule_a3ddcca406cb2165182e4017cbeb6b71f}{Slug}} =$>$ \char`\"{}core\char`\"{}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1CoreModule_a4cc7372acc5402f96b4ac4cae0b97da9}{Name}} =$>$ \char`\"{}Core\char`\"{}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1CoreModule_a2368a211ee7134f10140339b77613ad5}{Description}} =$>$ \char`\"{}The core module containing default implementations.\char`\"{}
+\item 
+I\+Collection$<$ Type $>$ \mbox{\hyperlink{classKyoo_1_1CoreModule_a04d9861be5f649501ef1885a4df15079}{Provides}}
+\item 
+I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConditionalProvide}{Conditional\+Provide}} $>$ \mbox{\hyperlink{classKyoo_1_1CoreModule_a2ac33838d1d322df4f2ae964e46c6c57}{Conditional\+Provides}}
+\item 
+I\+Collection$<$ Type $>$ \mbox{\hyperlink{classKyoo_1_1CoreModule_a8b22b1fc82e3ffe2fccfe4cfee0d08e2}{Requires}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly I\+Configuration \mbox{\hyperlink{classKyoo_1_1CoreModule_aafb15d3794cd4848d2ff066c9a2cde25}{\+\_\+configuration}}
+\begin{DoxyCompactList}\small\item\em The configuration to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The core module containing default implementations 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1CoreModule_a8312bd4c7240fd5516e19d6a131265f2}\label{classKyoo_1_1CoreModule_a8312bd4c7240fd5516e19d6a131265f2}} 
+\index{Kyoo.CoreModule@{Kyoo.CoreModule}!CoreModule@{CoreModule}}
+\index{CoreModule@{CoreModule}!Kyoo.CoreModule@{Kyoo.CoreModule}}
+\doxysubsubsection{\texorpdfstring{CoreModule()}{CoreModule()}}
+{\footnotesize\ttfamily Kyoo.\+Core\+Module.\+Core\+Module (\begin{DoxyParamCaption}\item[{I\+Configuration}]{configuration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new core module instance and use the given configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em configuration} & The configuration to use\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1CoreModule_a801fac5cb99774640007c0ee07bab466}\label{classKyoo_1_1CoreModule_a801fac5cb99774640007c0ee07bab466}} 
+\index{Kyoo.CoreModule@{Kyoo.CoreModule}!Configure@{Configure}}
+\index{Configure@{Configure}!Kyoo.CoreModule@{Kyoo.CoreModule}}
+\doxysubsubsection{\texorpdfstring{Configure()}{Configure()}}
+{\footnotesize\ttfamily void Kyoo.\+Core\+Module.\+Configure (\begin{DoxyParamCaption}\item[{I\+Service\+Collection}]{services,  }\item[{I\+Collection$<$ Type $>$}]{available\+Types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A configure method that will be run on plugin\textquotesingle{}s startup. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin_a8dc70a134829625351ba6cbfb0b3d471}{Kyoo.\+Controllers.\+I\+Plugin}}.
+
+\mbox{\Hypertarget{classKyoo_1_1CoreModule_a9875b376b791168cb905fbd129117e87}\label{classKyoo_1_1CoreModule_a9875b376b791168cb905fbd129117e87}} 
+\index{Kyoo.CoreModule@{Kyoo.CoreModule}!ConfigureAspNet@{ConfigureAspNet}}
+\index{ConfigureAspNet@{ConfigureAspNet}!Kyoo.CoreModule@{Kyoo.CoreModule}}
+\doxysubsubsection{\texorpdfstring{ConfigureAspNet()}{ConfigureAspNet()}}
+{\footnotesize\ttfamily void Kyoo.\+Core\+Module.\+Configure\+Asp\+Net (\begin{DoxyParamCaption}\item[{I\+Application\+Builder}]{app }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+An optional configuration step to allow a plugin to change asp net configurations. W\+A\+R\+N\+I\+NG\+: This is only called on \mbox{\hyperlink{namespaceKyoo}{Kyoo}}\textquotesingle{}s startup so you must restart the app to apply this changes. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin_ae30f22818dce78b83774285abec4a0ad}{Kyoo.\+Controllers.\+I\+Plugin}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1CoreModule_aafb15d3794cd4848d2ff066c9a2cde25}\label{classKyoo_1_1CoreModule_aafb15d3794cd4848d2ff066c9a2cde25}} 
+\index{Kyoo.CoreModule@{Kyoo.CoreModule}!\_configuration@{\_configuration}}
+\index{\_configuration@{\_configuration}!Kyoo.CoreModule@{Kyoo.CoreModule}}
+\doxysubsubsection{\texorpdfstring{\_configuration}{\_configuration}}
+{\footnotesize\ttfamily readonly I\+Configuration Kyoo.\+Core\+Module.\+\_\+configuration\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The configuration to use. 
+
+\mbox{\Hypertarget{classKyoo_1_1CoreModule_a2ac33838d1d322df4f2ae964e46c6c57}\label{classKyoo_1_1CoreModule_a2ac33838d1d322df4f2ae964e46c6c57}} 
+\index{Kyoo.CoreModule@{Kyoo.CoreModule}!ConditionalProvides@{ConditionalProvides}}
+\index{ConditionalProvides@{ConditionalProvides}!Kyoo.CoreModule@{Kyoo.CoreModule}}
+\doxysubsubsection{\texorpdfstring{ConditionalProvides}{ConditionalProvides}}
+{\footnotesize\ttfamily I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConditionalProvide}{Conditional\+Provide}}$>$ Kyoo.\+Core\+Module.\+Conditional\+Provides}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=> \textcolor{keyword}{new} ConditionalProvide[]}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            (typeof(ILibraryRepository), typeof(DatabaseContext)),}
+\DoxyCodeLine{            (typeof(ILibraryItemRepository), typeof(DatabaseContext)),}
+\DoxyCodeLine{            (typeof(ICollectionRepository), typeof(DatabaseContext)),}
+\DoxyCodeLine{            (typeof(IShowRepository), typeof(DatabaseContext)),}
+\DoxyCodeLine{            (typeof(ISeasonRepository), typeof(DatabaseContext)),}
+\DoxyCodeLine{            (typeof(IEpisodeRepository), typeof(DatabaseContext)),}
+\DoxyCodeLine{            (typeof(ITrackRepository), typeof(DatabaseContext)),}
+\DoxyCodeLine{            (typeof(IPeopleRepository), typeof(DatabaseContext)),}
+\DoxyCodeLine{            (typeof(IStudioRepository), typeof(DatabaseContext)),}
+\DoxyCodeLine{            (typeof(IGenreRepository), typeof(DatabaseContext)),}
+\DoxyCodeLine{            (typeof(IProviderRepository), typeof(DatabaseContext)),}
+\DoxyCodeLine{            (typeof(IUserRepository), typeof(DatabaseContext))}
+\DoxyCodeLine{        \}}
+
+\end{DoxyCode}
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1CoreModule_a2368a211ee7134f10140339b77613ad5}\label{classKyoo_1_1CoreModule_a2368a211ee7134f10140339b77613ad5}} 
+\index{Kyoo.CoreModule@{Kyoo.CoreModule}!Description@{Description}}
+\index{Description@{Description}!Kyoo.CoreModule@{Kyoo.CoreModule}}
+\doxysubsubsection{\texorpdfstring{Description}{Description}}
+{\footnotesize\ttfamily string Kyoo.\+Core\+Module.\+Description =$>$ \char`\"{}The core module containing default implementations.\char`\"{}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1CoreModule_a4cc7372acc5402f96b4ac4cae0b97da9}\label{classKyoo_1_1CoreModule_a4cc7372acc5402f96b4ac4cae0b97da9}} 
+\index{Kyoo.CoreModule@{Kyoo.CoreModule}!Name@{Name}}
+\index{Name@{Name}!Kyoo.CoreModule@{Kyoo.CoreModule}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string Kyoo.\+Core\+Module.\+Name =$>$ \char`\"{}Core\char`\"{}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1CoreModule_a04d9861be5f649501ef1885a4df15079}\label{classKyoo_1_1CoreModule_a04d9861be5f649501ef1885a4df15079}} 
+\index{Kyoo.CoreModule@{Kyoo.CoreModule}!Provides@{Provides}}
+\index{Provides@{Provides}!Kyoo.CoreModule@{Kyoo.CoreModule}}
+\doxysubsubsection{\texorpdfstring{Provides}{Provides}}
+{\footnotesize\ttfamily I\+Collection$<$Type$>$ Kyoo.\+Core\+Module.\+Provides}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=> \textcolor{keyword}{new}[]}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            typeof(IFileManager),}
+\DoxyCodeLine{            typeof(ITranscoder),}
+\DoxyCodeLine{            typeof(IThumbnailsManager),}
+\DoxyCodeLine{            typeof(IProviderManager),}
+\DoxyCodeLine{            typeof(ITaskManager),}
+\DoxyCodeLine{            typeof(ILibraryManager)}
+\DoxyCodeLine{        \}}
+
+\end{DoxyCode}
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1CoreModule_a8b22b1fc82e3ffe2fccfe4cfee0d08e2}\label{classKyoo_1_1CoreModule_a8b22b1fc82e3ffe2fccfe4cfee0d08e2}} 
+\index{Kyoo.CoreModule@{Kyoo.CoreModule}!Requires@{Requires}}
+\index{Requires@{Requires}!Kyoo.CoreModule@{Kyoo.CoreModule}}
+\doxysubsubsection{\texorpdfstring{Requires}{Requires}}
+{\footnotesize\ttfamily I\+Collection$<$Type$>$ Kyoo.\+Core\+Module.\+Requires}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=> \textcolor{keyword}{new} []}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            typeof(ILibraryRepository),}
+\DoxyCodeLine{            typeof(ILibraryItemRepository),}
+\DoxyCodeLine{            typeof(ICollectionRepository),}
+\DoxyCodeLine{            typeof(IShowRepository),}
+\DoxyCodeLine{            typeof(ISeasonRepository),}
+\DoxyCodeLine{            typeof(IEpisodeRepository),}
+\DoxyCodeLine{            typeof(ITrackRepository),}
+\DoxyCodeLine{            typeof(IPeopleRepository),}
+\DoxyCodeLine{            typeof(IStudioRepository),}
+\DoxyCodeLine{            typeof(IGenreRepository),}
+\DoxyCodeLine{            typeof(IProviderRepository)}
+\DoxyCodeLine{        \}}
+
+\end{DoxyCode}
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1CoreModule_a3ddcca406cb2165182e4017cbeb6b71f}\label{classKyoo_1_1CoreModule_a3ddcca406cb2165182e4017cbeb6b71f}} 
+\index{Kyoo.CoreModule@{Kyoo.CoreModule}!Slug@{Slug}}
+\index{Slug@{Slug}!Kyoo.CoreModule@{Kyoo.CoreModule}}
+\doxysubsubsection{\texorpdfstring{Slug}{Slug}}
+{\footnotesize\ttfamily string Kyoo.\+Core\+Module.\+Slug =$>$ \char`\"{}core\char`\"{}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\mbox{\hyperlink{CoreModule_8cs}{Core\+Module.\+cs}}\end{DoxyCompactItemize}

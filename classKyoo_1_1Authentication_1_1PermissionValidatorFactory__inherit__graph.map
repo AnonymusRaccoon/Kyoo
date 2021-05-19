@@ -1,0 +1,4 @@
+<map id="Kyoo.Authentication.PermissionValidatorFactory" name="Kyoo.Authentication.PermissionValidatorFactory">
+<area shape="rect" id="node1" title="A permission validator to validate permission with user Permission array or the default array from th..." alt="" coords="5,145,235,267"/>
+<area shape="rect" id="node2" href="$interfaceKyoo_1_1Models_1_1Permissions_1_1IPermissionValidator.html" title="A service to validate permissions" alt="" coords="42,5,198,97"/>
+</map>

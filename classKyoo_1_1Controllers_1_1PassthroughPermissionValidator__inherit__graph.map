@@ -1,0 +1,4 @@
+<map id="Kyoo.Controllers.PassthroughPermissionValidator" name="Kyoo.Controllers.PassthroughPermissionValidator">
+<area shape="rect" id="node1" title="A permission validator that always validate permissions. This effectively disable the permission syst..." alt="" coords="5,145,261,267"/>
+<area shape="rect" id="node2" href="$interfaceKyoo_1_1Models_1_1Permissions_1_1IPermissionValidator.html" title="A service to validate permissions" alt="" coords="55,5,211,97"/>
+</map>

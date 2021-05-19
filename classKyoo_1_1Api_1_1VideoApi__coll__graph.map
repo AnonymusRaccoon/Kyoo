@@ -1,0 +1,7 @@
+<map id="Kyoo.Api.VideoApi" name="Kyoo.Api.VideoApi">
+<area shape="rect" id="node1" title=" " alt="" coords="242,453,431,619"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,159,92,237"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1IFileManager.html" title="A service to abstract the file system to allow custom file systems (like distant file systems or exte..." alt="" coords="116,108,333,288"/>
+<area shape="rect" id="node4" href="$interfaceKyoo_1_1Controllers_1_1ILibraryManager.html" title="An interface to interract with the database. Every repository is mapped through here." alt="" coords="357,5,540,391"/>
+<area shape="rect" id="node5" href="$interfaceKyoo_1_1Controllers_1_1ITranscoder.html" title=" " alt="" coords="564,145,771,251"/>
+</map>

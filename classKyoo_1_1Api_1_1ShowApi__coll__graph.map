@@ -1,0 +1,7 @@
+<map id="Kyoo.Api.ShowApi" name="Kyoo.Api.ShowApi">
+<area shape="rect" id="node1" title=" " alt="" coords="339,453,477,677"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1CommonApi_1_1CrudApi.html" title=" " alt="" coords="5,64,163,332"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1IFileManager.html" title="A service to abstract the file system to allow custom file systems (like distant file systems or exte..." alt="" coords="187,108,405,288"/>
+<area shape="rect" id="node4" href="$interfaceKyoo_1_1Controllers_1_1ILibraryManager.html" title="An interface to interract with the database. Every repository is mapped through here." alt="" coords="429,5,611,391"/>
+<area shape="rect" id="node5" href="$interfaceKyoo_1_1Controllers_1_1IThumbnailsManager.html" title=" " alt="" coords="636,71,849,325"/>
+</map>

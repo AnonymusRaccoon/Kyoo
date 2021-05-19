@@ -1,0 +1,188 @@
+\hypertarget{classKyoo_1_1Controllers_1_1TrackRepository}{}\doxysection{Kyoo.\+Controllers.\+Track\+Repository Class Reference}
+\label{classKyoo_1_1Controllers_1_1TrackRepository}\index{Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}}
+
+
+A local repository to handle tracks.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+Track\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1Controllers_1_1TrackRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+Track\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1Controllers_1_1TrackRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1TrackRepository_a6f2dbc9b9aa783c3ef666e44afd013c9}{Track\+Repository}} (\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} database)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TrackRepository}{Track\+Repository}}. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TrackRepository_a205b2e8c60821149d54350c9f9a31021}{Get}} (string slug, \mbox{\hyperlink{namespaceKyoo_1_1Models_ae50c4d5a9549b79e0cd3e91c5c42ef35}{Stream\+Type}} type=Stream\+Type.\+Unknown)
+\begin{DoxyCompactList}\small\item\em Get a track from it\textquotesingle{}s slug and it\textquotesingle{}s type. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TrackRepository_abeb0e5eb887b09222fe52d125e37d226}{Get\+Or\+Default}} (string slug, \mbox{\hyperlink{namespaceKyoo_1_1Models_ae50c4d5a9549b79e0cd3e91c5c42ef35}{Stream\+Type}} type=Stream\+Type.\+Unknown)
+\begin{DoxyCompactList}\small\item\em Get a track from it\textquotesingle{}s slug and it\textquotesingle{}s type or null if it is not found. \end{DoxyCompactList}\item 
+override Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TrackRepository_a56477e40c359c54aa1858da3e35bf308}{Search}} (string query)
+\item 
+override async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TrackRepository_a6600718a17c0bf75a0406b062d39a2a8}{Create}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}} obj)
+\item 
+override async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TrackRepository_af3bce5cf674caacbf58d505010b029bd}{Delete}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}} obj)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+override Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}}, object $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TrackRepository_ae0445e2ead5c089be1f82527f70194b8}{Default\+Sort}} =$>$ x =$>$ x.\+Track\+Index
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{I\+Repository}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}} $>$. \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TrackRepository_a65cc468fc522aa351bd04ea23f146708}{Get}} (string slug)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TrackRepository_ab5f7d1e29d75555f9d01623382f9b45f}{\+\_\+database}}
+\begin{DoxyCompactList}\small\item\em The databse handle \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A local repository to handle tracks. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TrackRepository_a6f2dbc9b9aa783c3ef666e44afd013c9}\label{classKyoo_1_1Controllers_1_1TrackRepository_a6f2dbc9b9aa783c3ef666e44afd013c9}} 
+\index{Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}!TrackRepository@{TrackRepository}}
+\index{TrackRepository@{TrackRepository}!Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}}
+\doxysubsubsection{\texorpdfstring{TrackRepository()}{TrackRepository()}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+Track\+Repository.\+Track\+Repository (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}}}]{database }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TrackRepository}{Track\+Repository}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & The datatabse handle\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TrackRepository_a6600718a17c0bf75a0406b062d39a2a8}\label{classKyoo_1_1Controllers_1_1TrackRepository_a6600718a17c0bf75a0406b062d39a2a8}} 
+\index{Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}!Create@{Create}}
+\index{Create@{Create}!Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily override async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}}$>$ Kyoo.\+Controllers.\+Track\+Repository.\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TrackRepository_af3bce5cf674caacbf58d505010b029bd}\label{classKyoo_1_1Controllers_1_1TrackRepository_af3bce5cf674caacbf58d505010b029bd}} 
+\index{Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}!Delete@{Delete}}
+\index{Delete@{Delete}!Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily override async Task Kyoo.\+Controllers.\+Track\+Repository.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TrackRepository_a65cc468fc522aa351bd04ea23f146708}\label{classKyoo_1_1Controllers_1_1TrackRepository_a65cc468fc522aa351bd04ea23f146708}} 
+\index{Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}}$>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{I\+Repository}}$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}}$>$. Kyoo.\+Controllers.\+Track\+Repository.\+Get (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Reimplemented from \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a3b68de5e73f15d9c7c73d5b4d01b2b6d}{Kyoo.\+Controllers.\+Local\+Repository$<$ Track $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TrackRepository_a205b2e8c60821149d54350c9f9a31021}\label{classKyoo_1_1Controllers_1_1TrackRepository_a205b2e8c60821149d54350c9f9a31021}} 
+\index{Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}}$>$ Kyoo.\+Controllers.\+Track\+Repository.\+Get (\begin{DoxyParamCaption}\item[{string}]{slug,  }\item[{\mbox{\hyperlink{namespaceKyoo_1_1Models_ae50c4d5a9549b79e0cd3e91c5c42ef35}{Stream\+Type}}}]{type = {\ttfamily StreamType.Unknown} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a track from it\textquotesingle{}s slug and it\textquotesingle{}s type. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITrackRepository_adc7c0a0de8177c21abb0c459912e3155}{Kyoo.\+Controllers.\+I\+Track\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TrackRepository_abeb0e5eb887b09222fe52d125e37d226}\label{classKyoo_1_1Controllers_1_1TrackRepository_abeb0e5eb887b09222fe52d125e37d226}} 
+\index{Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}}$>$ Kyoo.\+Controllers.\+Track\+Repository.\+Get\+Or\+Default (\begin{DoxyParamCaption}\item[{string}]{slug,  }\item[{\mbox{\hyperlink{namespaceKyoo_1_1Models_ae50c4d5a9549b79e0cd3e91c5c42ef35}{Stream\+Type}}}]{type = {\ttfamily StreamType.Unknown} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a track from it\textquotesingle{}s slug and it\textquotesingle{}s type or null if it is not found. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITrackRepository_af678e57bc0c3a3f0cc3cf5296723b902}{Kyoo.\+Controllers.\+I\+Track\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TrackRepository_a56477e40c359c54aa1858da3e35bf308}\label{classKyoo_1_1Controllers_1_1TrackRepository_a56477e40c359c54aa1858da3e35bf308}} 
+\index{Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}!Search@{Search}}
+\index{Search@{Search}!Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily override Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}}$>$ $>$ Kyoo.\+Controllers.\+Track\+Repository.\+Search (\begin{DoxyParamCaption}\item[{string}]{query }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Implements \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a1ec5ba57aa01810e262bbfc02bd1fc3e}{Kyoo.\+Controllers.\+Local\+Repository$<$ Track $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TrackRepository_ab5f7d1e29d75555f9d01623382f9b45f}\label{classKyoo_1_1Controllers_1_1TrackRepository_ab5f7d1e29d75555f9d01623382f9b45f}} 
+\index{Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}!\_database@{\_database}}
+\index{\_database@{\_database}!Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}}
+\doxysubsubsection{\texorpdfstring{\_database}{\_database}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} Kyoo.\+Controllers.\+Track\+Repository.\+\_\+database\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The databse handle 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1TrackRepository_ae0445e2ead5c089be1f82527f70194b8}\label{classKyoo_1_1Controllers_1_1TrackRepository_ae0445e2ead5c089be1f82527f70194b8}} 
+\index{Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}!DefaultSort@{DefaultSort}}
+\index{DefaultSort@{DefaultSort}!Kyoo.Controllers.TrackRepository@{Kyoo.Controllers.TrackRepository}}
+\doxysubsubsection{\texorpdfstring{DefaultSort}{DefaultSort}}
+{\footnotesize\ttfamily override Expression$<$Func$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}}, object$>$ $>$ Kyoo.\+Controllers.\+Track\+Repository.\+Default\+Sort =$>$ x =$>$ x.\+Track\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Controllers/\+Repositories/\mbox{\hyperlink{TrackRepository_8cs}{Track\+Repository.\+cs}}\end{DoxyCompactItemize}

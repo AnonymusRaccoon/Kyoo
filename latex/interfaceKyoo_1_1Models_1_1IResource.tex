@@ -1,0 +1,67 @@
+\hypertarget{interfaceKyoo_1_1Models_1_1IResource}{}\doxysection{Kyoo.\+Models.\+I\+Resource Interface Reference}
+\label{interfaceKyoo_1_1Models_1_1IResource}\index{Kyoo.Models.IResource@{Kyoo.Models.IResource}}
+
+
+An interface to represent a resource that can be retrieved from the database.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Models.\+I\+Resource\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceKyoo_1_1Models_1_1IResource__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Models.\+I\+Resource\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{interfaceKyoo_1_1Models_1_1IResource__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{interfaceKyoo_1_1Models_1_1IResource_ad9407b41d2386d772b31a2a2e05bfb33}{ID}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A unique ID for this type of resource. This can\textquotesingle{}t be changed and duplicates are not allowed. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interfaceKyoo_1_1Models_1_1IResource_a330651440108eecabf065608e7b632de}{Slug}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A human-\/readable identifier that can be used instead of an ID. A slug must be unique for a type of resource but it can be changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An interface to represent a resource that can be retrieved from the database. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Models_1_1IResource_ad9407b41d2386d772b31a2a2e05bfb33}\label{interfaceKyoo_1_1Models_1_1IResource_ad9407b41d2386d772b31a2a2e05bfb33}} 
+\index{Kyoo.Models.IResource@{Kyoo.Models.IResource}!ID@{ID}}
+\index{ID@{ID}!Kyoo.Models.IResource@{Kyoo.Models.IResource}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily int Kyoo.\+Models.\+I\+Resource.\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A unique ID for this type of resource. This can\textquotesingle{}t be changed and duplicates are not allowed. 
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Models_1_1IResource_a330651440108eecabf065608e7b632de}\label{interfaceKyoo_1_1Models_1_1IResource_a330651440108eecabf065608e7b632de}} 
+\index{Kyoo.Models.IResource@{Kyoo.Models.IResource}!Slug@{Slug}}
+\index{Slug@{Slug}!Kyoo.Models.IResource@{Kyoo.Models.IResource}}
+\doxysubsubsection{\texorpdfstring{Slug}{Slug}}
+{\footnotesize\ttfamily string Kyoo.\+Models.\+I\+Resource.\+Slug\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+A human-\/readable identifier that can be used instead of an ID. A slug must be unique for a type of resource but it can be changed. 
+
+There is no setter for a slug since it can be computed from other fields. For example, a season slug is \{Show\+Slug\}-\/s\{Season\+Number\}. 
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Models/\+Resources/\mbox{\hyperlink{IResource_8cs}{I\+Resource.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,206 @@
+\hypertarget{classKyoo_1_1Postgresql_1_1PostgresContext}{}\doxysection{Kyoo.\+Postgresql.\+Postgres\+Context Class Reference}
+\label{classKyoo_1_1Postgresql_1_1PostgresContext}\index{Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}}
+
+
+A postgresql implementation of \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}}.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Postgresql.\+Postgres\+Context\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1Postgresql_1_1PostgresContext__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Postgresql.\+Postgres\+Context\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1Postgresql_1_1PostgresContext__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresContext_afd87607e0f2b8183d2ff6ba2214f795d}{Postgres\+Context}} ()
+\begin{DoxyCompactList}\small\item\em A basic constructor that set default values (query tracker behaviors, mapping enums...) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresContext_a2396eabfdabf83bf6be38233c18fb143}{Postgres\+Context}} (Db\+Context\+Options options)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresContext}{Postgres\+Context}} using specific options \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresContext_afa2da70068dbc1656d66e2a4ff2d2c04}{Postgres\+Context}} (string connection, bool debug\+Mode)
+\begin{DoxyCompactList}\small\item\em A basic constructor that set default values (query tracker behaviors, mapping enums...) \end{DoxyCompactList}\item 
+override Expression$<$ Func$<$ T, bool $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresContext_a0210140cd005cfe1a31fcc36fa529745}{Like$<$ T $>$}} (Expression$<$ Func$<$ T, string $>$$>$ query, string format)
+\begin{DoxyCompactList}\small\item\em Perform a case insensitive like operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresContext_a0c4b7e14e393c9932315c61fd7b3377d}{On\+Configuring}} (Db\+Context\+Options\+Builder options\+Builder)
+\begin{DoxyCompactList}\small\item\em Set connection information for this database context \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresContext_aa4a036234dc7b782ccf982c930adaca1}{On\+Model\+Creating}} (Model\+Builder model\+Builder)
+\begin{DoxyCompactList}\small\item\em Set database parameters to support every types of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresContext_a1918751cc3ffee2f18f9625c79139620}{Is\+Duplicate\+Exception}} (Exception ex)
+\begin{DoxyCompactList}\small\item\em Check if the exception is a duplicated exception. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly string \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresContext_aa364d31b3ff1b6cbef6414e3825a14e8}{\+\_\+connection}}
+\begin{DoxyCompactList}\small\item\em The connection string to use. \end{DoxyCompactList}\item 
+readonly bool \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresContext_adaa15d4fc592f4abb006eb03d354a56e}{\+\_\+debug\+Mode}}
+\begin{DoxyCompactList}\small\item\em Is this instance in debug mode? \end{DoxyCompactList}\item 
+readonly bool \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresContext_a62d25b469f6f403fb8c3f985c5e16627}{\+\_\+skip\+Configure}}
+\begin{DoxyCompactList}\small\item\em Should the configure step be skipped? This is used when the database is created via Db\+Context\+Options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A postgresql implementation of \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}}. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresContext_afd87607e0f2b8183d2ff6ba2214f795d}\label{classKyoo_1_1Postgresql_1_1PostgresContext_afd87607e0f2b8183d2ff6ba2214f795d}} 
+\index{Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}!PostgresContext@{PostgresContext}}
+\index{PostgresContext@{PostgresContext}!Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}}
+\doxysubsubsection{\texorpdfstring{PostgresContext()}{PostgresContext()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Kyoo.\+Postgresql.\+Postgres\+Context.\+Postgres\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A basic constructor that set default values (query tracker behaviors, mapping enums...) 
+
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresContext_a2396eabfdabf83bf6be38233c18fb143}\label{classKyoo_1_1Postgresql_1_1PostgresContext_a2396eabfdabf83bf6be38233c18fb143}} 
+\index{Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}!PostgresContext@{PostgresContext}}
+\index{PostgresContext@{PostgresContext}!Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}}
+\doxysubsubsection{\texorpdfstring{PostgresContext()}{PostgresContext()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Kyoo.\+Postgresql.\+Postgres\+Context.\+Postgres\+Context (\begin{DoxyParamCaption}\item[{Db\+Context\+Options}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresContext}{Postgres\+Context}} using specific options 
+
+
+\begin{DoxyParams}{Parameters}
+{\em options} & The options to use.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresContext_afa2da70068dbc1656d66e2a4ff2d2c04}\label{classKyoo_1_1Postgresql_1_1PostgresContext_afa2da70068dbc1656d66e2a4ff2d2c04}} 
+\index{Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}!PostgresContext@{PostgresContext}}
+\index{PostgresContext@{PostgresContext}!Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}}
+\doxysubsubsection{\texorpdfstring{PostgresContext()}{PostgresContext()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Kyoo.\+Postgresql.\+Postgres\+Context.\+Postgres\+Context (\begin{DoxyParamCaption}\item[{string}]{connection,  }\item[{bool}]{debug\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A basic constructor that set default values (query tracker behaviors, mapping enums...) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & The connection string to use\\
+\hline
+{\em debug\+Mode} & Is this instance in debug mode?\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresContext_a1918751cc3ffee2f18f9625c79139620}\label{classKyoo_1_1Postgresql_1_1PostgresContext_a1918751cc3ffee2f18f9625c79139620}} 
+\index{Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}!IsDuplicateException@{IsDuplicateException}}
+\index{IsDuplicateException@{IsDuplicateException}!Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}}
+\doxysubsubsection{\texorpdfstring{IsDuplicateException()}{IsDuplicateException()}}
+{\footnotesize\ttfamily override bool Kyoo.\+Postgresql.\+Postgres\+Context.\+Is\+Duplicate\+Exception (\begin{DoxyParamCaption}\item[{Exception}]{ex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Check if the exception is a duplicated exception. 
+
+
+
+Implements \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a2ca03fba8f40c1fc90ee83c80a6cabbd}{Kyoo.\+Database\+Context}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresContext_a0210140cd005cfe1a31fcc36fa529745}\label{classKyoo_1_1Postgresql_1_1PostgresContext_a0210140cd005cfe1a31fcc36fa529745}} 
+\index{Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}!Like$<$ T $>$@{Like$<$ T $>$}}
+\index{Like$<$ T $>$@{Like$<$ T $>$}!Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}}
+\doxysubsubsection{\texorpdfstring{Like$<$ T $>$()}{Like< T >()}}
+{\footnotesize\ttfamily override Expression$<$Func$<$T, bool$>$ $>$ Kyoo.\+Postgresql.\+Postgres\+Context.\+Like$<$ T $>$ (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, string $>$$>$}]{query,  }\item[{string}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Perform a case insensitive like operation. 
+
+
+
+Implements \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a93fe8df1282c8dee1de537966e5deebd}{Kyoo.\+Database\+Context}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresContext_a0c4b7e14e393c9932315c61fd7b3377d}\label{classKyoo_1_1Postgresql_1_1PostgresContext_a0c4b7e14e393c9932315c61fd7b3377d}} 
+\index{Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}!OnConfiguring@{OnConfiguring}}
+\index{OnConfiguring@{OnConfiguring}!Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}}
+\doxysubsubsection{\texorpdfstring{OnConfiguring()}{OnConfiguring()}}
+{\footnotesize\ttfamily override void Kyoo.\+Postgresql.\+Postgres\+Context.\+On\+Configuring (\begin{DoxyParamCaption}\item[{Db\+Context\+Options\+Builder}]{options\+Builder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Set connection information for this database context 
+
+
+\begin{DoxyParams}{Parameters}
+{\em options\+Builder} & An option builder to fill.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresContext_aa4a036234dc7b782ccf982c930adaca1}\label{classKyoo_1_1Postgresql_1_1PostgresContext_aa4a036234dc7b782ccf982c930adaca1}} 
+\index{Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}!OnModelCreating@{OnModelCreating}}
+\index{OnModelCreating@{OnModelCreating}!Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}}
+\doxysubsubsection{\texorpdfstring{OnModelCreating()}{OnModelCreating()}}
+{\footnotesize\ttfamily override void Kyoo.\+Postgresql.\+Postgres\+Context.\+On\+Model\+Creating (\begin{DoxyParamCaption}\item[{Model\+Builder}]{model\+Builder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Set database parameters to support every types of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model\+Builder} & The database\textquotesingle{}s model builder.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresContext_aa364d31b3ff1b6cbef6414e3825a14e8}\label{classKyoo_1_1Postgresql_1_1PostgresContext_aa364d31b3ff1b6cbef6414e3825a14e8}} 
+\index{Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}!\_connection@{\_connection}}
+\index{\_connection@{\_connection}!Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}}
+\doxysubsubsection{\texorpdfstring{\_connection}{\_connection}}
+{\footnotesize\ttfamily readonly string Kyoo.\+Postgresql.\+Postgres\+Context.\+\_\+connection\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The connection string to use. 
+
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresContext_adaa15d4fc592f4abb006eb03d354a56e}\label{classKyoo_1_1Postgresql_1_1PostgresContext_adaa15d4fc592f4abb006eb03d354a56e}} 
+\index{Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}!\_debugMode@{\_debugMode}}
+\index{\_debugMode@{\_debugMode}!Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}}
+\doxysubsubsection{\texorpdfstring{\_debugMode}{\_debugMode}}
+{\footnotesize\ttfamily readonly bool Kyoo.\+Postgresql.\+Postgres\+Context.\+\_\+debug\+Mode\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Is this instance in debug mode? 
+
+\mbox{\Hypertarget{classKyoo_1_1Postgresql_1_1PostgresContext_a62d25b469f6f403fb8c3f985c5e16627}\label{classKyoo_1_1Postgresql_1_1PostgresContext_a62d25b469f6f403fb8c3f985c5e16627}} 
+\index{Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}!\_skipConfigure@{\_skipConfigure}}
+\index{\_skipConfigure@{\_skipConfigure}!Kyoo.Postgresql.PostgresContext@{Kyoo.Postgresql.PostgresContext}}
+\doxysubsubsection{\texorpdfstring{\_skipConfigure}{\_skipConfigure}}
+{\footnotesize\ttfamily readonly bool Kyoo.\+Postgresql.\+Postgres\+Context.\+\_\+skip\+Configure\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Should the configure step be skipped? This is used when the database is created via Db\+Context\+Options. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Postgresql/\mbox{\hyperlink{PostgresContext_8cs}{Postgres\+Context.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$interfaceKyoo_1_1Controllers_1_1ITask.html" title="A common interface that tasks should implement." alt="" coords="5,31,172,57"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Tasks_1_1Crawler.html" title=" " alt="" coords="245,5,393,32"/>
+<area shape="rect" id="node3" href="$classKyoo_1_1Tasks_1_1PluginInitializer.html" title="A task run on Kyoo&#39;s startup to initialize plugins" alt="" coords="220,56,419,83"/>
+</map>

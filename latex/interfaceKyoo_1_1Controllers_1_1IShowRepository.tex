@@ -1,0 +1,97 @@
+\hypertarget{interfaceKyoo_1_1Controllers_1_1IShowRepository}{}\doxysection{Kyoo.\+Controllers.\+I\+Show\+Repository Interface Reference}
+\label{interfaceKyoo_1_1Controllers_1_1IShowRepository}\index{Kyoo.Controllers.IShowRepository@{Kyoo.Controllers.IShowRepository}}
+
+
+A repository to handle shows.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+I\+Show\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{interfaceKyoo_1_1Controllers_1_1IShowRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+I\+Show\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{interfaceKyoo_1_1Controllers_1_1IShowRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository_ade2f270e5202ccdd18a5bf9cb6ac6b71}{Add\+Show\+Link}} (int show\+ID, int? library\+ID, int? collection\+ID)
+\begin{DoxyCompactList}\small\item\em Link a show to a collection and/or a library. The given show is now part of those containers. If both a library and a collection are given, the collection is added to the library too. \end{DoxyCompactList}\item 
+Task$<$ string $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository_a1b7c63a30421fbc959d58c5fe80880c9}{Get\+Slug}} (int show\+ID)
+\begin{DoxyCompactList}\small\item\em Get a show\textquotesingle{}s slug from it\textquotesingle{}s ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A repository to handle shows. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IShowRepository_ade2f270e5202ccdd18a5bf9cb6ac6b71}\label{interfaceKyoo_1_1Controllers_1_1IShowRepository_ade2f270e5202ccdd18a5bf9cb6ac6b71}} 
+\index{Kyoo.Controllers.IShowRepository@{Kyoo.Controllers.IShowRepository}!AddShowLink@{AddShowLink}}
+\index{AddShowLink@{AddShowLink}!Kyoo.Controllers.IShowRepository@{Kyoo.Controllers.IShowRepository}}
+\doxysubsubsection{\texorpdfstring{AddShowLink()}{AddShowLink()}}
+{\footnotesize\ttfamily Task Kyoo.\+Controllers.\+I\+Show\+Repository.\+Add\+Show\+Link (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{int?}]{library\+ID,  }\item[{int?}]{collection\+ID }\end{DoxyParamCaption})}
+
+
+
+Link a show to a collection and/or a library. The given show is now part of those containers. If both a library and a collection are given, the collection is added to the library too. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em show\+ID} & The ID of the show\\
+\hline
+{\em library\+ID} & The ID of the library (optional)\\
+\hline
+{\em collection\+ID} & The ID of the collection (optional)\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_af19f7f83959efab0905e7d9c7afdadb7}{Kyoo.\+Controllers.\+Show\+Repository}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IShowRepository_a1b7c63a30421fbc959d58c5fe80880c9}\label{interfaceKyoo_1_1Controllers_1_1IShowRepository_a1b7c63a30421fbc959d58c5fe80880c9}} 
+\index{Kyoo.Controllers.IShowRepository@{Kyoo.Controllers.IShowRepository}!GetSlug@{GetSlug}}
+\index{GetSlug@{GetSlug}!Kyoo.Controllers.IShowRepository@{Kyoo.Controllers.IShowRepository}}
+\doxysubsubsection{\texorpdfstring{GetSlug()}{GetSlug()}}
+{\footnotesize\ttfamily Task$<$string$>$ Kyoo.\+Controllers.\+I\+Show\+Repository.\+Get\+Slug (\begin{DoxyParamCaption}\item[{int}]{show\+ID }\end{DoxyParamCaption})}
+
+
+
+Get a show\textquotesingle{}s slug from it\textquotesingle{}s ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em show\+ID} & The ID of the show\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If a show with the given ID is not found.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The show\textquotesingle{}s slug
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_a975d07dcc8bc83e5141cb75bd0a4f570}{Kyoo.\+Controllers.\+Show\+Repository}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Controllers/\mbox{\hyperlink{IRepository_8cs}{I\+Repository.\+cs}}\end{DoxyCompactItemize}

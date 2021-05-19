@@ -1,0 +1,137 @@
+\hypertarget{classKyoo_1_1Controllers_1_1GenreRepository}{}\doxysection{Kyoo.\+Controllers.\+Genre\+Repository Class Reference}
+\label{classKyoo_1_1Controllers_1_1GenreRepository}\index{Kyoo.Controllers.GenreRepository@{Kyoo.Controllers.GenreRepository}}
+
+
+A local repository for genres.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+Genre\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1Controllers_1_1GenreRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+Genre\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKyoo_1_1Controllers_1_1GenreRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1GenreRepository_a6bb313ba223e21f1473d324d7aab8bb9}{Genre\+Repository}} (\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} database)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1GenreRepository}{Genre\+Repository}}. \end{DoxyCompactList}\item 
+override async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Genre}{Genre}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1GenreRepository_aff353ccca942c507fcd454b9c8d14034}{Search}} (string query)
+\item 
+override async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Genre}{Genre}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1GenreRepository_a59b89adada0901966530a8cdefbb5182}{Create}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Genre}{Genre}} obj)
+\item 
+override async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1GenreRepository_a2ca44a6e48c668159f4d9fa68e531038}{Delete}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Genre}{Genre}} obj)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+override Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Genre}{Genre}}, object $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1GenreRepository_ad7b7430f3afe843ebfa3f19f7ff55693}{Default\+Sort}} =$>$ x =$>$ x.\+Slug
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1GenreRepository_ae0513d298d94206a10d574f1fd2ce762}{\+\_\+database}}
+\begin{DoxyCompactList}\small\item\em The database handle \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A local repository for genres. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1GenreRepository_a6bb313ba223e21f1473d324d7aab8bb9}\label{classKyoo_1_1Controllers_1_1GenreRepository_a6bb313ba223e21f1473d324d7aab8bb9}} 
+\index{Kyoo.Controllers.GenreRepository@{Kyoo.Controllers.GenreRepository}!GenreRepository@{GenreRepository}}
+\index{GenreRepository@{GenreRepository}!Kyoo.Controllers.GenreRepository@{Kyoo.Controllers.GenreRepository}}
+\doxysubsubsection{\texorpdfstring{GenreRepository()}{GenreRepository()}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+Genre\+Repository.\+Genre\+Repository (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}}}]{database }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1GenreRepository}{Genre\+Repository}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & The database handle\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1GenreRepository_a59b89adada0901966530a8cdefbb5182}\label{classKyoo_1_1Controllers_1_1GenreRepository_a59b89adada0901966530a8cdefbb5182}} 
+\index{Kyoo.Controllers.GenreRepository@{Kyoo.Controllers.GenreRepository}!Create@{Create}}
+\index{Create@{Create}!Kyoo.Controllers.GenreRepository@{Kyoo.Controllers.GenreRepository}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily override async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Genre}{Genre}}$>$ Kyoo.\+Controllers.\+Genre\+Repository.\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Genre}{Genre}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1GenreRepository_a2ca44a6e48c668159f4d9fa68e531038}\label{classKyoo_1_1Controllers_1_1GenreRepository_a2ca44a6e48c668159f4d9fa68e531038}} 
+\index{Kyoo.Controllers.GenreRepository@{Kyoo.Controllers.GenreRepository}!Delete@{Delete}}
+\index{Delete@{Delete}!Kyoo.Controllers.GenreRepository@{Kyoo.Controllers.GenreRepository}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily override async Task Kyoo.\+Controllers.\+Genre\+Repository.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Genre}{Genre}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1GenreRepository_aff353ccca942c507fcd454b9c8d14034}\label{classKyoo_1_1Controllers_1_1GenreRepository_aff353ccca942c507fcd454b9c8d14034}} 
+\index{Kyoo.Controllers.GenreRepository@{Kyoo.Controllers.GenreRepository}!Search@{Search}}
+\index{Search@{Search}!Kyoo.Controllers.GenreRepository@{Kyoo.Controllers.GenreRepository}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily override async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Genre}{Genre}}$>$ $>$ Kyoo.\+Controllers.\+Genre\+Repository.\+Search (\begin{DoxyParamCaption}\item[{string}]{query }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Implements \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a1ec5ba57aa01810e262bbfc02bd1fc3e}{Kyoo.\+Controllers.\+Local\+Repository$<$ Genre $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1GenreRepository_ae0513d298d94206a10d574f1fd2ce762}\label{classKyoo_1_1Controllers_1_1GenreRepository_ae0513d298d94206a10d574f1fd2ce762}} 
+\index{Kyoo.Controllers.GenreRepository@{Kyoo.Controllers.GenreRepository}!\_database@{\_database}}
+\index{\_database@{\_database}!Kyoo.Controllers.GenreRepository@{Kyoo.Controllers.GenreRepository}}
+\doxysubsubsection{\texorpdfstring{\_database}{\_database}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} Kyoo.\+Controllers.\+Genre\+Repository.\+\_\+database\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The database handle 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1GenreRepository_ad7b7430f3afe843ebfa3f19f7ff55693}\label{classKyoo_1_1Controllers_1_1GenreRepository_ad7b7430f3afe843ebfa3f19f7ff55693}} 
+\index{Kyoo.Controllers.GenreRepository@{Kyoo.Controllers.GenreRepository}!DefaultSort@{DefaultSort}}
+\index{DefaultSort@{DefaultSort}!Kyoo.Controllers.GenreRepository@{Kyoo.Controllers.GenreRepository}}
+\doxysubsubsection{\texorpdfstring{DefaultSort}{DefaultSort}}
+{\footnotesize\ttfamily override Expression$<$Func$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Genre}{Genre}}, object$>$ $>$ Kyoo.\+Controllers.\+Genre\+Repository.\+Default\+Sort =$>$ x =$>$ x.\+Slug\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Controllers/\+Repositories/\mbox{\hyperlink{GenreRepository_8cs}{Genre\+Repository.\+cs}}\end{DoxyCompactItemize}

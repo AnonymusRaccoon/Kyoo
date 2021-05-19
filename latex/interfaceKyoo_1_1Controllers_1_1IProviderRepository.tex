@@ -1,0 +1,95 @@
+\hypertarget{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{}\doxysection{Kyoo.\+Controllers.\+I\+Provider\+Repository Interface Reference}
+\label{interfaceKyoo_1_1Controllers_1_1IProviderRepository}\index{Kyoo.Controllers.IProviderRepository@{Kyoo.Controllers.IProviderRepository}}
+
+
+A repository to handle providers.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+I\+Provider\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{interfaceKyoo_1_1Controllers_1_1IProviderRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+I\+Provider\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{interfaceKyoo_1_1Controllers_1_1IProviderRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}} $>$ $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository_acd94bdc68a3dd8e3f5505127159bfe43}{Get\+Metadata\+ID}} (Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}}, bool $>$$>$ where=null, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}} $>$ sort=default, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Get a list of external ids that match all filters \end{DoxyCompactList}\item 
+Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}} $>$ $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository_ad99ad0952df57a0d884a078ec92761bb}{Get\+Metadata\+ID}} (\mbox{[}Optional\mbox{]} Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}}, bool $>$$>$ where, Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}}, object $>$$>$ sort, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Get a list of external ids that match all filters \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A repository to handle providers. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IProviderRepository_ad99ad0952df57a0d884a078ec92761bb}\label{interfaceKyoo_1_1Controllers_1_1IProviderRepository_ad99ad0952df57a0d884a078ec92761bb}} 
+\index{Kyoo.Controllers.IProviderRepository@{Kyoo.Controllers.IProviderRepository}!GetMetadataID@{GetMetadataID}}
+\index{GetMetadataID@{GetMetadataID}!Kyoo.Controllers.IProviderRepository@{Kyoo.Controllers.IProviderRepository}}
+\doxysubsubsection{\texorpdfstring{GetMetadataID()}{GetMetadataID()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}}$>$ $>$ Kyoo.\+Controllers.\+I\+Provider\+Repository.\+Get\+Metadata\+ID (\begin{DoxyParamCaption}\item[{\mbox{[}\+Optional\mbox{]} Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}}, bool $>$$>$}]{where,  }\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}}, object $>$$>$}]{sort,  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})}
+
+
+
+Get a list of external ids that match all filters 
+
+
+\begin{DoxyParams}{Parameters}
+{\em where} & A predicate to add arbitrary filter\\
+\hline
+{\em sort} & A sort by expression\\
+\hline
+{\em limit} & \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} information (where to start and how many to get)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A filtered list of external ids.
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IProviderRepository_acd94bdc68a3dd8e3f5505127159bfe43}\label{interfaceKyoo_1_1Controllers_1_1IProviderRepository_acd94bdc68a3dd8e3f5505127159bfe43}} 
+\index{Kyoo.Controllers.IProviderRepository@{Kyoo.Controllers.IProviderRepository}!GetMetadataID@{GetMetadataID}}
+\index{GetMetadataID@{GetMetadataID}!Kyoo.Controllers.IProviderRepository@{Kyoo.Controllers.IProviderRepository}}
+\doxysubsubsection{\texorpdfstring{GetMetadataID()}{GetMetadataID()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}}$>$ $>$ Kyoo.\+Controllers.\+I\+Provider\+Repository.\+Get\+Metadata\+ID (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}}, bool $>$$>$}]{where = {\ttfamily null},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}} $>$}]{sort = {\ttfamily default},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})}
+
+
+
+Get a list of external ids that match all filters 
+
+
+\begin{DoxyParams}{Parameters}
+{\em where} & A predicate to add arbitrary filter\\
+\hline
+{\em sort} & \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}} information (sort order \& sort by)\\
+\hline
+{\em limit} & \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} information (where to start and how many to get)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A filtered list of external ids.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderRepository_ac5d41914aa3019b29be805dfc4b7ccee}{Kyoo.\+Controllers.\+Provider\+Repository}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Controllers/\mbox{\hyperlink{IRepository_8cs}{I\+Repository.\+cs}}\end{DoxyCompactItemize}

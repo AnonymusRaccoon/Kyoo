@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title=" " alt="" coords="5,5,212,47"/>
+<area shape="rect" id="node2" href="$interfaceKyoo_1_1Controllers_1_1IUserRepository.html" title="A repository to handle users." alt="" coords="260,13,497,39"/>
+<area shape="rect" id="node3" href="$classKyoo_1_1Controllers_1_1UserRepository.html" title="A repository for users." alt="" coords="545,42,779,69"/>
+<area shape="rect" id="node4" href="$classKyoo_1_1Controllers_1_1LocalRepository.html" title=" " alt="" coords="260,64,497,105"/>
+</map>

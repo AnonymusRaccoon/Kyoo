@@ -1,0 +1,139 @@
+\hypertarget{classKyoo_1_1Api_1_1SeasonApi}{}\doxysection{Kyoo.\+Api.\+Season\+Api Class Reference}
+\label{classKyoo_1_1Api_1_1SeasonApi}\index{Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}}
+
+
+Inheritance diagram for Kyoo.\+Api.\+Season\+Api\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classKyoo_1_1Api_1_1SeasonApi__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Api.\+Season\+Api\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKyoo_1_1Api_1_1SeasonApi__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Api_1_1SeasonApi_a447da79bde3b5cd7818630cd093f36f9}{Season\+Api}} (\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}} library\+Manager, I\+Options$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Options_1_1BasicOptions}{Basic\+Options}} $>$ options, \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IThumbnailsManager}{I\+Thumbnails\+Manager}} thumbs, \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}} files)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1SeasonApi_ab459ad0554e9e33b23cf3c693f9b0398}{Get\+Episode}} (int season\+ID, \mbox{[}From\+Query\mbox{]} string sort\+By, \mbox{[}From\+Query\mbox{]} int after\+ID, \mbox{[}From\+Query\mbox{]} Dictionary$<$ string, string $>$ where, \mbox{[}From\+Query\mbox{]} int limit=30)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1SeasonApi_a8fae68f12a5181a636883ae0fec8e2f6}{Get\+Episode}} (string show\+Slug, int season\+Number, \mbox{[}From\+Query\mbox{]} string sort\+By, \mbox{[}From\+Query\mbox{]} int after\+ID, \mbox{[}From\+Query\mbox{]} Dictionary$<$ string, string $>$ where, \mbox{[}From\+Query\mbox{]} int limit=30)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1SeasonApi_a53f99d8099660962ff934afed18d67d7}{Get\+Episode}} (int show\+ID, int season\+Number, \mbox{[}From\+Query\mbox{]} string sort\+By, \mbox{[}From\+Query\mbox{]} int after\+ID, \mbox{[}From\+Query\mbox{]} Dictionary$<$ string, string $>$ where, \mbox{[}From\+Query\mbox{]} int limit=30)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1SeasonApi_a3eb1de7612b21e2a0e350855cdc31efc}{Get\+Show}} (int season\+ID)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1SeasonApi_ae8f2b810fdd312a82808969ae187d5bc}{Get\+Show}} (string show\+Slug, int season\+Number)
+\item 
+async Task$<$ Action\+Result$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1SeasonApi_a5ba6951998f2f446dfa314bc877e682c}{Get\+Show}} (int show\+ID, int season\+Number)
+\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1SeasonApi_a0ab68f9b83b0c11ab26de47b01e6c539}{Get\+Thumb}} (int id)
+\item 
+async Task$<$ I\+Action\+Result $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1SeasonApi_a0e6af110e912643bb2f4f5ce7157af2e}{Get\+Thumb}} (string slug)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}} \mbox{\hyperlink{classKyoo_1_1Api_1_1SeasonApi_aee68a60ca1ed307d186f804313f81735}{\+\_\+library\+Manager}}
+\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IThumbnailsManager}{I\+Thumbnails\+Manager}} \mbox{\hyperlink{classKyoo_1_1Api_1_1SeasonApi_ad71c5f278f9bc3b2672e76324a680d88}{\+\_\+thumbs}}
+\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}} \mbox{\hyperlink{classKyoo_1_1Api_1_1SeasonApi_a0c6db8e960ec7112b0869c6fb90522df}{\+\_\+files}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1SeasonApi_a447da79bde3b5cd7818630cd093f36f9}\label{classKyoo_1_1Api_1_1SeasonApi_a447da79bde3b5cd7818630cd093f36f9}} 
+\index{Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}!SeasonApi@{SeasonApi}}
+\index{SeasonApi@{SeasonApi}!Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}}
+\doxysubsubsection{\texorpdfstring{SeasonApi()}{SeasonApi()}}
+{\footnotesize\ttfamily Kyoo.\+Api.\+Season\+Api.\+Season\+Api (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}}}]{library\+Manager,  }\item[{I\+Options$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Options_1_1BasicOptions}{Basic\+Options}} $>$}]{options,  }\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IThumbnailsManager}{I\+Thumbnails\+Manager}}}]{thumbs,  }\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}}}]{files }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1SeasonApi_ab459ad0554e9e33b23cf3c693f9b0398}\label{classKyoo_1_1Api_1_1SeasonApi_ab459ad0554e9e33b23cf3c693f9b0398}} 
+\index{Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}!GetEpisode@{GetEpisode}}
+\index{GetEpisode@{GetEpisode}!Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}}
+\doxysubsubsection{\texorpdfstring{GetEpisode()}{GetEpisode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ $>$ $>$ Kyoo.\+Api.\+Season\+Api.\+Get\+Episode (\begin{DoxyParamCaption}\item[{int}]{season\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} string}]{sort\+By,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{after\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} Dictionary$<$ string, string $>$}]{where,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{limit = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1SeasonApi_a53f99d8099660962ff934afed18d67d7}\label{classKyoo_1_1Api_1_1SeasonApi_a53f99d8099660962ff934afed18d67d7}} 
+\index{Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}!GetEpisode@{GetEpisode}}
+\index{GetEpisode@{GetEpisode}!Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}}
+\doxysubsubsection{\texorpdfstring{GetEpisode()}{GetEpisode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ $>$ $>$ Kyoo.\+Api.\+Season\+Api.\+Get\+Episode (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{int}]{season\+Number,  }\item[{\mbox{[}\+From\+Query\mbox{]} string}]{sort\+By,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{after\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} Dictionary$<$ string, string $>$}]{where,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{limit = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1SeasonApi_a8fae68f12a5181a636883ae0fec8e2f6}\label{classKyoo_1_1Api_1_1SeasonApi_a8fae68f12a5181a636883ae0fec8e2f6}} 
+\index{Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}!GetEpisode@{GetEpisode}}
+\index{GetEpisode@{GetEpisode}!Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}}
+\doxysubsubsection{\texorpdfstring{GetEpisode()}{GetEpisode()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Page}{Page}}$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ $>$ $>$ Kyoo.\+Api.\+Season\+Api.\+Get\+Episode (\begin{DoxyParamCaption}\item[{string}]{show\+Slug,  }\item[{int}]{season\+Number,  }\item[{\mbox{[}\+From\+Query\mbox{]} string}]{sort\+By,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{after\+ID,  }\item[{\mbox{[}\+From\+Query\mbox{]} Dictionary$<$ string, string $>$}]{where,  }\item[{\mbox{[}\+From\+Query\mbox{]} int}]{limit = {\ttfamily 30} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1SeasonApi_a3eb1de7612b21e2a0e350855cdc31efc}\label{classKyoo_1_1Api_1_1SeasonApi_a3eb1de7612b21e2a0e350855cdc31efc}} 
+\index{Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}!GetShow@{GetShow}}
+\index{GetShow@{GetShow}!Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}}
+\doxysubsubsection{\texorpdfstring{GetShow()}{GetShow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}$>$ $>$ Kyoo.\+Api.\+Season\+Api.\+Get\+Show (\begin{DoxyParamCaption}\item[{int}]{season\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1SeasonApi_a5ba6951998f2f446dfa314bc877e682c}\label{classKyoo_1_1Api_1_1SeasonApi_a5ba6951998f2f446dfa314bc877e682c}} 
+\index{Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}!GetShow@{GetShow}}
+\index{GetShow@{GetShow}!Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}}
+\doxysubsubsection{\texorpdfstring{GetShow()}{GetShow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}$>$ $>$ Kyoo.\+Api.\+Season\+Api.\+Get\+Show (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{int}]{season\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1SeasonApi_ae8f2b810fdd312a82808969ae187d5bc}\label{classKyoo_1_1Api_1_1SeasonApi_ae8f2b810fdd312a82808969ae187d5bc}} 
+\index{Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}!GetShow@{GetShow}}
+\index{GetShow@{GetShow}!Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}}
+\doxysubsubsection{\texorpdfstring{GetShow()}{GetShow()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}$>$ $>$ Kyoo.\+Api.\+Season\+Api.\+Get\+Show (\begin{DoxyParamCaption}\item[{string}]{show\+Slug,  }\item[{int}]{season\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1SeasonApi_a0ab68f9b83b0c11ab26de47b01e6c539}\label{classKyoo_1_1Api_1_1SeasonApi_a0ab68f9b83b0c11ab26de47b01e6c539}} 
+\index{Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}!GetThumb@{GetThumb}}
+\index{GetThumb@{GetThumb}!Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}}
+\doxysubsubsection{\texorpdfstring{GetThumb()}{GetThumb()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Kyoo.\+Api.\+Season\+Api.\+Get\+Thumb (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1SeasonApi_a0e6af110e912643bb2f4f5ce7157af2e}\label{classKyoo_1_1Api_1_1SeasonApi_a0e6af110e912643bb2f4f5ce7157af2e}} 
+\index{Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}!GetThumb@{GetThumb}}
+\index{GetThumb@{GetThumb}!Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}}
+\doxysubsubsection{\texorpdfstring{GetThumb()}{GetThumb()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$I\+Action\+Result$>$ Kyoo.\+Api.\+Season\+Api.\+Get\+Thumb (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1SeasonApi_a0c6db8e960ec7112b0869c6fb90522df}\label{classKyoo_1_1Api_1_1SeasonApi_a0c6db8e960ec7112b0869c6fb90522df}} 
+\index{Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}!\_files@{\_files}}
+\index{\_files@{\_files}!Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}}
+\doxysubsubsection{\texorpdfstring{\_files}{\_files}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}} Kyoo.\+Api.\+Season\+Api.\+\_\+files\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1SeasonApi_aee68a60ca1ed307d186f804313f81735}\label{classKyoo_1_1Api_1_1SeasonApi_aee68a60ca1ed307d186f804313f81735}} 
+\index{Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}!\_libraryManager@{\_libraryManager}}
+\index{\_libraryManager@{\_libraryManager}!Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}}
+\doxysubsubsection{\texorpdfstring{\_libraryManager}{\_libraryManager}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}} Kyoo.\+Api.\+Season\+Api.\+\_\+library\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1SeasonApi_ad71c5f278f9bc3b2672e76324a680d88}\label{classKyoo_1_1Api_1_1SeasonApi_ad71c5f278f9bc3b2672e76324a680d88}} 
+\index{Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}!\_thumbs@{\_thumbs}}
+\index{\_thumbs@{\_thumbs}!Kyoo.Api.SeasonApi@{Kyoo.Api.SeasonApi}}
+\doxysubsubsection{\texorpdfstring{\_thumbs}{\_thumbs}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IThumbnailsManager}{I\+Thumbnails\+Manager}} Kyoo.\+Api.\+Season\+Api.\+\_\+thumbs\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Views/\mbox{\hyperlink{SeasonApi_8cs}{Season\+Api.\+cs}}\end{DoxyCompactItemize}

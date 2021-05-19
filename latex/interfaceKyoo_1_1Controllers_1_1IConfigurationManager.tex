@@ -1,0 +1,136 @@
+\hypertarget{interfaceKyoo_1_1Controllers_1_1IConfigurationManager}{}\doxysection{Kyoo.\+Controllers.\+I\+Configuration\+Manager Interface Reference}
+\label{interfaceKyoo_1_1Controllers_1_1IConfigurationManager}\index{Kyoo.Controllers.IConfigurationManager@{Kyoo.Controllers.IConfigurationManager}}
+
+
+A class to ease configuration management. This work W\+I\+TH Microsoft\textquotesingle{}s package, you can still use I\+Options patterns to access your options, this manager ease dynamic work and editing. It works with Configuration\+Reference.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+I\+Configuration\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{interfaceKyoo_1_1Controllers_1_1IConfigurationManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+I\+Configuration\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{interfaceKyoo_1_1Controllers_1_1IConfigurationManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IConfigurationManager_aab04a51a2f899d7052bf5ae3ac5fc310}{Get\+Value}} (string path)
+\begin{DoxyCompactList}\small\item\em Get the value of a setting using it\textquotesingle{}s path. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IConfigurationManager_af4ed93f75e89c78c36bbe6bf29645e84}{Get\+Value$<$ T $>$}} (string path)
+\begin{DoxyCompactList}\small\item\em Get the value of a setting using it\textquotesingle{}s path. If your don\textquotesingle{}t need a strongly typed value, see \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IConfigurationManager_aab04a51a2f899d7052bf5ae3ac5fc310}{Get\+Value}}. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IConfigurationManager_ace77670f6f2f5df4d6e5738c6d293c83}{Edit\+Value}} (string path, object value)
+\begin{DoxyCompactList}\small\item\em Edit the value of a setting using it\textquotesingle{}s path. Save it to the json file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to ease configuration management. This work W\+I\+TH Microsoft\textquotesingle{}s package, you can still use I\+Options patterns to access your options, this manager ease dynamic work and editing. It works with Configuration\+Reference. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IConfigurationManager_ace77670f6f2f5df4d6e5738c6d293c83}\label{interfaceKyoo_1_1Controllers_1_1IConfigurationManager_ace77670f6f2f5df4d6e5738c6d293c83}} 
+\index{Kyoo.Controllers.IConfigurationManager@{Kyoo.Controllers.IConfigurationManager}!EditValue@{EditValue}}
+\index{EditValue@{EditValue}!Kyoo.Controllers.IConfigurationManager@{Kyoo.Controllers.IConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{EditValue()}{EditValue()}}
+{\footnotesize\ttfamily Task Kyoo.\+Controllers.\+I\+Configuration\+Manager.\+Edit\+Value (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{object}]{value }\end{DoxyParamCaption})}
+
+
+
+Edit the value of a setting using it\textquotesingle{}s path. Save it to the json file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path of the resource (can be separated by \textquotesingle{}\+:\textquotesingle{} or \textquotesingle{}\+\_\+\+\_\+\textquotesingle{})\\
+\hline
+{\em value} & The new value of the resource\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & No setting found at the given path.\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConfigurationManager_aa804b7d140e90cb2f38a41bc02398c88}{Kyoo.\+Controllers.\+Configuration\+Manager}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IConfigurationManager_aab04a51a2f899d7052bf5ae3ac5fc310}\label{interfaceKyoo_1_1Controllers_1_1IConfigurationManager_aab04a51a2f899d7052bf5ae3ac5fc310}} 
+\index{Kyoo.Controllers.IConfigurationManager@{Kyoo.Controllers.IConfigurationManager}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!Kyoo.Controllers.IConfigurationManager@{Kyoo.Controllers.IConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily object Kyoo.\+Controllers.\+I\+Configuration\+Manager.\+Get\+Value (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})}
+
+
+
+Get the value of a setting using it\textquotesingle{}s path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path of the resource (can be separated by \textquotesingle{}\+:\textquotesingle{} or \textquotesingle{}\+\_\+\+\_\+\textquotesingle{})\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & No setting found at the given path.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The value of the settings (if it\textquotesingle{}s a strongly typed one, the given type is instantiated
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConfigurationManager_ae4698899e362928ceba33516dfdf8e72}{Kyoo.\+Controllers.\+Configuration\+Manager}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IConfigurationManager_af4ed93f75e89c78c36bbe6bf29645e84}\label{interfaceKyoo_1_1Controllers_1_1IConfigurationManager_af4ed93f75e89c78c36bbe6bf29645e84}} 
+\index{Kyoo.Controllers.IConfigurationManager@{Kyoo.Controllers.IConfigurationManager}!GetValue$<$ T $>$@{GetValue$<$ T $>$}}
+\index{GetValue$<$ T $>$@{GetValue$<$ T $>$}!Kyoo.Controllers.IConfigurationManager@{Kyoo.Controllers.IConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{GetValue$<$ T $>$()}{GetValue< T >()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IConfigurationManager_aab04a51a2f899d7052bf5ae3ac5fc310}{Kyoo.\+Controllers.\+I\+Configuration\+Manager.\+Get\+Value}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})}
+
+
+
+Get the value of a setting using it\textquotesingle{}s path. If your don\textquotesingle{}t need a strongly typed value, see \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IConfigurationManager_aab04a51a2f899d7052bf5ae3ac5fc310}{Get\+Value}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path of the resource (can be separated by \textquotesingle{}\+:\textquotesingle{} or \textquotesingle{}\+\_\+\+\_\+\textquotesingle{})\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & A type to strongly type your option.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Cast\+Exception} & If your type is not the same as the registered type\\
+\hline
+{\em Item\+Not\+Found\+Exception} & No setting found at the given path.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The value of the settings (if it\textquotesingle{}s a strongly typed one, the given type is instantiated
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConfigurationManager_ab7b738e956c21272758062b39f40358d}{Kyoo.\+Controllers.\+Configuration\+Manager}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Controllers/\mbox{\hyperlink{IConfigurationManager_8cs}{I\+Configuration\+Manager.\+cs}}\end{DoxyCompactItemize}

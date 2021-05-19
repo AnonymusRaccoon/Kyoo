@@ -1,0 +1,205 @@
+\hypertarget{classKyoo_1_1Tasks_1_1PluginInitializer}{}\doxysection{Kyoo.\+Tasks.\+Plugin\+Initializer Class Reference}
+\label{classKyoo_1_1Tasks_1_1PluginInitializer}\index{Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}}
+
+
+A task run on \mbox{\hyperlink{namespaceKyoo}{Kyoo}}\textquotesingle{}s startup to initialize plugins  
+
+
+
+
+Inheritance diagram for Kyoo.\+Tasks.\+Plugin\+Initializer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classKyoo_1_1Tasks_1_1PluginInitializer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Tasks.\+Plugin\+Initializer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classKyoo_1_1Tasks_1_1PluginInitializer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task \mbox{\hyperlink{classKyoo_1_1Tasks_1_1PluginInitializer_a0cfed441043e7494f88fe8e3735df1c0}{Run}} (\mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskParameters}{Task\+Parameters}} arguments, Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em Start this task. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskParameters}{Task\+Parameters}} \mbox{\hyperlink{classKyoo_1_1Tasks_1_1PluginInitializer_aae1e13b55a4d2fba50bd3dd744bcad2a}{Get\+Parameters}} ()
+\begin{DoxyCompactList}\small\item\em The list of parameters \end{DoxyCompactList}\item 
+int? \mbox{\hyperlink{classKyoo_1_1Tasks_1_1PluginInitializer_a96754795e2b2b24f21b18266bd728e4f}{Progress}} ()
+\begin{DoxyCompactList}\small\item\em If this task is running, return the percentage of completion of this task or null if no percentage can be given. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Tasks_1_1PluginInitializer_a68b0cfaee5e884917791b4b0e964b6ea}{Slug}} =$>$ \char`\"{}plugin-\/init\char`\"{}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Tasks_1_1PluginInitializer_ad8b5b3067c3f5d96145db786e8a7d78f}{Name}} =$>$ \char`\"{}Plugin\+Initializer\char`\"{}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Tasks_1_1PluginInitializer_a698e5f06d28833d33eb5e4f99e03fca8}{Description}} =$>$ \char`\"{}A task to initialize plugins.\char`\"{}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Tasks_1_1PluginInitializer_a8b2efafaf5fdf7e28c0ad1325cda2707}{Help\+Message}} =$>$ null
+\item 
+bool \mbox{\hyperlink{classKyoo_1_1Tasks_1_1PluginInitializer_ae1a93246f0b1de68c29baf19681274d9}{Run\+On\+Startup}} =$>$ true
+\item 
+int \mbox{\hyperlink{classKyoo_1_1Tasks_1_1PluginInitializer_a620984f7cfdd6ad79e59fe49825f9716}{Priority}} =$>$ int.\+Max\+Value
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager}{I\+Plugin\+Manager}} \mbox{\hyperlink{classKyoo_1_1Tasks_1_1PluginInitializer_a11b4a9bb38f4a828c94fa5478ff8df85}{Plugin\+Manager}}\hspace{0.3cm}{\ttfamily  \mbox{[}set, private get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The plugin manager used to retrieve plugins to initialize them. \end{DoxyCompactList}\item 
+I\+Service\+Provider \mbox{\hyperlink{classKyoo_1_1Tasks_1_1PluginInitializer_a0dc8af7889b23e0dbab163612b04c5b0}{Provider}}\hspace{0.3cm}{\ttfamily  \mbox{[}set, private get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The service provider given to each I\+Plugin.\+Initialize method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A task run on \mbox{\hyperlink{namespaceKyoo}{Kyoo}}\textquotesingle{}s startup to initialize plugins 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1PluginInitializer_aae1e13b55a4d2fba50bd3dd744bcad2a}\label{classKyoo_1_1Tasks_1_1PluginInitializer_aae1e13b55a4d2fba50bd3dd744bcad2a}} 
+\index{Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}!GetParameters@{GetParameters}}
+\index{GetParameters@{GetParameters}!Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}}
+\doxysubsubsection{\texorpdfstring{GetParameters()}{GetParameters()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskParameters}{Task\+Parameters}} Kyoo.\+Tasks.\+Plugin\+Initializer.\+Get\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The list of parameters 
+
+\begin{DoxyReturn}{Returns}
+All parameters that this task as. Every one of them will be given to the run function with a value.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask_aaaf952751d8460c03a4b8bd8a2589b6e}{Kyoo.\+Controllers.\+I\+Task}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1PluginInitializer_a96754795e2b2b24f21b18266bd728e4f}\label{classKyoo_1_1Tasks_1_1PluginInitializer_a96754795e2b2b24f21b18266bd728e4f}} 
+\index{Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}!Progress@{Progress}}
+\index{Progress@{Progress}!Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}}
+\doxysubsubsection{\texorpdfstring{Progress()}{Progress()}}
+{\footnotesize\ttfamily int? Kyoo.\+Tasks.\+Plugin\+Initializer.\+Progress (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If this task is running, return the percentage of completion of this task or null if no percentage can be given. 
+
+\begin{DoxyReturn}{Returns}
+The percentage of completion of the task.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask_ac42635cbedcb0f4aa70263eee143879b}{Kyoo.\+Controllers.\+I\+Task}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1PluginInitializer_a0cfed441043e7494f88fe8e3735df1c0}\label{classKyoo_1_1Tasks_1_1PluginInitializer_a0cfed441043e7494f88fe8e3735df1c0}} 
+\index{Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}!Run@{Run}}
+\index{Run@{Run}!Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily Task Kyoo.\+Tasks.\+Plugin\+Initializer.\+Run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskParameters}{Task\+Parameters}}}]{arguments,  }\item[{Cancellation\+Token}]{cancellation\+Token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Start this task. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask_a19c0c658c3254fb2a5fe443a3c4c9221}{Kyoo.\+Controllers.\+I\+Task}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1PluginInitializer_a698e5f06d28833d33eb5e4f99e03fca8}\label{classKyoo_1_1Tasks_1_1PluginInitializer_a698e5f06d28833d33eb5e4f99e03fca8}} 
+\index{Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}!Description@{Description}}
+\index{Description@{Description}!Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}}
+\doxysubsubsection{\texorpdfstring{Description}{Description}}
+{\footnotesize\ttfamily string Kyoo.\+Tasks.\+Plugin\+Initializer.\+Description =$>$ \char`\"{}A task to initialize plugins.\char`\"{}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1PluginInitializer_a8b2efafaf5fdf7e28c0ad1325cda2707}\label{classKyoo_1_1Tasks_1_1PluginInitializer_a8b2efafaf5fdf7e28c0ad1325cda2707}} 
+\index{Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}!HelpMessage@{HelpMessage}}
+\index{HelpMessage@{HelpMessage}!Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}}
+\doxysubsubsection{\texorpdfstring{HelpMessage}{HelpMessage}}
+{\footnotesize\ttfamily string Kyoo.\+Tasks.\+Plugin\+Initializer.\+Help\+Message =$>$ null}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1PluginInitializer_ad8b5b3067c3f5d96145db786e8a7d78f}\label{classKyoo_1_1Tasks_1_1PluginInitializer_ad8b5b3067c3f5d96145db786e8a7d78f}} 
+\index{Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}!Name@{Name}}
+\index{Name@{Name}!Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string Kyoo.\+Tasks.\+Plugin\+Initializer.\+Name =$>$ \char`\"{}Plugin\+Initializer\char`\"{}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1PluginInitializer_a620984f7cfdd6ad79e59fe49825f9716}\label{classKyoo_1_1Tasks_1_1PluginInitializer_a620984f7cfdd6ad79e59fe49825f9716}} 
+\index{Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}!Priority@{Priority}}
+\index{Priority@{Priority}!Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}}
+\doxysubsubsection{\texorpdfstring{Priority}{Priority}}
+{\footnotesize\ttfamily int Kyoo.\+Tasks.\+Plugin\+Initializer.\+Priority =$>$ int.\+Max\+Value}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1PluginInitializer_ae1a93246f0b1de68c29baf19681274d9}\label{classKyoo_1_1Tasks_1_1PluginInitializer_ae1a93246f0b1de68c29baf19681274d9}} 
+\index{Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}!RunOnStartup@{RunOnStartup}}
+\index{RunOnStartup@{RunOnStartup}!Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}}
+\doxysubsubsection{\texorpdfstring{RunOnStartup}{RunOnStartup}}
+{\footnotesize\ttfamily bool Kyoo.\+Tasks.\+Plugin\+Initializer.\+Run\+On\+Startup =$>$ true}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1PluginInitializer_a68b0cfaee5e884917791b4b0e964b6ea}\label{classKyoo_1_1Tasks_1_1PluginInitializer_a68b0cfaee5e884917791b4b0e964b6ea}} 
+\index{Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}!Slug@{Slug}}
+\index{Slug@{Slug}!Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}}
+\doxysubsubsection{\texorpdfstring{Slug}{Slug}}
+{\footnotesize\ttfamily string Kyoo.\+Tasks.\+Plugin\+Initializer.\+Slug =$>$ \char`\"{}plugin-\/init\char`\"{}}
+
+
+
+
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1PluginInitializer_a11b4a9bb38f4a828c94fa5478ff8df85}\label{classKyoo_1_1Tasks_1_1PluginInitializer_a11b4a9bb38f4a828c94fa5478ff8df85}} 
+\index{Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}!PluginManager@{PluginManager}}
+\index{PluginManager@{PluginManager}!Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}}
+\doxysubsubsection{\texorpdfstring{PluginManager}{PluginManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager}{I\+Plugin\+Manager}} Kyoo.\+Tasks.\+Plugin\+Initializer.\+Plugin\+Manager\hspace{0.3cm}{\ttfamily [set]}, {\ttfamily [private get]}}
+
+
+
+The plugin manager used to retrieve plugins to initialize them. 
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1PluginInitializer_a0dc8af7889b23e0dbab163612b04c5b0}\label{classKyoo_1_1Tasks_1_1PluginInitializer_a0dc8af7889b23e0dbab163612b04c5b0}} 
+\index{Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}!Provider@{Provider}}
+\index{Provider@{Provider}!Kyoo.Tasks.PluginInitializer@{Kyoo.Tasks.PluginInitializer}}
+\doxysubsubsection{\texorpdfstring{Provider}{Provider}}
+{\footnotesize\ttfamily I\+Service\+Provider Kyoo.\+Tasks.\+Plugin\+Initializer.\+Provider\hspace{0.3cm}{\ttfamily [set]}, {\ttfamily [private get]}}
+
+
+
+The service provider given to each I\+Plugin.\+Initialize method. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Tasks/\mbox{\hyperlink{PluginInitializer_8cs}{Plugin\+Initializer.\+cs}}\end{DoxyCompactItemize}

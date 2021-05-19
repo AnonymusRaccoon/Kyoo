@@ -1,0 +1,123 @@
+\hypertarget{classKyoo_1_1Api_1_1ConfigurationApi}{}\doxysection{Kyoo.\+Api.\+Configuration\+Api Class Reference}
+\label{classKyoo_1_1Api_1_1ConfigurationApi}\index{Kyoo.Api.ConfigurationApi@{Kyoo.Api.ConfigurationApi}}
+
+
+An A\+PI to retrieve or edit configuration settings  
+
+
+
+
+Inheritance diagram for Kyoo.\+Api.\+Configuration\+Api\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classKyoo_1_1Api_1_1ConfigurationApi__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Api.\+Configuration\+Api\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classKyoo_1_1Api_1_1ConfigurationApi__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Api_1_1ConfigurationApi_a24d28240399216a475ebcb19d0bd534b}{Configuration\+Api}} (\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IConfigurationManager}{I\+Configuration\+Manager}} manager)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Api_1_1ConfigurationApi}{Configuration\+Api}} using the given configuration. \end{DoxyCompactList}\item 
+Action\+Result$<$ object $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ConfigurationApi_af04e0c350791f41a50daed8ecf0c36a2}{Get\+Configuration}} (string slug)
+\begin{DoxyCompactList}\small\item\em Get a permission from it\textquotesingle{}s slug. \end{DoxyCompactList}\item 
+async Task$<$ Action\+Result$<$ object $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Api_1_1ConfigurationApi_ae2432e21f780c2791142db0507ef8abc}{Edit\+Configuration}} (string slug, \mbox{[}From\+Body\mbox{]} object new\+Value)
+\begin{DoxyCompactList}\small\item\em Edit a permission from it\textquotesingle{}s slug. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IConfigurationManager}{I\+Configuration\+Manager}} \mbox{\hyperlink{classKyoo_1_1Api_1_1ConfigurationApi_a25d65434d22e79f194170d461cb5fa34}{\+\_\+manager}}
+\begin{DoxyCompactList}\small\item\em The configuration manager used to retrieve and edit configuration values (while being type safe). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An A\+PI to retrieve or edit configuration settings 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ConfigurationApi_a24d28240399216a475ebcb19d0bd534b}\label{classKyoo_1_1Api_1_1ConfigurationApi_a24d28240399216a475ebcb19d0bd534b}} 
+\index{Kyoo.Api.ConfigurationApi@{Kyoo.Api.ConfigurationApi}!ConfigurationApi@{ConfigurationApi}}
+\index{ConfigurationApi@{ConfigurationApi}!Kyoo.Api.ConfigurationApi@{Kyoo.Api.ConfigurationApi}}
+\doxysubsubsection{\texorpdfstring{ConfigurationApi()}{ConfigurationApi()}}
+{\footnotesize\ttfamily Kyoo.\+Api.\+Configuration\+Api.\+Configuration\+Api (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IConfigurationManager}{I\+Configuration\+Manager}}}]{manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Api_1_1ConfigurationApi}{Configuration\+Api}} using the given configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & The configuration manager used to retrieve and edit configuration values\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ConfigurationApi_ae2432e21f780c2791142db0507ef8abc}\label{classKyoo_1_1Api_1_1ConfigurationApi_ae2432e21f780c2791142db0507ef8abc}} 
+\index{Kyoo.Api.ConfigurationApi@{Kyoo.Api.ConfigurationApi}!EditConfiguration@{EditConfiguration}}
+\index{EditConfiguration@{EditConfiguration}!Kyoo.Api.ConfigurationApi@{Kyoo.Api.ConfigurationApi}}
+\doxysubsubsection{\texorpdfstring{EditConfiguration()}{EditConfiguration()}}
+{\footnotesize\ttfamily async Task$<$Action\+Result$<$object$>$ $>$ Kyoo.\+Api.\+Configuration\+Api.\+Edit\+Configuration (\begin{DoxyParamCaption}\item[{string}]{slug,  }\item[{\mbox{[}\+From\+Body\mbox{]} object}]{new\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Edit a permission from it\textquotesingle{}s slug. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slug} & The permission to edit. You can use \textquotesingle{}\+:\textquotesingle{} or \char`\"{}\+\_\+\+\_\+\char`\"{} to get a child value.\\
+\hline
+{\em new\+Value} & The new value of the configuration\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The edited value.
+\end{DoxyReturn}
+$<$response code=\char`\"{}200\char`\"{}$>$Return the edited value$<$/response$>$ $<$response code=\char`\"{}404\char`\"{}$>$No configuration exists for the given slug$<$/response$>$ \mbox{\Hypertarget{classKyoo_1_1Api_1_1ConfigurationApi_af04e0c350791f41a50daed8ecf0c36a2}\label{classKyoo_1_1Api_1_1ConfigurationApi_af04e0c350791f41a50daed8ecf0c36a2}} 
+\index{Kyoo.Api.ConfigurationApi@{Kyoo.Api.ConfigurationApi}!GetConfiguration@{GetConfiguration}}
+\index{GetConfiguration@{GetConfiguration}!Kyoo.Api.ConfigurationApi@{Kyoo.Api.ConfigurationApi}}
+\doxysubsubsection{\texorpdfstring{GetConfiguration()}{GetConfiguration()}}
+{\footnotesize\ttfamily Action\+Result$<$object$>$ Kyoo.\+Api.\+Configuration\+Api.\+Get\+Configuration (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a permission from it\textquotesingle{}s slug. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slug} & The permission to retrieve. You can use \textquotesingle{}\+:\textquotesingle{} or \char`\"{}\+\_\+\+\_\+\char`\"{} to get a child value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The associate value or list of values.
+\end{DoxyReturn}
+$<$response code=\char`\"{}200\char`\"{}$>$Return the configuration value or the list of configurations$<$/response$>$ $<$response code=\char`\"{}404\char`\"{}$>$No configuration exists for the given slug$<$/response$>$ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Api_1_1ConfigurationApi_a25d65434d22e79f194170d461cb5fa34}\label{classKyoo_1_1Api_1_1ConfigurationApi_a25d65434d22e79f194170d461cb5fa34}} 
+\index{Kyoo.Api.ConfigurationApi@{Kyoo.Api.ConfigurationApi}!\_manager@{\_manager}}
+\index{\_manager@{\_manager}!Kyoo.Api.ConfigurationApi@{Kyoo.Api.ConfigurationApi}}
+\doxysubsubsection{\texorpdfstring{\_manager}{\_manager}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IConfigurationManager}{I\+Configuration\+Manager}} Kyoo.\+Api.\+Configuration\+Api.\+\_\+manager\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The configuration manager used to retrieve and edit configuration values (while being type safe). 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Views/\mbox{\hyperlink{ConfigurationApi_8cs}{Configuration\+Api.\+cs}}\end{DoxyCompactItemize}

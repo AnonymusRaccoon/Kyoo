@@ -1,0 +1,265 @@
+\hypertarget{classKyoo_1_1Controllers_1_1PluginManager}{}\doxysection{Kyoo.\+Controllers.\+Plugin\+Manager Class Reference}
+\label{classKyoo_1_1Controllers_1_1PluginManager}\index{Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}}
+
+
+An implementation of \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager}{I\+Plugin\+Manager}}. This is used to load plugins and retrieve information from them.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+Plugin\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classKyoo_1_1Controllers_1_1PluginManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+Plugin\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classKyoo_1_1Controllers_1_1PluginManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_1_1PluginDependencyLoader}{Plugin\+Dependency\+Loader}}
+\begin{DoxyCompactList}\small\item\em A custom Assembly\+Load\+Context to load plugin\textquotesingle{}s dependency if they are on the same folder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_ab65f53defb0a121fe089dad14c92e1e5}{Plugin\+Manager}} (I\+Service\+Provider provider, I\+Options\+Monitor$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Options_1_1BasicOptions}{Basic\+Options}} $>$ options, I\+Logger$<$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager}{Plugin\+Manager}} $>$ logger)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager}{Plugin\+Manager}} instance. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_a331c613b56a2bfef0455a838d5eaf5ed}{Get\+Plugin$<$ T $>$}} (string name)
+\begin{DoxyCompactList}\small\item\em Get a single plugin that match the type and name given. \end{DoxyCompactList}\item 
+I\+Collection$<$ T $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_afb3a3d91c29f8e8a1656ae30a79ef285}{Get\+Plugins$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Get all plugins of the given type. \end{DoxyCompactList}\item 
+I\+Collection$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_a5df9c9e85fd8905107498cdfdc99f73b}{Get\+All\+Plugins}} ()
+\begin{DoxyCompactList}\small\item\em Get all plugins currently running on \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. This also includes deleted plugins if the app as not been restarted. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_acc9d949d7b04acec4d2f6eb4734cb419}{Load\+Plugins}} (I\+Collection$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}} $>$ plugins)
+\begin{DoxyCompactList}\small\item\em Load plugins and their dependencies from the plugin directory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_a1669531fdd4f8ad190ef419426a6d6aa}{Configure\+Services}} (I\+Service\+Collection services)
+\begin{DoxyCompactList}\small\item\em Configure services adding or removing services as the plugins wants. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_a3d36674c1b53b36c7474b4e09b70170b}{Configure\+Aspnet}} (I\+Application\+Builder app)
+\begin{DoxyCompactList}\small\item\em Configure an asp net application applying plugins policies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_ad2a815e110c622ddf9165a6ebf3990c8}{Load\+Plugin}} (string path)
+\begin{DoxyCompactList}\small\item\em Load a single plugin and return all \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}} implementations contained in the Assembly. \end{DoxyCompactList}\item 
+I\+Collection$<$ Type $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_adba228fb87a6668de4ef51dddf8c621a}{Get\+Provided\+Types}} (I\+Collection$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}} $>$ plugins)
+\begin{DoxyCompactList}\small\item\em Get the list of types provided by the currently loaded plugins. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly I\+Service\+Provider \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_a18133edd6bd258c4b2041e006d919404}{\+\_\+provider}}
+\begin{DoxyCompactList}\small\item\em The service provider. It allow plugin\textquotesingle{}s activation. \end{DoxyCompactList}\item 
+readonly I\+Options\+Monitor$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Options_1_1BasicOptions}{Basic\+Options}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_a4f3a0af904af13bce5c660a4ce6a1d0c}{\+\_\+options}}
+\begin{DoxyCompactList}\small\item\em The configuration to get the plugin\textquotesingle{}s directory. \end{DoxyCompactList}\item 
+readonly I\+Logger$<$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager}{Plugin\+Manager}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_a868bcc228d5e99a530cc251c75523b74}{\+\_\+logger}}
+\begin{DoxyCompactList}\small\item\em The logger used by this class. \end{DoxyCompactList}\item 
+readonly List$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager_ac947d4bd26336186d740b17119339762}{\+\_\+plugins}} = new()
+\begin{DoxyCompactList}\small\item\em The list of plugins that are currently loaded. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An implementation of \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager}{I\+Plugin\+Manager}}. This is used to load plugins and retrieve information from them. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PluginManager_ab65f53defb0a121fe089dad14c92e1e5}\label{classKyoo_1_1Controllers_1_1PluginManager_ab65f53defb0a121fe089dad14c92e1e5}} 
+\index{Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}!PluginManager@{PluginManager}}
+\index{PluginManager@{PluginManager}!Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}}
+\doxysubsubsection{\texorpdfstring{PluginManager()}{PluginManager()}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+Plugin\+Manager.\+Plugin\+Manager (\begin{DoxyParamCaption}\item[{I\+Service\+Provider}]{provider,  }\item[{I\+Options\+Monitor$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Options_1_1BasicOptions}{Basic\+Options}} $>$}]{options,  }\item[{I\+Logger$<$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager}{Plugin\+Manager}} $>$}]{logger }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager}{Plugin\+Manager}} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em provider} & A service container to allow initialization of plugins\\
+\hline
+{\em options} & The configuration instance, to get the plugin\textquotesingle{}s directory path.\\
+\hline
+{\em logger} & The logger used by this class.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PluginManager_a3d36674c1b53b36c7474b4e09b70170b}\label{classKyoo_1_1Controllers_1_1PluginManager_a3d36674c1b53b36c7474b4e09b70170b}} 
+\index{Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}!ConfigureAspnet@{ConfigureAspnet}}
+\index{ConfigureAspnet@{ConfigureAspnet}!Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}}
+\doxysubsubsection{\texorpdfstring{ConfigureAspnet()}{ConfigureAspnet()}}
+{\footnotesize\ttfamily void Kyoo.\+Controllers.\+Plugin\+Manager.\+Configure\+Aspnet (\begin{DoxyParamCaption}\item[{I\+Application\+Builder}]{app }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configure an asp net application applying plugins policies. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager_a00621b7e0eef649d8a23e52a2f8ac98f}{Kyoo.\+Controllers.\+I\+Plugin\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PluginManager_a1669531fdd4f8ad190ef419426a6d6aa}\label{classKyoo_1_1Controllers_1_1PluginManager_a1669531fdd4f8ad190ef419426a6d6aa}} 
+\index{Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}!ConfigureServices@{ConfigureServices}}
+\index{ConfigureServices@{ConfigureServices}!Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}}
+\doxysubsubsection{\texorpdfstring{ConfigureServices()}{ConfigureServices()}}
+{\footnotesize\ttfamily void Kyoo.\+Controllers.\+Plugin\+Manager.\+Configure\+Services (\begin{DoxyParamCaption}\item[{I\+Service\+Collection}]{services }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configure services adding or removing services as the plugins wants. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager_ae05b3ff84127bfc4af1d4ac74249cd30}{Kyoo.\+Controllers.\+I\+Plugin\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PluginManager_a5df9c9e85fd8905107498cdfdc99f73b}\label{classKyoo_1_1Controllers_1_1PluginManager_a5df9c9e85fd8905107498cdfdc99f73b}} 
+\index{Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}!GetAllPlugins@{GetAllPlugins}}
+\index{GetAllPlugins@{GetAllPlugins}!Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}}
+\doxysubsubsection{\texorpdfstring{GetAllPlugins()}{GetAllPlugins()}}
+{\footnotesize\ttfamily I\+Collection$<$\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}}$>$ Kyoo.\+Controllers.\+Plugin\+Manager.\+Get\+All\+Plugins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all plugins currently running on \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. This also includes deleted plugins if the app as not been restarted. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager_a4c80c9e0c41a5cf059b941dda917fc14}{Kyoo.\+Controllers.\+I\+Plugin\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PluginManager_a331c613b56a2bfef0455a838d5eaf5ed}\label{classKyoo_1_1Controllers_1_1PluginManager_a331c613b56a2bfef0455a838d5eaf5ed}} 
+\index{Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}!GetPlugin$<$ T $>$@{GetPlugin$<$ T $>$}}
+\index{GetPlugin$<$ T $>$@{GetPlugin$<$ T $>$}!Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}}
+\doxysubsubsection{\texorpdfstring{GetPlugin$<$ T $>$()}{GetPlugin< T >()}}
+{\footnotesize\ttfamily T Kyoo.\+Controllers.\+Plugin\+Manager.\+Get\+Plugin$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a single plugin that match the type and name given. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager_a8b26080cc642ce5dcd3197a4cc88c8f6}{Kyoo.\+Controllers.\+I\+Plugin\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PluginManager_afb3a3d91c29f8e8a1656ae30a79ef285}\label{classKyoo_1_1Controllers_1_1PluginManager_afb3a3d91c29f8e8a1656ae30a79ef285}} 
+\index{Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}!GetPlugins$<$ T $>$@{GetPlugins$<$ T $>$}}
+\index{GetPlugins$<$ T $>$@{GetPlugins$<$ T $>$}!Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}}
+\doxysubsubsection{\texorpdfstring{GetPlugins$<$ T $>$()}{GetPlugins< T >()}}
+{\footnotesize\ttfamily I\+Collection$<$T$>$ Kyoo.\+Controllers.\+Plugin\+Manager.\+Get\+Plugins$<$ T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all plugins of the given type. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager_aa99240d71ca8bd9719d848956faed014}{Kyoo.\+Controllers.\+I\+Plugin\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PluginManager_adba228fb87a6668de4ef51dddf8c621a}\label{classKyoo_1_1Controllers_1_1PluginManager_adba228fb87a6668de4ef51dddf8c621a}} 
+\index{Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}!GetProvidedTypes@{GetProvidedTypes}}
+\index{GetProvidedTypes@{GetProvidedTypes}!Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}}
+\doxysubsubsection{\texorpdfstring{GetProvidedTypes()}{GetProvidedTypes()}}
+{\footnotesize\ttfamily I\+Collection$<$Type$>$ Kyoo.\+Controllers.\+Plugin\+Manager.\+Get\+Provided\+Types (\begin{DoxyParamCaption}\item[{I\+Collection$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}} $>$}]{plugins }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Get the list of types provided by the currently loaded plugins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugins} & The list of plugins that will be used as a plugin pool to get provided types.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list of types available.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PluginManager_ad2a815e110c622ddf9165a6ebf3990c8}\label{classKyoo_1_1Controllers_1_1PluginManager_ad2a815e110c622ddf9165a6ebf3990c8}} 
+\index{Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}!LoadPlugin@{LoadPlugin}}
+\index{LoadPlugin@{LoadPlugin}!Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}}
+\doxysubsubsection{\texorpdfstring{LoadPlugin()}{LoadPlugin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}} \mbox{[}$\,$\mbox{]} Kyoo.\+Controllers.\+Plugin\+Manager.\+Load\+Plugin (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Load a single plugin and return all \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}} implementations contained in the Assembly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path of the dll\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list of dlls in hte assembly
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PluginManager_acc9d949d7b04acec4d2f6eb4734cb419}\label{classKyoo_1_1Controllers_1_1PluginManager_acc9d949d7b04acec4d2f6eb4734cb419}} 
+\index{Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}!LoadPlugins@{LoadPlugins}}
+\index{LoadPlugins@{LoadPlugins}!Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}}
+\doxysubsubsection{\texorpdfstring{LoadPlugins()}{LoadPlugins()}}
+{\footnotesize\ttfamily void Kyoo.\+Controllers.\+Plugin\+Manager.\+Load\+Plugins (\begin{DoxyParamCaption}\item[{I\+Collection$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}} $>$}]{plugins }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Load plugins and their dependencies from the plugin directory. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager_a22e1d734d49b6b48c9a41f9e5a48e125}{Kyoo.\+Controllers.\+I\+Plugin\+Manager}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PluginManager_a868bcc228d5e99a530cc251c75523b74}\label{classKyoo_1_1Controllers_1_1PluginManager_a868bcc228d5e99a530cc251c75523b74}} 
+\index{Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}!\_logger@{\_logger}}
+\index{\_logger@{\_logger}!Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}}
+\doxysubsubsection{\texorpdfstring{\_logger}{\_logger}}
+{\footnotesize\ttfamily readonly I\+Logger$<$\mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager}{Plugin\+Manager}}$>$ Kyoo.\+Controllers.\+Plugin\+Manager.\+\_\+logger\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The logger used by this class. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PluginManager_a4f3a0af904af13bce5c660a4ce6a1d0c}\label{classKyoo_1_1Controllers_1_1PluginManager_a4f3a0af904af13bce5c660a4ce6a1d0c}} 
+\index{Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}!\_options@{\_options}}
+\index{\_options@{\_options}!Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}}
+\doxysubsubsection{\texorpdfstring{\_options}{\_options}}
+{\footnotesize\ttfamily readonly I\+Options\+Monitor$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Options_1_1BasicOptions}{Basic\+Options}}$>$ Kyoo.\+Controllers.\+Plugin\+Manager.\+\_\+options\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The configuration to get the plugin\textquotesingle{}s directory. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PluginManager_ac947d4bd26336186d740b17119339762}\label{classKyoo_1_1Controllers_1_1PluginManager_ac947d4bd26336186d740b17119339762}} 
+\index{Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}!\_plugins@{\_plugins}}
+\index{\_plugins@{\_plugins}!Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}}
+\doxysubsubsection{\texorpdfstring{\_plugins}{\_plugins}}
+{\footnotesize\ttfamily readonly List$<$\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}}$>$ Kyoo.\+Controllers.\+Plugin\+Manager.\+\_\+plugins = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The list of plugins that are currently loaded. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1PluginManager_a18133edd6bd258c4b2041e006d919404}\label{classKyoo_1_1Controllers_1_1PluginManager_a18133edd6bd258c4b2041e006d919404}} 
+\index{Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}!\_provider@{\_provider}}
+\index{\_provider@{\_provider}!Kyoo.Controllers.PluginManager@{Kyoo.Controllers.PluginManager}}
+\doxysubsubsection{\texorpdfstring{\_provider}{\_provider}}
+{\footnotesize\ttfamily readonly I\+Service\+Provider Kyoo.\+Controllers.\+Plugin\+Manager.\+\_\+provider\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The service provider. It allow plugin\textquotesingle{}s activation. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Controllers/\mbox{\hyperlink{PluginManager_8cs}{Plugin\+Manager.\+cs}}\end{DoxyCompactItemize}

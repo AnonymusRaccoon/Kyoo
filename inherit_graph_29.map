@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$interfaceKyoo_1_1Controllers_1_1IBaseRepository.html" title="A base class for repositories. Every service implementing this will be handled by the LibraryManager." alt="" coords="5,5,244,32"/>
+<area shape="rect" id="node2" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title="A common repository for every resources." alt="" coords="292,5,537,32"/>
+<area shape="rect" id="node3" href="$classKyoo_1_1Controllers_1_1LocalRepository.html" title="A base class to create repositories using Entity Framework." alt="" coords="585,5,860,32"/>
+</map>

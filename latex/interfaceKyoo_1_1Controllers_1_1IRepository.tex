@@ -1,0 +1,639 @@
+\hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository}{}\doxysection{Kyoo.\+Controllers.\+I\+Repository$<$ T $>$ Interface Template Reference}
+\label{interfaceKyoo_1_1Controllers_1_1IRepository}\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+
+
+A common repository for every resources.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+I\+Repository$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{interfaceKyoo_1_1Controllers_1_1IRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+I\+Repository$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{interfaceKyoo_1_1Controllers_1_1IRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ T $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_af74eba3a7e105d6810cdc174ab9fbace}{Get}} (int id)
+\begin{DoxyCompactList}\small\item\em Get a resource from it\textquotesingle{}s ID. \end{DoxyCompactList}\item 
+Task$<$ T $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_aa7ec59ab2abd1de1210781fec0b6e4f3}{Get}} (string slug)
+\begin{DoxyCompactList}\small\item\em Get a resource from it\textquotesingle{}s slug. \end{DoxyCompactList}\item 
+Task$<$ T $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_ad0a2a7bd3f0f756ef14aa553a13ad528}{Get}} (Expression$<$ Func$<$ T, bool $>$$>$ where)
+\begin{DoxyCompactList}\small\item\em Get the first resource that match the predicate. \end{DoxyCompactList}\item 
+Task$<$ T $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_ad9334bf404ffb4c240efbbe06900b008}{Get\+Or\+Default}} (int id)
+\begin{DoxyCompactList}\small\item\em Get a resource from it\textquotesingle{}s ID or null if it is not found. \end{DoxyCompactList}\item 
+Task$<$ T $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a66bb3303f2e5734ca78de7c4feb7e40f}{Get\+Or\+Default}} (string slug)
+\begin{DoxyCompactList}\small\item\em Get a resource from it\textquotesingle{}s slug or null if it is not found. \end{DoxyCompactList}\item 
+Task$<$ T $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a425081354745d76fcaf4a9d1a7cd3c0e}{Get\+Or\+Default}} (Expression$<$ Func$<$ T, bool $>$$>$ where)
+\begin{DoxyCompactList}\small\item\em Get the first resource that match the predicate or null if it is not found. \end{DoxyCompactList}\item 
+Task$<$ I\+Collection$<$ T $>$ $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a6f4965c6b983a5d1ba6320170752b8e9}{Search}} (string query)
+\begin{DoxyCompactList}\small\item\em Search for resources. \end{DoxyCompactList}\item 
+Task$<$ I\+Collection$<$ T $>$ $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_ac2d5de5e9a6d374c4765189c4169243f}{Get\+All}} (Expression$<$ Func$<$ T, bool $>$$>$ where=null, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ T $>$ sort=default, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Get every resources that match all filters \end{DoxyCompactList}\item 
+Task$<$ I\+Collection$<$ T $>$ $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a785fc43cc8be633fed940580aee949fb}{Get\+All}} (\mbox{[}Optional\mbox{]} Expression$<$ Func$<$ T, bool $>$$>$ where, Expression$<$ Func$<$ T, object $>$$>$ sort, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Get every resources that match all filters \end{DoxyCompactList}\item 
+Task$<$ int $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a5d7747ee10f84a5272831180009b8d23}{Get\+Count}} (Expression$<$ Func$<$ T, bool $>$$>$ where=null)
+\begin{DoxyCompactList}\small\item\em Get the number of resources that match the filter\textquotesingle{}s predicate. \end{DoxyCompactList}\item 
+Task$<$ T $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_af5929cff2a3ee36d41c0d44d6962a597}{Create}} (\mbox{[}Not\+Null\mbox{]} T obj)
+\begin{DoxyCompactList}\small\item\em Create a new resource. \end{DoxyCompactList}\item 
+Task$<$ T $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a9259ac7c5dbc471876970f382e4b3122}{Create\+If\+Not\+Exists}} (\mbox{[}Not\+Null\mbox{]} T obj)
+\begin{DoxyCompactList}\small\item\em Create a new resource if it does not exist already. If it does, the existing value is returned instead. \end{DoxyCompactList}\item 
+Task$<$ T $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a90a12a368a6f95271903204b32c6b107}{Edit}} (\mbox{[}Not\+Null\mbox{]} T edited, bool reset\+Old)
+\begin{DoxyCompactList}\small\item\em Edit a resource \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a8818f07e10eebaa63b495bf31a8e45da}{Delete}} (int id)
+\begin{DoxyCompactList}\small\item\em Delete a resource by it\textquotesingle{}s ID \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a1f1806de7992247f9623a437d142534a}{Delete}} (string slug)
+\begin{DoxyCompactList}\small\item\em Delete a resource by it\textquotesingle{}s slug \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a93f62cd9c8e87e58fe8b98619f93a537}{Delete}} (\mbox{[}Not\+Null\mbox{]} T obj)
+\begin{DoxyCompactList}\small\item\em Delete a resource \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a27329fe6ec67afe73b2b3c117a298fec}{Delete\+Range}} (params T\mbox{[}$\,$\mbox{]} objs)
+\begin{DoxyCompactList}\small\item\em Delete a list of resources. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a18110a0a5edf51564701be67a0416cf7}{Delete\+Range}} (I\+Enumerable$<$ T $>$ objs)
+\begin{DoxyCompactList}\small\item\em Delete a list of resources. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_abcd685e5247c5df9f1e944f78d94a644}{Delete\+Range}} (params int\mbox{[}$\,$\mbox{]} ids)
+\begin{DoxyCompactList}\small\item\em Delete a list of resources. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a409fe5d14d4c72ba12f5e8d0467d79d3}{Delete\+Range}} (I\+Enumerable$<$ int $>$ ids)
+\begin{DoxyCompactList}\small\item\em Delete a list of resources. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a5f0773bddebbcd8ddd79ac6dd485deaa}{Delete\+Range}} (params string\mbox{[}$\,$\mbox{]} slugs)
+\begin{DoxyCompactList}\small\item\em Delete a list of resources. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_a2284c7ee4b9933b448a5ffe37cd05249}{Delete\+Range}} (I\+Enumerable$<$ string $>$ slugs)
+\begin{DoxyCompactList}\small\item\em Delete a list of resources. \end{DoxyCompactList}\item 
+Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository_af56a800c06294ca3ede23fa1a2ddc703}{Delete\+Range}} (\mbox{[}Not\+Null\mbox{]} Expression$<$ Func$<$ T, bool $>$$>$ where)
+\begin{DoxyCompactList}\small\item\em Delete a list of resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A common repository for every resources. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The resource\textquotesingle{}s type that this repository manage.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em class}]\item[{\em T} : {\em I\+Resource}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_af5929cff2a3ee36d41c0d44d6962a597}\label{interfaceKyoo_1_1Controllers_1_1IRepository_af5929cff2a3ee36d41c0d44d6962a597}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!Create@{Create}}
+\index{Create@{Create}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily Task$<$T$>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Create (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} T}]{obj }\end{DoxyParamCaption})}
+
+
+
+Create a new resource. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The item to register\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The resource registers and completed by database\textquotesingle{}s information (related items \& so on)
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ac3b7fb3e91e3dcd77dfc0123cdfe829a}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_a9259ac7c5dbc471876970f382e4b3122}\label{interfaceKyoo_1_1Controllers_1_1IRepository_a9259ac7c5dbc471876970f382e4b3122}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!CreateIfNotExists@{CreateIfNotExists}}
+\index{CreateIfNotExists@{CreateIfNotExists}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateIfNotExists()}{CreateIfNotExists()}}
+{\footnotesize\ttfamily Task$<$T$>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Create\+If\+Not\+Exists (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} T}]{obj }\end{DoxyParamCaption})}
+
+
+
+Create a new resource if it does not exist already. If it does, the existing value is returned instead. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to create\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The newly created item or the existing value if it existed.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a19e001f7275479b6b6644b88182d2a55}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_a93f62cd9c8e87e58fe8b98619f93a537}\label{interfaceKyoo_1_1Controllers_1_1IRepository_a93f62cd9c8e87e58fe8b98619f93a537}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!Delete@{Delete}}
+\index{Delete@{Delete}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Delete (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} T}]{obj }\end{DoxyParamCaption})}
+
+
+
+Delete a resource 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The resource to delete\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_aa69989ae719375d39a7f08c9c2b3e5ee}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_a8818f07e10eebaa63b495bf31a8e45da}\label{interfaceKyoo_1_1Controllers_1_1IRepository_a8818f07e10eebaa63b495bf31a8e45da}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!Delete@{Delete}}
+\index{Delete@{Delete}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Delete (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Delete a resource by it\textquotesingle{}s ID 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the resource\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ab6eaf27f244827c71c8bb66516aa7f37}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_a1f1806de7992247f9623a437d142534a}\label{interfaceKyoo_1_1Controllers_1_1IRepository_a1f1806de7992247f9623a437d142534a}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!Delete@{Delete}}
+\index{Delete@{Delete}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Delete (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})}
+
+
+
+Delete a resource by it\textquotesingle{}s slug 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slug} & The slug of the resource\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ae5ce2d88de3a0f48e5e9837ae7aef69f}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_af56a800c06294ca3ede23fa1a2ddc703}\label{interfaceKyoo_1_1Controllers_1_1IRepository_af56a800c06294ca3ede23fa1a2ddc703}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!DeleteRange@{DeleteRange}}
+\index{DeleteRange@{DeleteRange}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeleteRange()}{DeleteRange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Delete\+Range (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} Expression$<$ Func$<$ T, bool $>$$>$}]{where }\end{DoxyParamCaption})}
+
+
+
+Delete a list of resources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em where} & A predicate to filter resources to delete. Every resource that match this will be deleted.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_ace983f6e8b438ee493a8e98890a021a7}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_a409fe5d14d4c72ba12f5e8d0467d79d3}\label{interfaceKyoo_1_1Controllers_1_1IRepository_a409fe5d14d4c72ba12f5e8d0467d79d3}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!DeleteRange@{DeleteRange}}
+\index{DeleteRange@{DeleteRange}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeleteRange()}{DeleteRange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Delete\+Range (\begin{DoxyParamCaption}\item[{I\+Enumerable$<$ int $>$}]{ids }\end{DoxyParamCaption})}
+
+
+
+Delete a list of resources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ids} & An enumerable of resource\textquotesingle{}s id\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a9fac0692a513d55b17108cf292ae19e6}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_a2284c7ee4b9933b448a5ffe37cd05249}\label{interfaceKyoo_1_1Controllers_1_1IRepository_a2284c7ee4b9933b448a5ffe37cd05249}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!DeleteRange@{DeleteRange}}
+\index{DeleteRange@{DeleteRange}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeleteRange()}{DeleteRange()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Delete\+Range (\begin{DoxyParamCaption}\item[{I\+Enumerable$<$ string $>$}]{slugs }\end{DoxyParamCaption})}
+
+
+
+Delete a list of resources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slugs} & An enumerable of resource\textquotesingle{}s slug\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_aeea1f6ce9af5e2ba9514daa586d453f7}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_a18110a0a5edf51564701be67a0416cf7}\label{interfaceKyoo_1_1Controllers_1_1IRepository_a18110a0a5edf51564701be67a0416cf7}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!DeleteRange@{DeleteRange}}
+\index{DeleteRange@{DeleteRange}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeleteRange()}{DeleteRange()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Delete\+Range (\begin{DoxyParamCaption}\item[{I\+Enumerable$<$ T $>$}]{objs }\end{DoxyParamCaption})}
+
+
+
+Delete a list of resources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em objs} & An enumerable of resources to delete\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a2d85c555003c02545cd81289194f502f}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_abcd685e5247c5df9f1e944f78d94a644}\label{interfaceKyoo_1_1Controllers_1_1IRepository_abcd685e5247c5df9f1e944f78d94a644}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!DeleteRange@{DeleteRange}}
+\index{DeleteRange@{DeleteRange}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeleteRange()}{DeleteRange()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Delete\+Range (\begin{DoxyParamCaption}\item[{params int\mbox{[}$\,$\mbox{]}}]{ids }\end{DoxyParamCaption})}
+
+
+
+Delete a list of resources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ids} & One or multiple resource\textquotesingle{}s id\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_a5f0773bddebbcd8ddd79ac6dd485deaa}\label{interfaceKyoo_1_1Controllers_1_1IRepository_a5f0773bddebbcd8ddd79ac6dd485deaa}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!DeleteRange@{DeleteRange}}
+\index{DeleteRange@{DeleteRange}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeleteRange()}{DeleteRange()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Delete\+Range (\begin{DoxyParamCaption}\item[{params string\mbox{[}$\,$\mbox{]}}]{slugs }\end{DoxyParamCaption})}
+
+
+
+Delete a list of resources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slugs} & One or multiple resource\textquotesingle{}s slug\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_a27329fe6ec67afe73b2b3c117a298fec}\label{interfaceKyoo_1_1Controllers_1_1IRepository_a27329fe6ec67afe73b2b3c117a298fec}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!DeleteRange@{DeleteRange}}
+\index{DeleteRange@{DeleteRange}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DeleteRange()}{DeleteRange()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Delete\+Range (\begin{DoxyParamCaption}\item[{params T\mbox{[}$\,$\mbox{]}}]{objs }\end{DoxyParamCaption})}
+
+
+
+Delete a list of resources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em objs} & One or multiple resources to delete\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_a90a12a368a6f95271903204b32c6b107}\label{interfaceKyoo_1_1Controllers_1_1IRepository_a90a12a368a6f95271903204b32c6b107}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!Edit@{Edit}}
+\index{Edit@{Edit}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Edit()}{Edit()}}
+{\footnotesize\ttfamily Task$<$T$>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Edit (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} T}]{edited,  }\item[{bool}]{reset\+Old }\end{DoxyParamCaption})}
+
+
+
+Edit a resource 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edited} & The resource to edit, it\textquotesingle{}s ID can\textquotesingle{}t change.\\
+\hline
+{\em reset\+Old} & Should old properties of the resource be discarded or should null values considered as not changed?\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The resource edited and completed by database\textquotesingle{}s information (related items \& so on)
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a616c041783c77e5df0f6392affef6e26}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_ad0a2a7bd3f0f756ef14aa553a13ad528}\label{interfaceKyoo_1_1Controllers_1_1IRepository_ad0a2a7bd3f0f756ef14aa553a13ad528}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Task$<$T$>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Get (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, bool $>$$>$}]{where }\end{DoxyParamCaption})}
+
+
+
+Get the first resource that match the predicate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em where} & A predicate to filter the resource.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item could not be found.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The resource found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_aadfb91fde5031dc788c6f9cec5ec481a}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_af74eba3a7e105d6810cdc174ab9fbace}\label{interfaceKyoo_1_1Controllers_1_1IRepository_af74eba3a7e105d6810cdc174ab9fbace}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Task$<$T$>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Get (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Get a resource from it\textquotesingle{}s ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the resource\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item could not be found.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The resource found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_af09b42b1ad5164d603a591971558e2fa}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_aa7ec59ab2abd1de1210781fec0b6e4f3}\label{interfaceKyoo_1_1Controllers_1_1IRepository_aa7ec59ab2abd1de1210781fec0b6e4f3}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Task$<$T$>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Get (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})}
+
+
+
+Get a resource from it\textquotesingle{}s slug. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slug} & The slug of the resource\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item could not be found.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The resource found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a3b68de5e73f15d9c7c73d5b4d01b2b6d}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_a785fc43cc8be633fed940580aee949fb}\label{interfaceKyoo_1_1Controllers_1_1IRepository_a785fc43cc8be633fed940580aee949fb}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetAll()}{GetAll()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Task$<$I\+Collection$<$T$>$ $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Get\+All (\begin{DoxyParamCaption}\item[{\mbox{[}\+Optional\mbox{]} Expression$<$ Func$<$ T, bool $>$$>$}]{where,  }\item[{Expression$<$ Func$<$ T, object $>$$>$}]{sort,  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})}
+
+
+
+Get every resources that match all filters 
+
+
+\begin{DoxyParams}{Parameters}
+{\em where} & A filter predicate\\
+\hline
+{\em sort} & A sort by predicate. The order is ascending.\\
+\hline
+{\em limit} & How pagination should be done (where to start and how many to return)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of resources that match every filters
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_ac2d5de5e9a6d374c4765189c4169243f}\label{interfaceKyoo_1_1Controllers_1_1IRepository_ac2d5de5e9a6d374c4765189c4169243f}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetAll()}{GetAll()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Task$<$I\+Collection$<$T$>$ $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Get\+All (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, bool $>$$>$}]{where = {\ttfamily null},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ T $>$}]{sort = {\ttfamily default},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})}
+
+
+
+Get every resources that match all filters 
+
+
+\begin{DoxyParams}{Parameters}
+{\em where} & A filter predicate\\
+\hline
+{\em sort} & \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}} information about the query (sort by, sort order)\\
+\hline
+{\em limit} & How pagination should be done (where to start and how many to return)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of resources that match every filters
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_aed74f2c569f76f277789de79daf4cb75}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_a5d7747ee10f84a5272831180009b8d23}\label{interfaceKyoo_1_1Controllers_1_1IRepository_a5d7747ee10f84a5272831180009b8d23}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!GetCount@{GetCount}}
+\index{GetCount@{GetCount}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetCount()}{GetCount()}}
+{\footnotesize\ttfamily Task$<$int$>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Get\+Count (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, bool $>$$>$}]{where = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Get the number of resources that match the filter\textquotesingle{}s predicate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em where} & A filter predicate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+How many resources matched that filter
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a5fd7ade45d4410f9fcf0b05066f743d2}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_a425081354745d76fcaf4a9d1a7cd3c0e}\label{interfaceKyoo_1_1Controllers_1_1IRepository_a425081354745d76fcaf4a9d1a7cd3c0e}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Task$<$T$>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Get\+Or\+Default (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, bool $>$$>$}]{where }\end{DoxyParamCaption})}
+
+
+
+Get the first resource that match the predicate or null if it is not found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em where} & A predicate to filter the resource.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The resource found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a1c7672be816d2526290d5851966de9d3}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_ad9334bf404ffb4c240efbbe06900b008}\label{interfaceKyoo_1_1Controllers_1_1IRepository_ad9334bf404ffb4c240efbbe06900b008}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Task$<$T$>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Get\+Or\+Default (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Get a resource from it\textquotesingle{}s ID or null if it is not found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the resource\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The resource found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a79bb32bb6616a9c57be4c9825b44c3f8}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_a66bb3303f2e5734ca78de7c4feb7e40f}\label{interfaceKyoo_1_1Controllers_1_1IRepository_a66bb3303f2e5734ca78de7c4feb7e40f}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Task$<$T$>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Get\+Or\+Default (\begin{DoxyParamCaption}\item[{string}]{slug }\end{DoxyParamCaption})}
+
+
+
+Get a resource from it\textquotesingle{}s slug or null if it is not found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slug} & The slug of the resource\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The resource found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a0fc72df07e0cae1cbd24be315282cb90}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IRepository_a6f4965c6b983a5d1ba6320170752b8e9}\label{interfaceKyoo_1_1Controllers_1_1IRepository_a6f4965c6b983a5d1ba6320170752b8e9}} 
+\index{Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}!Search@{Search}}
+\index{Search@{Search}!Kyoo.Controllers.IRepository$<$ T $>$@{Kyoo.Controllers.IRepository$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily Task$<$I\+Collection$<$T$>$ $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{Kyoo.\+Controllers.\+I\+Repository}}$<$ T $>$.Search (\begin{DoxyParamCaption}\item[{string}]{query }\end{DoxyParamCaption})}
+
+
+
+Search for resources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & The query string.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of resources found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a1ec5ba57aa01810e262bbfc02bd1fc3e}{Kyoo.\+Controllers.\+Local\+Repository$<$ T $>$}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Controllers/\mbox{\hyperlink{IRepository_8cs}{I\+Repository.\+cs}}\end{DoxyCompactItemize}

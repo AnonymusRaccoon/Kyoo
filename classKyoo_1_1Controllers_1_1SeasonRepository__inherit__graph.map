@@ -1,0 +1,6 @@
+<map id="Kyoo.Controllers.SeasonRepository" name="Kyoo.Controllers.SeasonRepository">
+<area shape="rect" id="node1" title="A local repository to handle seasons." alt="" coords="80,667,331,993"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Controllers_1_1LocalRepository.html" title=" " alt="" coords="5,277,208,619"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1ISeasonRepository.html" title="A repository to handle seasons." alt="" coords="233,387,375,509"/>
+<area shape="rect" id="node4" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title=" " alt="" coords="217,5,391,229"/>
+</map>

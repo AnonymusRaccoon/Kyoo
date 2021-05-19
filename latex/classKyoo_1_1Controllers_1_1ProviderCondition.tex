@@ -1,0 +1,235 @@
+\hypertarget{classKyoo_1_1Controllers_1_1ProviderCondition}{}\doxysection{Kyoo.\+Controllers.\+Provider\+Condition Class Reference}
+\label{classKyoo_1_1Controllers_1_1ProviderCondition}\index{Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}}
+
+
+A condition for a conditional type.  
+
+
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+Provider\+Condition\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classKyoo_1_1Controllers_1_1ProviderCondition__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition_a7de26d782c8e766c70cf0d94de708a2f}{Provider\+Condition}} (Func$<$ bool $>$ condition)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}} from a raw function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition_a8292ee001c5d4c41197c4c559c66cf7d}{Provider\+Condition}} (Type needed)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}} from a type. This allow you to inform that a type will only be available if a dependency is met. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition_a996397f24af8e8b5e4311bf6adf87415}{Provider\+Condition}} (I\+Collection$<$ Type $>$ needed)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}} from a list of type. This allow you to inform that a type will only be available if a list of dependencies are met. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition_ab4f07440471a43c230653b2aae78102c}{Provider\+Condition}} (I\+Collection$<$ Type $>$ needed, Func$<$ bool $>$ condition)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}} with a list of types as dependencies and a predicate for arbitrary conditions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static implicit \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition_aa582a163d2a1474dc5f4679718de7041}{operator Provider\+Condition}} (Type type)
+\begin{DoxyCompactList}\small\item\em Implicitly convert a type to a \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}}. \end{DoxyCompactList}\item 
+static implicit \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition_adfe392e6dc486f26a35a469fbf570284}{operator Provider\+Condition}} (Type\mbox{[}$\,$\mbox{]} types)
+\begin{DoxyCompactList}\small\item\em Implicitly convert a list of type to a \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}}. \end{DoxyCompactList}\item 
+static implicit \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition_a0291cb39675b5348574e3584e8a0a686}{operator Provider\+Condition}} (List$<$ Type $>$ types)
+\item 
+static bool \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition_a4a6d0c7b63fc0fde85ee57d4e2865a31}{Has}} (Type needed, I\+Collection$<$ Type $>$ available)
+\begin{DoxyCompactList}\small\item\em Check if a type is available. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition_ae8b41258c39cd0b623215d83e91bb2f7}{Has}} (I\+Collection$<$ Type $>$ needed, I\+Collection$<$ Type $>$ available)
+\begin{DoxyCompactList}\small\item\em Check if a list of type are available. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Func$<$ bool $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition_aa16ca72b164c2d539ea972d157ec3a45}{Condition}} = () =$>$ true\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The condition as a method. If true is returned, the type will be provided. \end{DoxyCompactList}\item 
+I\+Collection$<$ Type $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition_a816ae395a5d2bb48a32c433e298cec7b}{Needed}} = Array\+Segment$<$Type$>$.Empty\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of types that this method needs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A condition for a conditional type. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderCondition_a7de26d782c8e766c70cf0d94de708a2f}\label{classKyoo_1_1Controllers_1_1ProviderCondition_a7de26d782c8e766c70cf0d94de708a2f}} 
+\index{Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}!ProviderCondition@{ProviderCondition}}
+\index{ProviderCondition@{ProviderCondition}!Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}}
+\doxysubsubsection{\texorpdfstring{ProviderCondition()}{ProviderCondition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+Provider\+Condition.\+Provider\+Condition (\begin{DoxyParamCaption}\item[{Func$<$ bool $>$}]{condition }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}} from a raw function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em condition} & The predicate that will be used as condition\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderCondition_a8292ee001c5d4c41197c4c559c66cf7d}\label{classKyoo_1_1Controllers_1_1ProviderCondition_a8292ee001c5d4c41197c4c559c66cf7d}} 
+\index{Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}!ProviderCondition@{ProviderCondition}}
+\index{ProviderCondition@{ProviderCondition}!Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}}
+\doxysubsubsection{\texorpdfstring{ProviderCondition()}{ProviderCondition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+Provider\+Condition.\+Provider\+Condition (\begin{DoxyParamCaption}\item[{Type}]{needed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}} from a type. This allow you to inform that a type will only be available if a dependency is met. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em needed} & The type that you need\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderCondition_a996397f24af8e8b5e4311bf6adf87415}\label{classKyoo_1_1Controllers_1_1ProviderCondition_a996397f24af8e8b5e4311bf6adf87415}} 
+\index{Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}!ProviderCondition@{ProviderCondition}}
+\index{ProviderCondition@{ProviderCondition}!Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}}
+\doxysubsubsection{\texorpdfstring{ProviderCondition()}{ProviderCondition()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+Provider\+Condition.\+Provider\+Condition (\begin{DoxyParamCaption}\item[{I\+Collection$<$ Type $>$}]{needed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}} from a list of type. This allow you to inform that a type will only be available if a list of dependencies are met. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em needed} & The types that you need\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderCondition_ab4f07440471a43c230653b2aae78102c}\label{classKyoo_1_1Controllers_1_1ProviderCondition_ab4f07440471a43c230653b2aae78102c}} 
+\index{Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}!ProviderCondition@{ProviderCondition}}
+\index{ProviderCondition@{ProviderCondition}!Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}}
+\doxysubsubsection{\texorpdfstring{ProviderCondition()}{ProviderCondition()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+Provider\+Condition.\+Provider\+Condition (\begin{DoxyParamCaption}\item[{I\+Collection$<$ Type $>$}]{needed,  }\item[{Func$<$ bool $>$}]{condition }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}} with a list of types as dependencies and a predicate for arbitrary conditions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em needed} & The list of dependencies\\
+\hline
+{\em condition} & An arbitrary condition\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderCondition_ae8b41258c39cd0b623215d83e91bb2f7}\label{classKyoo_1_1Controllers_1_1ProviderCondition_ae8b41258c39cd0b623215d83e91bb2f7}} 
+\index{Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}!Has@{Has}}
+\index{Has@{Has}!Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}}
+\doxysubsubsection{\texorpdfstring{Has()}{Has()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static bool Kyoo.\+Controllers.\+Provider\+Condition.\+Has (\begin{DoxyParamCaption}\item[{I\+Collection$<$ Type $>$}]{needed,  }\item[{I\+Collection$<$ Type $>$}]{available }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Check if a list of type are available. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em needed} & The list of types to check\\
+\hline
+{\em available} & The list of types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the dependencies are met, false otherwise
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderCondition_a4a6d0c7b63fc0fde85ee57d4e2865a31}\label{classKyoo_1_1Controllers_1_1ProviderCondition_a4a6d0c7b63fc0fde85ee57d4e2865a31}} 
+\index{Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}!Has@{Has}}
+\index{Has@{Has}!Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}}
+\doxysubsubsection{\texorpdfstring{Has()}{Has()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static bool Kyoo.\+Controllers.\+Provider\+Condition.\+Has (\begin{DoxyParamCaption}\item[{Type}]{needed,  }\item[{I\+Collection$<$ Type $>$}]{available }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Check if a type is available. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em needed} & The type to check\\
+\hline
+{\em available} & The list of types\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the dependency is met, false otherwise
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderCondition_a0291cb39675b5348574e3584e8a0a686}\label{classKyoo_1_1Controllers_1_1ProviderCondition_a0291cb39675b5348574e3584e8a0a686}} 
+\index{Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}!operator ProviderCondition@{operator ProviderCondition}}
+\index{operator ProviderCondition@{operator ProviderCondition}!Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}}
+\doxysubsubsection{\texorpdfstring{operator ProviderCondition()}{operator ProviderCondition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily static implicit Kyoo.\+Controllers.\+Provider\+Condition.\+operator \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}} (\begin{DoxyParamCaption}\item[{List$<$ Type $>$}]{types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderCondition_aa582a163d2a1474dc5f4679718de7041}\label{classKyoo_1_1Controllers_1_1ProviderCondition_aa582a163d2a1474dc5f4679718de7041}} 
+\index{Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}!operator ProviderCondition@{operator ProviderCondition}}
+\index{operator ProviderCondition@{operator ProviderCondition}!Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}}
+\doxysubsubsection{\texorpdfstring{operator ProviderCondition()}{operator ProviderCondition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily static implicit Kyoo.\+Controllers.\+Provider\+Condition.\+operator \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}} (\begin{DoxyParamCaption}\item[{Type}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Implicitly convert a type to a \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type dependency\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}} that will return true if the given type is available.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderCondition_adfe392e6dc486f26a35a469fbf570284}\label{classKyoo_1_1Controllers_1_1ProviderCondition_adfe392e6dc486f26a35a469fbf570284}} 
+\index{Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}!operator ProviderCondition@{operator ProviderCondition}}
+\index{operator ProviderCondition@{operator ProviderCondition}!Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}}
+\doxysubsubsection{\texorpdfstring{operator ProviderCondition()}{operator ProviderCondition()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static implicit Kyoo.\+Controllers.\+Provider\+Condition.\+operator \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}} (\begin{DoxyParamCaption}\item[{Type\mbox{[}$\,$\mbox{]}}]{types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Implicitly convert a list of type to a \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em types} & The list of type dependencies\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}} that will return true if the given types are available.
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderCondition_aa16ca72b164c2d539ea972d157ec3a45}\label{classKyoo_1_1Controllers_1_1ProviderCondition_aa16ca72b164c2d539ea972d157ec3a45}} 
+\index{Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}!Condition@{Condition}}
+\index{Condition@{Condition}!Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}}
+\doxysubsubsection{\texorpdfstring{Condition}{Condition}}
+{\footnotesize\ttfamily Func$<$bool$>$ Kyoo.\+Controllers.\+Provider\+Condition.\+Condition = () =$>$ true\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The condition as a method. If true is returned, the type will be provided. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderCondition_a816ae395a5d2bb48a32c433e298cec7b}\label{classKyoo_1_1Controllers_1_1ProviderCondition_a816ae395a5d2bb48a32c433e298cec7b}} 
+\index{Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}!Needed@{Needed}}
+\index{Needed@{Needed}!Kyoo.Controllers.ProviderCondition@{Kyoo.Controllers.ProviderCondition}}
+\doxysubsubsection{\texorpdfstring{Needed}{Needed}}
+{\footnotesize\ttfamily I\+Collection$<$Type$>$ Kyoo.\+Controllers.\+Provider\+Condition.\+Needed = Array\+Segment$<$Type$>$.Empty\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The list of types that this method needs. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Controllers/\mbox{\hyperlink{IPlugin_8cs}{I\+Plugin.\+cs}}\end{DoxyCompactItemize}

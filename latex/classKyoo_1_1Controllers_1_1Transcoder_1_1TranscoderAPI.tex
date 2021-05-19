@@ -1,0 +1,91 @@
+\hypertarget{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI}{}\doxysection{Kyoo.\+Controllers.\+Transcoder.\+Transcoder\+A\+PI Class Reference}
+\label{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI}\index{Kyoo.Controllers.Transcoder.TranscoderAPI@{Kyoo.Controllers.Transcoder.TranscoderAPI}}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+Transcoder.\+Transcoder\+A\+PI\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_af3594b80dabc8d27183ef1dc18ddb9d4}{init}} ()
+\item 
+static int \mbox{\hyperlink{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_a99768d220b14595de97a107b8384e677}{transmux}} (string path, string outpath, out float playable\+Duration)
+\item 
+static int \mbox{\hyperlink{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_a4af1cb45c2ba2b58758ee6c481cfd3d0}{transcode}} (string path, string outpath, out float playable\+Duration)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_ab7ab1aa5295cb71242f4e64f81749efd}{Extract\+Infos}} (string path, string out\+Path, bool reextract)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Int\+Ptr \mbox{\hyperlink{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_af98af9529cfe53b3b753d99ef596a537}{extract\+\_\+infos}} (string path, string outpath, out int length, out int track\+Count, bool reextracct)
+\item 
+static void \mbox{\hyperlink{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_a5ecb5fd34d413c5aef7516e3b802e5e9}{free}} (Int\+Ptr ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const string \mbox{\hyperlink{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_ab01b4c233e457d748580280b9ae2cb9f}{Transcoder\+Path}} = \char`\"{}transcoder\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_af98af9529cfe53b3b753d99ef596a537}\label{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_af98af9529cfe53b3b753d99ef596a537}} 
+\index{Kyoo.Controllers.Transcoder.TranscoderAPI@{Kyoo.Controllers.Transcoder.TranscoderAPI}!extract\_infos@{extract\_infos}}
+\index{extract\_infos@{extract\_infos}!Kyoo.Controllers.Transcoder.TranscoderAPI@{Kyoo.Controllers.Transcoder.TranscoderAPI}}
+\doxysubsubsection{\texorpdfstring{extract\_infos()}{extract\_infos()}}
+{\footnotesize\ttfamily static Int\+Ptr Kyoo.\+Controllers.\+Transcoder.\+Transcoder\+A\+P\+I.\+extract\+\_\+infos (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{string}]{outpath,  }\item[{out int}]{length,  }\item[{out int}]{track\+Count,  }\item[{bool}]{reextracct }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_ab7ab1aa5295cb71242f4e64f81749efd}\label{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_ab7ab1aa5295cb71242f4e64f81749efd}} 
+\index{Kyoo.Controllers.Transcoder.TranscoderAPI@{Kyoo.Controllers.Transcoder.TranscoderAPI}!ExtractInfos@{ExtractInfos}}
+\index{ExtractInfos@{ExtractInfos}!Kyoo.Controllers.Transcoder.TranscoderAPI@{Kyoo.Controllers.Transcoder.TranscoderAPI}}
+\doxysubsubsection{\texorpdfstring{ExtractInfos()}{ExtractInfos()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}} \mbox{[}$\,$\mbox{]} Kyoo.\+Controllers.\+Transcoder.\+Transcoder\+A\+P\+I.\+Extract\+Infos (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{string}]{out\+Path,  }\item[{bool}]{reextract }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_a5ecb5fd34d413c5aef7516e3b802e5e9}\label{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_a5ecb5fd34d413c5aef7516e3b802e5e9}} 
+\index{Kyoo.Controllers.Transcoder.TranscoderAPI@{Kyoo.Controllers.Transcoder.TranscoderAPI}!free@{free}}
+\index{free@{free}!Kyoo.Controllers.Transcoder.TranscoderAPI@{Kyoo.Controllers.Transcoder.TranscoderAPI}}
+\doxysubsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily static void Kyoo.\+Controllers.\+Transcoder.\+Transcoder\+A\+P\+I.\+free (\begin{DoxyParamCaption}\item[{Int\+Ptr}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_af3594b80dabc8d27183ef1dc18ddb9d4}\label{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_af3594b80dabc8d27183ef1dc18ddb9d4}} 
+\index{Kyoo.Controllers.Transcoder.TranscoderAPI@{Kyoo.Controllers.Transcoder.TranscoderAPI}!init@{init}}
+\index{init@{init}!Kyoo.Controllers.Transcoder.TranscoderAPI@{Kyoo.Controllers.Transcoder.TranscoderAPI}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily static int Kyoo.\+Controllers.\+Transcoder.\+Transcoder\+A\+P\+I.\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_a4af1cb45c2ba2b58758ee6c481cfd3d0}\label{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_a4af1cb45c2ba2b58758ee6c481cfd3d0}} 
+\index{Kyoo.Controllers.Transcoder.TranscoderAPI@{Kyoo.Controllers.Transcoder.TranscoderAPI}!transcode@{transcode}}
+\index{transcode@{transcode}!Kyoo.Controllers.Transcoder.TranscoderAPI@{Kyoo.Controllers.Transcoder.TranscoderAPI}}
+\doxysubsubsection{\texorpdfstring{transcode()}{transcode()}}
+{\footnotesize\ttfamily static int Kyoo.\+Controllers.\+Transcoder.\+Transcoder\+A\+P\+I.\+transcode (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{string}]{outpath,  }\item[{out float}]{playable\+Duration }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_a99768d220b14595de97a107b8384e677}\label{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_a99768d220b14595de97a107b8384e677}} 
+\index{Kyoo.Controllers.Transcoder.TranscoderAPI@{Kyoo.Controllers.Transcoder.TranscoderAPI}!transmux@{transmux}}
+\index{transmux@{transmux}!Kyoo.Controllers.Transcoder.TranscoderAPI@{Kyoo.Controllers.Transcoder.TranscoderAPI}}
+\doxysubsubsection{\texorpdfstring{transmux()}{transmux()}}
+{\footnotesize\ttfamily static int Kyoo.\+Controllers.\+Transcoder.\+Transcoder\+A\+P\+I.\+transmux (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{string}]{outpath,  }\item[{out float}]{playable\+Duration }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_ab01b4c233e457d748580280b9ae2cb9f}\label{classKyoo_1_1Controllers_1_1Transcoder_1_1TranscoderAPI_ab01b4c233e457d748580280b9ae2cb9f}} 
+\index{Kyoo.Controllers.Transcoder.TranscoderAPI@{Kyoo.Controllers.Transcoder.TranscoderAPI}!TranscoderPath@{TranscoderPath}}
+\index{TranscoderPath@{TranscoderPath}!Kyoo.Controllers.Transcoder.TranscoderAPI@{Kyoo.Controllers.Transcoder.TranscoderAPI}}
+\doxysubsubsection{\texorpdfstring{TranscoderPath}{TranscoderPath}}
+{\footnotesize\ttfamily const string Kyoo.\+Controllers.\+Transcoder.\+Transcoder\+A\+P\+I.\+Transcoder\+Path = \char`\"{}transcoder\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Controllers/\mbox{\hyperlink{Transcoder_8cs}{Transcoder.\+cs}}\end{DoxyCompactItemize}

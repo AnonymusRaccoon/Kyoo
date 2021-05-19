@@ -1,0 +1,5 @@
+<map id="Kyoo.Controllers.ITask" name="Kyoo.Controllers.ITask">
+<area shape="rect" id="node1" title="A common interface that tasks should implement." alt="" coords="132,5,299,185"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Tasks_1_1Crawler.html" title=" " alt="" coords="5,233,204,692"/>
+<area shape="rect" id="node3" href="$classKyoo_1_1Tasks_1_1PluginInitializer.html" title="A task run on Kyoo&#39;s startup to initialize plugins" alt="" coords="228,358,427,567"/>
+</map>

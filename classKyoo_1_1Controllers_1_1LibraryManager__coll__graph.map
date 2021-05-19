@@ -1,0 +1,5 @@
+<map id="Kyoo.Controllers.LibraryManager" name="Kyoo.Controllers.LibraryManager">
+<area shape="rect" id="node1" title=" " alt="" coords="121,439,307,839"/>
+<area shape="rect" id="node2" href="$interfaceKyoo_1_1Controllers_1_1ILibraryManager.html" title="An interface to interract with the database. Every repository is mapped through here." alt="" coords="5,5,188,376"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1IBaseRepository.html" title="A base class for repositories. Every service implementing this will be handled by the LibraryManager." alt="" coords="212,152,451,229"/>
+</map>

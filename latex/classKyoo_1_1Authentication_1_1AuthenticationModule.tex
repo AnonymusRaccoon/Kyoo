@@ -1,0 +1,225 @@
+\hypertarget{classKyoo_1_1Authentication_1_1AuthenticationModule}{}\doxysection{Kyoo.\+Authentication.\+Authentication\+Module Class Reference}
+\label{classKyoo_1_1Authentication_1_1AuthenticationModule}\index{Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}}
+
+
+A module that enable Open\+ID authentication for \mbox{\hyperlink{namespaceKyoo}{Kyoo}}.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Authentication.\+Authentication\+Module\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{classKyoo_1_1Authentication_1_1AuthenticationModule__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Authentication.\+Authentication\+Module\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{classKyoo_1_1Authentication_1_1AuthenticationModule__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Authentication_1_1AuthenticationModule_a84872d8f13891555bda7c4981a7cc3be}{Authentication\+Module}} (I\+Configuration configuration, I\+Logger\+Factory logger\+Factory, I\+Web\+Host\+Environment environment)
+\begin{DoxyCompactList}\small\item\em Create a new authentication module instance and use the given configuration and environment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKyoo_1_1Authentication_1_1AuthenticationModule_a09b21939ceb29dfbcd067b79d31b85f4}{Configure}} (I\+Service\+Collection services, I\+Collection$<$ Type $>$ available\+Types)
+\begin{DoxyCompactList}\small\item\em A configure method that will be run on plugin\textquotesingle{}s startup. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKyoo_1_1Authentication_1_1AuthenticationModule_a9641d25d5646c732ba8a041f3169c438}{Configure\+Asp\+Net}} (I\+Application\+Builder app)
+\begin{DoxyCompactList}\small\item\em An optional configuration step to allow a plugin to change asp net configurations. W\+A\+R\+N\+I\+NG\+: This is only called on \mbox{\hyperlink{namespaceKyoo}{Kyoo}}\textquotesingle{}s startup so you must restart the app to apply this changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Authentication_1_1AuthenticationModule_ac3806d935beef8d6304c9ae94496ac34}{Slug}} =$>$ \char`\"{}auth\char`\"{}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Authentication_1_1AuthenticationModule_ac010198a938f4b5b871ad34c1a2bdfde}{Name}} =$>$ \char`\"{}Authentication\char`\"{}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Authentication_1_1AuthenticationModule_ae61c015a63f298e23cc46a082b5a3285}{Description}} =$>$ \char`\"{}Enable Open\+ID authentication for Kyoo.\char`\"{}
+\item 
+I\+Collection$<$ Type $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1AuthenticationModule_ab464868b701cc5146fda6399654d2955}{Provides}} =$>$ Array\+Segment$<$Type$>$.Empty
+\item 
+I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConditionalProvide}{Conditional\+Provide}} $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1AuthenticationModule_a428b8c4aabb75a475ca2c5db0c2ea4ac}{Conditional\+Provides}} =$>$ Array\+Segment$<$\mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConditionalProvide}{Conditional\+Provide}}$>$.Empty
+\item 
+I\+Collection$<$ Type $>$ \mbox{\hyperlink{classKyoo_1_1Authentication_1_1AuthenticationModule_a2ff65a248d002bb0c6890d7d57dfca98}{Requires}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly I\+Configuration \mbox{\hyperlink{classKyoo_1_1Authentication_1_1AuthenticationModule_a6989e896c515377dcf69def3a18c8c6f}{\+\_\+configuration}}
+\begin{DoxyCompactList}\small\item\em The configuration to use. \end{DoxyCompactList}\item 
+readonly I\+Logger\+Factory \mbox{\hyperlink{classKyoo_1_1Authentication_1_1AuthenticationModule_ad5bb169f98c83df260e475d5aa8e71d0}{\+\_\+logger\+Factory}}
+\begin{DoxyCompactList}\small\item\em A logger factory to allow Identity\+Server to log things. \end{DoxyCompactList}\item 
+readonly I\+Web\+Host\+Environment \mbox{\hyperlink{classKyoo_1_1Authentication_1_1AuthenticationModule_a1a1af4ec5bc43912ac35b8df3a51e52c}{\+\_\+environment}}
+\begin{DoxyCompactList}\small\item\em The environment information to check if the app runs in debug mode \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A module that enable Open\+ID authentication for \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1AuthenticationModule_a84872d8f13891555bda7c4981a7cc3be}\label{classKyoo_1_1Authentication_1_1AuthenticationModule_a84872d8f13891555bda7c4981a7cc3be}} 
+\index{Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}!AuthenticationModule@{AuthenticationModule}}
+\index{AuthenticationModule@{AuthenticationModule}!Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}}
+\doxysubsubsection{\texorpdfstring{AuthenticationModule()}{AuthenticationModule()}}
+{\footnotesize\ttfamily Kyoo.\+Authentication.\+Authentication\+Module.\+Authentication\+Module (\begin{DoxyParamCaption}\item[{I\+Configuration}]{configuration,  }\item[{I\+Logger\+Factory}]{logger\+Factory,  }\item[{I\+Web\+Host\+Environment}]{environment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new authentication module instance and use the given configuration and environment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em configuration} & The configuration to use\\
+\hline
+{\em logger\+Factory} & The logger factory to allow Identity\+Server to log things\\
+\hline
+{\em environment} & The environment information to check if the app runs in debug mode\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1AuthenticationModule_a09b21939ceb29dfbcd067b79d31b85f4}\label{classKyoo_1_1Authentication_1_1AuthenticationModule_a09b21939ceb29dfbcd067b79d31b85f4}} 
+\index{Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}!Configure@{Configure}}
+\index{Configure@{Configure}!Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}}
+\doxysubsubsection{\texorpdfstring{Configure()}{Configure()}}
+{\footnotesize\ttfamily void Kyoo.\+Authentication.\+Authentication\+Module.\+Configure (\begin{DoxyParamCaption}\item[{I\+Service\+Collection}]{services,  }\item[{I\+Collection$<$ Type $>$}]{available\+Types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A configure method that will be run on plugin\textquotesingle{}s startup. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin_a8dc70a134829625351ba6cbfb0b3d471}{Kyoo.\+Controllers.\+I\+Plugin}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1AuthenticationModule_a9641d25d5646c732ba8a041f3169c438}\label{classKyoo_1_1Authentication_1_1AuthenticationModule_a9641d25d5646c732ba8a041f3169c438}} 
+\index{Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}!ConfigureAspNet@{ConfigureAspNet}}
+\index{ConfigureAspNet@{ConfigureAspNet}!Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}}
+\doxysubsubsection{\texorpdfstring{ConfigureAspNet()}{ConfigureAspNet()}}
+{\footnotesize\ttfamily void Kyoo.\+Authentication.\+Authentication\+Module.\+Configure\+Asp\+Net (\begin{DoxyParamCaption}\item[{I\+Application\+Builder}]{app }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+An optional configuration step to allow a plugin to change asp net configurations. W\+A\+R\+N\+I\+NG\+: This is only called on \mbox{\hyperlink{namespaceKyoo}{Kyoo}}\textquotesingle{}s startup so you must restart the app to apply this changes. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin_ae30f22818dce78b83774285abec4a0ad}{Kyoo.\+Controllers.\+I\+Plugin}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1AuthenticationModule_a6989e896c515377dcf69def3a18c8c6f}\label{classKyoo_1_1Authentication_1_1AuthenticationModule_a6989e896c515377dcf69def3a18c8c6f}} 
+\index{Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}!\_configuration@{\_configuration}}
+\index{\_configuration@{\_configuration}!Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}}
+\doxysubsubsection{\texorpdfstring{\_configuration}{\_configuration}}
+{\footnotesize\ttfamily readonly I\+Configuration Kyoo.\+Authentication.\+Authentication\+Module.\+\_\+configuration\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The configuration to use. 
+
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1AuthenticationModule_a1a1af4ec5bc43912ac35b8df3a51e52c}\label{classKyoo_1_1Authentication_1_1AuthenticationModule_a1a1af4ec5bc43912ac35b8df3a51e52c}} 
+\index{Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}!\_environment@{\_environment}}
+\index{\_environment@{\_environment}!Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}}
+\doxysubsubsection{\texorpdfstring{\_environment}{\_environment}}
+{\footnotesize\ttfamily readonly I\+Web\+Host\+Environment Kyoo.\+Authentication.\+Authentication\+Module.\+\_\+environment\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The environment information to check if the app runs in debug mode 
+
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1AuthenticationModule_ad5bb169f98c83df260e475d5aa8e71d0}\label{classKyoo_1_1Authentication_1_1AuthenticationModule_ad5bb169f98c83df260e475d5aa8e71d0}} 
+\index{Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}!\_loggerFactory@{\_loggerFactory}}
+\index{\_loggerFactory@{\_loggerFactory}!Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}}
+\doxysubsubsection{\texorpdfstring{\_loggerFactory}{\_loggerFactory}}
+{\footnotesize\ttfamily readonly I\+Logger\+Factory Kyoo.\+Authentication.\+Authentication\+Module.\+\_\+logger\+Factory\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A logger factory to allow Identity\+Server to log things. 
+
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1AuthenticationModule_a428b8c4aabb75a475ca2c5db0c2ea4ac}\label{classKyoo_1_1Authentication_1_1AuthenticationModule_a428b8c4aabb75a475ca2c5db0c2ea4ac}} 
+\index{Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}!ConditionalProvides@{ConditionalProvides}}
+\index{ConditionalProvides@{ConditionalProvides}!Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}}
+\doxysubsubsection{\texorpdfstring{ConditionalProvides}{ConditionalProvides}}
+{\footnotesize\ttfamily I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConditionalProvide}{Conditional\+Provide}}$>$ Kyoo.\+Authentication.\+Authentication\+Module.\+Conditional\+Provides =$>$ Array\+Segment$<$\mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConditionalProvide}{Conditional\+Provide}}$>$.Empty}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1AuthenticationModule_ae61c015a63f298e23cc46a082b5a3285}\label{classKyoo_1_1Authentication_1_1AuthenticationModule_ae61c015a63f298e23cc46a082b5a3285}} 
+\index{Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}!Description@{Description}}
+\index{Description@{Description}!Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}}
+\doxysubsubsection{\texorpdfstring{Description}{Description}}
+{\footnotesize\ttfamily string Kyoo.\+Authentication.\+Authentication\+Module.\+Description =$>$ \char`\"{}Enable Open\+ID authentication for Kyoo.\char`\"{}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1AuthenticationModule_ac010198a938f4b5b871ad34c1a2bdfde}\label{classKyoo_1_1Authentication_1_1AuthenticationModule_ac010198a938f4b5b871ad34c1a2bdfde}} 
+\index{Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}!Name@{Name}}
+\index{Name@{Name}!Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string Kyoo.\+Authentication.\+Authentication\+Module.\+Name =$>$ \char`\"{}Authentication\char`\"{}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1AuthenticationModule_ab464868b701cc5146fda6399654d2955}\label{classKyoo_1_1Authentication_1_1AuthenticationModule_ab464868b701cc5146fda6399654d2955}} 
+\index{Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}!Provides@{Provides}}
+\index{Provides@{Provides}!Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}}
+\doxysubsubsection{\texorpdfstring{Provides}{Provides}}
+{\footnotesize\ttfamily I\+Collection$<$Type$>$ Kyoo.\+Authentication.\+Authentication\+Module.\+Provides =$>$ Array\+Segment$<$Type$>$.Empty}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1AuthenticationModule_a2ff65a248d002bb0c6890d7d57dfca98}\label{classKyoo_1_1Authentication_1_1AuthenticationModule_a2ff65a248d002bb0c6890d7d57dfca98}} 
+\index{Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}!Requires@{Requires}}
+\index{Requires@{Requires}!Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}}
+\doxysubsubsection{\texorpdfstring{Requires}{Requires}}
+{\footnotesize\ttfamily I\+Collection$<$Type$>$ Kyoo.\+Authentication.\+Authentication\+Module.\+Requires}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=> \textcolor{keyword}{new} []}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            typeof(IUserRepository)}
+\DoxyCodeLine{        \}}
+
+\end{DoxyCode}
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Authentication_1_1AuthenticationModule_ac3806d935beef8d6304c9ae94496ac34}\label{classKyoo_1_1Authentication_1_1AuthenticationModule_ac3806d935beef8d6304c9ae94496ac34}} 
+\index{Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}!Slug@{Slug}}
+\index{Slug@{Slug}!Kyoo.Authentication.AuthenticationModule@{Kyoo.Authentication.AuthenticationModule}}
+\doxysubsubsection{\texorpdfstring{Slug}{Slug}}
+{\footnotesize\ttfamily string Kyoo.\+Authentication.\+Authentication\+Module.\+Slug =$>$ \char`\"{}auth\char`\"{}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Authentication/\mbox{\hyperlink{AuthenticationModule_8cs}{Authentication\+Module.\+cs}}\end{DoxyCompactItemize}

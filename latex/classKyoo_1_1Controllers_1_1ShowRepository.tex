@@ -1,0 +1,280 @@
+\hypertarget{classKyoo_1_1Controllers_1_1ShowRepository}{}\doxysection{Kyoo.\+Controllers.\+Show\+Repository Class Reference}
+\label{classKyoo_1_1Controllers_1_1ShowRepository}\index{Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}}
+
+
+A local repository to handle shows  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+Show\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1Controllers_1_1ShowRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+Show\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKyoo_1_1Controllers_1_1ShowRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_ae67f08b1372b7e7682548821b1c15173}{Show\+Repository}} (\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} database, \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IStudioRepository}{I\+Studio\+Repository}} studios, \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPeopleRepository}{I\+People\+Repository}} people, \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IGenreRepository}{I\+Genre\+Repository}} genres, \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{I\+Provider\+Repository}} providers, Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ISeasonRepository}{I\+Season\+Repository}} $>$ seasons, Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository}{I\+Episode\+Repository}} $>$ episodes)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository}{Show\+Repository}}. \end{DoxyCompactList}\item 
+override async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_a6ca83779aaf96039c09fe0d6ecfe2469}{Search}} (string query)
+\item 
+override async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_ad1987cf44ca56bf08a1aefcde13e9556}{Create}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} obj)
+\item 
+async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_af19f7f83959efab0905e7d9c7afdadb7}{Add\+Show\+Link}} (int show\+ID, int? library\+ID, int? collection\+ID)
+\begin{DoxyCompactList}\small\item\em Link a show to a collection and/or a library. The given show is now part of those containers. If both a library and a collection are given, the collection is added to the library too. \end{DoxyCompactList}\item 
+Task$<$ string $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_a975d07dcc8bc83e5141cb75bd0a4f570}{Get\+Slug}} (int show\+ID)
+\begin{DoxyCompactList}\small\item\em Get a show\textquotesingle{}s slug from it\textquotesingle{}s ID. \end{DoxyCompactList}\item 
+override async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_a1666c28f4ca3a10fd458a0cbb808c16e}{Delete}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} obj)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_ae9b77a4af6c7502118ef2f9f13eec44d}{Validate}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} resource)
+\item 
+override async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_a6599b6d2a3d71a1384cfa79d969a7eef}{Edit\+Relations}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} resource, \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} changed, bool reset\+Old)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+override Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}, object $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_a7ae1ea5f91c7a58bcc257c51b3604b08}{Default\+Sort}} =$>$ x =$>$ x.\+Title
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_a06bfd498dca91fa95a66b4c2dda59e1f}{\+\_\+database}}
+\begin{DoxyCompactList}\small\item\em The database handle \end{DoxyCompactList}\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IStudioRepository}{I\+Studio\+Repository}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_a5adc40831d2c1f63cbd3a7842b7f99bd}{\+\_\+studios}}
+\begin{DoxyCompactList}\small\item\em A studio repository to handle creation/validation of related studios. \end{DoxyCompactList}\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPeopleRepository}{I\+People\+Repository}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_aa71f20bfc325bcb1cda38fd77efae129}{\+\_\+people}}
+\begin{DoxyCompactList}\small\item\em A people repository to handle creation/validation of related people. \end{DoxyCompactList}\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IGenreRepository}{I\+Genre\+Repository}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_a202238f81ce10f32bf63ef83844fc60b}{\+\_\+genres}}
+\begin{DoxyCompactList}\small\item\em A genres repository to handle creation/validation of related genres. \end{DoxyCompactList}\item 
+readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{I\+Provider\+Repository}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_a906dd41298e4a414887abf28418c6b8a}{\+\_\+providers}}
+\begin{DoxyCompactList}\small\item\em A provider repository to handle external\+ID creation and deletion \end{DoxyCompactList}\item 
+readonly Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ISeasonRepository}{I\+Season\+Repository}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_a2af280db3949c371361659d77b4947d0}{\+\_\+seasons}}
+\begin{DoxyCompactList}\small\item\em A lazy loaded season repository to handle cascade deletion (seasons deletion whith it\textquotesingle{}s show) \end{DoxyCompactList}\item 
+readonly Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository}{I\+Episode\+Repository}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository_ac9c4a965194df9ecd18bd62b03be8ad8}{\+\_\+episodes}}
+\begin{DoxyCompactList}\small\item\em A lazy loaded episode repository to handle cascade deletion (episode deletion whith it\textquotesingle{}s show) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A local repository to handle shows 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ShowRepository_ae67f08b1372b7e7682548821b1c15173}\label{classKyoo_1_1Controllers_1_1ShowRepository_ae67f08b1372b7e7682548821b1c15173}} 
+\index{Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}!ShowRepository@{ShowRepository}}
+\index{ShowRepository@{ShowRepository}!Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}}
+\doxysubsubsection{\texorpdfstring{ShowRepository()}{ShowRepository()}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+Show\+Repository.\+Show\+Repository (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}}}]{database,  }\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IStudioRepository}{I\+Studio\+Repository}}}]{studios,  }\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPeopleRepository}{I\+People\+Repository}}}]{people,  }\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IGenreRepository}{I\+Genre\+Repository}}}]{genres,  }\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{I\+Provider\+Repository}}}]{providers,  }\item[{Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ISeasonRepository}{I\+Season\+Repository}} $>$}]{seasons,  }\item[{Lazy$<$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository}{I\+Episode\+Repository}} $>$}]{episodes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository}{Show\+Repository}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & The database handle to use\\
+\hline
+{\em studios} & A studio repository\\
+\hline
+{\em people} & A people repository\\
+\hline
+{\em genres} & A genres repository\\
+\hline
+{\em providers} & A provider repository\\
+\hline
+{\em seasons} & A lazy loaded season repository\\
+\hline
+{\em episodes} & A lazy loaded episode repository\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ShowRepository_af19f7f83959efab0905e7d9c7afdadb7}\label{classKyoo_1_1Controllers_1_1ShowRepository_af19f7f83959efab0905e7d9c7afdadb7}} 
+\index{Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}!AddShowLink@{AddShowLink}}
+\index{AddShowLink@{AddShowLink}!Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}}
+\doxysubsubsection{\texorpdfstring{AddShowLink()}{AddShowLink()}}
+{\footnotesize\ttfamily async Task Kyoo.\+Controllers.\+Show\+Repository.\+Add\+Show\+Link (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{int?}]{library\+ID,  }\item[{int?}]{collection\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Link a show to a collection and/or a library. The given show is now part of those containers. If both a library and a collection are given, the collection is added to the library too. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository_ade2f270e5202ccdd18a5bf9cb6ac6b71}{Kyoo.\+Controllers.\+I\+Show\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ShowRepository_ad1987cf44ca56bf08a1aefcde13e9556}\label{classKyoo_1_1Controllers_1_1ShowRepository_ad1987cf44ca56bf08a1aefcde13e9556}} 
+\index{Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}!Create@{Create}}
+\index{Create@{Create}!Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily override async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}$>$ Kyoo.\+Controllers.\+Show\+Repository.\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ShowRepository_a1666c28f4ca3a10fd458a0cbb808c16e}\label{classKyoo_1_1Controllers_1_1ShowRepository_a1666c28f4ca3a10fd458a0cbb808c16e}} 
+\index{Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}!Delete@{Delete}}
+\index{Delete@{Delete}!Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily override async Task Kyoo.\+Controllers.\+Show\+Repository.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ShowRepository_a6599b6d2a3d71a1384cfa79d969a7eef}\label{classKyoo_1_1Controllers_1_1ShowRepository_a6599b6d2a3d71a1384cfa79d969a7eef}} 
+\index{Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}!EditRelations@{EditRelations}}
+\index{EditRelations@{EditRelations}!Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}}
+\doxysubsubsection{\texorpdfstring{EditRelations()}{EditRelations()}}
+{\footnotesize\ttfamily override async Task Kyoo.\+Controllers.\+Show\+Repository.\+Edit\+Relations (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{resource,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{changed,  }\item[{bool}]{reset\+Old }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ShowRepository_a975d07dcc8bc83e5141cb75bd0a4f570}\label{classKyoo_1_1Controllers_1_1ShowRepository_a975d07dcc8bc83e5141cb75bd0a4f570}} 
+\index{Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}!GetSlug@{GetSlug}}
+\index{GetSlug@{GetSlug}!Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}}
+\doxysubsubsection{\texorpdfstring{GetSlug()}{GetSlug()}}
+{\footnotesize\ttfamily Task$<$string$>$ Kyoo.\+Controllers.\+Show\+Repository.\+Get\+Slug (\begin{DoxyParamCaption}\item[{int}]{show\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a show\textquotesingle{}s slug from it\textquotesingle{}s ID. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository_a1b7c63a30421fbc959d58c5fe80880c9}{Kyoo.\+Controllers.\+I\+Show\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ShowRepository_a6ca83779aaf96039c09fe0d6ecfe2469}\label{classKyoo_1_1Controllers_1_1ShowRepository_a6ca83779aaf96039c09fe0d6ecfe2469}} 
+\index{Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}!Search@{Search}}
+\index{Search@{Search}!Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily override async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}$>$ $>$ Kyoo.\+Controllers.\+Show\+Repository.\+Search (\begin{DoxyParamCaption}\item[{string}]{query }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Implements \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a1ec5ba57aa01810e262bbfc02bd1fc3e}{Kyoo.\+Controllers.\+Local\+Repository$<$ Show $>$}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ShowRepository_ae9b77a4af6c7502118ef2f9f13eec44d}\label{classKyoo_1_1Controllers_1_1ShowRepository_ae9b77a4af6c7502118ef2f9f13eec44d}} 
+\index{Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}!Validate@{Validate}}
+\index{Validate@{Validate}!Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily override async Task Kyoo.\+Controllers.\+Show\+Repository.\+Validate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{resource }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ShowRepository_a06bfd498dca91fa95a66b4c2dda59e1f}\label{classKyoo_1_1Controllers_1_1ShowRepository_a06bfd498dca91fa95a66b4c2dda59e1f}} 
+\index{Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}!\_database@{\_database}}
+\index{\_database@{\_database}!Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}}
+\doxysubsubsection{\texorpdfstring{\_database}{\_database}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} Kyoo.\+Controllers.\+Show\+Repository.\+\_\+database\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The database handle 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ShowRepository_ac9c4a965194df9ecd18bd62b03be8ad8}\label{classKyoo_1_1Controllers_1_1ShowRepository_ac9c4a965194df9ecd18bd62b03be8ad8}} 
+\index{Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}!\_episodes@{\_episodes}}
+\index{\_episodes@{\_episodes}!Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}}
+\doxysubsubsection{\texorpdfstring{\_episodes}{\_episodes}}
+{\footnotesize\ttfamily readonly Lazy$<$\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository}{I\+Episode\+Repository}}$>$ Kyoo.\+Controllers.\+Show\+Repository.\+\_\+episodes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A lazy loaded episode repository to handle cascade deletion (episode deletion whith it\textquotesingle{}s show) 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ShowRepository_a202238f81ce10f32bf63ef83844fc60b}\label{classKyoo_1_1Controllers_1_1ShowRepository_a202238f81ce10f32bf63ef83844fc60b}} 
+\index{Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}!\_genres@{\_genres}}
+\index{\_genres@{\_genres}!Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}}
+\doxysubsubsection{\texorpdfstring{\_genres}{\_genres}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IGenreRepository}{I\+Genre\+Repository}} Kyoo.\+Controllers.\+Show\+Repository.\+\_\+genres\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A genres repository to handle creation/validation of related genres. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ShowRepository_aa71f20bfc325bcb1cda38fd77efae129}\label{classKyoo_1_1Controllers_1_1ShowRepository_aa71f20bfc325bcb1cda38fd77efae129}} 
+\index{Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}!\_people@{\_people}}
+\index{\_people@{\_people}!Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}}
+\doxysubsubsection{\texorpdfstring{\_people}{\_people}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPeopleRepository}{I\+People\+Repository}} Kyoo.\+Controllers.\+Show\+Repository.\+\_\+people\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A people repository to handle creation/validation of related people. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ShowRepository_a906dd41298e4a414887abf28418c6b8a}\label{classKyoo_1_1Controllers_1_1ShowRepository_a906dd41298e4a414887abf28418c6b8a}} 
+\index{Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}!\_providers@{\_providers}}
+\index{\_providers@{\_providers}!Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}}
+\doxysubsubsection{\texorpdfstring{\_providers}{\_providers}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{I\+Provider\+Repository}} Kyoo.\+Controllers.\+Show\+Repository.\+\_\+providers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A provider repository to handle external\+ID creation and deletion 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ShowRepository_a2af280db3949c371361659d77b4947d0}\label{classKyoo_1_1Controllers_1_1ShowRepository_a2af280db3949c371361659d77b4947d0}} 
+\index{Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}!\_seasons@{\_seasons}}
+\index{\_seasons@{\_seasons}!Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}}
+\doxysubsubsection{\texorpdfstring{\_seasons}{\_seasons}}
+{\footnotesize\ttfamily readonly Lazy$<$\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ISeasonRepository}{I\+Season\+Repository}}$>$ Kyoo.\+Controllers.\+Show\+Repository.\+\_\+seasons\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A lazy loaded season repository to handle cascade deletion (seasons deletion whith it\textquotesingle{}s show) 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ShowRepository_a5adc40831d2c1f63cbd3a7842b7f99bd}\label{classKyoo_1_1Controllers_1_1ShowRepository_a5adc40831d2c1f63cbd3a7842b7f99bd}} 
+\index{Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}!\_studios@{\_studios}}
+\index{\_studios@{\_studios}!Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}}
+\doxysubsubsection{\texorpdfstring{\_studios}{\_studios}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IStudioRepository}{I\+Studio\+Repository}} Kyoo.\+Controllers.\+Show\+Repository.\+\_\+studios\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A studio repository to handle creation/validation of related studios. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ShowRepository_a7ae1ea5f91c7a58bcc257c51b3604b08}\label{classKyoo_1_1Controllers_1_1ShowRepository_a7ae1ea5f91c7a58bcc257c51b3604b08}} 
+\index{Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}!DefaultSort@{DefaultSort}}
+\index{DefaultSort@{DefaultSort}!Kyoo.Controllers.ShowRepository@{Kyoo.Controllers.ShowRepository}}
+\doxysubsubsection{\texorpdfstring{DefaultSort}{DefaultSort}}
+{\footnotesize\ttfamily override Expression$<$Func$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}, object$>$ $>$ Kyoo.\+Controllers.\+Show\+Repository.\+Default\+Sort =$>$ x =$>$ x.\+Title\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Controllers/\+Repositories/\mbox{\hyperlink{ShowRepository_8cs}{Show\+Repository.\+cs}}\end{DoxyCompactItemize}

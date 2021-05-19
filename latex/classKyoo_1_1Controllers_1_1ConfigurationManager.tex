@@ -1,0 +1,187 @@
+\hypertarget{classKyoo_1_1Controllers_1_1ConfigurationManager}{}\doxysection{Kyoo.\+Controllers.\+Configuration\+Manager Class Reference}
+\label{classKyoo_1_1Controllers_1_1ConfigurationManager}\index{Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}}
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+Configuration\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{classKyoo_1_1Controllers_1_1ConfigurationManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+Configuration\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{classKyoo_1_1Controllers_1_1ConfigurationManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConfigurationManager_abd0259e8521db4cda0797c5f8443513e}{Configuration\+Manager}} (I\+Configuration configuration, I\+Enumerable$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1ConfigurationReference}{Configuration\+Reference}} $>$ references)
+\begin{DoxyCompactList}\small\item\em Create a new Configuration\+Api using the given configuration. \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConfigurationManager_ae4698899e362928ceba33516dfdf8e72}{Get\+Value}} (string path)
+\begin{DoxyCompactList}\small\item\em Get the value of a setting using it\textquotesingle{}s path. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConfigurationManager_ab7b738e956c21272758062b39f40358d}{Get\+Value$<$ T $>$}} (string path)
+\begin{DoxyCompactList}\small\item\em Get the value of a setting using it\textquotesingle{}s path. If your don\textquotesingle{}t need a strongly typed value, see \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IConfigurationManager_aab04a51a2f899d7052bf5ae3ac5fc310}{Get\+Value}}. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConfigurationManager_aa804b7d140e90cb2f38a41bc02398c88}{Edit\+Value}} (string path, object value)
+\begin{DoxyCompactList}\small\item\em Edit the value of a setting using it\textquotesingle{}s path. Save it to the json file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Type \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConfigurationManager_ad956526d9c24b51d62e5885f4b0c42a7}{Get\+Type}} (string path)
+\item 
+Expando\+Object \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConfigurationManager_a9ef21fa2939abf3da39c5d263cc51f53}{To\+Object}} (I\+Configuration config)
+\begin{DoxyCompactList}\small\item\em Transform a configuration to a strongly typed object (the root configuration is an Expando\+Object but child elements are using strong types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static object \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConfigurationManager_a2558fc1a6885db862b77d7a4808dad93}{To\+Untyped}} (I\+Configuration\+Section config)
+\begin{DoxyCompactList}\small\item\em Transform the configuration section in nested expando objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly I\+Configuration \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConfigurationManager_ab24ec053740fd15070c3804179b0d231}{\+\_\+configuration}}
+\begin{DoxyCompactList}\small\item\em The configuration to retrieve and edit. \end{DoxyCompactList}\item 
+readonly Dictionary$<$ string, Type $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConfigurationManager_a4d09c621c56437f897da8147d5e5f375}{\+\_\+references}}
+\begin{DoxyCompactList}\small\item\em The strongly typed list of options \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ConfigurationManager_abd0259e8521db4cda0797c5f8443513e}\label{classKyoo_1_1Controllers_1_1ConfigurationManager_abd0259e8521db4cda0797c5f8443513e}} 
+\index{Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}!ConfigurationManager@{ConfigurationManager}}
+\index{ConfigurationManager@{ConfigurationManager}!Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{ConfigurationManager()}{ConfigurationManager()}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+Configuration\+Manager.\+Configuration\+Manager (\begin{DoxyParamCaption}\item[{I\+Configuration}]{configuration,  }\item[{I\+Enumerable$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1ConfigurationReference}{Configuration\+Reference}} $>$}]{references }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new Configuration\+Api using the given configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em configuration} & The configuration to use.\\
+\hline
+{\em references} & The strongly typed option list.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ConfigurationManager_aa804b7d140e90cb2f38a41bc02398c88}\label{classKyoo_1_1Controllers_1_1ConfigurationManager_aa804b7d140e90cb2f38a41bc02398c88}} 
+\index{Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}!EditValue@{EditValue}}
+\index{EditValue@{EditValue}!Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{EditValue()}{EditValue()}}
+{\footnotesize\ttfamily async Task Kyoo.\+Controllers.\+Configuration\+Manager.\+Edit\+Value (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{object}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Edit the value of a setting using it\textquotesingle{}s path. Save it to the json file. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IConfigurationManager_ace77670f6f2f5df4d6e5738c6d293c83}{Kyoo.\+Controllers.\+I\+Configuration\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ConfigurationManager_ad956526d9c24b51d62e5885f4b0c42a7}\label{classKyoo_1_1Controllers_1_1ConfigurationManager_ad956526d9c24b51d62e5885f4b0c42a7}} 
+\index{Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}!GetType@{GetType}}
+\index{GetType@{GetType}!Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily Type Kyoo.\+Controllers.\+Configuration\+Manager.\+Get\+Type (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ConfigurationManager_ae4698899e362928ceba33516dfdf8e72}\label{classKyoo_1_1Controllers_1_1ConfigurationManager_ae4698899e362928ceba33516dfdf8e72}} 
+\index{Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily object Kyoo.\+Controllers.\+Configuration\+Manager.\+Get\+Value (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the value of a setting using it\textquotesingle{}s path. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IConfigurationManager_aab04a51a2f899d7052bf5ae3ac5fc310}{Kyoo.\+Controllers.\+I\+Configuration\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ConfigurationManager_ab7b738e956c21272758062b39f40358d}\label{classKyoo_1_1Controllers_1_1ConfigurationManager_ab7b738e956c21272758062b39f40358d}} 
+\index{Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}!GetValue$<$ T $>$@{GetValue$<$ T $>$}}
+\index{GetValue$<$ T $>$@{GetValue$<$ T $>$}!Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{GetValue$<$ T $>$()}{GetValue< T >()}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConfigurationManager_ae4698899e362928ceba33516dfdf8e72}{Kyoo.\+Controllers.\+Configuration\+Manager.\+Get\+Value}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the value of a setting using it\textquotesingle{}s path. If your don\textquotesingle{}t need a strongly typed value, see \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IConfigurationManager_aab04a51a2f899d7052bf5ae3ac5fc310}{Get\+Value}}. 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IConfigurationManager_af4ed93f75e89c78c36bbe6bf29645e84}{Kyoo.\+Controllers.\+I\+Configuration\+Manager}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ConfigurationManager_a9ef21fa2939abf3da39c5d263cc51f53}\label{classKyoo_1_1Controllers_1_1ConfigurationManager_a9ef21fa2939abf3da39c5d263cc51f53}} 
+\index{Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}!ToObject@{ToObject}}
+\index{ToObject@{ToObject}!Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{ToObject()}{ToObject()}}
+{\footnotesize\ttfamily Expando\+Object Kyoo.\+Controllers.\+Configuration\+Manager.\+To\+Object (\begin{DoxyParamCaption}\item[{I\+Configuration}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Transform a configuration to a strongly typed object (the root configuration is an Expando\+Object but child elements are using strong types. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & The configuration to transform\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A strongly typed representation of the configuration.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ConfigurationManager_a2558fc1a6885db862b77d7a4808dad93}\label{classKyoo_1_1Controllers_1_1ConfigurationManager_a2558fc1a6885db862b77d7a4808dad93}} 
+\index{Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}!ToUntyped@{ToUntyped}}
+\index{ToUntyped@{ToUntyped}!Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{ToUntyped()}{ToUntyped()}}
+{\footnotesize\ttfamily static object Kyoo.\+Controllers.\+Configuration\+Manager.\+To\+Untyped (\begin{DoxyParamCaption}\item[{I\+Configuration\+Section}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Transform the configuration section in nested expando objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & The section to convert\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted section
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ConfigurationManager_ab24ec053740fd15070c3804179b0d231}\label{classKyoo_1_1Controllers_1_1ConfigurationManager_ab24ec053740fd15070c3804179b0d231}} 
+\index{Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}!\_configuration@{\_configuration}}
+\index{\_configuration@{\_configuration}!Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{\_configuration}{\_configuration}}
+{\footnotesize\ttfamily readonly I\+Configuration Kyoo.\+Controllers.\+Configuration\+Manager.\+\_\+configuration\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The configuration to retrieve and edit. 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ConfigurationManager_a4d09c621c56437f897da8147d5e5f375}\label{classKyoo_1_1Controllers_1_1ConfigurationManager_a4d09c621c56437f897da8147d5e5f375}} 
+\index{Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}!\_references@{\_references}}
+\index{\_references@{\_references}!Kyoo.Controllers.ConfigurationManager@{Kyoo.Controllers.ConfigurationManager}}
+\doxysubsubsection{\texorpdfstring{\_references}{\_references}}
+{\footnotesize\ttfamily readonly Dictionary$<$string, Type$>$ Kyoo.\+Controllers.\+Configuration\+Manager.\+\_\+references\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The strongly typed list of options 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Controllers/\mbox{\hyperlink{ConfigurationManager_8cs}{Configuration\+Manager.\+cs}}\end{DoxyCompactItemize}

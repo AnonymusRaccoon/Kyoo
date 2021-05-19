@@ -1,0 +1,6 @@
+<map id="Kyoo.Controllers.ProviderRepository" name="Kyoo.Controllers.ProviderRepository">
+<area shape="rect" id="node1" title="A local repository to handle providers." alt="" coords="120,667,307,832"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Controllers_1_1LocalRepository.html" title=" " alt="" coords="5,277,216,619"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1IProviderRepository.html" title="A repository to handle providers." alt="" coords="241,402,391,494"/>
+<area shape="rect" id="node4" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title=" " alt="" coords="226,5,406,229"/>
+</map>

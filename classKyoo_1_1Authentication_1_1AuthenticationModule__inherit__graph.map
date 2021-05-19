@@ -1,0 +1,4 @@
+<map id="Kyoo.Authentication.AuthenticationModule" name="Kyoo.Authentication.AuthenticationModule">
+<area shape="rect" id="node1" title="A module that enable OpenID authentication for Kyoo." alt="" coords="5,233,257,472"/>
+<area shape="rect" id="node2" href="$interfaceKyoo_1_1Controllers_1_1IPlugin.html" title="A common interface used to discord plugins" alt="" coords="48,5,215,185"/>
+</map>

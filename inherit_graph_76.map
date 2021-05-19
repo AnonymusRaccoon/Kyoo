@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$interfaceKyoo_1_1Models_1_1Permissions_1_1IPermissionValidator.html" title="A service to validate permissions" alt="" coords="5,39,197,80"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Authentication_1_1PermissionValidatorFactory.html" title="A permission validator to validate permission with user Permission array or the default array from th..." alt="" coords="245,5,475,47"/>
+<area shape="rect" id="node3" href="$classKyoo_1_1Controllers_1_1PassthroughPermissionValidator.html" title="A permission validator that always validate permissions. This effectively disable the permission syst..." alt="" coords="254,71,466,112"/>
+</map>

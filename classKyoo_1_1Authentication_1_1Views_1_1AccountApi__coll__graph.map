@@ -1,0 +1,8 @@
+<map id="Kyoo.Authentication.Views.AccountApi" name="Kyoo.Authentication.Views.AccountApi">
+<area shape="rect" id="node1" title="The class responsible for login, logout, permissions and claims of a user." alt="" coords="135,521,335,760"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,330,92,407"/>
+<area shape="rect" id="node3" title=" " alt="" coords="117,330,231,407"/>
+<area shape="rect" id="node4" href="$interfaceKyoo_1_1Controllers_1_1IUserRepository.html" title="A repository to handle users." alt="" coords="255,330,493,407"/>
+<area shape="rect" id="node5" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title=" " alt="" coords="296,5,452,229"/>
+<area shape="rect" id="node6" href="$interfaceKyoo_1_1Controllers_1_1IFileManager.html" title="A service to abstract the file system to allow custom file systems (like distant file systems or exte..." alt="" coords="517,279,735,459"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="Kyoo.Controllers.SeasonRepository" name="Kyoo.Controllers.SeasonRepository">
+<area shape="rect" id="node1" title="A local repository to handle seasons." alt="" coords="396,859,647,1141"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Controllers_1_1LocalRepository.html" title=" " alt="" coords="5,367,208,708"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1ISeasonRepository.html" title="A repository to handle seasons." alt="" coords="233,477,375,598"/>
+<area shape="rect" id="node4" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title=" " alt="" coords="217,5,391,229"/>
+<area shape="rect" id="node5" href="$interfaceKyoo_1_1Controllers_1_1IShowRepository.html" title="A repository to handle shows." alt="" coords="400,491,643,583"/>
+<area shape="rect" id="node6" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title=" " alt="" coords="441,5,602,229"/>
+<area shape="rect" id="node7" href="$interfaceKyoo_1_1Controllers_1_1IProviderRepository.html" title="A repository to handle providers." alt="" coords="667,484,858,591"/>
+<area shape="rect" id="node8" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title=" " alt="" coords="673,5,853,229"/>
+<area shape="rect" id="node9" href="$classKyoo_1_1DatabaseContext.html" title="The database handle used for all local repositories. This is an abstract class. It is meant to be imp..." alt="" coords="883,279,1101,796"/>
+<area shape="rect" id="node10" title=" " alt="" coords="947,79,1037,156"/>
+</map>

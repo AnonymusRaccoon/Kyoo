@@ -1,0 +1,642 @@
+\hypertarget{classKyoo_1_1DatabaseContext}{}\doxysection{Kyoo.\+Database\+Context Class Reference}
+\label{classKyoo_1_1DatabaseContext}\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+
+
+The database handle used for all local repositories. This is an abstract class. It is meant to be implemented by plugins. This allow the core to be database agnostic.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Database\+Context\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1DatabaseContext__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Database\+Context\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1DatabaseContext__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Db\+Set$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Link}{Link}}$<$ T1, T2 $>$ $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a41f15824689a063d23d021deb90a250b}{Links$<$ T1, T2 $>$}} ()
+\begin{DoxyCompactList}\small\item\em Get a generic link between two resource types. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a0f2a8c2be09924814e858b0354975e18}{Get\+Temporary\+Object$<$ T $>$}} (T model)
+\begin{DoxyCompactList}\small\item\em Return a new or an in cache temporary object wih the same ID as the one given \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{classKyoo_1_1DatabaseContext_acbb56287f716f7662455ee418ce9dc20}{Save\+Changes}} ()
+\begin{DoxyCompactList}\small\item\em Save changes that are applied to this context. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a2b4df69035d229f0a0bc3e5e5bcb80ee}{Save\+Changes}} (bool accept\+All\+Changes\+On\+Success)
+\begin{DoxyCompactList}\small\item\em Save changes that are applied to this context. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a40c4848a333b409afe3ba0e39919224e}{Save\+Changes}} (string duplicate\+Message)
+\begin{DoxyCompactList}\small\item\em Save changes that are applied to this context. \end{DoxyCompactList}\item 
+override async Task$<$ int $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_afb3256cd1de16119e36d859b2316ee5b}{Save\+Changes\+Async}} (bool accept\+All\+Changes\+On\+Success, Cancellation\+Token cancellation\+Token=new())
+\begin{DoxyCompactList}\small\item\em Save changes that are applied to this context. \end{DoxyCompactList}\item 
+override async Task$<$ int $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a92fe5db4992d9736c2df1ee7fe6f6564}{Save\+Changes\+Async}} (Cancellation\+Token cancellation\+Token=new())
+\begin{DoxyCompactList}\small\item\em Save changes that are applied to this context. \end{DoxyCompactList}\item 
+async Task$<$ int $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a9d1d8d98c120b4ca34f7b32c2b2ff4e1}{Save\+Changes\+Async}} (string duplicate\+Message, Cancellation\+Token cancellation\+Token=new())
+\begin{DoxyCompactList}\small\item\em Save changes that are applied to this context. \end{DoxyCompactList}\item 
+async Task$<$ int $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a275503eef4f250767cb80b687fd050c9}{Save\+If\+No\+Duplicates}} (Cancellation\+Token cancellation\+Token=new())
+\begin{DoxyCompactList}\small\item\em Save changes if no duplicates are found. If one is found, no change are saved but the current changes are no discarded. The current context will still hold those invalid changes. \end{DoxyCompactList}\item 
+Task$<$ T $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a329b2447268503117cb67d6494dbe335}{Save\+Or\+Retry$<$ T $>$}} (T obj, Func$<$ T, int, T $>$ on\+Fail, Cancellation\+Token cancellation\+Token=new())
+\begin{DoxyCompactList}\small\item\em Save items or retry with a custom method if a duplicate is found. \end{DoxyCompactList}\item 
+abstract Expression$<$ Func$<$ T, bool $>$ $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a93fe8df1282c8dee1de537966e5deebd}{Like$<$ T $>$}} (Expression$<$ Func$<$ T, string $>$$>$ query, string format)
+\begin{DoxyCompactList}\small\item\em Perform a case insensitive like operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1DatabaseContext_a9ee7e60248f32adb155a9f94b9de2c55}{Database\+Context}} ()
+\begin{DoxyCompactList}\small\item\em The default constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKyoo_1_1DatabaseContext_ade02957621b7c88605a5719c0784ac3a}{Database\+Context}} (Db\+Context\+Options options)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} using specific options \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{classKyoo_1_1DatabaseContext_aa6666b138800abf825cfb263a0327f99}{On\+Configuring}} (Db\+Context\+Options\+Builder options\+Builder)
+\begin{DoxyCompactList}\small\item\em Set basic configurations (like preventing query tracking) \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a996f8ac4d747a0ff464b1f672a3e09fe}{On\+Model\+Creating}} (Model\+Builder model\+Builder)
+\begin{DoxyCompactList}\small\item\em Set database parameters to support every types of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. \end{DoxyCompactList}\item 
+abstract bool \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a2ca03fba8f40c1fc90ee83c80a6cabbd}{Is\+Duplicate\+Exception}} (Exception ex)
+\begin{DoxyCompactList}\small\item\em Check if the exception is a duplicated exception. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Db\+Set$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a17be6735ef34ea415965c968285dbc8d}{Libraries}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em All libraries of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Library. \end{DoxyCompactList}\item 
+Db\+Set$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Collection}{Collection}} $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_abe08d1d096b15040efc04eeb41c2969f}{Collections}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em All collections of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Collection. \end{DoxyCompactList}\item 
+Db\+Set$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_ae2753b3e7f26f7ac1717b46ae2531210}{Shows}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em All shows of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Show. \end{DoxyCompactList}\item 
+Db\+Set$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_abe27faddb091c20bc17bdf9660b78868}{Seasons}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em All seasons of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Season. \end{DoxyCompactList}\item 
+Db\+Set$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a6762f2a3a159fd01060f4769dcfc8c08}{Episodes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em All episodes of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Episode. \end{DoxyCompactList}\item 
+Db\+Set$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}} $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a55080cf8bc9fdf2cc821a22fdaf561c1}{Tracks}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em All tracks of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Track. \end{DoxyCompactList}\item 
+Db\+Set$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Genre}{Genre}} $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_ac8a351d441b1f71372d6642a47d0825d}{Genres}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em All genres of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See \mbox{\hyperlink{classKyoo_1_1DatabaseContext_ac8a351d441b1f71372d6642a47d0825d}{Genres}}. \end{DoxyCompactList}\item 
+Db\+Set$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}} $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a5effb98999b7491519cfae4c2466b37b}{People}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em All people of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a5effb98999b7491519cfae4c2466b37b}{People}}. \end{DoxyCompactList}\item 
+Db\+Set$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Studio}{Studio}} $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a9c8f7ce7c42921eed804ea0c521d5353}{Studios}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em All studios of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Studio. \end{DoxyCompactList}\item 
+Db\+Set$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Provider}{Provider}} $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_adccf51d3038aac7e3054974c8b17a4a2}{Providers}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em All providers of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Provider. \end{DoxyCompactList}\item 
+Db\+Set$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}} $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a04df6b08a8477ee78594d4fc1dcf9a12}{Metadata\+Ids}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em All metadata\+I\+Ds (External\+I\+Ds) of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Metadata\+ID. \end{DoxyCompactList}\item 
+Db\+Set$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}} $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a68728fdf6dc1601596ed35bd9b6170bf}{Users}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of registered users. \end{DoxyCompactList}\item 
+Db\+Set$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}} $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a25bc80e6feb6fef9482f7498aee8bcac}{People\+Roles}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em All people\textquotesingle{}s role. See People\+Role. \end{DoxyCompactList}\item 
+Db\+Set$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1WatchedEpisode}{Watched\+Episode}} $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a778dc4a78ad56b3408cdd3a72ee359e7}{Watched\+Episodes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Episodes with a watch percentage. See Watched\+Episode \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task$<$ T $>$ \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a823b7def6ec76901e7f5807df7f08ed5}{Save\+Or\+Retry$<$ T $>$}} (T obj, Func$<$ T, int, T $>$ on\+Fail, int recurse, Cancellation\+Token cancellation\+Token=new())
+\begin{DoxyCompactList}\small\item\em Save items or retry with a custom method if a duplicate is found. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a28ddcc2b00885b9d50b6750eab93c86b}{Discard\+Changes}} ()
+\begin{DoxyCompactList}\small\item\em Delete every changes that are on this context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The database handle used for all local repositories. This is an abstract class. It is meant to be implemented by plugins. This allow the core to be database agnostic. 
+
+It should not be used directly, to access the database use a I\+Library\+Manager or repositories. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a9ee7e60248f32adb155a9f94b9de2c55}\label{classKyoo_1_1DatabaseContext_a9ee7e60248f32adb155a9f94b9de2c55}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!DatabaseContext@{DatabaseContext}}
+\index{DatabaseContext@{DatabaseContext}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{DatabaseContext()}{DatabaseContext()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Kyoo.\+Database\+Context.\+Database\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+The default constructor 
+
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_ade02957621b7c88605a5719c0784ac3a}\label{classKyoo_1_1DatabaseContext_ade02957621b7c88605a5719c0784ac3a}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!DatabaseContext@{DatabaseContext}}
+\index{DatabaseContext@{DatabaseContext}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{DatabaseContext()}{DatabaseContext()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Kyoo.\+Database\+Context.\+Database\+Context (\begin{DoxyParamCaption}\item[{Db\+Context\+Options}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} using specific options 
+
+
+\begin{DoxyParams}{Parameters}
+{\em options} & The options to use.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a28ddcc2b00885b9d50b6750eab93c86b}\label{classKyoo_1_1DatabaseContext_a28ddcc2b00885b9d50b6750eab93c86b}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!DiscardChanges@{DiscardChanges}}
+\index{DiscardChanges@{DiscardChanges}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{DiscardChanges()}{DiscardChanges()}}
+{\footnotesize\ttfamily void Kyoo.\+Database\+Context.\+Discard\+Changes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Delete every changes that are on this context. 
+
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a0f2a8c2be09924814e858b0354975e18}\label{classKyoo_1_1DatabaseContext_a0f2a8c2be09924814e858b0354975e18}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!GetTemporaryObject$<$ T $>$@{GetTemporaryObject$<$ T $>$}}
+\index{GetTemporaryObject$<$ T $>$@{GetTemporaryObject$<$ T $>$}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{GetTemporaryObject$<$ T $>$()}{GetTemporaryObject< T >()}}
+{\footnotesize\ttfamily T Kyoo.\+Database\+Context.\+Get\+Temporary\+Object$<$ T $>$ (\begin{DoxyParamCaption}\item[{T}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a new or an in cache temporary object wih the same ID as the one given 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & If a resource with the same ID is found in the database, it will be used. model will be used otherwise\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the resource\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+A resource that is now tracked by this context.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em class}]\item[{\em T} : {\em I\+Resource}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a2ca03fba8f40c1fc90ee83c80a6cabbd}\label{classKyoo_1_1DatabaseContext_a2ca03fba8f40c1fc90ee83c80a6cabbd}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!IsDuplicateException@{IsDuplicateException}}
+\index{IsDuplicateException@{IsDuplicateException}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{IsDuplicateException()}{IsDuplicateException()}}
+{\footnotesize\ttfamily abstract bool Kyoo.\+Database\+Context.\+Is\+Duplicate\+Exception (\begin{DoxyParamCaption}\item[{Exception}]{ex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Check if the exception is a duplicated exception. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ex} & The exception to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the exception is a duplicate exception. False otherwise
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresContext_a1918751cc3ffee2f18f9625c79139620}{Kyoo.\+Postgresql.\+Postgres\+Context}}.
+
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a93fe8df1282c8dee1de537966e5deebd}\label{classKyoo_1_1DatabaseContext_a93fe8df1282c8dee1de537966e5deebd}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!Like$<$ T $>$@{Like$<$ T $>$}}
+\index{Like$<$ T $>$@{Like$<$ T $>$}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{Like$<$ T $>$()}{Like< T >()}}
+{\footnotesize\ttfamily abstract Expression$<$Func$<$T, bool$>$ $>$ Kyoo.\+Database\+Context.\+Like$<$ T $>$ (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, string $>$$>$}]{query,  }\item[{string}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Perform a case insensitive like operation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & An accessor to get the item that will be checked.\\
+\hline
+{\em format} & The second operator of the like format.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the item to query\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+An expression representing the like query. It can directly be passed to a where call.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresContext_a0210140cd005cfe1a31fcc36fa529745}{Kyoo.\+Postgresql.\+Postgres\+Context}}.
+
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a41f15824689a063d23d021deb90a250b}\label{classKyoo_1_1DatabaseContext_a41f15824689a063d23d021deb90a250b}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!Links$<$ T1, T2 $>$@{Links$<$ T1, T2 $>$}}
+\index{Links$<$ T1, T2 $>$@{Links$<$ T1, T2 $>$}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{Links$<$ T1, T2 $>$()}{Links< T1, T2 >()}}
+{\footnotesize\ttfamily Db\+Set$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Link}{Link}}$<$T1, T2$>$ $>$ Kyoo.\+Database\+Context.\+Links$<$ T1, T2 $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a generic link between two resource types. 
+
+Types are order dependant. You can\textquotesingle{}t inverse the order. Please always put the owner first.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T1} & The first resource type of the relation. It is the owner of the second\\
+\hline
+{\em T2} & The second resource type of the relation. It is the contained resource.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+All links between the two types.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T1} : {\em class}]\item[{\em T1} : {\em I\+Resource}]\item[{\em T2} : {\em class}]\item[{\em T2} : {\em I\+Resource}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_aa6666b138800abf825cfb263a0327f99}\label{classKyoo_1_1DatabaseContext_aa6666b138800abf825cfb263a0327f99}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!OnConfiguring@{OnConfiguring}}
+\index{OnConfiguring@{OnConfiguring}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{OnConfiguring()}{OnConfiguring()}}
+{\footnotesize\ttfamily override void Kyoo.\+Database\+Context.\+On\+Configuring (\begin{DoxyParamCaption}\item[{Db\+Context\+Options\+Builder}]{options\+Builder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Set basic configurations (like preventing query tracking) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em options\+Builder} & An option builder to fill.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a996f8ac4d747a0ff464b1f672a3e09fe}\label{classKyoo_1_1DatabaseContext_a996f8ac4d747a0ff464b1f672a3e09fe}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!OnModelCreating@{OnModelCreating}}
+\index{OnModelCreating@{OnModelCreating}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{OnModelCreating()}{OnModelCreating()}}
+{\footnotesize\ttfamily override void Kyoo.\+Database\+Context.\+On\+Model\+Creating (\begin{DoxyParamCaption}\item[{Model\+Builder}]{model\+Builder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Set database parameters to support every types of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model\+Builder} & The database\textquotesingle{}s model builder.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_acbb56287f716f7662455ee418ce9dc20}\label{classKyoo_1_1DatabaseContext_acbb56287f716f7662455ee418ce9dc20}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!SaveChanges@{SaveChanges}}
+\index{SaveChanges@{SaveChanges}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{SaveChanges()}{SaveChanges()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily override int Kyoo.\+Database\+Context.\+Save\+Changes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Save changes that are applied to this context. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Duplicated\+Item\+Exception} & A duplicated item has been found.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The number of state entries written to the database.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a2b4df69035d229f0a0bc3e5e5bcb80ee}\label{classKyoo_1_1DatabaseContext_a2b4df69035d229f0a0bc3e5e5bcb80ee}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!SaveChanges@{SaveChanges}}
+\index{SaveChanges@{SaveChanges}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{SaveChanges()}{SaveChanges()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily override int Kyoo.\+Database\+Context.\+Save\+Changes (\begin{DoxyParamCaption}\item[{bool}]{accept\+All\+Changes\+On\+Success }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Save changes that are applied to this context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em accept\+All\+Changes\+On\+Success} & Indicates whether Accept\+All\+Changes() is called after the changes have been sent successfully to the database.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Duplicated\+Item\+Exception} & A duplicated item has been found.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The number of state entries written to the database.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a40c4848a333b409afe3ba0e39919224e}\label{classKyoo_1_1DatabaseContext_a40c4848a333b409afe3ba0e39919224e}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!SaveChanges@{SaveChanges}}
+\index{SaveChanges@{SaveChanges}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{SaveChanges()}{SaveChanges()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily int Kyoo.\+Database\+Context.\+Save\+Changes (\begin{DoxyParamCaption}\item[{string}]{duplicate\+Message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Save changes that are applied to this context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duplicate\+Message} & The message that will have the Duplicated\+Item\+Exception (if a duplicate is found).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Duplicated\+Item\+Exception} & A duplicated item has been found.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The number of state entries written to the database.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_afb3256cd1de16119e36d859b2316ee5b}\label{classKyoo_1_1DatabaseContext_afb3256cd1de16119e36d859b2316ee5b}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!SaveChangesAsync@{SaveChangesAsync}}
+\index{SaveChangesAsync@{SaveChangesAsync}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{SaveChangesAsync()}{SaveChangesAsync()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily override async Task$<$int$>$ Kyoo.\+Database\+Context.\+Save\+Changes\+Async (\begin{DoxyParamCaption}\item[{bool}]{accept\+All\+Changes\+On\+Success,  }\item[{Cancellation\+Token}]{cancellation\+Token = {\ttfamily new()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Save changes that are applied to this context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em accept\+All\+Changes\+On\+Success} & Indicates whether Accept\+All\+Changes() is called after the changes have been sent successfully to the database.\\
+\hline
+{\em cancellation\+Token} & A Cancellation\+Token to observe while waiting for the task to complete\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Duplicated\+Item\+Exception} & A duplicated item has been found.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The number of state entries written to the database.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a92fe5db4992d9736c2df1ee7fe6f6564}\label{classKyoo_1_1DatabaseContext_a92fe5db4992d9736c2df1ee7fe6f6564}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!SaveChangesAsync@{SaveChangesAsync}}
+\index{SaveChangesAsync@{SaveChangesAsync}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{SaveChangesAsync()}{SaveChangesAsync()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily override async Task$<$int$>$ Kyoo.\+Database\+Context.\+Save\+Changes\+Async (\begin{DoxyParamCaption}\item[{Cancellation\+Token}]{cancellation\+Token = {\ttfamily new()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Save changes that are applied to this context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cancellation\+Token} & A Cancellation\+Token to observe while waiting for the task to complete\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Duplicated\+Item\+Exception} & A duplicated item has been found.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The number of state entries written to the database.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a9d1d8d98c120b4ca34f7b32c2b2ff4e1}\label{classKyoo_1_1DatabaseContext_a9d1d8d98c120b4ca34f7b32c2b2ff4e1}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!SaveChangesAsync@{SaveChangesAsync}}
+\index{SaveChangesAsync@{SaveChangesAsync}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{SaveChangesAsync()}{SaveChangesAsync()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily async Task$<$int$>$ Kyoo.\+Database\+Context.\+Save\+Changes\+Async (\begin{DoxyParamCaption}\item[{string}]{duplicate\+Message,  }\item[{Cancellation\+Token}]{cancellation\+Token = {\ttfamily new()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Save changes that are applied to this context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duplicate\+Message} & The message that will have the Duplicated\+Item\+Exception (if a duplicate is found).\\
+\hline
+{\em cancellation\+Token} & A Cancellation\+Token to observe while waiting for the task to complete\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Duplicated\+Item\+Exception} & A duplicated item has been found.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The number of state entries written to the database.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a275503eef4f250767cb80b687fd050c9}\label{classKyoo_1_1DatabaseContext_a275503eef4f250767cb80b687fd050c9}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!SaveIfNoDuplicates@{SaveIfNoDuplicates}}
+\index{SaveIfNoDuplicates@{SaveIfNoDuplicates}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{SaveIfNoDuplicates()}{SaveIfNoDuplicates()}}
+{\footnotesize\ttfamily async Task$<$int$>$ Kyoo.\+Database\+Context.\+Save\+If\+No\+Duplicates (\begin{DoxyParamCaption}\item[{Cancellation\+Token}]{cancellation\+Token = {\ttfamily new()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Save changes if no duplicates are found. If one is found, no change are saved but the current changes are no discarded. The current context will still hold those invalid changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cancellation\+Token} & A Cancellation\+Token to observe while waiting for the task to complete\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of state entries written to the database or -\/1 if a duplicate exist.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a329b2447268503117cb67d6494dbe335}\label{classKyoo_1_1DatabaseContext_a329b2447268503117cb67d6494dbe335}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!SaveOrRetry$<$ T $>$@{SaveOrRetry$<$ T $>$}}
+\index{SaveOrRetry$<$ T $>$@{SaveOrRetry$<$ T $>$}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{SaveOrRetry$<$ T $>$()}{SaveOrRetry< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Task$<$T$>$ Kyoo.\+Database\+Context.\+Save\+Or\+Retry$<$ T $>$ (\begin{DoxyParamCaption}\item[{T}]{obj,  }\item[{Func$<$ T, int, T $>$}]{on\+Fail,  }\item[{Cancellation\+Token}]{cancellation\+Token = {\ttfamily new()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Save items or retry with a custom method if a duplicate is found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The item to save (other changes of this context will also be saved)\\
+\hline
+{\em on\+Fail} & A function to run on fail, the obj param wil be mapped. The second parameter is the current retry number.\\
+\hline
+{\em cancellation\+Token} & A Cancellation\+Token to observe while waiting for the task to complete\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the item to save\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The number of state entries written to the database.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a823b7def6ec76901e7f5807df7f08ed5}\label{classKyoo_1_1DatabaseContext_a823b7def6ec76901e7f5807df7f08ed5}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!SaveOrRetry$<$ T $>$@{SaveOrRetry$<$ T $>$}}
+\index{SaveOrRetry$<$ T $>$@{SaveOrRetry$<$ T $>$}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{SaveOrRetry$<$ T $>$()}{SaveOrRetry< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily async Task$<$T$>$ Kyoo.\+Database\+Context.\+Save\+Or\+Retry$<$ T $>$ (\begin{DoxyParamCaption}\item[{T}]{obj,  }\item[{Func$<$ T, int, T $>$}]{on\+Fail,  }\item[{int}]{recurse,  }\item[{Cancellation\+Token}]{cancellation\+Token = {\ttfamily new()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Save items or retry with a custom method if a duplicate is found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The item to save (other changes of this context will also be saved)\\
+\hline
+{\em on\+Fail} & A function to run on fail, the obj param wil be mapped. The second parameter is the current retry number.\\
+\hline
+{\em recurse} & The current retry number.\\
+\hline
+{\em cancellation\+Token} & A Cancellation\+Token to observe while waiting for the task to complete\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the item to save\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The number of state entries written to the database.
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_abe08d1d096b15040efc04eeb41c2969f}\label{classKyoo_1_1DatabaseContext_abe08d1d096b15040efc04eeb41c2969f}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!Collections@{Collections}}
+\index{Collections@{Collections}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{Collections}{Collections}}
+{\footnotesize\ttfamily Db\+Set$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Collection}{Collection}}$>$ Kyoo.\+Database\+Context.\+Collections\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+All collections of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Collection. 
+
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a6762f2a3a159fd01060f4769dcfc8c08}\label{classKyoo_1_1DatabaseContext_a6762f2a3a159fd01060f4769dcfc8c08}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!Episodes@{Episodes}}
+\index{Episodes@{Episodes}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{Episodes}{Episodes}}
+{\footnotesize\ttfamily Db\+Set$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Database\+Context.\+Episodes\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+All episodes of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Episode. 
+
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_ac8a351d441b1f71372d6642a47d0825d}\label{classKyoo_1_1DatabaseContext_ac8a351d441b1f71372d6642a47d0825d}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!Genres@{Genres}}
+\index{Genres@{Genres}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{Genres}{Genres}}
+{\footnotesize\ttfamily Db\+Set$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Genre}{Genre}}$>$ Kyoo.\+Database\+Context.\+Genres\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+All genres of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See \mbox{\hyperlink{classKyoo_1_1DatabaseContext_ac8a351d441b1f71372d6642a47d0825d}{Genres}}. 
+
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a17be6735ef34ea415965c968285dbc8d}\label{classKyoo_1_1DatabaseContext_a17be6735ef34ea415965c968285dbc8d}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!Libraries@{Libraries}}
+\index{Libraries@{Libraries}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{Libraries}{Libraries}}
+{\footnotesize\ttfamily Db\+Set$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}$>$ Kyoo.\+Database\+Context.\+Libraries\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+All libraries of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Library. 
+
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a04df6b08a8477ee78594d4fc1dcf9a12}\label{classKyoo_1_1DatabaseContext_a04df6b08a8477ee78594d4fc1dcf9a12}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!MetadataIds@{MetadataIds}}
+\index{MetadataIds@{MetadataIds}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{MetadataIds}{MetadataIds}}
+{\footnotesize\ttfamily Db\+Set$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}}$>$ Kyoo.\+Database\+Context.\+Metadata\+Ids\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+All metadata\+I\+Ds (External\+I\+Ds) of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Metadata\+ID. 
+
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a5effb98999b7491519cfae4c2466b37b}\label{classKyoo_1_1DatabaseContext_a5effb98999b7491519cfae4c2466b37b}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!People@{People}}
+\index{People@{People}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{People}{People}}
+{\footnotesize\ttfamily Db\+Set$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1People}{People}}$>$ Kyoo.\+Database\+Context.\+People\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+All people of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See \mbox{\hyperlink{classKyoo_1_1DatabaseContext_a5effb98999b7491519cfae4c2466b37b}{People}}. 
+
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a25bc80e6feb6fef9482f7498aee8bcac}\label{classKyoo_1_1DatabaseContext_a25bc80e6feb6fef9482f7498aee8bcac}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!PeopleRoles@{PeopleRoles}}
+\index{PeopleRoles@{PeopleRoles}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{PeopleRoles}{PeopleRoles}}
+{\footnotesize\ttfamily Db\+Set$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1PeopleRole}{People\+Role}}$>$ Kyoo.\+Database\+Context.\+People\+Roles\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+All people\textquotesingle{}s role. See People\+Role. 
+
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_adccf51d3038aac7e3054974c8b17a4a2}\label{classKyoo_1_1DatabaseContext_adccf51d3038aac7e3054974c8b17a4a2}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!Providers@{Providers}}
+\index{Providers@{Providers}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{Providers}{Providers}}
+{\footnotesize\ttfamily Db\+Set$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Provider}{Provider}}$>$ Kyoo.\+Database\+Context.\+Providers\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+All providers of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Provider. 
+
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_abe27faddb091c20bc17bdf9660b78868}\label{classKyoo_1_1DatabaseContext_abe27faddb091c20bc17bdf9660b78868}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!Seasons@{Seasons}}
+\index{Seasons@{Seasons}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{Seasons}{Seasons}}
+{\footnotesize\ttfamily Db\+Set$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ Kyoo.\+Database\+Context.\+Seasons\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+All seasons of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Season. 
+
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_ae2753b3e7f26f7ac1717b46ae2531210}\label{classKyoo_1_1DatabaseContext_ae2753b3e7f26f7ac1717b46ae2531210}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!Shows@{Shows}}
+\index{Shows@{Shows}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{Shows}{Shows}}
+{\footnotesize\ttfamily Db\+Set$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}$>$ Kyoo.\+Database\+Context.\+Shows\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+All shows of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Show. 
+
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a9c8f7ce7c42921eed804ea0c521d5353}\label{classKyoo_1_1DatabaseContext_a9c8f7ce7c42921eed804ea0c521d5353}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!Studios@{Studios}}
+\index{Studios@{Studios}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{Studios}{Studios}}
+{\footnotesize\ttfamily Db\+Set$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Studio}{Studio}}$>$ Kyoo.\+Database\+Context.\+Studios\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+All studios of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Studio. 
+
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a55080cf8bc9fdf2cc821a22fdaf561c1}\label{classKyoo_1_1DatabaseContext_a55080cf8bc9fdf2cc821a22fdaf561c1}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!Tracks@{Tracks}}
+\index{Tracks@{Tracks}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{Tracks}{Tracks}}
+{\footnotesize\ttfamily Db\+Set$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}}$>$ Kyoo.\+Database\+Context.\+Tracks\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+All tracks of \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. See Track. 
+
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a68728fdf6dc1601596ed35bd9b6170bf}\label{classKyoo_1_1DatabaseContext_a68728fdf6dc1601596ed35bd9b6170bf}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!Users@{Users}}
+\index{Users@{Users}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{Users}{Users}}
+{\footnotesize\ttfamily Db\+Set$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1User}{User}}$>$ Kyoo.\+Database\+Context.\+Users\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The list of registered users. 
+
+\mbox{\Hypertarget{classKyoo_1_1DatabaseContext_a778dc4a78ad56b3408cdd3a72ee359e7}\label{classKyoo_1_1DatabaseContext_a778dc4a78ad56b3408cdd3a72ee359e7}} 
+\index{Kyoo.DatabaseContext@{Kyoo.DatabaseContext}!WatchedEpisodes@{WatchedEpisodes}}
+\index{WatchedEpisodes@{WatchedEpisodes}!Kyoo.DatabaseContext@{Kyoo.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{WatchedEpisodes}{WatchedEpisodes}}
+{\footnotesize\ttfamily Db\+Set$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1WatchedEpisode}{Watched\+Episode}}$>$ Kyoo.\+Database\+Context.\+Watched\+Episodes\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Episodes with a watch percentage. See Watched\+Episode 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common\+A\+P\+I/\mbox{\hyperlink{DatabaseContext_8cs}{Database\+Context.\+cs}}\end{DoxyCompactItemize}

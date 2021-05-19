@@ -1,0 +1,186 @@
+\hypertarget{interfaceKyoo_1_1Controllers_1_1IPlugin}{}\doxysection{Kyoo.\+Controllers.\+I\+Plugin Interface Reference}
+\label{interfaceKyoo_1_1Controllers_1_1IPlugin}\index{Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}}
+
+
+A common interface used to discord plugins  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+I\+Plugin\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceKyoo_1_1Controllers_1_1IPlugin__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+I\+Plugin\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{interfaceKyoo_1_1Controllers_1_1IPlugin__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin_a8dc70a134829625351ba6cbfb0b3d471}{Configure}} (I\+Service\+Collection services, I\+Collection$<$ Type $>$ available\+Types)
+\begin{DoxyCompactList}\small\item\em A configure method that will be run on plugin\textquotesingle{}s startup. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin_ae30f22818dce78b83774285abec4a0ad}{Configure\+Asp\+Net}} (I\+Application\+Builder app)
+\begin{DoxyCompactList}\small\item\em An optional configuration step to allow a plugin to change asp net configurations. W\+A\+R\+N\+I\+NG\+: This is only called on \mbox{\hyperlink{namespaceKyoo}{Kyoo}}\textquotesingle{}s startup so you must restart the app to apply this changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin_a5b7cb8e8779111df6a1258dc155aac24}{Initialize}} (I\+Service\+Provider provider)
+\begin{DoxyCompactList}\small\item\em An optional function to execute and initialize your plugin. It can be used to initialize a database connection, fill initial data or anything. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin_a486ff09686ec21c17dae6e36771454de}{Slug}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A slug to identify this plugin in queries. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin_a4277017db23ede943a2047c64a0db6b0}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name of the plugin \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin_a84b2e66b990b1b260589b8d0b7da9222}{Description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The description of this plugin. This will be displayed on the \char`\"{}installed plugins\char`\"{} page. \end{DoxyCompactList}\item 
+I\+Collection$<$ Type $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin_ae362b0e13121b0cedc86d3d23c58989e}{Provides}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A list of services that are provided by this service. This allow other plugins to declare dependencies \end{DoxyCompactList}\item 
+I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConditionalProvide}{Conditional\+Provide}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin_ac68d8a3e419c4ebb843857d4b13fa7a4}{Conditional\+Provides}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A list of types that will be provided only if a condition is met. The condition can be an arbitrary method or a condition based on other type availability. For more information, see \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin_ac68d8a3e419c4ebb843857d4b13fa7a4}{Conditional\+Provides}}. \end{DoxyCompactList}\item 
+I\+Collection$<$ Type $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin_a256b9da8616b2c5ffe87a1a8d3e0f694}{Requires}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A list of services that are required by this plugin. You can put services that you provide conditionally here if you want. \mbox{\hyperlink{namespaceKyoo}{Kyoo}} will warn the user that this plugin can\textquotesingle{}t be loaded if a required service is not found. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A common interface used to discord plugins 
+
+You can inject services in the \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}} constructor. You should only inject well known services like an I\+Logger, I\+Configuration or I\+Web\+Host\+Environment.
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IPlugin_a8dc70a134829625351ba6cbfb0b3d471}\label{interfaceKyoo_1_1Controllers_1_1IPlugin_a8dc70a134829625351ba6cbfb0b3d471}} 
+\index{Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}!Configure@{Configure}}
+\index{Configure@{Configure}!Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}}
+\doxysubsubsection{\texorpdfstring{Configure()}{Configure()}}
+{\footnotesize\ttfamily void Kyoo.\+Controllers.\+I\+Plugin.\+Configure (\begin{DoxyParamCaption}\item[{I\+Service\+Collection}]{services,  }\item[{I\+Collection$<$ Type $>$}]{available\+Types }\end{DoxyParamCaption})}
+
+
+
+A configure method that will be run on plugin\textquotesingle{}s startup. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em services} & A service container to register new services.\\
+\hline
+{\em available\+Types} & The list of types that are available for this instance. This can be used for conditional type. See Provider\+Condition.\+Has(\+System.\+Type,\+System.\+Collections.\+Generic.\+I\+Collection$<$\+System.\+Type$>$) or Provider\+Condition.\+Has(\+System.\+Collections.\+Generic.\+I\+Collection$<$\+System.\+Type$>$,\+System.\+Collections.\+Generic.\+I\+Collection$<$\+System.\+Type$>$)$>$ You can\textquotesingle{}t simply check on the service collection because some dependencies might be registered after your plugin. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1CoreModule_a801fac5cb99774640007c0ee07bab466}{Kyoo.\+Core\+Module}}, \mbox{\hyperlink{classKyoo_1_1Authentication_1_1AuthenticationModule_a09b21939ceb29dfbcd067b79d31b85f4}{Kyoo.\+Authentication.\+Authentication\+Module}}, and \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresModule_a4c8960377f3821c60662b84b319b3360}{Kyoo.\+Postgresql.\+Postgres\+Module}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IPlugin_ae30f22818dce78b83774285abec4a0ad}\label{interfaceKyoo_1_1Controllers_1_1IPlugin_ae30f22818dce78b83774285abec4a0ad}} 
+\index{Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}!ConfigureAspNet@{ConfigureAspNet}}
+\index{ConfigureAspNet@{ConfigureAspNet}!Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}}
+\doxysubsubsection{\texorpdfstring{ConfigureAspNet()}{ConfigureAspNet()}}
+{\footnotesize\ttfamily void Kyoo.\+Controllers.\+I\+Plugin.\+Configure\+Asp\+Net (\begin{DoxyParamCaption}\item[{I\+Application\+Builder}]{app }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+An optional configuration step to allow a plugin to change asp net configurations. W\+A\+R\+N\+I\+NG\+: This is only called on \mbox{\hyperlink{namespaceKyoo}{Kyoo}}\textquotesingle{}s startup so you must restart the app to apply this changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & The Asp.\+Net application builder. On most case it is not needed but you can use it to add asp net functionalities.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1CoreModule_a9875b376b791168cb905fbd129117e87}{Kyoo.\+Core\+Module}}, and \mbox{\hyperlink{classKyoo_1_1Authentication_1_1AuthenticationModule_a9641d25d5646c732ba8a041f3169c438}{Kyoo.\+Authentication.\+Authentication\+Module}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IPlugin_a5b7cb8e8779111df6a1258dc155aac24}\label{interfaceKyoo_1_1Controllers_1_1IPlugin_a5b7cb8e8779111df6a1258dc155aac24}} 
+\index{Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Kyoo.\+Controllers.\+I\+Plugin.\+Initialize (\begin{DoxyParamCaption}\item[{I\+Service\+Provider}]{provider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+An optional function to execute and initialize your plugin. It can be used to initialize a database connection, fill initial data or anything. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em provider} & A service provider to request services\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Postgresql_1_1PostgresModule_a72098c86b173af30e7ebbd2ccfc565a7}{Kyoo.\+Postgresql.\+Postgres\+Module}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IPlugin_ac68d8a3e419c4ebb843857d4b13fa7a4}\label{interfaceKyoo_1_1Controllers_1_1IPlugin_ac68d8a3e419c4ebb843857d4b13fa7a4}} 
+\index{Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}!ConditionalProvides@{ConditionalProvides}}
+\index{ConditionalProvides@{ConditionalProvides}!Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}}
+\doxysubsubsection{\texorpdfstring{ConditionalProvides}{ConditionalProvides}}
+{\footnotesize\ttfamily I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConditionalProvide}{Conditional\+Provide}}$>$ Kyoo.\+Controllers.\+I\+Plugin.\+Conditional\+Provides\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+A list of types that will be provided only if a condition is met. The condition can be an arbitrary method or a condition based on other type availability. For more information, see \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin_ac68d8a3e419c4ebb843857d4b13fa7a4}{Conditional\+Provides}}. 
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IPlugin_a84b2e66b990b1b260589b8d0b7da9222}\label{interfaceKyoo_1_1Controllers_1_1IPlugin_a84b2e66b990b1b260589b8d0b7da9222}} 
+\index{Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}!Description@{Description}}
+\index{Description@{Description}!Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}}
+\doxysubsubsection{\texorpdfstring{Description}{Description}}
+{\footnotesize\ttfamily string Kyoo.\+Controllers.\+I\+Plugin.\+Description\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The description of this plugin. This will be displayed on the \char`\"{}installed plugins\char`\"{} page. 
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IPlugin_a4277017db23ede943a2047c64a0db6b0}\label{interfaceKyoo_1_1Controllers_1_1IPlugin_a4277017db23ede943a2047c64a0db6b0}} 
+\index{Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}!Name@{Name}}
+\index{Name@{Name}!Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string Kyoo.\+Controllers.\+I\+Plugin.\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The name of the plugin 
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IPlugin_ae362b0e13121b0cedc86d3d23c58989e}\label{interfaceKyoo_1_1Controllers_1_1IPlugin_ae362b0e13121b0cedc86d3d23c58989e}} 
+\index{Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}!Provides@{Provides}}
+\index{Provides@{Provides}!Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}}
+\doxysubsubsection{\texorpdfstring{Provides}{Provides}}
+{\footnotesize\ttfamily I\+Collection$<$Type$>$ Kyoo.\+Controllers.\+I\+Plugin.\+Provides\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+A list of services that are provided by this service. This allow other plugins to declare dependencies 
+
+You should put the type\textquotesingle{}s interface that will be register in configure. \mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IPlugin_a256b9da8616b2c5ffe87a1a8d3e0f694}\label{interfaceKyoo_1_1Controllers_1_1IPlugin_a256b9da8616b2c5ffe87a1a8d3e0f694}} 
+\index{Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}!Requires@{Requires}}
+\index{Requires@{Requires}!Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}}
+\doxysubsubsection{\texorpdfstring{Requires}{Requires}}
+{\footnotesize\ttfamily I\+Collection$<$Type$>$ Kyoo.\+Controllers.\+I\+Plugin.\+Requires\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+A list of services that are required by this plugin. You can put services that you provide conditionally here if you want. \mbox{\hyperlink{namespaceKyoo}{Kyoo}} will warn the user that this plugin can\textquotesingle{}t be loaded if a required service is not found. 
+
+Put here the most complete type that are needed for your plugin to work. If you need a \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryManager}{Library\+Manager}}, put typeof(\+I\+Library\+Manager). \mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IPlugin_a486ff09686ec21c17dae6e36771454de}\label{interfaceKyoo_1_1Controllers_1_1IPlugin_a486ff09686ec21c17dae6e36771454de}} 
+\index{Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}!Slug@{Slug}}
+\index{Slug@{Slug}!Kyoo.Controllers.IPlugin@{Kyoo.Controllers.IPlugin}}
+\doxysubsubsection{\texorpdfstring{Slug}{Slug}}
+{\footnotesize\ttfamily string Kyoo.\+Controllers.\+I\+Plugin.\+Slug\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+A slug to identify this plugin in queries. 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Controllers/\mbox{\hyperlink{IPlugin_8cs}{I\+Plugin.\+cs}}\end{DoxyCompactItemize}

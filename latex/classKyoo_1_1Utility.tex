@@ -1,0 +1,730 @@
+\hypertarget{classKyoo_1_1Utility}{}\doxysection{Kyoo.\+Utility Class Reference}
+\label{classKyoo_1_1Utility}\index{Kyoo.Utility@{Kyoo.Utility}}
+
+
+A set of utility functions that can be used everywhere.  
+
+
+
+
+Collaboration diagram for Kyoo.\+Utility\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classKyoo_1_1Utility__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classKyoo_1_1Utility_ab6bfcadef485ded03f990edfc62ce093}{Is\+Property\+Expression}} (Lambda\+Expression ex)
+\begin{DoxyCompactList}\small\item\em Is the lambda expression a member (like x =$>$ x.\+Body). \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{classKyoo_1_1Utility_aa397e5f5ea9434a6341557f35c485c1a}{Get\+Property\+Name}} (Lambda\+Expression ex)
+\begin{DoxyCompactList}\small\item\em Get the name of a property. Useful for selectors as members ex\+: Load(x =$>$ x.\+Shows) \end{DoxyCompactList}\item 
+static object \mbox{\hyperlink{classKyoo_1_1Utility_a56e2bbb68aac7347b59fd9068ce3c654}{Get\+Value}} (\mbox{[}Not\+Null\mbox{]} this Member\+Info member, \mbox{[}Not\+Null\mbox{]} object obj)
+\begin{DoxyCompactList}\small\item\em Get the value of a member (property or field) \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{classKyoo_1_1Utility_a96adb7cc03c5ba819905b5b0fa32c102}{To\+Slug}} (string str)
+\begin{DoxyCompactList}\small\item\em Slugify a string (Replace spaces by -\/, Uniformize accents é -\/$>$ e) \end{DoxyCompactList}\item 
+static T\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classKyoo_1_1Utility_a2c68f6f490f653c0ac3dcb17dc78ac74}{Merge\+Lists$<$ T $>$}} (I\+Enumerable$<$ T $>$ first, I\+Enumerable$<$ T $>$ second, Func$<$ T, T, bool $>$ is\+Equal=null)
+\begin{DoxyCompactList}\small\item\em Merge two lists, can keep duplicates or remove them. \end{DoxyCompactList}\item 
+static T \mbox{\hyperlink{classKyoo_1_1Utility_ad612a8130b53f5ed5470c7b88cc07100}{Assign$<$ T $>$}} (T first, T second)
+\begin{DoxyCompactList}\small\item\em Set every fields of first to those of second. Ignore fields marked with the Not\+Mergeable\+Attribute attribute At the end, the On\+Merge method of first will be called if first is a I\+On\+Merge \end{DoxyCompactList}\item 
+static T \mbox{\hyperlink{classKyoo_1_1Utility_a0ef3e9cfb388e791627a2f05538c8d51}{Complete$<$ T $>$}} (\mbox{[}Not\+Null\mbox{]} T first, \mbox{[}Can\+Be\+Null\mbox{]} T second, Func$<$ Property\+Info, bool $>$ where=null)
+\begin{DoxyCompactList}\small\item\em Set every default values of first to the value of second. ex\+: \{id\+: 0, slug\+: \char`\"{}test\char`\"{}\}, \{id\+: 4, slug\+: \char`\"{}foo\char`\"{}\} -\/$>$ \{id\+: 4, slug\+: \char`\"{}test\char`\"{}\}. At the end, the On\+Merge method of first will be called if first is a I\+On\+Merge \end{DoxyCompactList}\item 
+static T \mbox{\hyperlink{classKyoo_1_1Utility_a4bda6031a5666f96b66fb1289ea12408}{Merge$<$ T $>$}} (T first, T second)
+\begin{DoxyCompactList}\small\item\em An advanced \mbox{\hyperlink{classKyoo_1_1Utility_a0ef3e9cfb388e791627a2f05538c8d51}{Complete$<$\+T$>$}} function. This will set missing values of first to the corresponding values of second. Enumerable will be merged (concatenated). At the end, the On\+Merge method of first will be called if first is a I\+On\+Merge. \end{DoxyCompactList}\item 
+static T \mbox{\hyperlink{classKyoo_1_1Utility_ac680c78e2b27518ef2679c2eda11dc36}{Nullify$<$ T $>$}} (T obj)
+\begin{DoxyCompactList}\small\item\em Set every fields of obj to the default value. \end{DoxyCompactList}\item 
+static I\+Enumerable$<$ Type $>$ \mbox{\hyperlink{classKyoo_1_1Utility_ad2c4a6cd30b7d152869b65ec3d3fc922}{Get\+Inheritance\+Tree}} (\mbox{[}Not\+Null\mbox{]} this Type type)
+\begin{DoxyCompactList}\small\item\em Return every Type in the inheritance tree of the parameter (interfaces are not returned) \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classKyoo_1_1Utility_a3dab47495430e03008e5964fa549df7a}{Is\+Of\+Generic\+Type}} (\mbox{[}Not\+Null\mbox{]} object obj, \mbox{[}Not\+Null\mbox{]} Type generic\+Type)
+\begin{DoxyCompactList}\small\item\em Check if obj inherit from a generic type generic\+Type. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classKyoo_1_1Utility_af0a82f02b2532d6e5527acd2bf161edf}{Is\+Of\+Generic\+Type}} (\mbox{[}Not\+Null\mbox{]} Type type, \mbox{[}Not\+Null\mbox{]} Type generic\+Type)
+\begin{DoxyCompactList}\small\item\em Check if type inherit from a generic type generic\+Type. \end{DoxyCompactList}\item 
+static Type \mbox{\hyperlink{classKyoo_1_1Utility_ace09f255a21eb85f08232e28b4f17f89}{Get\+Generic\+Definition}} (\mbox{[}Not\+Null\mbox{]} Type type, \mbox{[}Not\+Null\mbox{]} Type generic\+Type)
+\begin{DoxyCompactList}\small\item\em Get the generic definition of generic\+Type. For example, calling this function with List$<$string$>$ and typeof(I\+Enumerable$<$$>$) will return I\+Enumerable$<$string$>$ \end{DoxyCompactList}\item 
+static I\+Enumerable$<$ T2 $>$ \mbox{\hyperlink{classKyoo_1_1Utility_aa36c41bcf95bad7237d38e64bbf9b97a}{Map$<$ T, T2 $>$}} (\mbox{[}Can\+Be\+Null\mbox{]} this I\+Enumerable$<$ T $>$ self, \mbox{[}Not\+Null\mbox{]} Func$<$ T, int, T2 $>$ mapper)
+\begin{DoxyCompactList}\small\item\em A Select where the index of the item can be used. \end{DoxyCompactList}\item 
+static async I\+Async\+Enumerable$<$ T2 $>$ \mbox{\hyperlink{classKyoo_1_1Utility_ad614348e8912c0f9d66abb6979b2dc5e}{Map\+Async$<$ T, T2 $>$}} (\mbox{[}Can\+Be\+Null\mbox{]} this I\+Enumerable$<$ T $>$ self, \mbox{[}Not\+Null\mbox{]} Func$<$ T, int, Task$<$ T2 $>$$>$ mapper)
+\begin{DoxyCompactList}\small\item\em A map where the mapping function is asynchronous. Note\+: \mbox{\hyperlink{classKyoo_1_1Utility_ac40800ff867b2429fe13ccb425c94d23}{Select\+Async$<$\+T,\+T2$>$}} might interest you. \end{DoxyCompactList}\item 
+static async I\+Async\+Enumerable$<$ T2 $>$ \mbox{\hyperlink{classKyoo_1_1Utility_ac40800ff867b2429fe13ccb425c94d23}{Select\+Async$<$ T, T2 $>$}} (\mbox{[}Can\+Be\+Null\mbox{]} this I\+Enumerable$<$ T $>$ self, \mbox{[}Not\+Null\mbox{]} Func$<$ T, Task$<$ T2 $>$$>$ mapper)
+\begin{DoxyCompactList}\small\item\em An asynchronous version of Select. \end{DoxyCompactList}\item 
+static async Task$<$ List$<$ T $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Utility_ae3ca8559fe176dddf453c348a3d8a765}{To\+List\+Async$<$ T $>$}} (\mbox{[}Not\+Null\mbox{]} this I\+Async\+Enumerable$<$ T $>$ self)
+\begin{DoxyCompactList}\small\item\em Convert an Async\+Enumerable to a List by waiting for every item. \end{DoxyCompactList}\item 
+static I\+Enumerable$<$ T $>$ \mbox{\hyperlink{classKyoo_1_1Utility_a17bd661128d9a384e9661af005a13807}{If\+Empty$<$ T $>$}} (this I\+Enumerable$<$ T $>$ self, Action action)
+\begin{DoxyCompactList}\small\item\em If the enumerable is empty, execute an action. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classKyoo_1_1Utility_a5fd64a3452f4b5725ae0937b629e870f}{For\+Each$<$ T $>$}} (\mbox{[}Can\+Be\+Null\mbox{]} this I\+Enumerable$<$ T $>$ self, Action$<$ T $>$ action)
+\begin{DoxyCompactList}\small\item\em A foreach used as a function with a little specificity\+: the list can be null. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classKyoo_1_1Utility_a9e330e49a72dd1d8e505c0352cc6d319}{For\+Each}} (\mbox{[}Can\+Be\+Null\mbox{]} this I\+Enumerable self, Action$<$ object $>$ action)
+\begin{DoxyCompactList}\small\item\em A foreach used as a function with a little specificity\+: the list can be null. \end{DoxyCompactList}\item 
+static async Task \mbox{\hyperlink{classKyoo_1_1Utility_a5795464b587b5a9a3e3c8a0c78ecf7cb}{For\+Each\+Async$<$ T $>$}} (\mbox{[}Can\+Be\+Null\mbox{]} this I\+Enumerable$<$ T $>$ self, Func$<$ T, Task $>$ action)
+\item 
+static async Task \mbox{\hyperlink{classKyoo_1_1Utility_a1dc68127c095d32167019f4c99cfc3fb}{For\+Each\+Async$<$ T $>$}} (\mbox{[}Can\+Be\+Null\mbox{]} this I\+Async\+Enumerable$<$ T $>$ self, Action$<$ T $>$ action)
+\item 
+static async Task \mbox{\hyperlink{classKyoo_1_1Utility_a94a92ca11cf4151ab9d46f624ab8cb39}{For\+Each\+Async}} (\mbox{[}Can\+Be\+Null\mbox{]} this I\+Enumerable self, Func$<$ object, Task $>$ action)
+\item 
+static Method\+Info \mbox{\hyperlink{classKyoo_1_1Utility_a90c3e68f35d6d9256e4b2cfd98641ff7}{Get\+Method}} (Type type, Binding\+Flags flag, string name, Type\mbox{[}$\,$\mbox{]} generics, object\mbox{[}$\,$\mbox{]} args)
+\item 
+static T \mbox{\hyperlink{classKyoo_1_1Utility_a0d1cca8ee0242ffb967ac0f59ba3ef6f}{Run\+Generic\+Method$<$ T $>$}} (\mbox{[}Not\+Null\mbox{]} Type owner, \mbox{[}Not\+Null\mbox{]} string method\+Name, \mbox{[}Not\+Null\mbox{]} Type type, params object\mbox{[}$\,$\mbox{]} args)
+\item 
+static T \mbox{\hyperlink{classKyoo_1_1Utility_a28a3451d9d08baa634e166838163a4d3}{Run\+Generic\+Method$<$ T $>$}} (\mbox{[}Not\+Null\mbox{]} Type owner, \mbox{[}Not\+Null\mbox{]} string method\+Name, \mbox{[}Not\+Null\mbox{]} Type\mbox{[}$\,$\mbox{]} types, params object\mbox{[}$\,$\mbox{]} args)
+\item 
+static T \mbox{\hyperlink{classKyoo_1_1Utility_a0666940415593adaa7a8ab02133b4f4e}{Run\+Generic\+Method$<$ T $>$}} (\mbox{[}Not\+Null\mbox{]} object instance, \mbox{[}Not\+Null\mbox{]} string method\+Name, \mbox{[}Not\+Null\mbox{]} Type type, params object\mbox{[}$\,$\mbox{]} args)
+\item 
+static T \mbox{\hyperlink{classKyoo_1_1Utility_ac523e8066c549c7b002e25594c887d95}{Run\+Generic\+Method$<$ T $>$}} (\mbox{[}Not\+Null\mbox{]} object instance, \mbox{[}Not\+Null\mbox{]} string method\+Name, \mbox{[}Not\+Null\mbox{]} Type\mbox{[}$\,$\mbox{]} types, params object\mbox{[}$\,$\mbox{]} args)
+\item 
+static Type \mbox{\hyperlink{classKyoo_1_1Utility_a9a1189cd79755d7e28fe11ee6280b677}{Get\+Enumerable\+Type}} (\mbox{[}No\+Enumeration\mbox{]}\mbox{[}Not\+Null\mbox{]} I\+Enumerable list)
+\item 
+static Type \mbox{\hyperlink{classKyoo_1_1Utility_a6b175e408ecbaf286c7052423791b989}{Get\+Enumerable\+Type}} (\mbox{[}Not\+Null\mbox{]} Type list\+Type)
+\item 
+static I\+Enumerable$<$ List$<$ T $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Utility_a512e162c3c51fddb36b1be3f63f270bc}{Batch\+By$<$ T $>$}} (this List$<$ T $>$ list, int count\+Per\+List)
+\item 
+static I\+Enumerable$<$ T\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{classKyoo_1_1Utility_a5495799e683bef4c27f775a675ee7488}{Batch\+By$<$ T $>$}} (this I\+Enumerable$<$ T $>$ list, int count\+Per\+List)
+\item 
+static string \mbox{\hyperlink{classKyoo_1_1Utility_aac33d52ea9305b53f1ac0d39de044034}{To\+Query\+String}} (this Dictionary$<$ string, string $>$ query)
+\item 
+static void \mbox{\hyperlink{classKyoo_1_1Utility_a2cea497e9271272e1c7fb412f88744b4}{Re\+Throw}} (\mbox{[}Not\+Null\mbox{]} this Exception ex)
+\item 
+static Task$<$ T $>$ \mbox{\hyperlink{classKyoo_1_1Utility_a9b820644b8ee239b2eff6734c24ed1c7}{Then$<$ T $>$}} (this Task$<$ T $>$ task, Action$<$ T $>$ map)
+\item 
+static Task$<$ T\+Result $>$ \mbox{\hyperlink{classKyoo_1_1Utility_ad4ab5d68c8b01fe0341fbdb8126aacd9}{Map$<$ T, T\+Result $>$}} (this Task$<$ T $>$ task, Func$<$ T, T\+Result $>$ map)
+\item 
+static Task$<$ T $>$ \mbox{\hyperlink{classKyoo_1_1Utility_a71608ba26b5843c53df1515c93f9204f}{Cast$<$ T $>$}} (this Task task)
+\item 
+static string \mbox{\hyperlink{classKyoo_1_1Utility_abb3305b5ebb39fd3f3c7bba718c515df}{Friendly\+Name}} (this Type type)
+\begin{DoxyCompactList}\small\item\em Get a friendly type name (supporting generics) For example a list of string will be displayed as List$<$string$>$ and not as List\`{}1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A set of utility functions that can be used everywhere. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Utility_ad612a8130b53f5ed5470c7b88cc07100}\label{classKyoo_1_1Utility_ad612a8130b53f5ed5470c7b88cc07100}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!Assign$<$ T $>$@{Assign$<$ T $>$}}
+\index{Assign$<$ T $>$@{Assign$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{Assign$<$ T $>$()}{Assign< T >()}}
+{\footnotesize\ttfamily static T Kyoo.\+Utility.\+Assign$<$ T $>$ (\begin{DoxyParamCaption}\item[{T}]{first,  }\item[{T}]{second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Set every fields of first to those of second. Ignore fields marked with the Not\+Mergeable\+Attribute attribute At the end, the On\+Merge method of first will be called if first is a I\+On\+Merge 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & The object to assign\\
+\hline
+{\em second} & The object containing new values\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Fields of T will be used\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+first
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Utility_a5495799e683bef4c27f775a675ee7488}\label{classKyoo_1_1Utility_a5495799e683bef4c27f775a675ee7488}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!BatchBy$<$ T $>$@{BatchBy$<$ T $>$}}
+\index{BatchBy$<$ T $>$@{BatchBy$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{BatchBy$<$ T $>$()}{BatchBy< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static I\+Enumerable$<$T\mbox{[}$\,$\mbox{]}$>$ Kyoo.\+Utility.\+Batch\+By$<$ T $>$ (\begin{DoxyParamCaption}\item[{this I\+Enumerable$<$ T $>$}]{list,  }\item[{int}]{count\+Per\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Utility_a512e162c3c51fddb36b1be3f63f270bc}\label{classKyoo_1_1Utility_a512e162c3c51fddb36b1be3f63f270bc}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!BatchBy$<$ T $>$@{BatchBy$<$ T $>$}}
+\index{BatchBy$<$ T $>$@{BatchBy$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{BatchBy$<$ T $>$()}{BatchBy< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static I\+Enumerable$<$List$<$T$>$ $>$ Kyoo.\+Utility.\+Batch\+By$<$ T $>$ (\begin{DoxyParamCaption}\item[{this List$<$ T $>$}]{list,  }\item[{int}]{count\+Per\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Utility_a71608ba26b5843c53df1515c93f9204f}\label{classKyoo_1_1Utility_a71608ba26b5843c53df1515c93f9204f}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!Cast$<$ T $>$@{Cast$<$ T $>$}}
+\index{Cast$<$ T $>$@{Cast$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{Cast$<$ T $>$()}{Cast< T >()}}
+{\footnotesize\ttfamily static Task$<$T$>$ Kyoo.\+Utility.\+Cast$<$ T $>$ (\begin{DoxyParamCaption}\item[{this Task}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Utility_a0ef3e9cfb388e791627a2f05538c8d51}\label{classKyoo_1_1Utility_a0ef3e9cfb388e791627a2f05538c8d51}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!Complete$<$ T $>$@{Complete$<$ T $>$}}
+\index{Complete$<$ T $>$@{Complete$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{Complete$<$ T $>$()}{Complete< T >()}}
+{\footnotesize\ttfamily static T Kyoo.\+Utility.\+Complete$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} T}]{first,  }\item[{\mbox{[}\+Can\+Be\+Null\mbox{]} T}]{second,  }\item[{Func$<$ Property\+Info, bool $>$}]{where = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Set every default values of first to the value of second. ex\+: \{id\+: 0, slug\+: \char`\"{}test\char`\"{}\}, \{id\+: 4, slug\+: \char`\"{}foo\char`\"{}\} -\/$>$ \{id\+: 4, slug\+: \char`\"{}test\char`\"{}\}. At the end, the On\+Merge method of first will be called if first is a I\+On\+Merge 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & The object to complete\\
+\hline
+{\em second} & Missing fields of first will be completed by fields of this item. If second is null, the function no-\/op.\\
+\hline
+{\em where} & Filter fields that will be merged\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Fields of T will be completed\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+first
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & If first is null\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classKyoo_1_1Utility_a9e330e49a72dd1d8e505c0352cc6d319}\label{classKyoo_1_1Utility_a9e330e49a72dd1d8e505c0352cc6d319}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!ForEach@{ForEach}}
+\index{ForEach@{ForEach}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{ForEach()}{ForEach()}}
+{\footnotesize\ttfamily static void Kyoo.\+Utility.\+For\+Each (\begin{DoxyParamCaption}\item[{\mbox{[}\+Can\+Be\+Null\mbox{]} this I\+Enumerable}]{self,  }\item[{Action$<$ object $>$}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+A foreach used as a function with a little specificity\+: the list can be null. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The list to enumerate. If this is null, the function result in a no-\/op\\
+\hline
+{\em action} & The action to execute for each arguments\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classKyoo_1_1Utility_a5fd64a3452f4b5725ae0937b629e870f}\label{classKyoo_1_1Utility_a5fd64a3452f4b5725ae0937b629e870f}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!ForEach$<$ T $>$@{ForEach$<$ T $>$}}
+\index{ForEach$<$ T $>$@{ForEach$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{ForEach$<$ T $>$()}{ForEach< T >()}}
+{\footnotesize\ttfamily static void \mbox{\hyperlink{classKyoo_1_1Utility_a9e330e49a72dd1d8e505c0352cc6d319}{Kyoo.\+Utility.\+For\+Each}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{[}\+Can\+Be\+Null\mbox{]} this I\+Enumerable$<$ T $>$}]{self,  }\item[{Action$<$ T $>$}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+A foreach used as a function with a little specificity\+: the list can be null. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The list to enumerate. If this is null, the function result in a no-\/op\\
+\hline
+{\em action} & The action to execute for each arguments\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of items in the list\\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classKyoo_1_1Utility_a94a92ca11cf4151ab9d46f624ab8cb39}\label{classKyoo_1_1Utility_a94a92ca11cf4151ab9d46f624ab8cb39}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!ForEachAsync@{ForEachAsync}}
+\index{ForEachAsync@{ForEachAsync}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{ForEachAsync()}{ForEachAsync()}}
+{\footnotesize\ttfamily static async Task Kyoo.\+Utility.\+For\+Each\+Async (\begin{DoxyParamCaption}\item[{\mbox{[}\+Can\+Be\+Null\mbox{]} this I\+Enumerable}]{self,  }\item[{Func$<$ object, Task $>$}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Utility_a1dc68127c095d32167019f4c99cfc3fb}\label{classKyoo_1_1Utility_a1dc68127c095d32167019f4c99cfc3fb}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!ForEachAsync$<$ T $>$@{ForEachAsync$<$ T $>$}}
+\index{ForEachAsync$<$ T $>$@{ForEachAsync$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{ForEachAsync$<$ T $>$()}{ForEachAsync< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static async Task \mbox{\hyperlink{classKyoo_1_1Utility_a94a92ca11cf4151ab9d46f624ab8cb39}{Kyoo.\+Utility.\+For\+Each\+Async}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{[}\+Can\+Be\+Null\mbox{]} this I\+Async\+Enumerable$<$ T $>$}]{self,  }\item[{Action$<$ T $>$}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Utility_a5795464b587b5a9a3e3c8a0c78ecf7cb}\label{classKyoo_1_1Utility_a5795464b587b5a9a3e3c8a0c78ecf7cb}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!ForEachAsync$<$ T $>$@{ForEachAsync$<$ T $>$}}
+\index{ForEachAsync$<$ T $>$@{ForEachAsync$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{ForEachAsync$<$ T $>$()}{ForEachAsync< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static async Task \mbox{\hyperlink{classKyoo_1_1Utility_a94a92ca11cf4151ab9d46f624ab8cb39}{Kyoo.\+Utility.\+For\+Each\+Async}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{[}\+Can\+Be\+Null\mbox{]} this I\+Enumerable$<$ T $>$}]{self,  }\item[{Func$<$ T, Task $>$}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Utility_abb3305b5ebb39fd3f3c7bba718c515df}\label{classKyoo_1_1Utility_abb3305b5ebb39fd3f3c7bba718c515df}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!FriendlyName@{FriendlyName}}
+\index{FriendlyName@{FriendlyName}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{FriendlyName()}{FriendlyName()}}
+{\footnotesize\ttfamily static string Kyoo.\+Utility.\+Friendly\+Name (\begin{DoxyParamCaption}\item[{this Type}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get a friendly type name (supporting generics) For example a list of string will be displayed as List$<$string$>$ and not as List\`{}1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type to use\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The friendly name of the type
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Utility_a9a1189cd79755d7e28fe11ee6280b677}\label{classKyoo_1_1Utility_a9a1189cd79755d7e28fe11ee6280b677}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!GetEnumerableType@{GetEnumerableType}}
+\index{GetEnumerableType@{GetEnumerableType}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{GetEnumerableType()}{GetEnumerableType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static Type Kyoo.\+Utility.\+Get\+Enumerable\+Type (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} I\+Enumerable}]{list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Utility_a6b175e408ecbaf286c7052423791b989}\label{classKyoo_1_1Utility_a6b175e408ecbaf286c7052423791b989}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!GetEnumerableType@{GetEnumerableType}}
+\index{GetEnumerableType@{GetEnumerableType}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{GetEnumerableType()}{GetEnumerableType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static Type Kyoo.\+Utility.\+Get\+Enumerable\+Type (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} Type}]{list\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Utility_ace09f255a21eb85f08232e28b4f17f89}\label{classKyoo_1_1Utility_ace09f255a21eb85f08232e28b4f17f89}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!GetGenericDefinition@{GetGenericDefinition}}
+\index{GetGenericDefinition@{GetGenericDefinition}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{GetGenericDefinition()}{GetGenericDefinition()}}
+{\footnotesize\ttfamily static Type Kyoo.\+Utility.\+Get\+Generic\+Definition (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} Type}]{type,  }\item[{\mbox{[}\+Not\+Null\mbox{]} Type}]{generic\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the generic definition of generic\+Type. For example, calling this function with List$<$string$>$ and typeof(I\+Enumerable$<$$>$) will return I\+Enumerable$<$string$>$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type to check\\
+\hline
+{\em generic\+Type} & The generic type to check against (Only generic types are supported like typeof(I\+Enumerable$<$$>$).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The generic definition of generic\+Type that type inherit or null if type does not implement the generic type.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & type and generic\+Type can\textquotesingle{}t be null\\
+\hline
+{\em Argument\+Exception} & generic\+Type must be a generic type\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classKyoo_1_1Utility_ad2c4a6cd30b7d152869b65ec3d3fc922}\label{classKyoo_1_1Utility_ad2c4a6cd30b7d152869b65ec3d3fc922}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!GetInheritanceTree@{GetInheritanceTree}}
+\index{GetInheritanceTree@{GetInheritanceTree}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{GetInheritanceTree()}{GetInheritanceTree()}}
+{\footnotesize\ttfamily static I\+Enumerable$<$Type$>$ Kyoo.\+Utility.\+Get\+Inheritance\+Tree (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} this Type}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return every Type in the inheritance tree of the parameter (interfaces are not returned) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The starting type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of types
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & type can\textquotesingle{}t be null\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classKyoo_1_1Utility_a90c3e68f35d6d9256e4b2cfd98641ff7}\label{classKyoo_1_1Utility_a90c3e68f35d6d9256e4b2cfd98641ff7}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!GetMethod@{GetMethod}}
+\index{GetMethod@{GetMethod}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{GetMethod()}{GetMethod()}}
+{\footnotesize\ttfamily static Method\+Info Kyoo.\+Utility.\+Get\+Method (\begin{DoxyParamCaption}\item[{Type}]{type,  }\item[{Binding\+Flags}]{flag,  }\item[{string}]{name,  }\item[{Type\mbox{[}$\,$\mbox{]}}]{generics,  }\item[{object\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Utility_aa397e5f5ea9434a6341557f35c485c1a}\label{classKyoo_1_1Utility_aa397e5f5ea9434a6341557f35c485c1a}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!GetPropertyName@{GetPropertyName}}
+\index{GetPropertyName@{GetPropertyName}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{GetPropertyName()}{GetPropertyName()}}
+{\footnotesize\ttfamily static string Kyoo.\+Utility.\+Get\+Property\+Name (\begin{DoxyParamCaption}\item[{Lambda\+Expression}]{ex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the name of a property. Useful for selectors as members ex\+: Load(x =$>$ x.\+Shows) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ex} & The expression\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the expression
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & If the expression is not a property, Argument\+Exception is thrown.\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classKyoo_1_1Utility_a56e2bbb68aac7347b59fd9068ce3c654}\label{classKyoo_1_1Utility_a56e2bbb68aac7347b59fd9068ce3c654}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily static object Kyoo.\+Utility.\+Get\+Value (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} this Member\+Info}]{member,  }\item[{\mbox{[}\+Not\+Null\mbox{]} object}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the value of a member (property or field) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em member} & The member value\\
+\hline
+{\em obj} & The owner of this member\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value boxed as an object
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & if member or obj is null.\\
+\hline
+{\em Argument\+Exception} & The member is not a field or a property.\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classKyoo_1_1Utility_a17bd661128d9a384e9661af005a13807}\label{classKyoo_1_1Utility_a17bd661128d9a384e9661af005a13807}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!IfEmpty$<$ T $>$@{IfEmpty$<$ T $>$}}
+\index{IfEmpty$<$ T $>$@{IfEmpty$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{IfEmpty$<$ T $>$()}{IfEmpty< T >()}}
+{\footnotesize\ttfamily static I\+Enumerable$<$T$>$ Kyoo.\+Utility.\+If\+Empty$<$ T $>$ (\begin{DoxyParamCaption}\item[{this I\+Enumerable$<$ T $>$}]{self,  }\item[{Action}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+If the enumerable is empty, execute an action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The enumerable to check\\
+\hline
+{\em action} & The action to execute is the list is empty\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of items inside the list\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Utility_a3dab47495430e03008e5964fa549df7a}\label{classKyoo_1_1Utility_a3dab47495430e03008e5964fa549df7a}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!IsOfGenericType@{IsOfGenericType}}
+\index{IsOfGenericType@{IsOfGenericType}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{IsOfGenericType()}{IsOfGenericType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static bool Kyoo.\+Utility.\+Is\+Of\+Generic\+Type (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} object}]{obj,  }\item[{\mbox{[}\+Not\+Null\mbox{]} Type}]{generic\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Check if obj inherit from a generic type generic\+Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Does this object\textquotesingle{}s type is a generic\+Type\\
+\hline
+{\em generic\+Type} & The generic type to check against (Only generic types are supported like typeof(I\+Enumerable$<$$>$).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if obj inherit from generic\+Type. False otherwise
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & obj and generic\+Type can\textquotesingle{}t be null\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classKyoo_1_1Utility_af0a82f02b2532d6e5527acd2bf161edf}\label{classKyoo_1_1Utility_af0a82f02b2532d6e5527acd2bf161edf}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!IsOfGenericType@{IsOfGenericType}}
+\index{IsOfGenericType@{IsOfGenericType}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{IsOfGenericType()}{IsOfGenericType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static bool Kyoo.\+Utility.\+Is\+Of\+Generic\+Type (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} Type}]{type,  }\item[{\mbox{[}\+Not\+Null\mbox{]} Type}]{generic\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Check if type inherit from a generic type generic\+Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type to check\\
+\hline
+{\em generic\+Type} & The generic type to check against (Only generic types are supported like typeof(I\+Enumerable$<$$>$).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if obj inherit from generic\+Type. False otherwise
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & obj and generic\+Type can\textquotesingle{}t be null\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classKyoo_1_1Utility_ab6bfcadef485ded03f990edfc62ce093}\label{classKyoo_1_1Utility_ab6bfcadef485ded03f990edfc62ce093}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!IsPropertyExpression@{IsPropertyExpression}}
+\index{IsPropertyExpression@{IsPropertyExpression}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{IsPropertyExpression()}{IsPropertyExpression()}}
+{\footnotesize\ttfamily static bool Kyoo.\+Utility.\+Is\+Property\+Expression (\begin{DoxyParamCaption}\item[{Lambda\+Expression}]{ex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Is the lambda expression a member (like x =$>$ x.\+Body). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ex} & The expression that should be checked\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the expression is a member, false otherwise
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Utility_aa36c41bcf95bad7237d38e64bbf9b97a}\label{classKyoo_1_1Utility_aa36c41bcf95bad7237d38e64bbf9b97a}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!Map$<$ T, T2 $>$@{Map$<$ T, T2 $>$}}
+\index{Map$<$ T, T2 $>$@{Map$<$ T, T2 $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{Map$<$ T, T2 $>$()}{Map< T, T2 >()}}
+{\footnotesize\ttfamily static I\+Enumerable$<$T2$>$ Kyoo.\+Utility.\+Map$<$ T, T2 $>$ (\begin{DoxyParamCaption}\item[{\mbox{[}\+Can\+Be\+Null\mbox{]} this I\+Enumerable$<$ T $>$}]{self,  }\item[{\mbox{[}\+Not\+Null\mbox{]} Func$<$ T, int, T2 $>$}]{mapper }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+A Select where the index of the item can be used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The I\+Enumerable to map. If self is null, an empty list is returned\\
+\hline
+{\em mapper} & The function that will map each items\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of items in self\\
+\hline
+{\em T2} & The type of items in the returned list\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The list mapped.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & mapper can\textquotesingle{}t be null\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classKyoo_1_1Utility_ad4ab5d68c8b01fe0341fbdb8126aacd9}\label{classKyoo_1_1Utility_ad4ab5d68c8b01fe0341fbdb8126aacd9}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!Map$<$ T, TResult $>$@{Map$<$ T, TResult $>$}}
+\index{Map$<$ T, TResult $>$@{Map$<$ T, TResult $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{Map$<$ T, TResult $>$()}{Map< T, TResult >()}}
+{\footnotesize\ttfamily static Task$<$T\+Result$>$ Kyoo.\+Utility.\+Map$<$ T, T\+Result $>$ (\begin{DoxyParamCaption}\item[{this Task$<$ T $>$}]{task,  }\item[{Func$<$ T, T\+Result $>$}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Utility_ad614348e8912c0f9d66abb6979b2dc5e}\label{classKyoo_1_1Utility_ad614348e8912c0f9d66abb6979b2dc5e}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!MapAsync$<$ T, T2 $>$@{MapAsync$<$ T, T2 $>$}}
+\index{MapAsync$<$ T, T2 $>$@{MapAsync$<$ T, T2 $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{MapAsync$<$ T, T2 $>$()}{MapAsync< T, T2 >()}}
+{\footnotesize\ttfamily static async I\+Async\+Enumerable$<$T2$>$ Kyoo.\+Utility.\+Map\+Async$<$ T, T2 $>$ (\begin{DoxyParamCaption}\item[{\mbox{[}\+Can\+Be\+Null\mbox{]} this I\+Enumerable$<$ T $>$}]{self,  }\item[{\mbox{[}\+Not\+Null\mbox{]} Func$<$ T, int, Task$<$ T2 $>$$>$}]{mapper }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+A map where the mapping function is asynchronous. Note\+: \mbox{\hyperlink{classKyoo_1_1Utility_ac40800ff867b2429fe13ccb425c94d23}{Select\+Async$<$\+T,\+T2$>$}} might interest you. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The I\+Enumerable to map. If self is null, an empty list is returned\\
+\hline
+{\em mapper} & The asynchronous function that will map each items\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of items in self\\
+\hline
+{\em T2} & The type of items in the returned list\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The list mapped as an Async\+Enumerable
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & mapper can\textquotesingle{}t be null\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classKyoo_1_1Utility_a4bda6031a5666f96b66fb1289ea12408}\label{classKyoo_1_1Utility_a4bda6031a5666f96b66fb1289ea12408}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!Merge$<$ T $>$@{Merge$<$ T $>$}}
+\index{Merge$<$ T $>$@{Merge$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{Merge$<$ T $>$()}{Merge< T >()}}
+{\footnotesize\ttfamily static T Kyoo.\+Utility.\+Merge$<$ T $>$ (\begin{DoxyParamCaption}\item[{T}]{first,  }\item[{T}]{second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+An advanced \mbox{\hyperlink{classKyoo_1_1Utility_a0ef3e9cfb388e791627a2f05538c8d51}{Complete$<$\+T$>$}} function. This will set missing values of first to the corresponding values of second. Enumerable will be merged (concatenated). At the end, the On\+Merge method of first will be called if first is a I\+On\+Merge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & The object to complete\\
+\hline
+{\em second} & Missing fields of first will be completed by fields of this item. If second is null, the function no-\/op.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Fields of T will be merged\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+first
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Utility_a2c68f6f490f653c0ac3dcb17dc78ac74}\label{classKyoo_1_1Utility_a2c68f6f490f653c0ac3dcb17dc78ac74}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!MergeLists$<$ T $>$@{MergeLists$<$ T $>$}}
+\index{MergeLists$<$ T $>$@{MergeLists$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{MergeLists$<$ T $>$()}{MergeLists< T >()}}
+{\footnotesize\ttfamily static T \mbox{[}$\,$\mbox{]} Kyoo.\+Utility.\+Merge\+Lists$<$ T $>$ (\begin{DoxyParamCaption}\item[{I\+Enumerable$<$ T $>$}]{first,  }\item[{I\+Enumerable$<$ T $>$}]{second,  }\item[{Func$<$ T, T, bool $>$}]{is\+Equal = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Merge two lists, can keep duplicates or remove them. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & The first enumerable to merge\\
+\hline
+{\em second} & The second enumerable to merge, if items from this list are equals to one from the first, they are not kept\\
+\hline
+{\em is\+Equal} & Equality function to compare items. If this is null, duplicated elements are kept\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The two list merged as an array
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Utility_ac680c78e2b27518ef2679c2eda11dc36}\label{classKyoo_1_1Utility_ac680c78e2b27518ef2679c2eda11dc36}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!Nullify$<$ T $>$@{Nullify$<$ T $>$}}
+\index{Nullify$<$ T $>$@{Nullify$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{Nullify$<$ T $>$()}{Nullify< T >()}}
+{\footnotesize\ttfamily static T Kyoo.\+Utility.\+Nullify$<$ T $>$ (\begin{DoxyParamCaption}\item[{T}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Set every fields of obj to the default value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to nullify\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Fields of T will be nullified\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+obj
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKyoo_1_1Utility_a2cea497e9271272e1c7fb412f88744b4}\label{classKyoo_1_1Utility_a2cea497e9271272e1c7fb412f88744b4}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!ReThrow@{ReThrow}}
+\index{ReThrow@{ReThrow}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{ReThrow()}{ReThrow()}}
+{\footnotesize\ttfamily static void Kyoo.\+Utility.\+Re\+Throw (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} this Exception}]{ex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Utility_a0666940415593adaa7a8ab02133b4f4e}\label{classKyoo_1_1Utility_a0666940415593adaa7a8ab02133b4f4e}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!RunGenericMethod$<$ T $>$@{RunGenericMethod$<$ T $>$}}
+\index{RunGenericMethod$<$ T $>$@{RunGenericMethod$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{RunGenericMethod$<$ T $>$()}{RunGenericMethod< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily static T Kyoo.\+Utility.\+Run\+Generic\+Method$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} object}]{instance,  }\item[{\mbox{[}\+Not\+Null\mbox{]} string}]{method\+Name,  }\item[{\mbox{[}\+Not\+Null\mbox{]} Type}]{type,  }\item[{params object\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Utility_ac523e8066c549c7b002e25594c887d95}\label{classKyoo_1_1Utility_ac523e8066c549c7b002e25594c887d95}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!RunGenericMethod$<$ T $>$@{RunGenericMethod$<$ T $>$}}
+\index{RunGenericMethod$<$ T $>$@{RunGenericMethod$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{RunGenericMethod$<$ T $>$()}{RunGenericMethod< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily static T Kyoo.\+Utility.\+Run\+Generic\+Method$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} object}]{instance,  }\item[{\mbox{[}\+Not\+Null\mbox{]} string}]{method\+Name,  }\item[{\mbox{[}\+Not\+Null\mbox{]} Type\mbox{[}$\,$\mbox{]}}]{types,  }\item[{params object\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Utility_a0d1cca8ee0242ffb967ac0f59ba3ef6f}\label{classKyoo_1_1Utility_a0d1cca8ee0242ffb967ac0f59ba3ef6f}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!RunGenericMethod$<$ T $>$@{RunGenericMethod$<$ T $>$}}
+\index{RunGenericMethod$<$ T $>$@{RunGenericMethod$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{RunGenericMethod$<$ T $>$()}{RunGenericMethod< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily static T Kyoo.\+Utility.\+Run\+Generic\+Method$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} Type}]{owner,  }\item[{\mbox{[}\+Not\+Null\mbox{]} string}]{method\+Name,  }\item[{\mbox{[}\+Not\+Null\mbox{]} Type}]{type,  }\item[{params object\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Utility_a28a3451d9d08baa634e166838163a4d3}\label{classKyoo_1_1Utility_a28a3451d9d08baa634e166838163a4d3}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!RunGenericMethod$<$ T $>$@{RunGenericMethod$<$ T $>$}}
+\index{RunGenericMethod$<$ T $>$@{RunGenericMethod$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{RunGenericMethod$<$ T $>$()}{RunGenericMethod< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily static T Kyoo.\+Utility.\+Run\+Generic\+Method$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} Type}]{owner,  }\item[{\mbox{[}\+Not\+Null\mbox{]} string}]{method\+Name,  }\item[{\mbox{[}\+Not\+Null\mbox{]} Type\mbox{[}$\,$\mbox{]}}]{types,  }\item[{params object\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Utility_ac40800ff867b2429fe13ccb425c94d23}\label{classKyoo_1_1Utility_ac40800ff867b2429fe13ccb425c94d23}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!SelectAsync$<$ T, T2 $>$@{SelectAsync$<$ T, T2 $>$}}
+\index{SelectAsync$<$ T, T2 $>$@{SelectAsync$<$ T, T2 $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{SelectAsync$<$ T, T2 $>$()}{SelectAsync< T, T2 >()}}
+{\footnotesize\ttfamily static async I\+Async\+Enumerable$<$T2$>$ Kyoo.\+Utility.\+Select\+Async$<$ T, T2 $>$ (\begin{DoxyParamCaption}\item[{\mbox{[}\+Can\+Be\+Null\mbox{]} this I\+Enumerable$<$ T $>$}]{self,  }\item[{\mbox{[}\+Not\+Null\mbox{]} Func$<$ T, Task$<$ T2 $>$$>$}]{mapper }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+An asynchronous version of Select. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The I\+Enumerable to map\\
+\hline
+{\em mapper} & The asynchronous function that will map each items\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of items in self\\
+\hline
+{\em T2} & The type of items in the returned list\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The list mapped as an Async\+Enumerable
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & mapper can\textquotesingle{}t be null\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classKyoo_1_1Utility_a9b820644b8ee239b2eff6734c24ed1c7}\label{classKyoo_1_1Utility_a9b820644b8ee239b2eff6734c24ed1c7}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!Then$<$ T $>$@{Then$<$ T $>$}}
+\index{Then$<$ T $>$@{Then$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{Then$<$ T $>$()}{Then< T >()}}
+{\footnotesize\ttfamily static Task$<$T$>$ Kyoo.\+Utility.\+Then$<$ T $>$ (\begin{DoxyParamCaption}\item[{this Task$<$ T $>$}]{task,  }\item[{Action$<$ T $>$}]{map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Utility_ae3ca8559fe176dddf453c348a3d8a765}\label{classKyoo_1_1Utility_ae3ca8559fe176dddf453c348a3d8a765}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!ToListAsync$<$ T $>$@{ToListAsync$<$ T $>$}}
+\index{ToListAsync$<$ T $>$@{ToListAsync$<$ T $>$}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{ToListAsync$<$ T $>$()}{ToListAsync< T >()}}
+{\footnotesize\ttfamily static async Task$<$List$<$T$>$ $>$ Kyoo.\+Utility.\+To\+List\+Async$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{[}\+Not\+Null\mbox{]} this I\+Async\+Enumerable$<$ T $>$}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert an Async\+Enumerable to a List by waiting for every item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The async list\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of items in the async list and in the returned list.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+A task that will return a simple list
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & The list can\textquotesingle{}t be null\\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classKyoo_1_1Utility_aac33d52ea9305b53f1ac0d39de044034}\label{classKyoo_1_1Utility_aac33d52ea9305b53f1ac0d39de044034}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!ToQueryString@{ToQueryString}}
+\index{ToQueryString@{ToQueryString}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{ToQueryString()}{ToQueryString()}}
+{\footnotesize\ttfamily static string Kyoo.\+Utility.\+To\+Query\+String (\begin{DoxyParamCaption}\item[{this Dictionary$<$ string, string $>$}]{query }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Utility_a96adb7cc03c5ba819905b5b0fa32c102}\label{classKyoo_1_1Utility_a96adb7cc03c5ba819905b5b0fa32c102}} 
+\index{Kyoo.Utility@{Kyoo.Utility}!ToSlug@{ToSlug}}
+\index{ToSlug@{ToSlug}!Kyoo.Utility@{Kyoo.Utility}}
+\doxysubsubsection{\texorpdfstring{ToSlug()}{ToSlug()}}
+{\footnotesize\ttfamily static string Kyoo.\+Utility.\+To\+Slug (\begin{DoxyParamCaption}\item[{string}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Slugify a string (Replace spaces by -\/, Uniformize accents é -\/$>$ e) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to slugify\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The slug version of the given string
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\mbox{\hyperlink{Utility_8cs}{Utility.\+cs}}\end{DoxyCompactItemize}

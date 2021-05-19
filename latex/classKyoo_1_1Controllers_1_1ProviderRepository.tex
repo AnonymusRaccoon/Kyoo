@@ -1,0 +1,153 @@
+\hypertarget{classKyoo_1_1Controllers_1_1ProviderRepository}{}\doxysection{Kyoo.\+Controllers.\+Provider\+Repository Class Reference}
+\label{classKyoo_1_1Controllers_1_1ProviderRepository}\index{Kyoo.Controllers.ProviderRepository@{Kyoo.Controllers.ProviderRepository}}
+
+
+A local repository to handle providers.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+Provider\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1Controllers_1_1ProviderRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+Provider\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKyoo_1_1Controllers_1_1ProviderRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderRepository_a1cf41bf6fb05354825786ab483c850ff}{Provider\+Repository}} (\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} database)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderRepository}{Provider\+Repository}}. \end{DoxyCompactList}\item 
+override async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Provider}{Provider}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderRepository_a5544b7facccc54edebd8db1288b3932f}{Search}} (string query)
+\item 
+override async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Provider}{Provider}} $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderRepository_ab5588dc7f81269b250214d69e97773c3}{Create}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Provider}{Provider}} obj)
+\item 
+override async Task \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderRepository_a7b01b153f295e4bfd2733e69318765e3}{Delete}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Provider}{Provider}} obj)
+\item 
+Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderRepository_ac5d41914aa3019b29be805dfc4b7ccee}{Get\+Metadata\+ID}} (Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}}, bool $>$$>$ where=null, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}} $>$ sort=default, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Get a list of external ids that match all filters \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+override Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Provider}{Provider}}, object $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderRepository_a28ec5ae82a5ed534c5f767347e954a40}{Default\+Sort}} =$>$ x =$>$ x.\+Slug
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderRepository_a091b606465704343d0cbf03fac0944d7}{\+\_\+database}}
+\begin{DoxyCompactList}\small\item\em The database handle \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A local repository to handle providers. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderRepository_a1cf41bf6fb05354825786ab483c850ff}\label{classKyoo_1_1Controllers_1_1ProviderRepository_a1cf41bf6fb05354825786ab483c850ff}} 
+\index{Kyoo.Controllers.ProviderRepository@{Kyoo.Controllers.ProviderRepository}!ProviderRepository@{ProviderRepository}}
+\index{ProviderRepository@{ProviderRepository}!Kyoo.Controllers.ProviderRepository@{Kyoo.Controllers.ProviderRepository}}
+\doxysubsubsection{\texorpdfstring{ProviderRepository()}{ProviderRepository()}}
+{\footnotesize\ttfamily Kyoo.\+Controllers.\+Provider\+Repository.\+Provider\+Repository (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}}}]{database }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderRepository}{Provider\+Repository}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & The database handle\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderRepository_ab5588dc7f81269b250214d69e97773c3}\label{classKyoo_1_1Controllers_1_1ProviderRepository_ab5588dc7f81269b250214d69e97773c3}} 
+\index{Kyoo.Controllers.ProviderRepository@{Kyoo.Controllers.ProviderRepository}!Create@{Create}}
+\index{Create@{Create}!Kyoo.Controllers.ProviderRepository@{Kyoo.Controllers.ProviderRepository}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily override async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Provider}{Provider}}$>$ Kyoo.\+Controllers.\+Provider\+Repository.\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Provider}{Provider}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderRepository_a7b01b153f295e4bfd2733e69318765e3}\label{classKyoo_1_1Controllers_1_1ProviderRepository_a7b01b153f295e4bfd2733e69318765e3}} 
+\index{Kyoo.Controllers.ProviderRepository@{Kyoo.Controllers.ProviderRepository}!Delete@{Delete}}
+\index{Delete@{Delete}!Kyoo.Controllers.ProviderRepository@{Kyoo.Controllers.ProviderRepository}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily override async Task Kyoo.\+Controllers.\+Provider\+Repository.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Provider}{Provider}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderRepository_ac5d41914aa3019b29be805dfc4b7ccee}\label{classKyoo_1_1Controllers_1_1ProviderRepository_ac5d41914aa3019b29be805dfc4b7ccee}} 
+\index{Kyoo.Controllers.ProviderRepository@{Kyoo.Controllers.ProviderRepository}!GetMetadataID@{GetMetadataID}}
+\index{GetMetadataID@{GetMetadataID}!Kyoo.Controllers.ProviderRepository@{Kyoo.Controllers.ProviderRepository}}
+\doxysubsubsection{\texorpdfstring{GetMetadataID()}{GetMetadataID()}}
+{\footnotesize\ttfamily Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}}$>$ $>$ Kyoo.\+Controllers.\+Provider\+Repository.\+Get\+Metadata\+ID (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}}, bool $>$$>$}]{where = {\ttfamily null},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1MetadataID}{Metadata\+ID}} $>$}]{sort = {\ttfamily default},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a list of external ids that match all filters 
+
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository_acd94bdc68a3dd8e3f5505127159bfe43}{Kyoo.\+Controllers.\+I\+Provider\+Repository}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderRepository_a5544b7facccc54edebd8db1288b3932f}\label{classKyoo_1_1Controllers_1_1ProviderRepository_a5544b7facccc54edebd8db1288b3932f}} 
+\index{Kyoo.Controllers.ProviderRepository@{Kyoo.Controllers.ProviderRepository}!Search@{Search}}
+\index{Search@{Search}!Kyoo.Controllers.ProviderRepository@{Kyoo.Controllers.ProviderRepository}}
+\doxysubsubsection{\texorpdfstring{Search()}{Search()}}
+{\footnotesize\ttfamily override async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Provider}{Provider}}$>$ $>$ Kyoo.\+Controllers.\+Provider\+Repository.\+Search (\begin{DoxyParamCaption}\item[{string}]{query }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+
+
+
+
+Implements \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository_a1ec5ba57aa01810e262bbfc02bd1fc3e}{Kyoo.\+Controllers.\+Local\+Repository$<$ Provider $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderRepository_a091b606465704343d0cbf03fac0944d7}\label{classKyoo_1_1Controllers_1_1ProviderRepository_a091b606465704343d0cbf03fac0944d7}} 
+\index{Kyoo.Controllers.ProviderRepository@{Kyoo.Controllers.ProviderRepository}!\_database@{\_database}}
+\index{\_database@{\_database}!Kyoo.Controllers.ProviderRepository@{Kyoo.Controllers.ProviderRepository}}
+\doxysubsubsection{\texorpdfstring{\_database}{\_database}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{classKyoo_1_1DatabaseContext}{Database\+Context}} Kyoo.\+Controllers.\+Provider\+Repository.\+\_\+database\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The database handle 
+
+\mbox{\Hypertarget{classKyoo_1_1Controllers_1_1ProviderRepository_a28ec5ae82a5ed534c5f767347e954a40}\label{classKyoo_1_1Controllers_1_1ProviderRepository_a28ec5ae82a5ed534c5f767347e954a40}} 
+\index{Kyoo.Controllers.ProviderRepository@{Kyoo.Controllers.ProviderRepository}!DefaultSort@{DefaultSort}}
+\index{DefaultSort@{DefaultSort}!Kyoo.Controllers.ProviderRepository@{Kyoo.Controllers.ProviderRepository}}
+\doxysubsubsection{\texorpdfstring{DefaultSort}{DefaultSort}}
+{\footnotesize\ttfamily override Expression$<$Func$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Provider}{Provider}}, object$>$ $>$ Kyoo.\+Controllers.\+Provider\+Repository.\+Default\+Sort =$>$ x =$>$ x.\+Slug\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Controllers/\+Repositories/\mbox{\hyperlink{ProviderRepository_8cs}{Provider\+Repository.\+cs}}\end{DoxyCompactItemize}

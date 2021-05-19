@@ -1,0 +1,117 @@
+\hypertarget{namespaceKyoo_1_1Controllers}{}\doxysection{Kyoo.\+Controllers Namespace Reference}
+\label{namespaceKyoo_1_1Controllers}\index{Kyoo.Controllers@{Kyoo.Controllers}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1BadTranscoderException}{Bad\+Transcoder\+Exception}}
+\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1CollectionRepository}{Collection\+Repository}}
+\begin{DoxyCompactList}\small\item\em A local repository to handle collections \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConditionalProvide}{Conditional\+Provide}}
+\begin{DoxyCompactList}\small\item\em A type that will only be provided if a special condition is met. To check that your condition is met, you can check the \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}} class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ConfigurationManager}{Configuration\+Manager}}
+\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository}{Episode\+Repository}}
+\begin{DoxyCompactList}\small\item\em A local repository to handle episodes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1FileManager}{File\+Manager}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}} for the local filesystem (using System.\+IO). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1GenreRepository}{Genre\+Repository}}
+\begin{DoxyCompactList}\small\item\em A local repository for genres. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IBaseRepository}{I\+Base\+Repository}}
+\begin{DoxyCompactList}\small\item\em A base class for repositories. Every service implementing this will be handled by the \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryManager}{Library\+Manager}}. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ICollectionRepository}{I\+Collection\+Repository}}
+\begin{DoxyCompactList}\small\item\em A repository for collections \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IConfigurationManager}{I\+Configuration\+Manager}}
+\begin{DoxyCompactList}\small\item\em A class to ease configuration management. This work W\+I\+TH Microsoft\textquotesingle{}s package, you can still use I\+Options patterns to access your options, this manager ease dynamic work and editing. It works with Configuration\+Reference. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository}{I\+Episode\+Repository}}
+\begin{DoxyCompactList}\small\item\em The repository to handle episodes \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IFileManager}{I\+File\+Manager}}
+\begin{DoxyCompactList}\small\item\em A service to abstract the file system to allow custom file systems (like distant file systems or external providers) \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IGenreRepository}{I\+Genre\+Repository}}
+\begin{DoxyCompactList}\small\item\em A repository for genres. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository}{I\+Library\+Item\+Repository}}
+\begin{DoxyCompactList}\small\item\em A repository to handle library items (A wrapper around shows and collections). \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}}
+\begin{DoxyCompactList}\small\item\em An interface to interract with the database. Every repository is mapped through here. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryRepository}{I\+Library\+Repository}}
+\begin{DoxyCompactList}\small\item\em A repository to handle libraries. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IMetadataProvider}{I\+Metadata\+Provider}}
+\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPeopleRepository}{I\+People\+Repository}}
+\begin{DoxyCompactList}\small\item\em A repository for people. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPlugin}{I\+Plugin}}
+\begin{DoxyCompactList}\small\item\em A common interface used to discord plugins \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager}{I\+Plugin\+Manager}}
+\begin{DoxyCompactList}\small\item\em A manager to load plugins and retrieve information from them. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderManager}{I\+Provider\+Manager}}
+\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderRepository}{I\+Provider\+Repository}}
+\begin{DoxyCompactList}\small\item\em A repository to handle providers. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IRepository}{I\+Repository}}
+\begin{DoxyCompactList}\small\item\em A common repository for every resources. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ISeasonRepository}{I\+Season\+Repository}}
+\begin{DoxyCompactList}\small\item\em A repository to handle seasons. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IShowRepository}{I\+Show\+Repository}}
+\begin{DoxyCompactList}\small\item\em A repository to handle shows. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IStudioRepository}{I\+Studio\+Repository}}
+\begin{DoxyCompactList}\small\item\em A repository for studios. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask}{I\+Task}}
+\begin{DoxyCompactList}\small\item\em A common interface that tasks should implement. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITaskManager}{I\+Task\+Manager}}
+\begin{DoxyCompactList}\small\item\em A service to handle long running tasks. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IThumbnailsManager}{I\+Thumbnails\+Manager}}
+\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITrackRepository}{I\+Track\+Repository}}
+\begin{DoxyCompactList}\small\item\em A repository to handle tracks \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITranscoder}{I\+Transcoder}}
+\item 
+interface \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IUserRepository}{I\+User\+Repository}}
+\begin{DoxyCompactList}\small\item\em A repository to handle users. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1JsonPropertyIgnorer}{Json\+Property\+Ignorer}}
+\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository}{Library\+Item\+Repository}}
+\begin{DoxyCompactList}\small\item\em A local repository to handle library items. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryManager}{Library\+Manager}}
+\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryRepository}{Library\+Repository}}
+\begin{DoxyCompactList}\small\item\em A local repository to handle libraries. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LocalRepository}{Local\+Repository}}
+\begin{DoxyCompactList}\small\item\em A base class to create repositories using Entity Framework. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}
+\begin{DoxyCompactList}\small\item\em Information about the pagination. How many items should be displayed and where to start. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PassthroughPermissionValidator}{Passthrough\+Permission\+Validator}}
+\begin{DoxyCompactList}\small\item\em A permission validator that always validate permissions. This effectively disable the permission system. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRepository}{People\+Repository}}
+\begin{DoxyCompactList}\small\item\em A local repository to handle people. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PeopleRoleConverter}{People\+Role\+Converter}}
+\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1PluginManager}{Plugin\+Manager}}
+\begin{DoxyCompactList}\small\item\em An implementation of \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IPluginManager}{I\+Plugin\+Manager}}. This is used to load plugins and retrieve information from them. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderCondition}{Provider\+Condition}}
+\begin{DoxyCompactList}\small\item\em A condition for a conditional type. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderManager}{Provider\+Manager}}
+\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ProviderRepository}{Provider\+Repository}}
+\begin{DoxyCompactList}\small\item\em A local repository to handle providers. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SeasonRepository}{Season\+Repository}}
+\begin{DoxyCompactList}\small\item\em A local repository to handle seasons. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1SerializeAsProvider}{Serialize\+As\+Provider}}
+\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ShowRepository}{Show\+Repository}}
+\begin{DoxyCompactList}\small\item\em A local repository to handle shows \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}
+\begin{DoxyCompactList}\small\item\em Information about how a query should be sorted. What factor should decide the sort and in which order. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1StudioRepository}{Studio\+Repository}}
+\begin{DoxyCompactList}\small\item\em A local repository to handle studios \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskManager}{Task\+Manager}}
+\begin{DoxyCompactList}\small\item\em A service to handle long running tasks and a background runner. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskParameters}{Task\+Parameters}}
+\begin{DoxyCompactList}\small\item\em A parameters container implementing an indexer to allow simple usage of parameters. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1ThumbnailsManager}{Thumbnails\+Manager}}
+\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TrackRepository}{Track\+Repository}}
+\begin{DoxyCompactList}\small\item\em A local repository to handle tracks. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1Transcoder}{Transcoder}}
+\item 
+class \mbox{\hyperlink{classKyoo_1_1Controllers_1_1UserRepository}{User\+Repository}}
+\begin{DoxyCompactList}\small\item\em A repository for users. \end{DoxyCompactList}\end{DoxyCompactItemize}

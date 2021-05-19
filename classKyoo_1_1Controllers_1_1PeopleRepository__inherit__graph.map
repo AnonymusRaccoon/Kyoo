@@ -1,0 +1,6 @@
+<map id="Kyoo.Controllers.PeopleRepository" name="Kyoo.Controllers.PeopleRepository">
+<area shape="rect" id="node1" title="A local repository to handle people." alt="" coords="81,667,327,920"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Controllers_1_1LocalRepository.html" title=" " alt="" coords="5,277,205,619"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1IPeopleRepository.html" title="A repository for people." alt="" coords="229,358,376,538"/>
+<area shape="rect" id="node4" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title=" " alt="" coords="217,5,388,229"/>
+</map>

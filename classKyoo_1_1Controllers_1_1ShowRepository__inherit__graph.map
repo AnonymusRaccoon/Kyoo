@@ -1,0 +1,6 @@
+<map id="Kyoo.Controllers.ShowRepository" name="Kyoo.Controllers.ShowRepository">
+<area shape="rect" id="node1" title="A local repository to handle shows" alt="" coords="80,667,319,949"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Controllers_1_1LocalRepository.html" title=" " alt="" coords="5,277,204,619"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1IShowRepository.html" title="A repository to handle shows." alt="" coords="228,402,363,494"/>
+<area shape="rect" id="node4" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title=" " alt="" coords="215,5,376,229"/>
+</map>

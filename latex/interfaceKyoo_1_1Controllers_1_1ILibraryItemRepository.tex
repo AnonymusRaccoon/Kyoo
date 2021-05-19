@@ -1,0 +1,155 @@
+\hypertarget{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository}{}\doxysection{Kyoo.\+Controllers.\+I\+Library\+Item\+Repository Interface Reference}
+\label{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository}\index{Kyoo.Controllers.ILibraryItemRepository@{Kyoo.Controllers.ILibraryItemRepository}}
+
+
+A repository to handle library items (A wrapper around shows and collections).  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+I\+Library\+Item\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+I\+Library\+Item\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository_a35b0a65a4e2a39941353dd2e7d7f8a52}{Get\+From\+Library}} (int id, Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, bool $>$$>$ where=null, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ sort=default, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Get items (A wrapper around shows or collections) from a library. \end{DoxyCompactList}\item 
+Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository_add424b185af2fca94dc16fbeb33c4007}{Get\+From\+Library}} (int id, \mbox{[}Optional\mbox{]} Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, bool $>$$>$ where, Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, object $>$$>$ sort, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Get items (A wrapper around shows or collections) from a library. \end{DoxyCompactList}\item 
+Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository_a18244dc7fc814f37289c3c623f6522d4}{Get\+From\+Library}} (string slug, Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, bool $>$$>$ where=null, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ sort=default, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Get items (A wrapper around shows or collections) from a library. \end{DoxyCompactList}\item 
+Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$ $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository_a9e2426533110ceeb0ade4f4fdd928f69}{Get\+From\+Library}} (string slug, \mbox{[}Optional\mbox{]} Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, bool $>$$>$ where, Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, object $>$$>$ sort, \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}} limit=default)
+\begin{DoxyCompactList}\small\item\em Get items (A wrapper around shows or collections) from a library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A repository to handle library items (A wrapper around shows and collections). 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository_add424b185af2fca94dc16fbeb33c4007}\label{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository_add424b185af2fca94dc16fbeb33c4007}} 
+\index{Kyoo.Controllers.ILibraryItemRepository@{Kyoo.Controllers.ILibraryItemRepository}!GetFromLibrary@{GetFromLibrary}}
+\index{GetFromLibrary@{GetFromLibrary}!Kyoo.Controllers.ILibraryItemRepository@{Kyoo.Controllers.ILibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{GetFromLibrary()}{GetFromLibrary()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}$>$ $>$ Kyoo.\+Controllers.\+I\+Library\+Item\+Repository.\+Get\+From\+Library (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{\mbox{[}\+Optional\mbox{]} Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, bool $>$$>$}]{where,  }\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, object $>$$>$}]{sort,  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})}
+
+
+
+Get items (A wrapper around shows or collections) from a library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the library\\
+\hline
+{\em where} & A filter function\\
+\hline
+{\em sort} & A sort by method\\
+\hline
+{\em limit} & How many items to return and where to start\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of items that match every filters
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository_a35b0a65a4e2a39941353dd2e7d7f8a52}\label{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository_a35b0a65a4e2a39941353dd2e7d7f8a52}} 
+\index{Kyoo.Controllers.ILibraryItemRepository@{Kyoo.Controllers.ILibraryItemRepository}!GetFromLibrary@{GetFromLibrary}}
+\index{GetFromLibrary@{GetFromLibrary}!Kyoo.Controllers.ILibraryItemRepository@{Kyoo.Controllers.ILibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{GetFromLibrary()}{GetFromLibrary()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}$>$ $>$ Kyoo.\+Controllers.\+I\+Library\+Item\+Repository.\+Get\+From\+Library (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, bool $>$$>$}]{where = {\ttfamily null},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$}]{sort = {\ttfamily default},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})}
+
+
+
+Get items (A wrapper around shows or collections) from a library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the library\\
+\hline
+{\em where} & A filter function\\
+\hline
+{\em sort} & \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}} information (sort order \& sort by)\\
+\hline
+{\em limit} & How many items to return and where to start\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of items that match every filters
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_aa1b6254d70a458d3bc8c021c5add43b2}{Kyoo.\+Controllers.\+Library\+Item\+Repository}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository_a9e2426533110ceeb0ade4f4fdd928f69}\label{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository_a9e2426533110ceeb0ade4f4fdd928f69}} 
+\index{Kyoo.Controllers.ILibraryItemRepository@{Kyoo.Controllers.ILibraryItemRepository}!GetFromLibrary@{GetFromLibrary}}
+\index{GetFromLibrary@{GetFromLibrary}!Kyoo.Controllers.ILibraryItemRepository@{Kyoo.Controllers.ILibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{GetFromLibrary()}{GetFromLibrary()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}$>$ $>$ Kyoo.\+Controllers.\+I\+Library\+Item\+Repository.\+Get\+From\+Library (\begin{DoxyParamCaption}\item[{string}]{slug,  }\item[{\mbox{[}\+Optional\mbox{]} Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, bool $>$$>$}]{where,  }\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, object $>$$>$}]{sort,  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})}
+
+
+
+Get items (A wrapper around shows or collections) from a library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slug} & The slug of the library\\
+\hline
+{\em where} & A filter function\\
+\hline
+{\em sort} & A sort by method\\
+\hline
+{\em limit} & How many items to return and where to start\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of items that match every filters
+\end{DoxyReturn}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository_a18244dc7fc814f37289c3c623f6522d4}\label{interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository_a18244dc7fc814f37289c3c623f6522d4}} 
+\index{Kyoo.Controllers.ILibraryItemRepository@{Kyoo.Controllers.ILibraryItemRepository}!GetFromLibrary@{GetFromLibrary}}
+\index{GetFromLibrary@{GetFromLibrary}!Kyoo.Controllers.ILibraryItemRepository@{Kyoo.Controllers.ILibraryItemRepository}}
+\doxysubsubsection{\texorpdfstring{GetFromLibrary()}{GetFromLibrary()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}$>$ $>$ Kyoo.\+Controllers.\+I\+Library\+Item\+Repository.\+Get\+From\+Library (\begin{DoxyParamCaption}\item[{string}]{slug,  }\item[{Expression$<$ Func$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}}, bool $>$$>$}]{where = {\ttfamily null},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}}$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1LibraryItem}{Library\+Item}} $>$}]{sort = {\ttfamily default},  }\item[{\mbox{\hyperlink{structKyoo_1_1Controllers_1_1Pagination}{Pagination}}}]{limit = {\ttfamily default} }\end{DoxyParamCaption})}
+
+
+
+Get items (A wrapper around shows or collections) from a library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slug} & The slug of the library\\
+\hline
+{\em where} & A filter function\\
+\hline
+{\em sort} & \mbox{\hyperlink{structKyoo_1_1Controllers_1_1Sort}{Sort}} information (sort order \& sort by)\\
+\hline
+{\em limit} & How many items to return and where to start\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of items that match every filters
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1LibraryItemRepository_a95ae880ff1e3bfd4e80c8f3967ccc8f8}{Kyoo.\+Controllers.\+Library\+Item\+Repository}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Controllers/\mbox{\hyperlink{IRepository_8cs}{I\+Repository.\+cs}}\end{DoxyCompactItemize}

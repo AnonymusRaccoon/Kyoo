@@ -1,0 +1,60 @@
+\href{https://github.com/AnonymusRaccoon/Kyoo/actions/workflows/build.yml}{\texttt{ }} \href{https://github.com/AnonymusRaccoon/Kyoo/actions/workflows/tests.yml}{\texttt{ }} \href{https://github.com/users/AnonymusRaccoon/packages/container/package/kyoo}{\texttt{ }} \href{https://sonarcloud.io/dashboard?id=AnonymusRaccoon_Kyoo}{\texttt{ }} \href{./LICENSE}{\texttt{ }} 
+
+\mbox{\hyperlink{namespaceKyoo}{Kyoo}} is an open-\/souce media browser which allow you to stream your movies, tv-\/shows or animes. It is an alternative to Plex, Emby or Jellyfin.
+
+\mbox{\hyperlink{namespaceKyoo}{Kyoo}} has been created from scratch, it is not a fork. Everything is and always will be free and open-\/source.
+
+Feel free to open issues or pull requests, all contribution are welcomed.\hypertarget{md_README_autotoc_md4}{}\doxysection{Screens}\label{md_README_autotoc_md4}
+
+
+\DoxyHorRuler{0}
+ 
+
+\DoxyHorRuler{0}
+ 
+
+\DoxyHorRuler{0}
+ 
+
+\DoxyHorRuler{0}
+ 
+
+\DoxyHorRuler{0}
+ 
+
+\DoxyHorRuler{0}
+ \hypertarget{md_README_autotoc_md5}{}\doxysection{Installation}\label{md_README_autotoc_md5}
+On any system, you will need a running postgres server where \mbox{\hyperlink{namespaceKyoo}{Kyoo}} can connect. The connection\textquotesingle{}s informations can be specified on the appsettings.\+json file, the default connection settings use the user {\ttfamily kyoo} with the password {\ttfamily kyoo\+Password} on the server at {\ttfamily 127.\+0.\+0.\+1\+:5432} (the default postgres url).
+
+You can find nightly prebuild zipped version here\+:
+\begin{DoxyItemize}
+\item \href{https://nightly.link/AnonymusRaccoon/Kyoo/workflows/release/master/kyoo_windows.zip}{\texttt{ Windows}}
+\item \href{https://nightly.link/AnonymusRaccoon/Kyoo/workflows/release/master/kyoo_macos.zip}{\texttt{ Mac\+OS}}
+\item \href{https://nightly.link/AnonymusRaccoon/Kyoo/workflows/release/master/kyoo_linux.zip}{\texttt{ Linux}}
+\end{DoxyItemize}
+
+For arch based, debian based or rpm compatible distributions, a package is automatically created and can be downloaded\+:
+\begin{DoxyItemize}
+\item \href{https://nightly.link/AnonymusRaccoon/Kyoo/workflows/release/master/kyoo_arch.zip}{\texttt{ Arch}}
+\item \href{https://nightly.link/AnonymusRaccoon/Kyoo/workflows/release/master/kyoo_debian.zip}{\texttt{ Debian}}
+\item \href{https://nightly.link/AnonymusRaccoon/Kyoo/workflows/release/master/kyoo_rpm.zip}{\texttt{ R\+PM}}
+\end{DoxyItemize}
+
+A docker file is also available and an up-\/to-\/date docker image is available at\+: {\ttfamily ghcr.\+io/anonymusraccoon/kyoo\+:master}. An example docker-\/compose image is available at the root of the repository. You can customise it to feet your needs and use a prebuild image or you can build it from source. To do that, clone the repository with the {\ttfamily -\/-\/recurse} flag and run {\ttfamily docker-\/compose up}.\hypertarget{md_README_autotoc_md6}{}\doxysection{Repositories}\label{md_README_autotoc_md6}
+This is the main repository for \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. Here, you will find all the server\textquotesingle{}s code, the build process \& the login page.
+
+In the \href{https://github.com/AnonymusRaccoon/Kyoo.WebApp}{\texttt{ Kyoo.\+Web\+App}} repository, you will find the code of the web app (created usint angular).
+
+In the \href{https://github.com/AnonymusRaccoon/Kyoo.Transcoder}{\texttt{ Kyoo.\+Transcoder}} repository, you will find the C code that handle transcoding, transmuxing \& subtitles/codecs extractions from media files.
+
+Both of theses repository are needed to fully build \mbox{\hyperlink{namespaceKyoo}{Kyoo}}, when you clone this repository you should use the --recurse argument of git like so\+: {\ttfamily git clone \href{https://github.com/AnonymusRaccoon/Kyoo}{\texttt{ https\+://github.\+com/\+Anonymus\+Raccoon/\+Kyoo}} -\/-\/recurse}.\hypertarget{md_README_autotoc_md7}{}\doxysection{Development \& Build}\label{md_README_autotoc_md7}
+To develop for \mbox{\hyperlink{namespaceKyoo}{Kyoo}}, you will need the .N\+ET 5.\+0 S\+DK and node \& npm for the webapp. If you want to build the transcoder, you will also need a cmake compatible environement.
+
+To run the development server, simply open the .sln file with your favorite C\# I\+DE (like Jetbrain\textquotesingle{}s Rider or Visual Studio) and press run or you can use the C\+LI and use the {\ttfamily dotnet run -\/p \mbox{\hyperlink{namespaceKyoo}{Kyoo}}} command. To pack the application, run the {\ttfamily dotnet publish -\/c Release -\/o $<$build\+\_\+path$>$ \mbox{\hyperlink{namespaceKyoo}{Kyoo}}} command. This will build the server, the webapp and the transcoder and output files in the $<$build\+\_\+path$>$ directory.
+
+If you want, you can build kyoo without it\textquotesingle{}s transcoder by running {\ttfamily dotnet build \textquotesingle{}-\/p\+:Skip\+Transcoder=true\textquotesingle{}}. You are now responsible of bringing a transcoder dynamic library at the build location. If you don\textquotesingle{}t bring one, the transcoder won\textquotesingle{}t be available.
+
+You can also disable the webapp build by running {\ttfamily dotnet build \textquotesingle{}-\/p\+:Skip\+Web\+App=true\textquotesingle{}}. Those two options can be combined by running {\ttfamily dotnet build \textquotesingle{}-\/p\+:Skip\+Transcoder=true;Skip\+Web\+App=true\textquotesingle{}}\hypertarget{md_README_autotoc_md8}{}\doxysection{Plugins}\label{md_README_autotoc_md8}
+You can create plugins for \mbox{\hyperlink{namespaceKyoo}{Kyoo}}. To do that, create a C\# Library project targetting the .Net Core 5 and install the \href{https://www.nuget.org/packages/Kyoo.Common}{\texttt{ Kyoo.\+Common}} package and implement the I\+Plugin interface.
+
+You can create Tasks which can be started manually or automatically at startup or every X hours. You can also create metadata providers that will be used to get informations about shows, seasons, episodes \& people. You can find an exemple of metadata provider \href{https://github.com/AnonymusRaccoon/Kyoo.TheMovieDB}{\texttt{ here}}. 

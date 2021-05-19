@@ -1,0 +1,8 @@
+<map id="Kyoo.Controllers.LibraryItemRepository" name="Kyoo.Controllers.LibraryItemRepository">
+<area shape="rect" id="node1" title="A local repository to handle library items." alt="" coords="218,859,410,1215"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Controllers_1_1LocalRepository.html" title=" " alt="" coords="5,359,204,715"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1ILibraryItemRepository.html" title="A repository to handle library items (A wrapper around shows and collections)." alt="" coords="229,477,399,598"/>
+<area shape="rect" id="node4" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title=" " alt="" coords="213,5,415,229"/>
+<area shape="rect" id="node5" href="$classKyoo_1_1DatabaseContext.html" title="The database handle used for all local repositories. This is an abstract class. It is meant to be imp..." alt="" coords="423,279,642,796"/>
+<area shape="rect" id="node6" title=" " alt="" coords="487,79,578,156"/>
+</map>

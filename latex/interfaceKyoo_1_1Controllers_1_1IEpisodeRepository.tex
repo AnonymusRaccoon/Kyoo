@@ -1,0 +1,227 @@
+\hypertarget{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository}{}\doxysection{Kyoo.\+Controllers.\+I\+Episode\+Repository Interface Reference}
+\label{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository}\index{Kyoo.Controllers.IEpisodeRepository@{Kyoo.Controllers.IEpisodeRepository}}
+
+
+The repository to handle episodes  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+I\+Episode\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+I\+Episode\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_acd0cd07b2348a5bd9cde169b70265539}{Get}} (int show\+ID, int season\+Number, int episode\+Number)
+\begin{DoxyCompactList}\small\item\em Get a episode from it\textquotesingle{}s show\+ID, it\textquotesingle{}s season\+Number and it\textquotesingle{}s episode number. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_adb1cf3d34354f71de53ddd19610a237c}{Get}} (string show\+Slug, int season\+Number, int episode\+Number)
+\begin{DoxyCompactList}\small\item\em Get a episode from it\textquotesingle{}s show slug, it\textquotesingle{}s season\+Number and it\textquotesingle{}s episode number. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_a2f61209d221500930db7dcb5196aacc3}{Get\+Or\+Default}} (int show\+ID, int season\+Number, int episode\+Number)
+\begin{DoxyCompactList}\small\item\em Get a episode from it\textquotesingle{}s show\+ID, it\textquotesingle{}s season\+Number and it\textquotesingle{}s episode number or null if it is not found. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_aacaf492d483320a784df41f275d7d9ac}{Get\+Or\+Default}} (string show\+Slug, int season\+Number, int episode\+Number)
+\begin{DoxyCompactList}\small\item\em Get a episode from it\textquotesingle{}s show slug, it\textquotesingle{}s season\+Number and it\textquotesingle{}s episode number or null if it is not found. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_a02a3741c14a2c916d64d96475f563f55}{Get\+Absolute}} (int show\+ID, int absolute\+Number)
+\begin{DoxyCompactList}\small\item\em Get a episode from it\textquotesingle{}s show\+ID and it\textquotesingle{}s absolute number. \end{DoxyCompactList}\item 
+Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_ae8cd75a8763d7c0333670b990b483bb8}{Get\+Absolute}} (string show\+Slug, int absolute\+Number)
+\begin{DoxyCompactList}\small\item\em Get a episode from it\textquotesingle{}s show\+ID and it\textquotesingle{}s absolute number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The repository to handle episodes 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_acd0cd07b2348a5bd9cde169b70265539}\label{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_acd0cd07b2348a5bd9cde169b70265539}} 
+\index{Kyoo.Controllers.IEpisodeRepository@{Kyoo.Controllers.IEpisodeRepository}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.IEpisodeRepository@{Kyoo.Controllers.IEpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+I\+Episode\+Repository.\+Get (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{int}]{season\+Number,  }\item[{int}]{episode\+Number }\end{DoxyParamCaption})}
+
+
+
+Get a episode from it\textquotesingle{}s show\+ID, it\textquotesingle{}s season\+Number and it\textquotesingle{}s episode number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em show\+ID} & The id of the show\\
+\hline
+{\em season\+Number} & The season\textquotesingle{}s number\\
+\hline
+{\em episode\+Number} & The episode\textquotesingle{}s number\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The episode found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a3801dc7ddad4329bbcd0917567292a7a}{Kyoo.\+Controllers.\+Episode\+Repository}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_adb1cf3d34354f71de53ddd19610a237c}\label{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_adb1cf3d34354f71de53ddd19610a237c}} 
+\index{Kyoo.Controllers.IEpisodeRepository@{Kyoo.Controllers.IEpisodeRepository}!Get@{Get}}
+\index{Get@{Get}!Kyoo.Controllers.IEpisodeRepository@{Kyoo.Controllers.IEpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+I\+Episode\+Repository.\+Get (\begin{DoxyParamCaption}\item[{string}]{show\+Slug,  }\item[{int}]{season\+Number,  }\item[{int}]{episode\+Number }\end{DoxyParamCaption})}
+
+
+
+Get a episode from it\textquotesingle{}s show slug, it\textquotesingle{}s season\+Number and it\textquotesingle{}s episode number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em show\+Slug} & The slug of the show\\
+\hline
+{\em season\+Number} & The season\textquotesingle{}s number\\
+\hline
+{\em episode\+Number} & The episode\textquotesingle{}s number\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The episode found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a19002e9a63c84582e764413a64f9e95e}{Kyoo.\+Controllers.\+Episode\+Repository}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_a02a3741c14a2c916d64d96475f563f55}\label{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_a02a3741c14a2c916d64d96475f563f55}} 
+\index{Kyoo.Controllers.IEpisodeRepository@{Kyoo.Controllers.IEpisodeRepository}!GetAbsolute@{GetAbsolute}}
+\index{GetAbsolute@{GetAbsolute}!Kyoo.Controllers.IEpisodeRepository@{Kyoo.Controllers.IEpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{GetAbsolute()}{GetAbsolute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+I\+Episode\+Repository.\+Get\+Absolute (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{int}]{absolute\+Number }\end{DoxyParamCaption})}
+
+
+
+Get a episode from it\textquotesingle{}s show\+ID and it\textquotesingle{}s absolute number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em show\+ID} & The id of the show\\
+\hline
+{\em absolute\+Number} & The episode\textquotesingle{}s absolute number (The episode number does not reset to 1 after the end of a season.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The episode found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a5021f10d7bd5a47ff2c6cc85574be960}{Kyoo.\+Controllers.\+Episode\+Repository}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_ae8cd75a8763d7c0333670b990b483bb8}\label{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_ae8cd75a8763d7c0333670b990b483bb8}} 
+\index{Kyoo.Controllers.IEpisodeRepository@{Kyoo.Controllers.IEpisodeRepository}!GetAbsolute@{GetAbsolute}}
+\index{GetAbsolute@{GetAbsolute}!Kyoo.Controllers.IEpisodeRepository@{Kyoo.Controllers.IEpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{GetAbsolute()}{GetAbsolute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+I\+Episode\+Repository.\+Get\+Absolute (\begin{DoxyParamCaption}\item[{string}]{show\+Slug,  }\item[{int}]{absolute\+Number }\end{DoxyParamCaption})}
+
+
+
+Get a episode from it\textquotesingle{}s show\+ID and it\textquotesingle{}s absolute number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em show\+Slug} & The slug of the show\\
+\hline
+{\em absolute\+Number} & The episode\textquotesingle{}s absolute number (The episode number does not reset to 1 after the end of a season.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Item\+Not\+Found\+Exception} & If the item is not found\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The episode found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_aa7e2894733430e2c8b0c245f746fdc08}{Kyoo.\+Controllers.\+Episode\+Repository}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_a2f61209d221500930db7dcb5196aacc3}\label{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_a2f61209d221500930db7dcb5196aacc3}} 
+\index{Kyoo.Controllers.IEpisodeRepository@{Kyoo.Controllers.IEpisodeRepository}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.IEpisodeRepository@{Kyoo.Controllers.IEpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+I\+Episode\+Repository.\+Get\+Or\+Default (\begin{DoxyParamCaption}\item[{int}]{show\+ID,  }\item[{int}]{season\+Number,  }\item[{int}]{episode\+Number }\end{DoxyParamCaption})}
+
+
+
+Get a episode from it\textquotesingle{}s show\+ID, it\textquotesingle{}s season\+Number and it\textquotesingle{}s episode number or null if it is not found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em show\+ID} & The id of the show\\
+\hline
+{\em season\+Number} & The season\textquotesingle{}s number\\
+\hline
+{\em episode\+Number} & The episode\textquotesingle{}s number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The episode found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_ad46e45c550006ec9f578eabb6c1fe759}{Kyoo.\+Controllers.\+Episode\+Repository}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_aacaf492d483320a784df41f275d7d9ac}\label{interfaceKyoo_1_1Controllers_1_1IEpisodeRepository_aacaf492d483320a784df41f275d7d9ac}} 
+\index{Kyoo.Controllers.IEpisodeRepository@{Kyoo.Controllers.IEpisodeRepository}!GetOrDefault@{GetOrDefault}}
+\index{GetOrDefault@{GetOrDefault}!Kyoo.Controllers.IEpisodeRepository@{Kyoo.Controllers.IEpisodeRepository}}
+\doxysubsubsection{\texorpdfstring{GetOrDefault()}{GetOrDefault()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Controllers.\+I\+Episode\+Repository.\+Get\+Or\+Default (\begin{DoxyParamCaption}\item[{string}]{show\+Slug,  }\item[{int}]{season\+Number,  }\item[{int}]{episode\+Number }\end{DoxyParamCaption})}
+
+
+
+Get a episode from it\textquotesingle{}s show slug, it\textquotesingle{}s season\+Number and it\textquotesingle{}s episode number or null if it is not found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em show\+Slug} & The slug of the show\\
+\hline
+{\em season\+Number} & The season\textquotesingle{}s number\\
+\hline
+{\em episode\+Number} & The episode\textquotesingle{}s number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The episode found
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Controllers_1_1EpisodeRepository_a800cebb6710e34bbc799c75f23062201}{Kyoo.\+Controllers.\+Episode\+Repository}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Controllers/\mbox{\hyperlink{IRepository_8cs}{I\+Repository.\+cs}}\end{DoxyCompactItemize}

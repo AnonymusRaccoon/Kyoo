@@ -1,0 +1,8 @@
+<map id="Kyoo.Controllers.TrackRepository" name="Kyoo.Controllers.TrackRepository">
+<area shape="rect" id="node1" title="A local repository to handle tracks." alt="" coords="177,859,414,1024"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Controllers_1_1LocalRepository.html" title=" " alt="" coords="5,367,204,708"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1ITrackRepository.html" title="A repository to handle tracks" alt="" coords="229,491,362,583"/>
+<area shape="rect" id="node4" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title=" " alt="" coords="215,5,375,229"/>
+<area shape="rect" id="node5" href="$classKyoo_1_1DatabaseContext.html" title="The database handle used for all local repositories. This is an abstract class. It is meant to be imp..." alt="" coords="386,279,605,796"/>
+<area shape="rect" id="node6" title=" " alt="" coords="450,79,541,156"/>
+</map>

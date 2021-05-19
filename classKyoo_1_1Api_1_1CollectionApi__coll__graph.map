@@ -1,0 +1,5 @@
+<map id="Kyoo.Api.CollectionApi" name="Kyoo.Api.CollectionApi">
+<area shape="rect" id="node1" title=" " alt="" coords="105,453,274,589"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1CommonApi_1_1CrudApi.html" title=" " alt="" coords="5,64,173,332"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1ILibraryManager.html" title="An interface to interract with the database. Every repository is mapped through here." alt="" coords="198,5,381,391"/>
+</map>

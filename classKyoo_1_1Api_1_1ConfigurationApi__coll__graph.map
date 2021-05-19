@@ -1,0 +1,5 @@
+<map id="Kyoo.Api.ConfigurationApi" name="Kyoo.Api.ConfigurationApi">
+<area shape="rect" id="node1" title="An API to retrieve or edit configuration settings" alt="" coords="43,189,233,296"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,27,92,105"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1IConfigurationManager.html" title="A class to ease configuration management. This work WITH Microsoft&#39;s package, you can still use IOpti..." alt="" coords="117,5,341,127"/>
+</map>

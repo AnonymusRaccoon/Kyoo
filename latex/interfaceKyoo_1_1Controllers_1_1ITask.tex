@@ -1,0 +1,184 @@
+\hypertarget{interfaceKyoo_1_1Controllers_1_1ITask}{}\doxysection{Kyoo.\+Controllers.\+I\+Task Interface Reference}
+\label{interfaceKyoo_1_1Controllers_1_1ITask}\index{Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}}
+
+
+A common interface that tasks should implement.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Controllers.\+I\+Task\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceKyoo_1_1Controllers_1_1ITask__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Controllers.\+I\+Task\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{interfaceKyoo_1_1Controllers_1_1ITask__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask_a19c0c658c3254fb2a5fe443a3c4c9221}{Run}} (\mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskParameters}{Task\+Parameters}} arguments, Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em Start this task. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskParameters}{Task\+Parameters}} \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask_aaaf952751d8460c03a4b8bd8a2589b6e}{Get\+Parameters}} ()
+\begin{DoxyCompactList}\small\item\em The list of parameters \end{DoxyCompactList}\item 
+int? \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask_ac42635cbedcb0f4aa70263eee143879b}{Progress}} ()
+\begin{DoxyCompactList}\small\item\em If this task is running, return the percentage of completion of this task or null if no percentage can be given. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask_adb0ef3b25de661d7918b352d1ca08674}{Slug}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The slug of the task, used to start it. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask_acbfbc6a086ad7c7eb1b21293a22164e7}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name of the task that will be displayed to the user. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask_a23d6ee7b7af93ead199d0831b142a4b2}{Description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A quick description of what this task will do. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask_ab554307c8cc2feee25e79bc1edca6113}{Help\+Message}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An optional message to display to help the user. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask_a6d46ade90646fee48b94a309e12e53fa}{Run\+On\+Startup}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Should this task be automatically run at app startup? \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask_a886b16694103321c4ec7bd48007a2d91}{Priority}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The priority of this task. Only used if \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask_a6d46ade90646fee48b94a309e12e53fa}{Run\+On\+Startup}} is true. It allow one to specify witch task will be started first as tasked are run on a Priority\textquotesingle{}s descending order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A common interface that tasks should implement. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ITask_aaaf952751d8460c03a4b8bd8a2589b6e}\label{interfaceKyoo_1_1Controllers_1_1ITask_aaaf952751d8460c03a4b8bd8a2589b6e}} 
+\index{Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}!GetParameters@{GetParameters}}
+\index{GetParameters@{GetParameters}!Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}}
+\doxysubsubsection{\texorpdfstring{GetParameters()}{GetParameters()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskParameters}{Task\+Parameters}} Kyoo.\+Controllers.\+I\+Task.\+Get\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The list of parameters 
+
+\begin{DoxyReturn}{Returns}
+All parameters that this task as. Every one of them will be given to the run function with a value.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Tasks_1_1PluginInitializer_aae1e13b55a4d2fba50bd3dd744bcad2a}{Kyoo.\+Tasks.\+Plugin\+Initializer}}, and \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_ae8ab942c18db10b9f42c56a11e074227}{Kyoo.\+Tasks.\+Crawler}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ITask_ac42635cbedcb0f4aa70263eee143879b}\label{interfaceKyoo_1_1Controllers_1_1ITask_ac42635cbedcb0f4aa70263eee143879b}} 
+\index{Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}!Progress@{Progress}}
+\index{Progress@{Progress}!Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}}
+\doxysubsubsection{\texorpdfstring{Progress()}{Progress()}}
+{\footnotesize\ttfamily int? Kyoo.\+Controllers.\+I\+Task.\+Progress (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+If this task is running, return the percentage of completion of this task or null if no percentage can be given. 
+
+\begin{DoxyReturn}{Returns}
+The percentage of completion of the task.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Tasks_1_1PluginInitializer_a96754795e2b2b24f21b18266bd728e4f}{Kyoo.\+Tasks.\+Plugin\+Initializer}}, and \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a5de189c5817cb5c50a2c72b10131dd3b}{Kyoo.\+Tasks.\+Crawler}}.
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ITask_a19c0c658c3254fb2a5fe443a3c4c9221}\label{interfaceKyoo_1_1Controllers_1_1ITask_a19c0c658c3254fb2a5fe443a3c4c9221}} 
+\index{Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}!Run@{Run}}
+\index{Run@{Run}!Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily Task Kyoo.\+Controllers.\+I\+Task.\+Run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskParameters}{Task\+Parameters}}}]{arguments,  }\item[{Cancellation\+Token}]{cancellation\+Token }\end{DoxyParamCaption})}
+
+
+
+Start this task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arguments} & The list of parameters.\\
+\hline
+{\em cancellation\+Token} & A token to request the task\textquotesingle{}s cancellation. If this task is not cancelled quickly, it might be killed by the runner.\\
+\hline
+\end{DoxyParams}
+
+
+Your task can have any service as a public field and use the Injected\+Attribute, they will be set to an available service from the service container before calling this method. 
+
+Implemented in \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a2c4fb38b11179c0165c9053563397dc2}{Kyoo.\+Tasks.\+Crawler}}, and \mbox{\hyperlink{classKyoo_1_1Tasks_1_1PluginInitializer_a0cfed441043e7494f88fe8e3735df1c0}{Kyoo.\+Tasks.\+Plugin\+Initializer}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ITask_a23d6ee7b7af93ead199d0831b142a4b2}\label{interfaceKyoo_1_1Controllers_1_1ITask_a23d6ee7b7af93ead199d0831b142a4b2}} 
+\index{Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}!Description@{Description}}
+\index{Description@{Description}!Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}}
+\doxysubsubsection{\texorpdfstring{Description}{Description}}
+{\footnotesize\ttfamily string Kyoo.\+Controllers.\+I\+Task.\+Description\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+A quick description of what this task will do. 
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ITask_ab554307c8cc2feee25e79bc1edca6113}\label{interfaceKyoo_1_1Controllers_1_1ITask_ab554307c8cc2feee25e79bc1edca6113}} 
+\index{Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}!HelpMessage@{HelpMessage}}
+\index{HelpMessage@{HelpMessage}!Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}}
+\doxysubsubsection{\texorpdfstring{HelpMessage}{HelpMessage}}
+{\footnotesize\ttfamily string Kyoo.\+Controllers.\+I\+Task.\+Help\+Message\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+An optional message to display to help the user. 
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ITask_acbfbc6a086ad7c7eb1b21293a22164e7}\label{interfaceKyoo_1_1Controllers_1_1ITask_acbfbc6a086ad7c7eb1b21293a22164e7}} 
+\index{Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}!Name@{Name}}
+\index{Name@{Name}!Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string Kyoo.\+Controllers.\+I\+Task.\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The name of the task that will be displayed to the user. 
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ITask_a886b16694103321c4ec7bd48007a2d91}\label{interfaceKyoo_1_1Controllers_1_1ITask_a886b16694103321c4ec7bd48007a2d91}} 
+\index{Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}!Priority@{Priority}}
+\index{Priority@{Priority}!Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}}
+\doxysubsubsection{\texorpdfstring{Priority}{Priority}}
+{\footnotesize\ttfamily int Kyoo.\+Controllers.\+I\+Task.\+Priority\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The priority of this task. Only used if \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask_a6d46ade90646fee48b94a309e12e53fa}{Run\+On\+Startup}} is true. It allow one to specify witch task will be started first as tasked are run on a Priority\textquotesingle{}s descending order. 
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ITask_a6d46ade90646fee48b94a309e12e53fa}\label{interfaceKyoo_1_1Controllers_1_1ITask_a6d46ade90646fee48b94a309e12e53fa}} 
+\index{Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}!RunOnStartup@{RunOnStartup}}
+\index{RunOnStartup@{RunOnStartup}!Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}}
+\doxysubsubsection{\texorpdfstring{RunOnStartup}{RunOnStartup}}
+{\footnotesize\ttfamily bool Kyoo.\+Controllers.\+I\+Task.\+Run\+On\+Startup\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Should this task be automatically run at app startup? 
+
+\mbox{\Hypertarget{interfaceKyoo_1_1Controllers_1_1ITask_adb0ef3b25de661d7918b352d1ca08674}\label{interfaceKyoo_1_1Controllers_1_1ITask_adb0ef3b25de661d7918b352d1ca08674}} 
+\index{Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}!Slug@{Slug}}
+\index{Slug@{Slug}!Kyoo.Controllers.ITask@{Kyoo.Controllers.ITask}}
+\doxysubsubsection{\texorpdfstring{Slug}{Slug}}
+{\footnotesize\ttfamily string Kyoo.\+Controllers.\+I\+Task.\+Slug\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The slug of the task, used to start it. 
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Controllers/\mbox{\hyperlink{ITask_8cs}{I\+Task.\+cs}}\end{DoxyCompactItemize}

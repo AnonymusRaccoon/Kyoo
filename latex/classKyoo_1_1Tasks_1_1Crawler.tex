@@ -1,0 +1,360 @@
+\hypertarget{classKyoo_1_1Tasks_1_1Crawler}{}\doxysection{Kyoo.\+Tasks.\+Crawler Class Reference}
+\label{classKyoo_1_1Tasks_1_1Crawler}\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+
+
+Inheritance diagram for Kyoo.\+Tasks.\+Crawler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1Tasks_1_1Crawler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Tasks.\+Crawler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classKyoo_1_1Tasks_1_1Crawler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskParameters}{Task\+Parameters}} \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_ae8ab942c18db10b9f42c56a11e074227}{Get\+Parameters}} ()
+\begin{DoxyCompactList}\small\item\em The list of parameters \end{DoxyCompactList}\item 
+int? \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a5de189c5817cb5c50a2c72b10131dd3b}{Progress}} ()
+\begin{DoxyCompactList}\small\item\em If this task is running, return the percentage of completion of this task or null if no percentage can be given. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a2c4fb38b11179c0165c9053563397dc2}{Run}} (\mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskParameters}{Task\+Parameters}} parameters, Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em Start this task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_aa447aedc40ee8feca5eec01a118dcddc}{Slug}} =$>$ \char`\"{}scan\char`\"{}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a63c138a21c5eeb83867bb6b72799f582}{Name}} =$>$ \char`\"{}Scan libraries\char`\"{}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_ae1d2688d0aad2ff136743f1b2b318c1a}{Description}} =$>$ \char`\"{}Scan your libraries, load data for new shows and remove shows that don\textquotesingle{}t exist anymore.\char`\"{}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_ada2e057101279da72f9c5f9bb30bb2d6}{Help\+Message}} =$>$ \char`\"{}Reloading all libraries is a long process and may take up to 24 hours if it is the first scan in a while.\char`\"{}
+\item 
+bool \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_aaee8665bff6be4717aadf6e100a5b970}{Run\+On\+Startup}} =$>$ true
+\item 
+int \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a47f6d6691fb3ad39cd87fa0d78e47b7c}{Priority}} =$>$ 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+I\+Service\+Provider \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a610010c36495fad60e3825a5df0b554b}{Service\+Provider}}\hspace{0.3cm}{\ttfamily  \mbox{[}set, private get\mbox{]}}
+\item 
+\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IThumbnailsManager}{I\+Thumbnails\+Manager}} \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a462c73b5e41a5af42ac9fab573d5a85c}{Thumbnails\+Manager}}\hspace{0.3cm}{\ttfamily  \mbox{[}set, private get\mbox{]}}
+\item 
+\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderManager}{I\+Provider\+Manager}} \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_aa43d1045d297aac4f5acf3c6225bbf7e}{Metadata\+Provider}}\hspace{0.3cm}{\ttfamily  \mbox{[}set, private get\mbox{]}}
+\item 
+\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITranscoder}{I\+Transcoder}} \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_acd43e579fb2196126ece9244a32974bc}{Transcoder}}\hspace{0.3cm}{\ttfamily  \mbox{[}set, private get\mbox{]}}
+\item 
+I\+Configuration \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a813bbf63524c01ddf34551c75fd359bf}{Config}}\hspace{0.3cm}{\ttfamily  \mbox{[}set, private get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_ae1dbdfab21c8e984d20e88bc7884a6e3}{Scan}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library, I\+Enumerable$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ episodes, I\+Enumerable$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}} $>$ tracks, Cancellation\+Token cancellation\+Token)
+\item 
+async Task \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_aed5e66a530cdfd00034c0cb6f947fe91}{Register\+External\+Subtitle}} (string path, Cancellation\+Token token)
+\item 
+async Task \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a3f6aa0c43266c13b5b1d8e7bf293f486}{Register\+File}} (string path, string relative\+Path, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library, Cancellation\+Token token)
+\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Collection}{Collection}} $>$ \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a47c70435f56792385c42abb9cca38d63}{Get\+Collection}} (\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}} library\+Manager, string collection\+Name, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} $>$ \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a589aa6921db894622ef19ed1073b04d4}{Get\+Show}} (\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}} library\+Manager, string show\+Title, string show\+Path, bool is\+Movie, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} $>$ \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_ac2bcbe5d55e31e1474687644b835702a}{Get\+Season}} (\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}} library\+Manager, \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} show, int season\+Number, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a043d2d0b6ae9b2e71626799d025ed0f9}{Get\+Episode}} (\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}} library\+Manager, \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} show, \mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}} season, int episode\+Number, int absolute\+Number, string episode\+Path, \mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}} library)
+\item 
+async Task$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$ \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a2bb2dc7c6b1132822f743e39ab2e9fc1}{Get\+Movie}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} show, string episode\+Path)
+\item 
+async Task$<$ I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}} $>$ $>$ \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a7099737698dd169575d5ce01779346b7}{Get\+Tracks}} (\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} episode)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_ad5b68fdc3b5e15374575ff4f0d482b34}{Is\+Video}} (string file\+Path)
+\item 
+static bool \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a39c1628c1231b277d6af10eb696c8cb1}{Is\+Subtitle}} (string file\+Path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a8575df4a6c423ad9850af39b75c7ce9b}{\+\_\+parallel\+Tasks}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a6798cf2359133ea3a230a36d70ae10aa}{Video\+Extensions}}
+\item 
+static readonly Dictionary$<$ string, string $>$ \mbox{\hyperlink{classKyoo_1_1Tasks_1_1Crawler_a7f80fdf3e0bb014a42bc5484206bcf6e}{Subtitle\+Extensions}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_a47c70435f56792385c42abb9cca38d63}\label{classKyoo_1_1Tasks_1_1Crawler_a47c70435f56792385c42abb9cca38d63}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!GetCollection@{GetCollection}}
+\index{GetCollection@{GetCollection}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{GetCollection()}{GetCollection()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Collection}{Collection}}$>$ Kyoo.\+Tasks.\+Crawler.\+Get\+Collection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}}}]{library\+Manager,  }\item[{string}]{collection\+Name,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_a043d2d0b6ae9b2e71626799d025ed0f9}\label{classKyoo_1_1Tasks_1_1Crawler_a043d2d0b6ae9b2e71626799d025ed0f9}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!GetEpisode@{GetEpisode}}
+\index{GetEpisode@{GetEpisode}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{GetEpisode()}{GetEpisode()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Tasks.\+Crawler.\+Get\+Episode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}}}]{library\+Manager,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{show,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}}]{season,  }\item[{int}]{episode\+Number,  }\item[{int}]{absolute\+Number,  }\item[{string}]{episode\+Path,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_a2bb2dc7c6b1132822f743e39ab2e9fc1}\label{classKyoo_1_1Tasks_1_1Crawler_a2bb2dc7c6b1132822f743e39ab2e9fc1}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!GetMovie@{GetMovie}}
+\index{GetMovie@{GetMovie}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{GetMovie()}{GetMovie()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}$>$ Kyoo.\+Tasks.\+Crawler.\+Get\+Movie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{show,  }\item[{string}]{episode\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_ae8ab942c18db10b9f42c56a11e074227}\label{classKyoo_1_1Tasks_1_1Crawler_ae8ab942c18db10b9f42c56a11e074227}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!GetParameters@{GetParameters}}
+\index{GetParameters@{GetParameters}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{GetParameters()}{GetParameters()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskParameters}{Task\+Parameters}} Kyoo.\+Tasks.\+Crawler.\+Get\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The list of parameters 
+
+\begin{DoxyReturn}{Returns}
+All parameters that this task as. Every one of them will be given to the run function with a value.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask_aaaf952751d8460c03a4b8bd8a2589b6e}{Kyoo.\+Controllers.\+I\+Task}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_ac2bcbe5d55e31e1474687644b835702a}\label{classKyoo_1_1Tasks_1_1Crawler_ac2bcbe5d55e31e1474687644b835702a}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!GetSeason@{GetSeason}}
+\index{GetSeason@{GetSeason}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{GetSeason()}{GetSeason()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Season}{Season}}$>$ Kyoo.\+Tasks.\+Crawler.\+Get\+Season (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}}}]{library\+Manager,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}}]{show,  }\item[{int}]{season\+Number,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_a589aa6921db894622ef19ed1073b04d4}\label{classKyoo_1_1Tasks_1_1Crawler_a589aa6921db894622ef19ed1073b04d4}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!GetShow@{GetShow}}
+\index{GetShow@{GetShow}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{GetShow()}{GetShow()}}
+{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}$>$ Kyoo.\+Tasks.\+Crawler.\+Get\+Show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ILibraryManager}{I\+Library\+Manager}}}]{library\+Manager,  }\item[{string}]{show\+Title,  }\item[{string}]{show\+Path,  }\item[{bool}]{is\+Movie,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_a7099737698dd169575d5ce01779346b7}\label{classKyoo_1_1Tasks_1_1Crawler_a7099737698dd169575d5ce01779346b7}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!GetTracks@{GetTracks}}
+\index{GetTracks@{GetTracks}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{GetTracks()}{GetTracks()}}
+{\footnotesize\ttfamily async Task$<$I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}}$>$ $>$ Kyoo.\+Tasks.\+Crawler.\+Get\+Tracks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}}}]{episode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_a39c1628c1231b277d6af10eb696c8cb1}\label{classKyoo_1_1Tasks_1_1Crawler_a39c1628c1231b277d6af10eb696c8cb1}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!IsSubtitle@{IsSubtitle}}
+\index{IsSubtitle@{IsSubtitle}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{IsSubtitle()}{IsSubtitle()}}
+{\footnotesize\ttfamily static bool Kyoo.\+Tasks.\+Crawler.\+Is\+Subtitle (\begin{DoxyParamCaption}\item[{string}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_ad5b68fdc3b5e15374575ff4f0d482b34}\label{classKyoo_1_1Tasks_1_1Crawler_ad5b68fdc3b5e15374575ff4f0d482b34}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!IsVideo@{IsVideo}}
+\index{IsVideo@{IsVideo}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{IsVideo()}{IsVideo()}}
+{\footnotesize\ttfamily static bool Kyoo.\+Tasks.\+Crawler.\+Is\+Video (\begin{DoxyParamCaption}\item[{string}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_a5de189c5817cb5c50a2c72b10131dd3b}\label{classKyoo_1_1Tasks_1_1Crawler_a5de189c5817cb5c50a2c72b10131dd3b}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!Progress@{Progress}}
+\index{Progress@{Progress}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{Progress()}{Progress()}}
+{\footnotesize\ttfamily int? Kyoo.\+Tasks.\+Crawler.\+Progress (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If this task is running, return the percentage of completion of this task or null if no percentage can be given. 
+
+\begin{DoxyReturn}{Returns}
+The percentage of completion of the task.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask_ac42635cbedcb0f4aa70263eee143879b}{Kyoo.\+Controllers.\+I\+Task}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_aed5e66a530cdfd00034c0cb6f947fe91}\label{classKyoo_1_1Tasks_1_1Crawler_aed5e66a530cdfd00034c0cb6f947fe91}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!RegisterExternalSubtitle@{RegisterExternalSubtitle}}
+\index{RegisterExternalSubtitle@{RegisterExternalSubtitle}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{RegisterExternalSubtitle()}{RegisterExternalSubtitle()}}
+{\footnotesize\ttfamily async Task Kyoo.\+Tasks.\+Crawler.\+Register\+External\+Subtitle (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{Cancellation\+Token}]{token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_a3f6aa0c43266c13b5b1d8e7bf293f486}\label{classKyoo_1_1Tasks_1_1Crawler_a3f6aa0c43266c13b5b1d8e7bf293f486}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!RegisterFile@{RegisterFile}}
+\index{RegisterFile@{RegisterFile}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{RegisterFile()}{RegisterFile()}}
+{\footnotesize\ttfamily async Task Kyoo.\+Tasks.\+Crawler.\+Register\+File (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{string}]{relative\+Path,  }\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library,  }\item[{Cancellation\+Token}]{token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_a2c4fb38b11179c0165c9053563397dc2}\label{classKyoo_1_1Tasks_1_1Crawler_a2c4fb38b11179c0165c9053563397dc2}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!Run@{Run}}
+\index{Run@{Run}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily async Task Kyoo.\+Tasks.\+Crawler.\+Run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Controllers_1_1TaskParameters}{Task\+Parameters}}}]{arguments,  }\item[{Cancellation\+Token}]{cancellation\+Token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Start this task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arguments} & The list of parameters.\\
+\hline
+{\em cancellation\+Token} & A token to request the task\textquotesingle{}s cancellation. If this task is not cancelled quickly, it might be killed by the runner.\\
+\hline
+\end{DoxyParams}
+
+
+Your task can have any service as a public field and use the Injected\+Attribute, they will be set to an available service from the service container before calling this method. 
+
+Implements \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITask_a19c0c658c3254fb2a5fe443a3c4c9221}{Kyoo.\+Controllers.\+I\+Task}}.
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_ae1dbdfab21c8e984d20e88bc7884a6e3}\label{classKyoo_1_1Tasks_1_1Crawler_ae1dbdfab21c8e984d20e88bc7884a6e3}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!Scan@{Scan}}
+\index{Scan@{Scan}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{Scan()}{Scan()}}
+{\footnotesize\ttfamily async Task Kyoo.\+Tasks.\+Crawler.\+Scan (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKyoo_1_1Models_1_1Library}{Library}}}]{library,  }\item[{I\+Enumerable$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Episode}{Episode}} $>$}]{episodes,  }\item[{I\+Enumerable$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Track}{Track}} $>$}]{tracks,  }\item[{Cancellation\+Token}]{cancellation\+Token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_a8575df4a6c423ad9850af39b75c7ce9b}\label{classKyoo_1_1Tasks_1_1Crawler_a8575df4a6c423ad9850af39b75c7ce9b}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!\_parallelTasks@{\_parallelTasks}}
+\index{\_parallelTasks@{\_parallelTasks}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{\_parallelTasks}{\_parallelTasks}}
+{\footnotesize\ttfamily int Kyoo.\+Tasks.\+Crawler.\+\_\+parallel\+Tasks\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_ae1d2688d0aad2ff136743f1b2b318c1a}\label{classKyoo_1_1Tasks_1_1Crawler_ae1d2688d0aad2ff136743f1b2b318c1a}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!Description@{Description}}
+\index{Description@{Description}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{Description}{Description}}
+{\footnotesize\ttfamily string Kyoo.\+Tasks.\+Crawler.\+Description =$>$ \char`\"{}Scan your libraries, load data for new shows and remove shows that don\textquotesingle{}t exist anymore.\char`\"{}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_ada2e057101279da72f9c5f9bb30bb2d6}\label{classKyoo_1_1Tasks_1_1Crawler_ada2e057101279da72f9c5f9bb30bb2d6}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!HelpMessage@{HelpMessage}}
+\index{HelpMessage@{HelpMessage}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{HelpMessage}{HelpMessage}}
+{\footnotesize\ttfamily string Kyoo.\+Tasks.\+Crawler.\+Help\+Message =$>$ \char`\"{}Reloading all libraries is a long process and may take up to 24 hours if it is the first scan in a while.\char`\"{}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_a63c138a21c5eeb83867bb6b72799f582}\label{classKyoo_1_1Tasks_1_1Crawler_a63c138a21c5eeb83867bb6b72799f582}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!Name@{Name}}
+\index{Name@{Name}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string Kyoo.\+Tasks.\+Crawler.\+Name =$>$ \char`\"{}Scan libraries\char`\"{}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_a47f6d6691fb3ad39cd87fa0d78e47b7c}\label{classKyoo_1_1Tasks_1_1Crawler_a47f6d6691fb3ad39cd87fa0d78e47b7c}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!Priority@{Priority}}
+\index{Priority@{Priority}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{Priority}{Priority}}
+{\footnotesize\ttfamily int Kyoo.\+Tasks.\+Crawler.\+Priority =$>$ 0}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_aaee8665bff6be4717aadf6e100a5b970}\label{classKyoo_1_1Tasks_1_1Crawler_aaee8665bff6be4717aadf6e100a5b970}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!RunOnStartup@{RunOnStartup}}
+\index{RunOnStartup@{RunOnStartup}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{RunOnStartup}{RunOnStartup}}
+{\footnotesize\ttfamily bool Kyoo.\+Tasks.\+Crawler.\+Run\+On\+Startup =$>$ true}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_aa447aedc40ee8feca5eec01a118dcddc}\label{classKyoo_1_1Tasks_1_1Crawler_aa447aedc40ee8feca5eec01a118dcddc}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!Slug@{Slug}}
+\index{Slug@{Slug}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{Slug}{Slug}}
+{\footnotesize\ttfamily string Kyoo.\+Tasks.\+Crawler.\+Slug =$>$ \char`\"{}scan\char`\"{}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_a7f80fdf3e0bb014a42bc5484206bcf6e}\label{classKyoo_1_1Tasks_1_1Crawler_a7f80fdf3e0bb014a42bc5484206bcf6e}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!SubtitleExtensions@{SubtitleExtensions}}
+\index{SubtitleExtensions@{SubtitleExtensions}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{SubtitleExtensions}{SubtitleExtensions}}
+{\footnotesize\ttfamily readonly Dictionary$<$string, string$>$ Kyoo.\+Tasks.\+Crawler.\+Subtitle\+Extensions\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{keyword}{new}()}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            \{\textcolor{stringliteral}{".ass"}, \textcolor{stringliteral}{"ass"}\},}
+\DoxyCodeLine{            \{\textcolor{stringliteral}{".str"}, \textcolor{stringliteral}{"subrip"}\}}
+\DoxyCodeLine{        \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_a6798cf2359133ea3a230a36d70ae10aa}\label{classKyoo_1_1Tasks_1_1Crawler_a6798cf2359133ea3a230a36d70ae10aa}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!VideoExtensions@{VideoExtensions}}
+\index{VideoExtensions@{VideoExtensions}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{VideoExtensions}{VideoExtensions}}
+{\footnotesize\ttfamily readonly string \mbox{[}$\,$\mbox{]} Kyoo.\+Tasks.\+Crawler.\+Video\+Extensions\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            \textcolor{stringliteral}{".webm"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".mkv"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".flv"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".vob"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".ogg"}, }
+\DoxyCodeLine{            \textcolor{stringliteral}{".ogv"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".avi"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".mts"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".m2ts"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".ts"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".mov"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".qt"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".asf"}, }
+\DoxyCodeLine{            \textcolor{stringliteral}{".mp4"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".m4p"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".m4v"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".mpg"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".mp2"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".mpeg"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".mpe"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".mpv"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".m2v"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".3gp"},}
+\DoxyCodeLine{            \textcolor{stringliteral}{".3g2"}}
+\DoxyCodeLine{        \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_a813bbf63524c01ddf34551c75fd359bf}\label{classKyoo_1_1Tasks_1_1Crawler_a813bbf63524c01ddf34551c75fd359bf}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!Config@{Config}}
+\index{Config@{Config}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{Config}{Config}}
+{\footnotesize\ttfamily I\+Configuration Kyoo.\+Tasks.\+Crawler.\+Config\hspace{0.3cm}{\ttfamily [set]}, {\ttfamily [private get]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_aa43d1045d297aac4f5acf3c6225bbf7e}\label{classKyoo_1_1Tasks_1_1Crawler_aa43d1045d297aac4f5acf3c6225bbf7e}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!MetadataProvider@{MetadataProvider}}
+\index{MetadataProvider@{MetadataProvider}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{MetadataProvider}{MetadataProvider}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IProviderManager}{I\+Provider\+Manager}} Kyoo.\+Tasks.\+Crawler.\+Metadata\+Provider\hspace{0.3cm}{\ttfamily [set]}, {\ttfamily [private get]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_a610010c36495fad60e3825a5df0b554b}\label{classKyoo_1_1Tasks_1_1Crawler_a610010c36495fad60e3825a5df0b554b}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!ServiceProvider@{ServiceProvider}}
+\index{ServiceProvider@{ServiceProvider}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{ServiceProvider}{ServiceProvider}}
+{\footnotesize\ttfamily I\+Service\+Provider Kyoo.\+Tasks.\+Crawler.\+Service\+Provider\hspace{0.3cm}{\ttfamily [set]}, {\ttfamily [private get]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_a462c73b5e41a5af42ac9fab573d5a85c}\label{classKyoo_1_1Tasks_1_1Crawler_a462c73b5e41a5af42ac9fab573d5a85c}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!ThumbnailsManager@{ThumbnailsManager}}
+\index{ThumbnailsManager@{ThumbnailsManager}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{ThumbnailsManager}{ThumbnailsManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1IThumbnailsManager}{I\+Thumbnails\+Manager}} Kyoo.\+Tasks.\+Crawler.\+Thumbnails\+Manager\hspace{0.3cm}{\ttfamily [set]}, {\ttfamily [private get]}}
+
+\mbox{\Hypertarget{classKyoo_1_1Tasks_1_1Crawler_acd43e579fb2196126ece9244a32974bc}\label{classKyoo_1_1Tasks_1_1Crawler_acd43e579fb2196126ece9244a32974bc}} 
+\index{Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}!Transcoder@{Transcoder}}
+\index{Transcoder@{Transcoder}!Kyoo.Tasks.Crawler@{Kyoo.Tasks.Crawler}}
+\doxysubsubsection{\texorpdfstring{Transcoder}{Transcoder}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interfaceKyoo_1_1Controllers_1_1ITranscoder}{I\+Transcoder}} Kyoo.\+Tasks.\+Crawler.\+Transcoder\hspace{0.3cm}{\ttfamily [set]}, {\ttfamily [private get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo/\+Tasks/\mbox{\hyperlink{Crawler_8cs}{Crawler.\+cs}}\end{DoxyCompactItemize}

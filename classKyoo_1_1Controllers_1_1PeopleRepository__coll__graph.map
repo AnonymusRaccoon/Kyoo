@@ -1,0 +1,10 @@
+<map id="Kyoo.Controllers.PeopleRepository" name="Kyoo.Controllers.PeopleRepository">
+<area shape="rect" id="node1" title="A local repository to handle people." alt="" coords="275,859,522,1083"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1Controllers_1_1LocalRepository.html" title=" " alt="" coords="5,367,205,708"/>
+<area shape="rect" id="node3" href="$interfaceKyoo_1_1Controllers_1_1IPeopleRepository.html" title="A repository for people." alt="" coords="229,447,376,627"/>
+<area shape="rect" id="node4" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title=" " alt="" coords="215,5,385,229"/>
+<area shape="rect" id="node5" href="$interfaceKyoo_1_1Controllers_1_1IProviderRepository.html" title="A repository to handle providers." alt="" coords="401,484,591,591"/>
+<area shape="rect" id="node6" href="$interfaceKyoo_1_1Controllers_1_1IRepository.html" title=" " alt="" coords="410,5,590,229"/>
+<area shape="rect" id="node7" href="$classKyoo_1_1DatabaseContext.html" title="The database handle used for all local repositories. This is an abstract class. It is meant to be imp..." alt="" coords="616,279,835,796"/>
+<area shape="rect" id="node8" title=" " alt="" coords="680,79,771,156"/>
+</map>

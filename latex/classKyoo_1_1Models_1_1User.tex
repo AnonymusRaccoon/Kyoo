@@ -1,0 +1,151 @@
+\hypertarget{classKyoo_1_1Models_1_1User}{}\doxysection{Kyoo.\+Models.\+User Class Reference}
+\label{classKyoo_1_1Models_1_1User}\index{Kyoo.Models.User@{Kyoo.Models.User}}
+
+
+A single user of the app.  
+
+
+
+
+Inheritance diagram for Kyoo.\+Models.\+User\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classKyoo_1_1Models_1_1User__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kyoo.\+Models.\+User\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classKyoo_1_1Models_1_1User__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classKyoo_1_1Models_1_1User_af5657fb7a2fef66eb3635bc40efbb7bf}{ID}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Models_1_1User_a0528d20a7bf6a300d38e5fe4580a8b55}{Slug}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classKyoo_1_1Models_1_1User_a730ed773286d9067e6b5a0459a7a526e}{Username}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A username displayed to the user. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classKyoo_1_1Models_1_1User_a2fa164926b0cc927232730d48088488c}{Email}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The user email address. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classKyoo_1_1Models_1_1User_ab2a2be7c320b5b79ef4878ada8a52b62}{Password}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The user password (hashed, it can\textquotesingle{}t be read like that). The hashing format is implementation defined. \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classKyoo_1_1Models_1_1User_ae81dde4ff9b95e15839d26ee6ff8419a}{Permissions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of permissions of the user. The format of this is implementation dependent. \end{DoxyCompactList}\item 
+Dictionary$<$ string, string $>$ \mbox{\hyperlink{classKyoo_1_1Models_1_1User_af63f9720df2a2a6109a3c0a403b3ddfb}{Extra\+Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Arbitrary extra data that can be used by specific authentication implementations. \end{DoxyCompactList}\item 
+I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}} $>$ \mbox{\hyperlink{classKyoo_1_1Models_1_1User_a626ae389ef29f58fd33d944de97ee52d}{Watched}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of shows the user has finished. \end{DoxyCompactList}\item 
+I\+Collection$<$ \mbox{\hyperlink{classKyoo_1_1Models_1_1WatchedEpisode}{Watched\+Episode}} $>$ \mbox{\hyperlink{classKyoo_1_1Models_1_1User_a1167e2dbc2dda511f937de2408002ad8}{Currently\+Watching}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of episodes the user is watching (stopped in progress or the next episode of the show) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A single user of the app. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classKyoo_1_1Models_1_1User_a1167e2dbc2dda511f937de2408002ad8}\label{classKyoo_1_1Models_1_1User_a1167e2dbc2dda511f937de2408002ad8}} 
+\index{Kyoo.Models.User@{Kyoo.Models.User}!CurrentlyWatching@{CurrentlyWatching}}
+\index{CurrentlyWatching@{CurrentlyWatching}!Kyoo.Models.User@{Kyoo.Models.User}}
+\doxysubsubsection{\texorpdfstring{CurrentlyWatching}{CurrentlyWatching}}
+{\footnotesize\ttfamily I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1WatchedEpisode}{Watched\+Episode}}$>$ Kyoo.\+Models.\+User.\+Currently\+Watching\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The list of episodes the user is watching (stopped in progress or the next episode of the show) 
+
+\mbox{\Hypertarget{classKyoo_1_1Models_1_1User_a2fa164926b0cc927232730d48088488c}\label{classKyoo_1_1Models_1_1User_a2fa164926b0cc927232730d48088488c}} 
+\index{Kyoo.Models.User@{Kyoo.Models.User}!Email@{Email}}
+\index{Email@{Email}!Kyoo.Models.User@{Kyoo.Models.User}}
+\doxysubsubsection{\texorpdfstring{Email}{Email}}
+{\footnotesize\ttfamily string Kyoo.\+Models.\+User.\+Email\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The user email address. 
+
+\mbox{\Hypertarget{classKyoo_1_1Models_1_1User_af63f9720df2a2a6109a3c0a403b3ddfb}\label{classKyoo_1_1Models_1_1User_af63f9720df2a2a6109a3c0a403b3ddfb}} 
+\index{Kyoo.Models.User@{Kyoo.Models.User}!ExtraData@{ExtraData}}
+\index{ExtraData@{ExtraData}!Kyoo.Models.User@{Kyoo.Models.User}}
+\doxysubsubsection{\texorpdfstring{ExtraData}{ExtraData}}
+{\footnotesize\ttfamily Dictionary$<$string, string$>$ Kyoo.\+Models.\+User.\+Extra\+Data\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Arbitrary extra data that can be used by specific authentication implementations. 
+
+\mbox{\Hypertarget{classKyoo_1_1Models_1_1User_af5657fb7a2fef66eb3635bc40efbb7bf}\label{classKyoo_1_1Models_1_1User_af5657fb7a2fef66eb3635bc40efbb7bf}} 
+\index{Kyoo.Models.User@{Kyoo.Models.User}!ID@{ID}}
+\index{ID@{ID}!Kyoo.Models.User@{Kyoo.Models.User}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily int Kyoo.\+Models.\+User.\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Models_1_1User_ab2a2be7c320b5b79ef4878ada8a52b62}\label{classKyoo_1_1Models_1_1User_ab2a2be7c320b5b79ef4878ada8a52b62}} 
+\index{Kyoo.Models.User@{Kyoo.Models.User}!Password@{Password}}
+\index{Password@{Password}!Kyoo.Models.User@{Kyoo.Models.User}}
+\doxysubsubsection{\texorpdfstring{Password}{Password}}
+{\footnotesize\ttfamily string Kyoo.\+Models.\+User.\+Password\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The user password (hashed, it can\textquotesingle{}t be read like that). The hashing format is implementation defined. 
+
+\mbox{\Hypertarget{classKyoo_1_1Models_1_1User_ae81dde4ff9b95e15839d26ee6ff8419a}\label{classKyoo_1_1Models_1_1User_ae81dde4ff9b95e15839d26ee6ff8419a}} 
+\index{Kyoo.Models.User@{Kyoo.Models.User}!Permissions@{Permissions}}
+\index{Permissions@{Permissions}!Kyoo.Models.User@{Kyoo.Models.User}}
+\doxysubsubsection{\texorpdfstring{Permissions}{Permissions}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Kyoo.\+Models.\+User.\+Permissions\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The list of permissions of the user. The format of this is implementation dependent. 
+
+\mbox{\Hypertarget{classKyoo_1_1Models_1_1User_a0528d20a7bf6a300d38e5fe4580a8b55}\label{classKyoo_1_1Models_1_1User_a0528d20a7bf6a300d38e5fe4580a8b55}} 
+\index{Kyoo.Models.User@{Kyoo.Models.User}!Slug@{Slug}}
+\index{Slug@{Slug}!Kyoo.Models.User@{Kyoo.Models.User}}
+\doxysubsubsection{\texorpdfstring{Slug}{Slug}}
+{\footnotesize\ttfamily string Kyoo.\+Models.\+User.\+Slug\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classKyoo_1_1Models_1_1User_a730ed773286d9067e6b5a0459a7a526e}\label{classKyoo_1_1Models_1_1User_a730ed773286d9067e6b5a0459a7a526e}} 
+\index{Kyoo.Models.User@{Kyoo.Models.User}!Username@{Username}}
+\index{Username@{Username}!Kyoo.Models.User@{Kyoo.Models.User}}
+\doxysubsubsection{\texorpdfstring{Username}{Username}}
+{\footnotesize\ttfamily string Kyoo.\+Models.\+User.\+Username\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A username displayed to the user. 
+
+\mbox{\Hypertarget{classKyoo_1_1Models_1_1User_a626ae389ef29f58fd33d944de97ee52d}\label{classKyoo_1_1Models_1_1User_a626ae389ef29f58fd33d944de97ee52d}} 
+\index{Kyoo.Models.User@{Kyoo.Models.User}!Watched@{Watched}}
+\index{Watched@{Watched}!Kyoo.Models.User@{Kyoo.Models.User}}
+\doxysubsubsection{\texorpdfstring{Watched}{Watched}}
+{\footnotesize\ttfamily I\+Collection$<$\mbox{\hyperlink{classKyoo_1_1Models_1_1Show}{Show}}$>$ Kyoo.\+Models.\+User.\+Watched\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The list of shows the user has finished. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kyoo.\+Common/\+Models/\+Resources/\mbox{\hyperlink{User_8cs}{User.\+cs}}\end{DoxyCompactItemize}

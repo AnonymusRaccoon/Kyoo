@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,96,39"/>
+<area shape="rect" id="node2" href="$classKyoo_1_1DatabaseContext.html" title="The database handle used for all local repositories. This is an abstract class. It is meant to be imp..." alt="" coords="144,13,315,39"/>
+<area shape="rect" id="node3" href="$classKyoo_1_1Postgresql_1_1PostgresContext.html" title="A postgresql implementation of DatabaseContext." alt="" coords="363,5,549,47"/>
+</map>
