@@ -30,6 +30,18 @@ namespace Kyoo.Api
 		}
 
 		/// <summary>
+		/// Get all permissions.
+		/// </summary>
+		/// <returns>The associate list of values.</returns>
+		/// <response code="200">Return the configuration values</response>
+		[HttpGet]
+		[Permission(nameof(ConfigurationApi), Kind.Read, Group.Admin)]
+		public ActionResult<object> GetConfiguration()
+		{
+			return _manager.GetValue(null);
+		}
+		
+		/// <summary>
 		/// Get a permission from it's slug.
 		/// </summary>
 		/// <param name="slug">The permission to retrieve. You can use ':' or "__" to get a child value.</param>

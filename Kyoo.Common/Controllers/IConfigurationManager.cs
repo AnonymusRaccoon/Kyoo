@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using JetBrains.Annotations;
 using Kyoo.Models;
 using Kyoo.Models.Exceptions;
 
@@ -18,7 +19,7 @@ namespace Kyoo.Controllers
 		/// <param name="path">The path of the resource (can be separated by ':' or '__')</param>
 		/// <exception cref="ItemNotFoundException">No setting found at the given path.</exception>
 		/// <returns>The value of the settings (if it's a strongly typed one, the given type is instantiated</returns>
-		object GetValue(string path);
+		object GetValue([CanBeNull] string path);
 		
 		/// <summary>
 		/// Get the value of a setting using it's path.
@@ -26,16 +27,17 @@ namespace Kyoo.Controllers
 		/// </summary>
 		/// <param name="path">The path of the resource (can be separated by ':' or '__')</param>
 		/// <typeparam name="T">A type to strongly type your option.</typeparam>
-		/// <exception cref="InvalidCastException">If your type is not the same as the registered type</exception>
+		/// <exception cref="ArgumentException">If your type is not the same as the registered type</exception>
 		/// <exception cref="ItemNotFoundException">No setting found at the given path.</exception>
 		/// <returns>The value of the settings (if it's a strongly typed one, the given type is instantiated</returns>
-		T GetValue<T>(string path);
+		T GetValue<T>([NotNull] string path);
 		
 		/// <summary>
 		/// Edit the value of a setting using it's path. Save it to the json file.
 		/// </summary>
 		/// <param name="path">The path of the resource (can be separated by ':' or '__')</param>
 		/// <param name="value">The new value of the resource</param>
+		/// <exception cref="ArgumentException">If your type is not the same as the registered type</exception>
 		/// <exception cref="ItemNotFoundException">No setting found at the given path.</exception>
 		Task EditValue(string path, object value);
 	}

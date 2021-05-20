@@ -57,6 +57,8 @@ namespace Kyoo.Controllers
 		/// <inheritdoc />
 		public object GetValue(string path)
 		{
+			if (path == null)
+				return ToObject(_configuration);
 			path = path.Replace("__", ":");
 			// TODO handle lists and dictionaries.
 			Type type = GetType(path);
@@ -71,12 +73,14 @@ namespace Kyoo.Controllers
 		/// <inheritdoc />
 		public T GetValue<T>(string path)
 		{
+			if (path == null)
+				throw new ArgumentNullException(nameof(path));
 			path = path.Replace("__", ":");
 			// TODO handle lists and dictionaries.
 			Type type = GetType(path);
 			if (typeof(T).IsAssignableFrom(type))
-				throw new InvalidCastException($"The type {typeof(T).Name} is not valid for " +
-				                               $"a resource of type {type.Name}.");
+				throw new ArgumentException($"The type {typeof(T).Name} is not valid for " +
+				                            $"a resource of type {type.Name}.");
 			return (T)GetValue(path);
 		}
 		
