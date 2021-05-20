@@ -139,7 +139,12 @@ namespace Kyoo.Controllers
 		public void ConfigureAspnet(IApplicationBuilder app)
 		{
 			foreach (IPlugin plugin in _plugins)
+			{
+				using IServiceScope scope = _provider.CreateScope();
+				Helper.InjectServices(plugin, x => scope.ServiceProvider.GetRequiredService(x));
 				plugin.ConfigureAspNet(app);
+				Helper.InjectServices(plugin, _ => null);
+			}
 		}
 
 		/// <summary>

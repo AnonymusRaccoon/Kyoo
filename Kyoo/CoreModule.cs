@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Kyoo.Controllers;
+using Kyoo.Models.Attributes;
 using Kyoo.Models.Options;
 using Kyoo.Models.Permissions;
 using Kyoo.Tasks;
@@ -77,6 +78,11 @@ namespace Kyoo
 		/// The configuration to use.
 		/// </summary>
 		private readonly IConfiguration _configuration;
+		
+		/// <summary>
+		/// The configuration manager used to specify type of configuration sections.
+		/// </summary>
+		[Injected] public IConfigurationManager ConfigurationManager { private get; set; }
 
 		
 		/// <summary>
@@ -94,14 +100,9 @@ namespace Kyoo
 			string publicUrl = _configuration.GetPublicUrl();
 
 			services.Configure<BasicOptions>(_configuration.GetSection(BasicOptions.Path));
-			services.AddConfiguration<BasicOptions>(BasicOptions.Path);
 			services.Configure<TaskOptions>(_configuration.GetSection(TaskOptions.Path));
-			services.AddConfiguration<TaskOptions>(TaskOptions.Path);
 			services.Configure<MediaOptions>(_configuration.GetSection(MediaOptions.Path));
-			services.AddConfiguration<MediaOptions>(MediaOptions.Path);
-			services.AddUntypedConfiguration("database");
-			services.AddUntypedConfiguration("logging");
-			
+
 			services.AddControllers()
 				.AddNewtonsoftJson(x =>
 				{
@@ -144,6 +145,12 @@ namespace Kyoo
 		/// <inheritdoc />
 		public void ConfigureAspNet(IApplicationBuilder app)
 		{
+			ConfigurationManager.Register<BasicOptions>(BasicOptions.Path);
+			ConfigurationManager.Register<TaskOptions>(TaskOptions.Path);
+			ConfigurationManager.Register<MediaOptions>(MediaOptions.Path);
+			ConfigurationManager.RegisterUntyped("database");
+			ConfigurationManager.RegisterUntyped("logging");
+
 			FileExtensionContentTypeProvider contentTypeProvider = new();
 			contentTypeProvider.Mappings[".data"] = "application/octet-stream";
 			app.UseStaticFiles(new StaticFileOptions

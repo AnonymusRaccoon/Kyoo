@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
+using Kyoo.Models.Attributes;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -70,15 +71,25 @@ namespace Kyoo.Controllers
 		/// An optional configuration step to allow a plugin to change asp net configurations.
 		/// WARNING: This is only called on Kyoo's startup so you must restart the app to apply this changes.
 		/// </summary>
+		/// <remarks>
+		/// Your plugin can have any service as a public field and use the <see cref="InjectedAttribute"/>,
+		/// they will be set to an available service from the service container before calling this method.
+		/// </remarks>
 		/// <param name="app">The Asp.Net application builder. On most case it is not needed but you can use it to add asp net functionalities.</param>
-		void ConfigureAspNet(IApplicationBuilder app) {}
-		
+		void ConfigureAspNet(IApplicationBuilder app)
+		{
+			// Skipped
+		}
+
 		/// <summary>
 		/// An optional function to execute and initialize your plugin.
 		/// It can be used to initialize a database connection, fill initial data or anything.
 		/// </summary>
 		/// <param name="provider">A service provider to request services</param>
-		void Initialize(IServiceProvider provider) {}
+		void Initialize(IServiceProvider provider)
+		{
+			// Skipped
+		}
 	}
 
 	/// <summary>

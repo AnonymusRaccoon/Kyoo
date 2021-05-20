@@ -29,6 +29,15 @@ namespace Kyoo.Controllers
 		/// Create a new <see cref="ConfigurationApi"/> using the given configuration.
 		/// </summary>
 		/// <param name="configuration">The configuration to use.</param>
+		public ConfigurationManager(IConfiguration configuration)
+		{
+			_configuration = configuration;
+		}
+
+		/// <summary>
+		/// Create a new <see cref="ConfigurationApi"/> using the given configuration.
+		/// </summary>
+		/// <param name="configuration">The configuration to use.</param>
 		/// <param name="references">The strongly typed option list.</param>
 		public ConfigurationManager(IConfiguration configuration, IEnumerable<ConfigurationReference> references)
 		{
@@ -36,6 +45,32 @@ namespace Kyoo.Controllers
 			_references = references.ToDictionary(x => x.Path, x => x.Type, StringComparer.OrdinalIgnoreCase);
 		}
 
+		
+		/// <inheritdoc />
+		public void Register<T>(string path)
+		{
+			if (_references.TryGetValue(path, out Type type))
+				throw new ArgumentException($"The path {path} is already registered with the type: {type}.");
+			foreach (ConfigurationReference confRef in ConfigurationReference.CreateReference<T>(path))
+				_references.Add(confRef.Path, confRef.Type);
+		}
+
+		/// <inheritdoc />
+		public void RegisterUntyped(string path)
+		{
+			if (_references.TryGetValue(path, out Type type))
+				throw new ArgumentException($"The path {path} is already registered with the type: {type}.");
+			ConfigurationReference config = ConfigurationReference.CreateUntyped(path);
+			_references.Add(config.Path, config.Type);
+		}
+
+		/// <summary>
+		/// Get the type of the resource at a given path
+		/// </summary>
+		/// <param name="path">The path of the resource (separated by ':' or "__")</param>
+		/// <returns>The type of the resource</returns>
+		/// <exception cref="ArgumentException">The path is not a typed resource</exception>
+		/// <exception cref="ItemNotFoundException">No resource exists for the given path</exception>
 		private Type GetType(string path)
 		{
 			path = path.Replace("__", ":");

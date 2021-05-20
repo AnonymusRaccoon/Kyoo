@@ -14,6 +14,21 @@ namespace Kyoo.Controllers
 	public interface IConfigurationManager
 	{
 		/// <summary>
+		/// Add an editable configuration to the editable configuration list
+		/// </summary>
+		/// <param name="path">The root path of the editable configuration. It should not be a nested type.</param>
+		/// <typeparam name="T">The type of the configuration</typeparam>
+		void Register<T>([NotNull] string path);
+
+		/// <summary>
+		/// Add an editable configuration to the editable configuration list.
+		/// WARNING: this method allow you to add an unmanaged type. This type won't be editable. This can be used
+		/// for external libraries or variable arguments.
+		/// </summary>
+		/// <param name="path">The root path of the editable configuration. It should not be a nested type.</param>
+		void RegisterUntyped([NotNull] string path);
+		
+		/// <summary>
 		/// Get the value of a setting using it's path.
 		/// </summary>
 		/// <param name="path">The path of the resource (can be separated by ':' or '__')</param>
@@ -39,6 +54,6 @@ namespace Kyoo.Controllers
 		/// <param name="value">The new value of the resource</param>
 		/// <exception cref="ArgumentException">If your type is not the same as the registered type</exception>
 		/// <exception cref="ItemNotFoundException">No setting found at the given path.</exception>
-		Task EditValue(string path, object value);
+		Task EditValue([NotNull] string path, object value);
 	}
 }
