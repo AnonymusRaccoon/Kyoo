@@ -23,7 +23,7 @@ namespace Kyoo.Models.Options
 		/// <summary>
 		/// The path of the plugin directory.
 		/// </summary>
-		public string PluginPath { get; set; } = "plugins/";
+		public string PluginsPath { get; set; } = "plugins/";
 
 		/// <summary>
 		/// The path of the people pictures.

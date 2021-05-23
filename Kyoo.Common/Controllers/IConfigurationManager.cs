@@ -1,7 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using JetBrains.Annotations;
 using Kyoo.Models;
+using Kyoo.Models.DisplayableOptions;
 using Kyoo.Models.Exceptions;
 
 namespace Kyoo.Controllers
@@ -55,5 +57,19 @@ namespace Kyoo.Controllers
 		/// <exception cref="ArgumentException">If your type is not the same as the registered type</exception>
 		/// <exception cref="ItemNotFoundException">No setting found at the given path.</exception>
 		Task EditValue([NotNull] string path, object value);
+
+
+		/// <summary>
+		/// Add an editable panel to the list.
+		/// </summary>
+		/// <param name="sectionName">The name of the big section</param>
+		/// <param name="options">The list of options to put on the section (this is ordered).</param>
+		void RegisterPanel(string sectionName, ICollection<DisplayableOption> options);
+		
+		/// <summary>
+		/// Get a dictionary of settings to display in a UI.
+		/// </summary>
+		/// <returns>A list of sections</returns>
+		ICollection<ConfigurationSection> GetEditPanel();
 	}
 }

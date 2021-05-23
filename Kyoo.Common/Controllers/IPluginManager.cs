@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Kyoo.Models.Exceptions;
 using Microsoft.AspNetCore.Builder;
@@ -46,11 +47,12 @@ namespace Kyoo.Controllers
 		/// </summary>
 		/// <param name="services">The service collection to populate</param>
 		public void ConfigureServices(IServiceCollection services);
-		
+
 		/// <summary>
 		/// Configure an asp net application applying plugins policies.
 		/// </summary>
 		/// <param name="app">The asp net application to configure</param>
-		public void ConfigureAspnet(IApplicationBuilder app);
+		/// <param name="provider">The service provider used to inject services to plugin's ConfigureAspNet</param>
+		public void ConfigureAspnet(IApplicationBuilder app, IServiceProvider provider);
 	}
 }

@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Kyoo.Controllers;
+using Kyoo.Models.DisplayableOptions;
 using Kyoo.Models.Exceptions;
 using Kyoo.Models.Permissions;
 using Microsoft.AspNetCore.Mvc;
@@ -87,6 +89,18 @@ namespace Kyoo.Api
 			{
 				return BadRequest(ex.Message);
 			}
+		}
+		
+		/// <summary>
+		/// Get the permission UI.
+		/// </summary>
+		/// <returns>The permission UI sections.</returns>
+		/// <response code="200">Return The permission UI sections</response>
+		[HttpGet("panel")]
+		[Permission(nameof(ConfigurationApi), Kind.Read, Group.Admin)]
+		public ICollection<ConfigurationSection> GetPanel()
+		{
+			return _manager.GetEditPanel();
 		}
 	}
 }

@@ -7,9 +7,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Kyoo.Api;
 using Kyoo.Models;
+using Kyoo.Models.DisplayableOptions;
 using Kyoo.Models.Exceptions;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json.Linq;
+using ConfigurationSection = Kyoo.Models.DisplayableOptions.ConfigurationSection;
 
 namespace Kyoo.Controllers
 {
@@ -26,12 +28,19 @@ namespace Kyoo.Controllers
 		private readonly Dictionary<string, Type> _references;
 
 		/// <summary>
+		/// The list of panels for the configuration UI.
+		/// </summary>
+		private readonly ICollection<ConfigurationSection> _panels;
+
+		/// <summary>
 		/// Create a new <see cref="ConfigurationApi"/> using the given configuration.
 		/// </summary>
 		/// <param name="configuration">The configuration to use.</param>
 		public ConfigurationManager(IConfiguration configuration)
 		{
 			_configuration = configuration;
+			_references = new Dictionary<string, Type>();
+			_panels = new List<ConfigurationSection>();
 		}
 
 		/// <summary>
@@ -43,6 +52,7 @@ namespace Kyoo.Controllers
 		{
 			_configuration = configuration;
 			_references = references.ToDictionary(x => x.Path, x => x.Type, StringComparer.OrdinalIgnoreCase);
+			_panels = new List<ConfigurationSection>();
 		}
 
 		
@@ -184,6 +194,22 @@ namespace Kyoo.Controllers
 			if (!obj.Any())
 				return config.Value;
 			return obj;
+		}
+
+		/// <inheritdoc />
+		public void RegisterPanel(string sectionName, ICollection<DisplayableOption> options)
+		{
+			_panels.Add(new ConfigurationSection
+			{
+				Name = sectionName,
+				Options = options
+			});
+		}
+
+		/// <inheritdoc />
+		public ICollection<ConfigurationSection> GetEditPanel()
+		{
+			return _panels;
 		}
 	}
 }

@@ -76,13 +76,14 @@ namespace Kyoo
 			services.AddTask<PluginInitializer>();
 			_plugins.ConfigureServices(services);
 		}
-		
+
 		/// <summary>
 		/// Configure the asp net host.
 		/// </summary>
 		/// <param name="app">The asp net host to configure</param>
 		/// <param name="env">The host environment (is the app in development mode?)</param>
-		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+		/// <param name="provider">The service provider used to inject services to plugin's ConfigureAspNet</param>
+		public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider provider)
 		{
 			if (env.IsDevelopment())
 				app.UseDeveloperExceptionPage();
@@ -109,8 +110,8 @@ namespace Kyoo
 				return next();
 			});
 			app.UseResponseCompression();
-			
-			_plugins.ConfigureAspnet(app);
+
+			_plugins.ConfigureAspnet(app, provider);
 
 			app.UseSpa(spa =>
 			{
