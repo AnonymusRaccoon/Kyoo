@@ -10,7 +10,7 @@ using Kyoo.Models.Exceptions;
 namespace Kyoo.Controllers
 {
 	/// <summary>
-	/// An interface to interract with the database. Every repository is mapped through here. 
+	/// An interface to interact with the database. Every repository is mapped through here. 
 	/// </summary>
 	public interface ILibraryManager
 	{
@@ -28,7 +28,7 @@ namespace Kyoo.Controllers
 		ILibraryRepository LibraryRepository { get; }
 		
 		/// <summary>
-		/// The repository that handle libraries's items (a wrapper arround shows & collections).
+		/// The repository that handle libraries items (a wrapper around shows & collections).
 		/// </summary>
 		ILibraryItemRepository LibraryItemRepository { get; }
 		
@@ -269,18 +269,18 @@ namespace Kyoo.Controllers
 			where T : class, IResource;
 
 		/// <summary>
-		/// Load a related resource without specifing it's type.
+		/// Load a related resource without specifying it's type.
 		/// </summary>
 		/// <param name="obj">The source object.</param>
 		/// <param name="memberName">The name of the resource to load (case sensitive)</param>
 		Task Load([NotNull] IResource obj, string memberName);
 		
 		/// <summary>
-		/// Get items (A wrapper arround shows or collections) from a library.
+		/// Get items (A wrapper around shows or collections) from a library.
 		/// </summary>
 		/// <param name="id">The ID of the library</param>
 		/// <param name="where">A filter function</param>
-		/// <param name="sort">Sort informations (sort order & sort by)</param>
+		/// <param name="sort">Sort information (sort order & sort by)</param>
 		/// <param name="limit">How many items to return and where to start</param>
 		/// <returns>A list of items that match every filters</returns>
 		Task<ICollection<LibraryItem>> GetItemsFromLibrary(int id,
@@ -289,7 +289,7 @@ namespace Kyoo.Controllers
 			Pagination limit = default);
 		
 		/// <summary>
-		/// Get items (A wrapper arround shows or collections) from a library.
+		/// Get items (A wrapper around shows or collections) from a library.
 		/// </summary>
 		/// <param name="id">The ID of the library</param>
 		/// <param name="where">A filter function</param>
@@ -303,11 +303,11 @@ namespace Kyoo.Controllers
 		) => GetItemsFromLibrary(id, where, new Sort<LibraryItem>(sort), limit);
 		
 		/// <summary>
-		/// Get items (A wrapper arround shows or collections) from a library.
+		/// Get items (A wrapper around shows or collections) from a library.
 		/// </summary>
 		/// <param name="slug">The slug of the library</param>
 		/// <param name="where">A filter function</param>
-		/// <param name="sort">Sort informations (sort order & sort by)</param>
+		/// <param name="sort">Sort information (sort order & sort by)</param>
 		/// <param name="limit">How many items to return and where to start</param>
 		/// <returns>A list of items that match every filters</returns>
 		Task<ICollection<LibraryItem>> GetItemsFromLibrary(string slug,
@@ -316,7 +316,7 @@ namespace Kyoo.Controllers
 			Pagination limit = default);
 		
 		/// <summary>
-		/// Get items (A wrapper arround shows or collections) from a library.
+		/// Get items (A wrapper around shows or collections) from a library.
 		/// </summary>
 		/// <param name="slug">The slug of the library</param>
 		/// <param name="where">A filter function</param>
@@ -335,7 +335,7 @@ namespace Kyoo.Controllers
 		/// </summary>
 		/// <param name="showID">The ID of the show</param>
 		/// <param name="where">A filter function</param>
-		/// <param name="sort">Sort informations (sort order & sort by)</param>
+		/// <param name="sort">Sort information (sort order & sort by)</param>
 		/// <param name="limit">How many items to return and where to start</param>
 		/// <returns>A list of items that match every filters</returns>
 		Task<ICollection<PeopleRole>> GetPeopleFromShow(int showID,
@@ -362,7 +362,7 @@ namespace Kyoo.Controllers
 		/// </summary>
 		/// <param name="showSlug">The slug of the show</param>
 		/// <param name="where">A filter function</param>
-		/// <param name="sort">Sort informations (sort order & sort by)</param>
+		/// <param name="sort">Sort information (sort order & sort by)</param>
 		/// <param name="limit">How many items to return and where to start</param>
 		/// <returns>A list of items that match every filters</returns>
 		Task<ICollection<PeopleRole>> GetPeopleFromShow(string showSlug,
@@ -390,7 +390,7 @@ namespace Kyoo.Controllers
 		/// </summary>
 		/// <param name="id">The id of the person</param>
 		/// <param name="where">A filter function</param>
-		/// <param name="sort">Sort informations (sort order & sort by)</param>
+		/// <param name="sort">Sort information (sort order & sort by)</param>
 		/// <param name="limit">How many items to return and where to start</param>
 		/// <returns>A list of items that match every filters</returns>
 		Task<ICollection<PeopleRole>> GetRolesFromPeople(int id,
@@ -417,7 +417,7 @@ namespace Kyoo.Controllers
 		/// </summary>
 		/// <param name="slug">The slug of the person</param>
 		/// <param name="where">A filter function</param>
-		/// <param name="sort">Sort informations (sort order & sort by)</param>
+		/// <param name="sort">Sort information (sort order & sort by)</param>
 		/// <param name="limit">How many items to return and where to start</param>
 		/// <returns>A list of items that match every filters</returns>
 		Task<ICollection<PeopleRole>> GetRolesFromPeople(string slug,
@@ -460,7 +460,7 @@ namespace Kyoo.Controllers
 		/// Get all resources with filters
 		/// </summary>
 		/// <param name="where">A filter function</param>
-		/// <param name="sort">Sort informations (sort order & sort by)</param>
+		/// <param name="sort">Sort information (sort order & sort by)</param>
 		/// <param name="limit">How many items to return and where to start</param>
 		/// <typeparam name="T">The type of resources to load</typeparam>
 		/// <returns>A list of resources that match every filters</returns>
@@ -504,7 +504,7 @@ namespace Kyoo.Controllers
 		/// </summary>
 		/// <param name="item">The item to register</param>
 		/// <typeparam name="T">The type of resource</typeparam>
-		/// <returns>The resource registers and completed by database's informations (related items & so on)</returns>
+		/// <returns>The resource registers and completed by database's information (related items & so on)</returns>
 		Task<T> Create<T>([NotNull] T item) where T : class, IResource;
 		
 		/// <summary>
@@ -518,11 +518,11 @@ namespace Kyoo.Controllers
 		/// <summary>
 		/// Edit a resource
 		/// </summary>
-		/// <param name="item">The resourcce to edit, it's ID can't change.</param>
+		/// <param name="item">The resource to edit, it's ID can't change.</param>
 		/// <param name="resetOld">Should old properties of the resource be discarded or should null values considered as not changed?</param>
 		/// <typeparam name="T">The type of resources</typeparam>
 		/// <exception cref="ItemNotFoundException">If the item is not found</exception>
-		/// <returns>The resource edited and completed by database's informations (related items & so on)</returns>
+		/// <returns>The resource edited and completed by database's information (related items & so on)</returns>
 		Task<T> Edit<T>(T item, bool resetOld) where T : class, IResource;
 
 		/// <summary>

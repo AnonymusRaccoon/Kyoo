@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Kyoo.Models.Options
 {
 	/// <summary>
@@ -44,5 +46,13 @@ namespace Kyoo.Models.Options
 		/// The temporary folder to cache transcoded file.
 		/// </summary>
 		public string TranscodePath { get; set; } = "cached/transcode";
+
+		/// <summary>
+		/// The list of plugin repositories where you can download plugins.
+		/// </summary>
+		/// <remarks>
+		///	You should only put trusted sources here, plugins can run arbitrary code on behalf of Kyoo's process.
+		/// </remarks>
+		public ICollection<string> Repositories { get; set; } = new List<string>();
 	}
 }

@@ -1,9 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Json;
 using System.Reflection;
 using System.Runtime.Loader;
+using System.Threading.Tasks;
+using Kyoo.Models;
+using Kyoo.Models.Exceptions;
 using Kyoo.Models.Options;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,6 +29,10 @@ namespace Kyoo.Controllers
 		/// </summary>
 		private readonly IServiceProvider _provider;
 		/// <summary>
+		/// A client factory used to get clients for calls to repositories.
+		/// </summary>
+		private readonly IHttpClientFactory _httpFactory;
+		/// <summary>
 		/// The configuration to get the plugin's directory.
 		/// </summary>
 		private readonly IOptionsMonitor<BasicOptions> _options;
@@ -35,18 +45,25 @@ namespace Kyoo.Controllers
 		/// The list of plugins that are currently loaded.
 		/// </summary>
 		private readonly List<IPlugin> _plugins = new();
-
+		/// <summary>
+		/// A dictionary mapping a plugin's slug to it's install location (or null if the plugin has been loaded manually).
+		/// </summary>
+		private readonly Dictionary<string, string> _pluginsLocation = new();
+		
 		/// <summary>
 		/// Create a new <see cref="PluginManager"/> instance.
 		/// </summary>
 		/// <param name="provider">A service container to allow initialization of plugins</param>
+		/// <param name="httpFactory">A client factory used to get clients for calls to repositories.</param>
 		/// <param name="options">The configuration instance, to get the plugin's directory path.</param>
 		/// <param name="logger">The logger used by this class.</param>
 		public PluginManager(IServiceProvider provider,
+			IHttpClientFactory httpFactory,
 			IOptionsMonitor<BasicOptions> options,
 			ILogger<PluginManager> logger)
 		{
 			_provider = provider;
+			_httpFactory = httpFactory;
 			_options = options;
 			_logger = logger;
 		}
@@ -61,13 +78,65 @@ namespace Kyoo.Controllers
 		/// <inheritdoc />
 		public ICollection<T> GetPlugins<T>()
 		{
-			return _plugins?.OfType<T>().ToArray();
+			return _plugins?.OfType<T>().ToList();
 		}
 
 		/// <inheritdoc />
 		public ICollection<IPlugin> GetAllPlugins()
 		{
 			return _plugins;
+		}
+
+		/// <inheritdoc />
+		public async Task<ICollection<PluginRepository>> SearchRepositories(string query = null)
+		{
+			HttpClient client = _httpFactory.CreateClient();
+			return await _options.CurrentValue.Repositories
+				.SelectAsync(async x => await client.GetFromJsonAsync<PluginRepository>(x))
+				.ToListAsync();
+		}
+
+		/// <inheritdoc />
+		public async Task Install(IPluginMetadata plugin)
+		{
+			IPlugin existing = _plugins.FirstOrDefault(x => x.Slug == plugin.Slug);
+			if (existing != null)
+			{
+				_logger.LogInformation("Updating {Plugin} (was v{OldVersion}, installing v{NewVersion}", 
+					plugin.Name, existing.Version, plugin.Version);
+			}
+			
+			_logger.LogInformation("Installing {Plugin} v{Version}...", plugin.Name, plugin.Version);
+			string outputDirectory = Path.Combine(_options.CurrentValue.PluginPath,
+				$"{plugin.Slug}-{plugin.Version}");
+			Directory.CreateDirectory(outputDirectory);
+			HttpClient client = _httpFactory.CreateClient();
+			ZipArchive archive = new(await client.GetStreamAsync(plugin.DownloadURL));
+			archive.ExtractToDirectory(outputDirectory);
+			_logger.LogInformation("{Plugin} v{Version} installed", plugin.Name, plugin.Version);
+
+			if (existing != null)
+				Uninstall(existing);
+		}
+
+		/// <inheritdoc />
+		public void Uninstall(string slug)
+		{
+			IPlugin plugin = _plugins.FirstOrDefault(x => x.Slug == slug);
+			if (plugin == null)
+				throw new ItemNotFoundException($"No plugin could be found with the slug {slug}.");
+			Uninstall(plugin);
+		}
+		
+		/// <inheritdoc />
+		public void Uninstall(IPlugin plugin)
+		{
+			string location = _pluginsLocation[plugin.Slug];
+			if (location == null)
+				throw new ArgumentException($"A plugin loaded manually can't be uninstalled.");
+			Directory.Delete(location, true);
+			_plugins.Remove(plugin);
+			_pluginsLocation.Remove(plugin.Slug);
 		}
 
 		/// <summary>
@@ -82,21 +151,39 @@ namespace Kyoo.Controllers
 			{
 				PluginDependencyLoader loader = new(path);
 				Assembly assembly = loader.LoadFromAssemblyPath(path);
-				return assembly.GetTypes()
+				IPlugin[] loaded = assembly.GetTypes()
 					.Where(x => typeof(IPlugin).IsAssignableFrom(x))
 					.Where(x => _plugins.All(y => y.GetType() != x))
 					.Select(x => (IPlugin)ActivatorUtilities.CreateInstance(_provider, x))
 					.ToArray();
+				foreach (IPlugin plugin in loaded)
+				{
+					if (!_pluginsLocation.TryAdd(plugin.Slug, path))
+						throw new ArgumentException($"More than one version of the plugin {plugin.Slug} " +
+						                            $"has been found. This is not supported.");
+				}
+				return loaded;
 			}
 			catch (Exception ex)
 			{
-				_logger.LogError(ex, "Could not load the plugin at {Path}", path);
+				_logger.LogError(ex, "Could not load plugins at {Path}", path);
 				return Array.Empty<IPlugin>();
 			}
 		}
+
+		/// <inheritdoc />
+		public void LoadPlugins(params Type[] plugins)
+		{
+			LoadPlugins(plugins.Select(x =>
+			{
+				if (!x.IsAssignableTo(typeof(IPlugin)))
+					throw new ArgumentException($"{x} does not implement IPlugin. Only plugins can be loaded.");
+				return (IPlugin)ActivatorUtilities.CreateInstance(_provider, x);
+			}).ToArray());
+		}
 		
 		/// <inheritdoc />
-		public void LoadPlugins(ICollection<IPlugin> plugins)
+		public void LoadPlugins(params IPlugin[] plugins)
 		{
 			string pluginFolder = _options.CurrentValue.PluginPath;
 			if (!Directory.Exists(pluginFolder))
@@ -107,7 +194,7 @@ namespace Kyoo.Controllers
 			plugins = plugins.Concat(pluginsPaths.SelectMany(LoadPlugin))
 				.GroupBy(x => x.Name)
 				.Select(x => x.First())
-				.ToList();
+				.ToArray();
 
 			ICollection<Type> available = GetProvidedTypes(plugins);
 			_plugins.AddRange(plugins.Where(plugin =>

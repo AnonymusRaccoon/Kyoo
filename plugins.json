@@ -1,0 +1,14 @@
+{
+  "name": "Core",
+  "description": "The main plugin's repository containing official packages.",
+  "plugins": [
+    {
+      "slug": "the-tvdb",
+      "name": "TheTVDB Provider",
+      "description": "A metadata provider for TheTVDB.",
+      "downloadURL": "SOON",
+      "version": "1.0.0",
+      "provides": ["Kyoo.Controllers.IMetadataProvider"]
+    }
+  ]
+}

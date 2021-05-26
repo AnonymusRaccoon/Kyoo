@@ -3,17 +3,13 @@ using System.IO;
 using Kyoo.Authentication;
 using Kyoo.Controllers;
 using Kyoo.Models;
-using Kyoo.Models.Options;
 using Kyoo.Postgresql;
 using Kyoo.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Kyoo
 {
@@ -31,24 +27,17 @@ namespace Kyoo
 		/// <summary>
 		/// Created from the DI container, those services are needed to load information and instantiate plugins.s
 		/// </summary>
-		/// <param name="hostProvider">
-		/// The ServiceProvider used to create this <see cref="Startup"/> instance.
-		/// The host provider that contains only well-known services that are Kyoo independent.
-		/// This is used to instantiate plugins that might need a logger, a configuration or an host environment.
-		/// </param>
-		/// <param name="configuration">The configuration context</param>
-		/// <param name="loggerFactory">A logger factory used to create a logger for the plugin manager.</param>
-		public Startup(IServiceProvider hostProvider, IConfiguration configuration, ILoggerFactory loggerFactory, IWebHostEnvironment host)
+		/// <param name="plugins">The plugin manager to load plugins and allow them to configure the host.</param>
+		public Startup(IPluginManager plugins)
 		{
-			IOptionsMonitor<BasicOptions> options = hostProvider.GetService<IOptionsMonitor<BasicOptions>>();
-			_plugins = new PluginManager(hostProvider, options, loggerFactory.CreateLogger<PluginManager>());
+			_plugins = plugins;
 			
-			// TODO remove postgres from here and load it like a normal plugin.
-			_plugins.LoadPlugins(new IPlugin[] {
-				new CoreModule(configuration), 
-				new PostgresModule(configuration, host),
-				new AuthenticationModule(configuration, loggerFactory, host)
-			});
+			// TODO remove postgres and authentication from here and load it like a normal plugin.
+			_plugins.LoadPlugins(
+				typeof(CoreModule),
+				typeof(PostgresModule),
+				typeof(AuthenticationModule)
+			);
 		}
 
 		/// <summary>
@@ -67,12 +56,7 @@ namespace Kyoo
 			{
 				x.EnableForHttps = true;
 			});
-			
-			services.AddHttpClient();
-			
 			services.AddTransient(typeof(Lazy<>), typeof(LazyDi<>));
-			
-			services.AddSingleton(_plugins);
 			services.AddTask<PluginInitializer>();
 			_plugins.ConfigureServices(services);
 		}

@@ -1,4 +1,7 @@
+using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using Kyoo.Models;
 using Kyoo.Models.Exceptions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
@@ -31,7 +34,35 @@ namespace Kyoo.Controllers
 		/// </summary>
 		/// <returns>All plugins currently loaded.</returns>
 		public ICollection<IPlugin> GetAllPlugins();
+		
+		/// <summary>
+		/// List all plugin available on the installed repositories.
+		/// </summary>
+		/// <param name="query">A string to search a specific plugin.</param>
+		/// <returns>The list of plugins available to download.</returns>
+		public Task<ICollection<PluginRepository>> SearchRepositories(string query = null);
 
+		/// <summary>
+		/// Install the selected plugin. To enable it, you will need to restart Kyoo.
+		/// </summary>
+		/// <param name="plugin">The plugin to install</param>
+		public Task Install(IPluginMetadata plugin);
+
+		/// <summary>
+		/// Uninstall a plugin by it's slug.
+		/// </summary>
+		/// <param name="pluginSlug">The slug of the plugin to uninstall</param>
+		/// <exception cref="ItemNotFoundException">No plugin could be found with the specified slug.</exception>
+		/// <exception cref="NotSupportedException">The specified plugin could not be removed.</exception>
+		public void Uninstall(string pluginSlug);
+		
+		/// <summary>
+		/// Uninstall a plugin.
+		/// </summary>
+		/// <param name="plugin">The plugin to uninstall.</param>
+		/// <exception cref="NotSupportedException">The specified plugin could not be removed.</exception>
+		public void Uninstall(IPlugin plugin);
+		
 		/// <summary>
 		/// Load plugins and their dependencies from the plugin directory.
 		/// </summary>
@@ -39,8 +70,17 @@ namespace Kyoo.Controllers
 		/// An initial plugin list to use.
 		/// You should not try to put plugins from the plugins directory here as they will get automatically loaded.
 		/// </param>
-		public void LoadPlugins(ICollection<IPlugin> plugins);
+		public void LoadPlugins(params IPlugin[] plugins);
 
+		/// <summary>
+		/// Load plugins and their dependencies from the plugin directory.
+		/// </summary>
+		/// <param name="plugins">
+		/// An initial list of plugin type to use. Those plugins will be constructed by the PluginManager.
+		/// You should not try to put plugins from the plugins directory here as they will get automatically loaded.
+		/// </param>
+		public void LoadPlugins(params Type[] plugins);
+		
 		/// <summary>
 		/// Configure services adding or removing services as the plugins wants.
 		/// </summary>

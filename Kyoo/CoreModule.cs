@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using Kyoo.Controllers;
+using Kyoo.Models;
 using Kyoo.Models.Options;
 using Kyoo.Models.Permissions;
 using Kyoo.Tasks;
@@ -27,6 +29,12 @@ namespace Kyoo
 		
 		/// <inheritdoc />
 		public string Description => "The core module containing default implementations.";
+
+		/// <inheritdoc />
+		public string DownloadURL => null;
+
+		/// <inheritdoc />
+		public Version Version => Assembly.GetExecutingAssembly().GetName().Version;
 
 		/// <inheritdoc />
 		public ICollection<Type> Provides => new[]

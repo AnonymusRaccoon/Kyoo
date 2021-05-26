@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using Kyoo.Controllers;
+using Kyoo.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -22,6 +24,12 @@ namespace Kyoo.Postgresql
 
 		/// <inheritdoc />
 		public string Description => "A database context for postgresql.";
+		
+		/// <inheritdoc />
+		public string DownloadURL => null;
+
+		/// <inheritdoc />
+		public Version Version => Assembly.GetExecutingAssembly().GetName().Version;
 
 		/// <inheritdoc />
 		public ICollection<Type> Provides => new[]

@@ -6,7 +6,8 @@
     "peoplePath": "people/",
     "providerPath": "providers/",
     "transmuxPath": "cached/transmux",
-    "transcodePath": "cached/transcode"
+    "transcodePath": "cached/transcode",
+    "repositories": []
   },
   
   "database": {

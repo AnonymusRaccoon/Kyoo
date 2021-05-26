@@ -9,6 +9,7 @@ using IdentityServer4.Services;
 using Kyoo.Authentication.Models;
 using Kyoo.Authentication.Views;
 using Kyoo.Controllers;
+using Kyoo.Models;
 using Kyoo.Models.Permissions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -36,6 +37,12 @@ namespace Kyoo.Authentication
 		
 		/// <inheritdoc />
 		public string Description => "Enable OpenID authentication for Kyoo.";
+		
+		/// <inheritdoc />
+		public string DownloadURL => null;
+
+		/// <inheritdoc />
+		public Version Version => Assembly.GetExecutingAssembly().GetName().Version;
 		
 		/// <inheritdoc />
 		public ICollection<Type> Provides => ArraySegment<Type>.Empty;

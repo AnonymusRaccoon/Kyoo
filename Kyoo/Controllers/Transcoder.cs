@@ -25,9 +25,9 @@ namespace Kyoo.Controllers
 
 			[DllImport(TranscoderPath, CallingConvention = CallingConvention.Cdecl)]
 			public static extern int transmux(string path, string outpath, out float playableDuration);
-		
-			[DllImport(TranscoderPath, CallingConvention = CallingConvention.Cdecl)]
-			public static extern int transcode(string path, string outpath, out float playableDuration);
+			//
+			// [DllImport(TranscoderPath, CallingConvention = CallingConvention.Cdecl)]
+			// public static extern int transcode(string path, string outpath, out float playableDuration);
 
 			[DllImport(TranscoderPath, CallingConvention = CallingConvention.Cdecl)]
 			private static extern IntPtr extract_infos(string path, 
