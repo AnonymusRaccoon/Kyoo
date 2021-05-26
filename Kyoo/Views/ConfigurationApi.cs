@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using System.Threading.Tasks;
 using Kyoo.Controllers;
 using Kyoo.Models.DisplayableOptions;
@@ -52,10 +52,10 @@ namespace Kyoo.Api
 		/// <response code="200">Return the dictionary of edited value. If a value could not be edited, it is removed from the dictionary</response>
 		[HttpPut]
 		[Permission(nameof(ConfigurationApi), Kind.Write, Group.Admin)]
-		[SuppressMessage("ReSharper", "RedundantJumpStatement")]
 		public async Task<Dictionary<string, object>> EditConfiguration([FromBody] Dictionary<string, object> newValues)
 		{
 			Dictionary<string, object> ret = new();
+			Dictionary<string, object> errors = new();
 			foreach ((string slug, object value) in newValues)
 			{
 				try
@@ -63,11 +63,14 @@ namespace Kyoo.Api
 					await _manager.EditValue(slug, value);
 					ret[slug] = value;
 				}
-				catch
+				catch (Exception exception)
 				{
-					continue;
+					errors[slug] = exception.Message;
 				}
 			}
+
+			if (errors.Any())
+				ret["error"] = errors;
 			return ret;
 		}
 		

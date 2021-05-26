@@ -10,7 +10,9 @@ using Kyoo.Models;
 using Kyoo.Models.DisplayableOptions;
 using Kyoo.Models.Exceptions;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Serialization;
 using ConfigurationSection = Kyoo.Models.DisplayableOptions.ConfigurationSection;
 
 namespace Kyoo.Controllers
@@ -132,18 +134,59 @@ namespace Kyoo.Controllers
 		/// <inheritdoc />
 		public async Task EditValue(string path, object value)
 		{
-			path = path.Replace("__", ":");
 			Type type = GetType(path);
-			value = JObject.FromObject(value).ToObject(type);
+			try
+			{
+				value = JObject.FromObject(value).ToObject(type);
+			}
+			catch (ArgumentException)
+			{
+				// ignored (ArgumentException is thrown when the type is not
+				// a JObject like object -- something like a string or an int)
+			}
+
 			if (value == null)
 				throw new ArgumentException("Invalid value format.");
 			
 			ExpandoObject config = ToObject(_configuration);
-			IDictionary<string, object> configDic = config;
-			configDic[path] = value;
-			JObject obj = JObject.FromObject(config);
+			JObject obj = JObject.FromObject(config, new JsonSerializer()
+			{
+				 ContractResolver = new CamelCasePropertyNamesContractResolver()
+			});
+
+			path = path.Replace("__", ":").Replace(':', '.');
+			JObject edited = JObject.FromObject(_CreateObject((path, value)));
+			obj.Merge(edited, new JsonMergeSettings
+			{
+				PropertyNameComparison = StringComparison.OrdinalIgnoreCase,
+				MergeArrayHandling = MergeArrayHandling.Replace,
+				MergeNullValueHandling = MergeNullValueHandling.Ignore
+			});
 			await using StreamWriter writer = new(Program.JsonConfigPath);
 			await writer.WriteAsync(obj.ToString());
+		}
+
+		/// <summary>
+		/// Create an <see cref="ExpandoObject"/> with properties specified in the properties list.
+		/// You can have '.' in the property path, that will create a nested expando object.
+		/// </summary>
+		/// <param name="properties">The list of properties in the object.</param>
+		/// <returns>An expando object with the given properties.</returns>
+		private static ExpandoObject _CreateObject(params (string, object)[] properties)
+		{
+			ExpandoObject ret = new();
+			IDictionary<string, object> dic = ret;
+			foreach ((string path, object value) in properties)
+			{
+				string[] paths = path.Split('.');
+				object nestedValue = paths.Length != 1
+					? _CreateObject((string.Join(',', paths[1..]), value))
+					: value;
+				if (dic.ContainsKey(paths[0]))
+					throw new ArgumentException($"You can't merge nested properties with this method.");
+				dic[paths[0]] = nestedValue;
+			}
+			return ret;
 		}
 		
 		/// <summary>
