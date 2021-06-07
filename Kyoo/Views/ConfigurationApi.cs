@@ -1,6 +1,9 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Kyoo.Controllers;
+using Kyoo.Models.DisplayableOptions;
 using Kyoo.Models.Exceptions;
 using Kyoo.Models.Permissions;
 using Microsoft.AspNetCore.Mvc;
@@ -29,6 +32,48 @@ namespace Kyoo.Api
 			_manager = manager;
 		}
 
+		/// <summary>
+		/// Get all permissions.
+		/// </summary>
+		/// <returns>The associate list of values.</returns>
+		/// <response code="200">Return the configuration values</response>
+		[HttpGet]
+		[Permission(nameof(ConfigurationApi), Kind.Read, Group.Admin)]
+		public ActionResult<object> GetConfiguration()
+		{
+			return _manager.GetValue(null);
+		}
+		
+		/// <summary>
+		/// Edit a dictionary of permissions.
+		/// </summary>
+		/// <param name="newValues">The dictionary with the following format: {slug: value}</param>
+		/// <returns>The dictionary of edited value.</returns>
+		/// <response code="200">Return the dictionary of edited value. If a value could not be edited, it is removed from the dictionary</response>
+		[HttpPut]
+		[Permission(nameof(ConfigurationApi), Kind.Write, Group.Admin)]
+		public async Task<Dictionary<string, object>> EditConfiguration([FromBody] Dictionary<string, object> newValues)
+		{
+			Dictionary<string, object> ret = new();
+			Dictionary<string, object> errors = new();
+			foreach ((string slug, object value) in newValues)
+			{
+				try
+				{
+					await _manager.EditValue(slug, value);
+					ret[slug] = value;
+				}
+				catch (Exception exception)
+				{
+					errors[slug] = exception.Message;
+				}
+			}
+
+			if (errors.Any())
+				ret["error"] = errors;
+			return ret;
+		}
+		
 		/// <summary>
 		/// Get a permission from it's slug.
 		/// </summary>
@@ -75,6 +120,18 @@ namespace Kyoo.Api
 			{
 				return BadRequest(ex.Message);
 			}
+		}
+		
+		/// <summary>
+		/// Get the permission UI.
+		/// </summary>
+		/// <returns>The permission UI sections.</returns>
+		/// <response code="200">Return The permission UI sections</response>
+		[HttpGet("panel")]
+		[Permission(nameof(ConfigurationApi), Kind.Read, Group.Admin)]
+		public ICollection<ConfigurationSection> GetPanel()
+		{
+			return _manager.GetEditPanel();
 		}
 	}
 }

@@ -107,8 +107,7 @@ namespace Kyoo.Controllers
 			}
 			
 			_logger.LogInformation("Installing {Plugin} v{Version}...", plugin.Name, plugin.Version);
-			string outputDirectory = Path.Combine(_options.CurrentValue.PluginPath,
-				$"{plugin.Slug}-{plugin.Version}");
+			string outputDirectory = Path.Combine(_options.CurrentValue.PluginsPath, $"{plugin.Slug}-{plugin.Version}");
 			Directory.CreateDirectory(outputDirectory);
 			HttpClient client = _httpFactory.CreateClient();
 			ZipArchive archive = new(await client.GetStreamAsync(plugin.DownloadURL));
@@ -185,7 +184,7 @@ namespace Kyoo.Controllers
 		/// <inheritdoc />
 		public void LoadPlugins(params IPlugin[] plugins)
 		{
-			string pluginFolder = _options.CurrentValue.PluginPath;
+			string pluginFolder = _options.CurrentValue.PluginsPath;
 			if (!Directory.Exists(pluginFolder))
 				Directory.CreateDirectory(pluginFolder);
 
@@ -223,10 +222,15 @@ namespace Kyoo.Controllers
 		}
 
 		/// <inheritdoc />
-		public void ConfigureAspnet(IApplicationBuilder app)
+		public void ConfigureAspnet(IApplicationBuilder app, IServiceProvider provider)
 		{
 			foreach (IPlugin plugin in _plugins)
+			{
+				using IServiceScope scope = provider.CreateScope();
+				Helper.InjectServices(plugin, x => scope.ServiceProvider.GetRequiredService(x));
 				plugin.ConfigureAspNet(app);
+				Helper.InjectServices(plugin, _ => null);
+			}
 		}
 
 		/// <summary>

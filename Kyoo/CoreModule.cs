@@ -5,6 +5,8 @@ using System.Linq;
 using System.Reflection;
 using Kyoo.Controllers;
 using Kyoo.Models;
+using Kyoo.Models.Attributes;
+using Kyoo.Models.DisplayableOptions;
 using Kyoo.Models.Options;
 using Kyoo.Models.Permissions;
 using Kyoo.Tasks;
@@ -44,7 +46,8 @@ namespace Kyoo
 			typeof(IThumbnailsManager),
 			typeof(IProviderManager),
 			typeof(ITaskManager),
-			typeof(ILibraryManager)
+			typeof(ILibraryManager),
+			typeof(IConfigurationManager)
 		};
 
 		/// <inheritdoc />
@@ -85,6 +88,11 @@ namespace Kyoo
 		/// The configuration to use.
 		/// </summary>
 		private readonly IConfiguration _configuration;
+		
+		/// <summary>
+		/// The configuration manager used to specify type of configuration sections.
+		/// </summary>
+		[Injected] public IConfigurationManager ConfigurationManager { private get; set; }
 
 		
 		/// <summary>
@@ -102,14 +110,9 @@ namespace Kyoo
 			string publicUrl = _configuration.GetPublicUrl();
 
 			services.Configure<BasicOptions>(_configuration.GetSection(BasicOptions.Path));
-			services.AddConfiguration<BasicOptions>(BasicOptions.Path);
 			services.Configure<TaskOptions>(_configuration.GetSection(TaskOptions.Path));
-			services.AddConfiguration<TaskOptions>(TaskOptions.Path);
 			services.Configure<MediaOptions>(_configuration.GetSection(MediaOptions.Path));
-			services.AddConfiguration<MediaOptions>(MediaOptions.Path);
-			services.AddUntypedConfiguration("database");
-			services.AddUntypedConfiguration("logging");
-			
+
 			services.AddControllers()
 				.AddNewtonsoftJson(x =>
 				{
@@ -152,6 +155,13 @@ namespace Kyoo
 		/// <inheritdoc />
 		public void ConfigureAspNet(IApplicationBuilder app)
 		{
+			ConfigurationManager.Register<BasicOptions>(BasicOptions.Path);
+			ConfigurationManager.Register<TaskOptions>(TaskOptions.Path);
+			ConfigurationManager.Register<MediaOptions>(MediaOptions.Path);
+			ConfigurationManager.RegisterUntyped("database");
+			ConfigurationManager.RegisterUntyped("logging");
+			SetupEditableOptions();
+
 			FileExtensionContentTypeProvider contentTypeProvider = new();
 			contentTypeProvider.Mappings[".data"] = "application/octet-stream";
 			app.UseStaticFiles(new StaticFileOptions
@@ -163,6 +173,75 @@ namespace Kyoo
 			app.UseEndpoints(endpoints =>
 			{
 				endpoints.MapControllers();
+			});
+		}
+
+		/// <summary>
+		/// Register editable panels to configure the core app.
+		/// </summary>
+		private void SetupEditableOptions()
+		{
+			ConfigurationManager.RegisterPanel("Urls", new []
+			{
+				new DisplayableOption
+				{
+					Slug = "basics:url",
+					Type = DisplayableOption.OptionType.String,
+					Name = "Bind URL",
+					Description = "The URL(s) that kyoo will listen to. This allow you to specify a port, a protocol and an host..",
+					HelpMessage = "The default is \"http://*:5000\". The * means any bindable address.",
+				},
+				new DisplayableOption
+				{
+					Slug = "basics:publicUrl",
+					Type = DisplayableOption.OptionType.String,
+					Name = "Public URL",
+					Description = "The public url to access kyoo. This will be the only address allowed for authentication.",
+					HelpMessage = "If you want to use https, you must register an ssl certificate and setup a reverse proxy yourself.",
+				}
+			});
+			ConfigurationManager.RegisterPanel("Paths", new []
+			{
+				new DisplayableOption
+				{
+					Slug = "basics:pluginsPath",
+					Type = DisplayableOption.OptionType.Path,
+					Name = "Plugin Directory",
+					Description = "The path where you will store your plugins. This is relative to your installation path.",
+					HelpMessage = $"Your installation path is: {Environment.CurrentDirectory}",
+				},
+				new DisplayableOption
+				{
+					Slug = "basics:peoplePath",
+					Type = DisplayableOption.OptionType.Path,
+					Name = "People Directory",
+					Description = "The path where people pictures will be saved. This is relative to your installation path.",
+					HelpMessage = $"Your installation path is: {Environment.CurrentDirectory}",
+				},
+				new DisplayableOption
+				{
+					Slug = "basics:providerPath",
+					Type = DisplayableOption.OptionType.Path,
+					Name = "Provider Directory",
+					Description = "The path where provider icons will be cached. This is relative to your installation path.",
+					HelpMessage = $"Your installation path is: {Environment.CurrentDirectory}",
+				},
+				new DisplayableOption
+				{
+					Slug = "basics:transmuxPath",
+					Type = DisplayableOption.OptionType.Path,
+					Name = "Transmux Cache Directory",
+					Description = "The path where transmuxed videos will be stored. This is relative to your installation path.",
+					HelpMessage = $"Your installation path is: {Environment.CurrentDirectory}",
+				},
+				new DisplayableOption
+				{
+					Slug = "basics:transcodePath",
+					Type = DisplayableOption.OptionType.Path,
+					Name = "Transcode Cache Directory",
+					Description = "The path where transcoded videos will be stored. This is relative to your installation path.",
+					HelpMessage = $"Your installation path is: {Environment.CurrentDirectory}",
+				}
 			});
 		}
 	}

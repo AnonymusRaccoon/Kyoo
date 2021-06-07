@@ -10,6 +10,7 @@ using Kyoo.Authentication.Models;
 using Kyoo.Authentication.Views;
 using Kyoo.Controllers;
 using Kyoo.Models;
+using Kyoo.Models.Attributes;
 using Kyoo.Models.Permissions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -71,6 +72,11 @@ namespace Kyoo.Authentication
 		/// The environment information to check if the app runs in debug mode
 		/// </summary>
 		private readonly IWebHostEnvironment _environment;
+		
+		/// <summary>
+		/// The configuration manager used to specify type of configuration sections.
+		/// </summary>
+		[Injected] public IConfigurationManager ConfigurationManager { private get; set; }
 
 
 		/// <summary>
@@ -105,7 +111,6 @@ namespace Kyoo.Authentication
 			services.Configure<PermissionOption>(_configuration.GetSection(PermissionOption.Path));
 			services.Configure<CertificateOption>(_configuration.GetSection(CertificateOption.Path));
 			services.Configure<AuthenticationOption>(_configuration.GetSection(AuthenticationOption.Path));
-			services.AddConfiguration<AuthenticationOption>(AuthenticationOption.Path);
 			
 			
 			List<Client> clients = new();
@@ -146,6 +151,8 @@ namespace Kyoo.Authentication
 		/// <inheritdoc />
 		public void ConfigureAspNet(IApplicationBuilder app)
 		{
+			ConfigurationManager.Register<AuthenticationOption>(AuthenticationOption.Path);
+
 			app.UseCookiePolicy(new CookiePolicyOptions
 			{
 				MinimumSameSitePolicy = SameSiteMode.Strict

@@ -7,9 +7,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Kyoo.Api;
 using Kyoo.Models;
+using Kyoo.Models.DisplayableOptions;
 using Kyoo.Models.Exceptions;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Serialization;
+using ConfigurationSection = Kyoo.Models.DisplayableOptions.ConfigurationSection;
 
 namespace Kyoo.Controllers
 {
@@ -26,6 +30,22 @@ namespace Kyoo.Controllers
 		private readonly Dictionary<string, Type> _references;
 
 		/// <summary>
+		/// The list of panels for the configuration UI.
+		/// </summary>
+		private readonly ICollection<ConfigurationSection> _panels;
+
+		/// <summary>
+		/// Create a new <see cref="ConfigurationApi"/> using the given configuration.
+		/// </summary>
+		/// <param name="configuration">The configuration to use.</param>
+		public ConfigurationManager(IConfiguration configuration)
+		{
+			_configuration = configuration;
+			_references = new Dictionary<string, Type>();
+			_panels = new List<ConfigurationSection>();
+		}
+
+		/// <summary>
 		/// Create a new <see cref="ConfigurationApi"/> using the given configuration.
 		/// </summary>
 		/// <param name="configuration">The configuration to use.</param>
@@ -34,8 +54,35 @@ namespace Kyoo.Controllers
 		{
 			_configuration = configuration;
 			_references = references.ToDictionary(x => x.Path, x => x.Type, StringComparer.OrdinalIgnoreCase);
+			_panels = new List<ConfigurationSection>();
 		}
 
+		
+		/// <inheritdoc />
+		public void Register<T>(string path)
+		{
+			if (_references.TryGetValue(path, out Type type))
+				throw new ArgumentException($"The path {path} is already registered with the type: {type}.");
+			foreach (ConfigurationReference confRef in ConfigurationReference.CreateReference<T>(path))
+				_references.Add(confRef.Path, confRef.Type);
+		}
+
+		/// <inheritdoc />
+		public void RegisterUntyped(string path)
+		{
+			if (_references.TryGetValue(path, out Type type))
+				throw new ArgumentException($"The path {path} is already registered with the type: {type}.");
+			ConfigurationReference config = ConfigurationReference.CreateUntyped(path);
+			_references.Add(config.Path, config.Type);
+		}
+
+		/// <summary>
+		/// Get the type of the resource at a given path
+		/// </summary>
+		/// <param name="path">The path of the resource (separated by ':' or "__")</param>
+		/// <returns>The type of the resource</returns>
+		/// <exception cref="ArgumentException">The path is not a typed resource</exception>
+		/// <exception cref="ItemNotFoundException">No resource exists for the given path</exception>
 		private Type GetType(string path)
 		{
 			path = path.Replace("__", ":");
@@ -57,6 +104,8 @@ namespace Kyoo.Controllers
 		/// <inheritdoc />
 		public object GetValue(string path)
 		{
+			if (path == null)
+				return ToObject(_configuration);
 			path = path.Replace("__", ":");
 			// TODO handle lists and dictionaries.
 			Type type = GetType(path);
@@ -71,30 +120,73 @@ namespace Kyoo.Controllers
 		/// <inheritdoc />
 		public T GetValue<T>(string path)
 		{
+			if (path == null)
+				throw new ArgumentNullException(nameof(path));
 			path = path.Replace("__", ":");
 			// TODO handle lists and dictionaries.
 			Type type = GetType(path);
 			if (typeof(T).IsAssignableFrom(type))
-				throw new InvalidCastException($"The type {typeof(T).Name} is not valid for " +
-				                               $"a resource of type {type.Name}.");
+				throw new ArgumentException($"The type {typeof(T).Name} is not valid for " +
+				                            $"a resource of type {type.Name}.");
 			return (T)GetValue(path);
 		}
 		
 		/// <inheritdoc />
 		public async Task EditValue(string path, object value)
 		{
-			path = path.Replace("__", ":");
 			Type type = GetType(path);
-			value = JObject.FromObject(value).ToObject(type);
+			try
+			{
+				value = JObject.FromObject(value).ToObject(type);
+			}
+			catch (ArgumentException)
+			{
+				// ignored (ArgumentException is thrown when the type is not
+				// a JObject like object -- something like a string or an int)
+			}
+
 			if (value == null)
 				throw new ArgumentException("Invalid value format.");
 			
 			ExpandoObject config = ToObject(_configuration);
-			IDictionary<string, object> configDic = config;
-			configDic[path] = value;
-			JObject obj = JObject.FromObject(config);
+			JObject obj = JObject.FromObject(config, new JsonSerializer()
+			{
+				 ContractResolver = new CamelCasePropertyNamesContractResolver()
+			});
+
+			path = path.Replace("__", ":").Replace(':', '.');
+			JObject edited = JObject.FromObject(_CreateObject((path, value)));
+			obj.Merge(edited, new JsonMergeSettings
+			{
+				PropertyNameComparison = StringComparison.OrdinalIgnoreCase,
+				MergeArrayHandling = MergeArrayHandling.Replace,
+				MergeNullValueHandling = MergeNullValueHandling.Ignore
+			});
 			await using StreamWriter writer = new(Program.JsonConfigPath);
 			await writer.WriteAsync(obj.ToString());
+		}
+
+		/// <summary>
+		/// Create an <see cref="ExpandoObject"/> with properties specified in the properties list.
+		/// You can have '.' in the property path, that will create a nested expando object.
+		/// </summary>
+		/// <param name="properties">The list of properties in the object.</param>
+		/// <returns>An expando object with the given properties.</returns>
+		private static ExpandoObject _CreateObject(params (string, object)[] properties)
+		{
+			ExpandoObject ret = new();
+			IDictionary<string, object> dic = ret;
+			foreach ((string path, object value) in properties)
+			{
+				string[] paths = path.Split('.');
+				object nestedValue = paths.Length != 1
+					? _CreateObject((string.Join(',', paths[1..]), value))
+					: value;
+				if (dic.ContainsKey(paths[0]))
+					throw new ArgumentException($"You can't merge nested properties with this method.");
+				dic[paths[0]] = nestedValue;
+			}
+			return ret;
 		}
 		
 		/// <summary>
@@ -145,6 +237,22 @@ namespace Kyoo.Controllers
 			if (!obj.Any())
 				return config.Value;
 			return obj;
+		}
+
+		/// <inheritdoc />
+		public void RegisterPanel(string sectionName, ICollection<DisplayableOption> options)
+		{
+			_panels.Add(new ConfigurationSection
+			{
+				Name = sectionName,
+				Options = options
+			});
+		}
+
+		/// <inheritdoc />
+		public ICollection<ConfigurationSection> GetEditPanel()
+		{
+			return _panels;
 		}
 	}
 }
