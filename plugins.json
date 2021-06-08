@@ -6,7 +6,7 @@
       "slug": "the-tvdb",
       "name": "TheTVDB Provider",
       "description": "A metadata provider for TheTVDB.",
-      "downloadURL": "SOON",
+      "downloadURL": "https://github.com/AnonymusRaccoon/Kyoo.TheTVDB/archive/refs/heads/master.zip",
       "version": "1.0.0"
     }
   ]

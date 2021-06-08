@@ -21,6 +21,6 @@ namespace Kyoo.Models
 		/// <summary>
 		/// The list of plugins available.
 		/// </summary>
-		public ICollection<IPluginMetadata> Plugins { get; set; }
+		public ICollection<PluginMetadata> Plugins { get; set; }
 	}
 }

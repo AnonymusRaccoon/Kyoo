@@ -29,4 +29,25 @@ namespace Kyoo.Models
 		/// </summary>
 		Version Version { get; }
 	}
+
+	/// <summary>
+	/// A plugin metadata class allowing storing and reading of metadata of a plugin in any context.
+	/// </summary>
+	public class PluginMetadata : IPluginMetadata
+	{
+		/// <inheritdoc/>
+		public string Slug { get; set; }
+		
+		/// <inheritdoc/>
+		public string Name { get; set; }
+		
+		/// <inheritdoc/>
+		public string Description { get; set; }
+		
+		/// <inheritdoc/>
+		public string DownloadURL { get; set; }
+		
+		/// <inheritdoc/>
+		public Version Version { get; set; }
+	}
 }
