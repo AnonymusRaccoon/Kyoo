@@ -7,8 +7,7 @@
       "name": "TheTVDB Provider",
       "description": "A metadata provider for TheTVDB.",
       "downloadURL": "SOON",
-      "version": "1.0.0",
-      "provides": ["Kyoo.Controllers.IMetadataProvider"]
+      "version": "1.0.0"
     }
   ]
 }
