@@ -7,7 +7,9 @@
     "providerPath": "providers/",
     "transmuxPath": "cached/transmux",
     "transcodePath": "cached/transcode",
-    "repositories": []
+    "repositories": [
+      "https://raw.githubusercontent.com/AnonymusRaccoon/Kyoo/develop/plugins.json"
+    ]
   },
   
   "database": {
