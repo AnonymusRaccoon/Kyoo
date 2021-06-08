@@ -144,6 +144,7 @@ namespace Kyoo
 			}
 
 			services.AddTask<Crawler>();
+			services.AddTask<InstallPlugin>();
 
 			if (services.All(x => x.ServiceType != typeof(IPermissionValidator)))
 				services.AddSingleton<IPermissionValidator, PassthroughPermissionValidator>();
