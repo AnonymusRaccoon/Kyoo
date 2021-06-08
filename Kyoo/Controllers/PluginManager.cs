@@ -109,6 +109,7 @@ namespace Kyoo.Controllers
 			string outputDirectory = Path.Combine(_options.CurrentValue.PluginsPath, $"{plugin.Slug}-{plugin.Version}");
 			Directory.CreateDirectory(outputDirectory);
 			HttpClient client = _httpFactory.CreateClient();
+			_logger.LogDebug("Downloading plugin {Plugin} from: {Url}", plugin.Name, plugin.DownloadURL);
 			ZipArchive archive = new(await client.GetStreamAsync(plugin.DownloadURL));
 			archive.ExtractToDirectory(outputDirectory);
 			_logger.LogInformation("{Plugin} v{Version} installed", plugin.Name, plugin.Version);
