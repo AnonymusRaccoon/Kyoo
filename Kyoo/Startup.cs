@@ -33,10 +33,11 @@ namespace Kyoo
 			_plugins = plugins;
 			
 			// TODO remove postgres and authentication from here and load it like a normal plugin.
+			// TODO For now, the authentication module must be loaded before the core to set the cookie policy wanted.
 			_plugins.LoadPlugins(
+				typeof(AuthenticationModule),
 				typeof(CoreModule),
-				typeof(PostgresModule),
-				typeof(AuthenticationModule)
+				typeof(PostgresModule)
 			);
 		}
 
