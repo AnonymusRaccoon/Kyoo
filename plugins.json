@@ -3,10 +3,10 @@
   "description": "The main plugin's repository containing official packages.",
   "plugins": [
     {
-      "slug": "the-tvdb",
-      "name": "TheTVDB Provider",
-      "description": "A metadata provider for TheTVDB.",
-      "downloadURL": "https://github.com/AnonymusRaccoon/Kyoo.TheTVDB/archive/refs/heads/master.zip",
+      "slug": "example",
+      "name": "Example",
+      "description": "An example plugin",
+      "downloadURL": "https://cdn-140.anonfiles.com/1dKa2d38ub/dbf297d7-1624868314/ExamplePlugin.dll",
       "version": "1.0.0"
     }
   ]

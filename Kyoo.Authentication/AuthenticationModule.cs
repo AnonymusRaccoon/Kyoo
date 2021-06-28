@@ -56,8 +56,11 @@ namespace Kyoo.Authentication
 		{
 			typeof(IUserRepository)
 		};
-		
-		
+
+		/// <inheritdoc />
+		public int StartOrder => -1;
+
+
 		/// <summary>
 		/// The configuration to use.
 		/// </summary>

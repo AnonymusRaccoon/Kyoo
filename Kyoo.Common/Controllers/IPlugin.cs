@@ -40,6 +40,18 @@ namespace Kyoo.Controllers
 		/// put typeof(ILibraryManager).
 		/// </remarks>
 		ICollection<Type> Requires { get; }
+
+		/// <summary>
+		/// A value to order the plugin's configure method. The Core as a start order of 0,
+		/// if you need to configure the asp net container before the core, use a negative order.
+		/// If you need to configure after the core, use a positive number. Having the same value as another plugin result
+		/// in undefined order between those plugins.
+		/// </summary>
+		/// <remarks>
+		/// Order should only matter for the <see cref="ConfigureAspNet"/> method as the <see cref="Configure"/> step
+		/// does not have access to others injected services but the list of available types is given as parameter.
+		/// </remarks>
+		virtual int StartOrder => 0;
 		
 		/// <summary>
 		/// A configure method that will be run on plugin's startup.

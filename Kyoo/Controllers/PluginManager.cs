@@ -107,6 +107,11 @@ namespace Kyoo.Controllers
 			
 			_logger.LogInformation("Installing {Plugin} v{Version}...", plugin.Name, plugin.Version);
 			string outputDirectory = Path.Combine(_options.CurrentValue.PluginsPath, $"{plugin.Slug}-{plugin.Version}");
+			if (Directory.Exists(outputDirectory))
+			{
+				_logger.LogCritical("Plugin {Plugin} already installed. Aborting installation", plugin.Name);
+				return;
+			}
 			Directory.CreateDirectory(outputDirectory);
 			HttpClient client = _httpFactory.CreateClient();
 			_logger.LogDebug("Downloading plugin {Plugin} from: {Url}", plugin.Name, plugin.DownloadURL);
@@ -217,14 +222,14 @@ namespace Kyoo.Controllers
 		public void ConfigureServices(IServiceCollection services)
 		{
 			ICollection<Type> available = GetProvidedTypes(_plugins);
-			foreach (IPlugin plugin in _plugins)
+			foreach (IPlugin plugin in _plugins.OrderBy(x => x.StartOrder))
 				plugin.Configure(services, available);
 		}
 
 		/// <inheritdoc />
 		public void ConfigureAspnet(IApplicationBuilder app, IServiceProvider provider)
 		{
-			foreach (IPlugin plugin in _plugins)
+			foreach (IPlugin plugin in _plugins.OrderBy(x => x.StartOrder))
 			{
 				using IServiceScope scope = provider.CreateScope();
 				Helper.InjectServices(plugin, x => scope.ServiceProvider.GetRequiredService(x));
